@@ -1,36 +1,63 @@
-import React from "react";
-import Link from "next/link";
+"use client";
 
-const Navbar = () => {
+import { useState } from "react";
+import { NavbarContainer, MenuButton, Sidebar } from "./style";
+
+export default function Navbar() {
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+
   return (
-    <>
-      <div className="w-full h-20 bg-emerald-800 sticky top-0">
-        <div className="container mx-auto px-4 h-full">
-          <div className="flex justify-between items-center h-full">
-            
-            <ul className="hidden md:flex gap-x-6 text-white">
-              <li>
-                <Link href="/about">
-                  <p>About Us</p>
-                </Link>
-              </li>
-              <li>
-                <Link href="/services">
-                  <p>Services</p>
-                </Link>
-              </li>
-              <li>
-                <Link href="/contacts">
-                  <p>Contacts</p>
-                </Link>
-              </li>
-            </ul>
-            
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
+    <NavbarContainer>
+      <div className="flex items-center justify-between px-4 py-3 md:px-8">
+        {/* Logo */}
+        <div className="text-xl font-bold">MyApp</div>
 
-export default Navbar;
+        {/* Menu button for mobile */}
+        <MenuButton
+          isOpen={isSidebarOpen}
+          onClick={() => setSidebarOpen(!isSidebarOpen)}
+        />
+
+        {/* Menu items for desktop */}
+        <nav className="hidden md:flex space-x-4">
+          <a href="/" className="text-white-600 hover:text-gray-400">
+            Home
+          </a>
+          <a href="/about" className="block text-white-600 hover:text-gray-400">
+            About
+          </a>
+          <a href="/contacts" className="block text-white-600 hover:text-gray-400">
+            Contacts
+          </a>
+          <a href="/chronicles" className="block text-white-600 hover:text-gray-400">
+            Chronicles
+          </a>
+          <a href="/cryptopedia" className="block text-white-600 hover:text-gray-400">
+            Cryptopedia
+          </a>
+        </nav>
+      </div>
+
+      {/* Sidebar for mobile */}
+      <Sidebar isOpen={isSidebarOpen} onClose={() => setSidebarOpen(false)}>
+        <nav className="space-y-2">
+          <a href="/" className="text-white-600 hover:text-gray-400">
+            Home
+          </a>
+          <a href="/about" className="block text-white-600 hover:text-gray-400">
+            About
+          </a>
+          <a href="/contacts" className="block text-white-600 hover:text-gray-400">
+            Contacts
+          </a>
+          <a href="/chronicles" className="block text-white-600 hover:text-gray-400">
+            Chronicles
+          </a>
+          <a href="/cryptopedia" className="block text-white-600 hover:text-gray-400">
+            Cryptopedia
+          </a>
+        </nav>
+      </Sidebar>
+    </NavbarContainer>
+  );
+}
