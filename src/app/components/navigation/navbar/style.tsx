@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 // Contenitore principale della Navbar
 export const NavbarContainer = ({ children }: { children: React.ReactNode }) => (
-    <header className="fixed top-0 left-0 w-full bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 text-white shadow-lg z-50">
+    <header className="fixed top-0 left-0 w-full bg-[var(--color-primary)] text-white shadow-lg z-50">
         {children}
     </header>
 );
@@ -17,7 +17,7 @@ export const MenuButton = ({
 }) => (
     <button
         onClick={onClick}
-        className="md:hidden p-2 text-white hover:text-gray-300 focus:outline-none z-50 transition-colors duration-300"
+        className="md:hidden p-2 text-white hover:text-[var(--color-accent)] focus:outline-none z-50 transition-colors duration-300"
     >
         {isOpen ? (
             // Icona "X" (chiusura)
@@ -71,12 +71,12 @@ export const Sidebar = ({
         <>
             {/* Overlay scuro */}
             <div
-                className="fixed inset-0 bg-black bg-opacity-40 z-40"
+                className="fixed inset-0 bg-[var(--foreground)] bg-opacity-40 z-40"
                 onClick={onClose}
             ></div>
 
             {/* Contenuto della Sidebar */}
-            <aside className="fixed top-0 left-0 w-64 h-full bg-gradient-to-br from-blue-600 to-blue-800 text-white shadow-lg z-50 p-6">
+            <aside className="fixed top-0 left-0 w-64 h-full bg-[var(--color-primary)] text-white shadow-lg z-50 p-6">
                 <nav className="space-y-4">{children}</nav>
             </aside>
         </>

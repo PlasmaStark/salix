@@ -36,7 +36,7 @@ export default function BlogPage() {
           .map((post) => (
         <li key={post.slug} className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
           <a href={`/chronicles/${post.slug}`} className="block p-6">
-            <h2 className="text-xl font-semibold mb-2 text-gray-800">{post.title}</h2>
+            <h2 className="text-xl font-semibold mb-2 text-[var(--color-accent2)]">{post.title}</h2>
             <small className="text-sm text-gray-500">{post.date}</small>
             <p className="text-gray-700 mt-2">{post.description}</p>
           </a>

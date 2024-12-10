@@ -10,7 +10,7 @@ export default function Navbar() {
     <NavbarContainer>
       <div className="flex items-center justify-between px-4 py-3 md:px-8">
         {/* Logo */}
-        <div className="text-xl font-bold">MyApp</div>
+        <div className="text-xl font-bold">Leonardo's Den</div>
 
         {/* Menu button for mobile */}
         <MenuButton
@@ -26,8 +26,8 @@ export default function Navbar() {
           <a href="/about" className="block text-white-600 hover:text-gray-400">
             About
           </a>
-          <a href="/contacts" className="block text-white-600 hover:text-gray-400">
-            Contacts
+          <a href="/primetales" className="block text-white-600 hover:text-gray-400">
+            Prime Tales
           </a>
           <a href="/chronicles" className="block text-white-600 hover:text-gray-400">
             Chronicles

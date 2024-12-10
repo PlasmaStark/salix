@@ -5,8 +5,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary-color: #3b82f6;
-  --secondary-color: #9333ea;
+  --color-primary: #1F2B32;
+  --color-secondary: #00453E;
+  --color-accent: #EC9929;
+  --color-accent2: #385157;
   --font-base: "Inter", sans-serif;
   --font-heading: "GeistSans", sans-serif;
   --font-mono: "GeistMono", monospace;
@@ -50,6 +52,10 @@ h1{
 h2{
   font-size: large;
   font-weight: bold;
+}
+
+b {
+  color: var(--color-accent);
 }
 
 div.content {
