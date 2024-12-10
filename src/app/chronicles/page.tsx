@@ -22,19 +22,28 @@ export default function BlogPage() {
   });
 
   return (
-    <main>
-      <h1>Il Blog</h1>
-      <ul>
-        {posts.map((post) => (
-          <li key={post.slug}>
-            <a href={`/blog/${post.slug}`}>
-              <h2>{post.title}</h2>
-              <p>{post.description}</p>
-              <small>{post.date}</small>
-            </a>
-          </li>
-        ))}
+    <main className="container mx-auto px-4 py-8">
+      <h1 className="text-4xl font-bold text-center mb-6">Chronicles</h1>
+      <p className="text-lg text-center mb-10">
+        A collection of personal chronicles.
+      </p>
+      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        {posts.sort((a, b) => {
+          const dateA = new Date(a.date);
+          const dateB = new Date(b.date);
+          return dateB.getTime() - dateA.getTime();
+        })
+          .map((post) => (
+        <li key={post.slug} className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+          <a href={`/chronicles/${post.slug}`} className="block p-6">
+            <h2 className="text-xl font-semibold mb-2 text-gray-800">{post.title}</h2>
+            <small className="text-sm text-gray-500">{post.date}</small>
+            <p className="text-gray-700 mt-2">{post.description}</p>
+          </a>
+        </li>
+          ))}
       </ul>
     </main>
+
   );
 }
