@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Breadcrumb from '@components/breadcrumb';
 
 export const metadata: Metadata = {
   title: "About",
@@ -8,6 +9,7 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <main className="container mx-auto px-4 py-8">
+      <Breadcrumb/>
       <h1 className="text-4xl font-bold text-center mb-6">About me</h1>
       <p className="text-lg text-left mb-5">
         I am Leonardo, apprentice researcher in mathematics and cryptography.

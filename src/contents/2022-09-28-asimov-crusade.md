@@ -3,11 +3,11 @@ title: "Crusading in Asimov's name"
 date: "2022-09-28"
 description: "The impossible search for 'The Gods Themselves'."
 tags:
-  - Asimov
   - Books
+  - Asimov
 ---
 
-**Note:** This is just one of the many random quests I embark upon. Life would be boring without them. Some of these crusades are really old, so I’ll add them gradually as inspiration strikes.
+**Note:** This is just one of the many random quests I embark upon. Life would be boring without them. Some are really old, so I’ll add them gradually as inspiration strikes.
 
 
 ## The Graal
