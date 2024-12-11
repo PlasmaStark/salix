@@ -1,7 +1,8 @@
 import { getPostContent } from '@lib_post';
 
-export default function BlogPost({ params }: { params: { slug: string } }) {
-  const { metadata, content } = getPostContent(params.slug);
+export default async function BlogPost({ params }: { params: any }) {
+  const { slug } = await params;
+  const { metadata, content } = getPostContent(slug);
 
   return (
     <article className="max-w-3xl mx-auto px-4 py-8">
@@ -13,7 +14,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
 
       {/* Contenuto */}
       <div
-        className="prose prose-lg prose-gray"
+        className="prose prose-lg prose-invert"
         dangerouslySetInnerHTML={{ __html: content }}
       />
     </article>

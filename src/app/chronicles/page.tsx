@@ -1,49 +1,44 @@
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-import { CONTENT_DIR } from '@config';
+import Link from 'next/link';
+import { getPosts, Post } from '@lib/getPosts';
 
 export default function BlogPage() {
-  // Legge tutti i file Markdown
-  const files = fs.readdirSync(CONTENT_DIR);
-
-  // Metadata file Markdown
-  const posts = files.map((file) => {
-    const filePath = path.join(CONTENT_DIR, file);
-    const fileContents = fs.readFileSync(filePath, 'utf-8');
-    const { data } = matter(fileContents);
-
-    return {
-      slug: file.replace('.md', ''),
-      title: data.title,
-      description: data.description,
-      date: data.date,
-    };
-  });
+  const posts = getPosts();
 
   return (
     <main className="container mx-auto px-4 py-8">
       <h1 className="text-4xl font-bold text-center mb-6">Chronicles</h1>
       <p className="text-lg text-center mb-10">
-        A collection of personal chronicles.
+        A collection of personal tales.
       </p>
-      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {posts.sort((a, b) => {
-          const dateA = new Date(a.date);
-          const dateB = new Date(b.date);
-          return dateB.getTime() - dateA.getTime();
-        })
-          .map((post) => (
-        <li key={post.slug} className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
-          <a href={`/chronicles/${post.slug}`} className="block p-6">
-            <h2 className="text-xl font-semibold mb-2 text-[var(--color-accent2)]">{post.title}</h2>
-            <small className="text-sm text-gray-500">{post.date}</small>
-            <p className="text-gray-700 mt-2">{post.description}</p>
-          </a>
-        </li>
+      <ul className="grid grid-cols-1 gap-3">
+        {posts
+          .sort((a : Post, b : Post) => new Date(b.date).getTime() - new Date(a.date).getTime())
+          .map((post : Post) => (
+            <li className = "mb-4">
+              <div>
+                <div key={post.slug} className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                  <a href={`/chronicles/${post.slug}`} className="block p-6">
+                    <h2 className="text-xl font-semibold text-[var(--color-accent2)]">{post.title}</h2>
+                    <small className="text-sm text-gray-500 mb-5">{post.date}</small>
+                    <p className="text-gray-700">{post.description}</p>
+                  </a>
+                </div>
+                <ul className="flex flex-wrap gap-2 mt-2">
+                  {post.tags.map((tag: string) => (
+                    <li key={tag}>
+                      <Link
+                        href={`/chronicles/tags/${tag}`}
+                        className="text-sm text-gray-600 bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-300"
+                      >
+                        #{tag}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </li>
           ))}
       </ul>
     </main>
-
   );
 }

@@ -64,3 +64,17 @@ div.content {
   margin: 0 auto;
   padding: var(--spacing-unit);
 }
+
+.tag {
+  background-color: #e5e7eb;
+  color: #374151;
+  border-radius: 9999px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tag:hover {
+  background-color: #d1d5db;
+}
