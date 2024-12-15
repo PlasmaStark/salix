@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <main className="container mx-auto px-4 py-8">
-      <Breadcrumb/>
+      <Breadcrumb />
       <h1 className="text-4xl font-bold text-center mb-6">About me</h1>
       <p className="text-lg text-left mb-5">
         I am Leonardo, apprentice researcher in mathematics and cryptography.
@@ -32,14 +32,15 @@ export default function About() {
       </p>
       <h3 className="text-xl font-semibold">Bridging the Gaps</h3>
       <p className="text-lg text-left mb-6">
-      Memory reminds us that politics and science have often been at odds. Yet, 
-      I believe that the effort to build a strong and unified community of 
-      researchers is worthwhile and essential. Such a 
-      community could shape future discussions and advocate effectively to 
-      ensure their voices are truly heard. This is extremely hard, and its key 
-      lies in fostering genuine dialogue and collaboration.
+        Memory reminds us that politics and science have often been at odds. Yet,
+        I believe that the effort to build a strong and unified community of
+        researchers is worthwhile and essential. Such a
+        community could shape future discussions and advocate effectively to
+        ensure their voices are truly heard. This is extremely hard, and its key
+        lies in fostering genuine dialogue and collaboration.
       </p>
       <h2 className="text-3xl font-semibold mb-3">Some projects</h2>
+      <h2 className="text-3xl font-semibold mb-3">Contacts</h2>
     </main>
   );
 }

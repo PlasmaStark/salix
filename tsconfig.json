@@ -22,8 +22,10 @@
       "@/*": ["./src/*"],
       "@contents/*": ["./src/contents/*"],
       "@config": ["./src/config"],
-      "@lib_post": ["./src/lib/post"],
+      "@lib/post": ["./src/lib/post"],
+      "@lib/article": ["./src/lib/article"],
       "@lib/getPosts": ["./src/lib/getPosts"],
+      "@lib/getArticles": ["./src/lib/getArticles"],
       "@components/breadcrumb": ["./src/app/components/navigation/breadcrumb"]
     }
   },

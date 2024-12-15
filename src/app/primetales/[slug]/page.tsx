@@ -1,10 +1,10 @@
-import { getPostContent } from '@lib/post';
+import { getArticleContent } from '@lib/article';
 import Breadcrumb from '@components/breadcrumb';
 import Link from 'next/link';
 
-export default async function BlogPost({ params }: { params: any }) {
+export default async function Article({ params }: { params: any }) {
   const { slug } = await params;
-  const { metadata, content } = getPostContent(slug);
+  const { metadata, content } = getArticleContent(slug);
 
   return (
     <article className="max-w-3xl mx-auto px-4 py-8">
@@ -17,7 +17,7 @@ export default async function BlogPost({ params }: { params: any }) {
           {metadata.tags.map((tag: string) => (
             <li key={tag}>
               <Link
-                href={`/chronicles/tags/${tag}`}
+                href={`/primetales/tags/${tag}`}
                 className="text-sm text-gray-600 bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-300"
               >
                 #{tag}

@@ -1,9 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { BLOG_DIR } from '@config';
+import { ARTICLE_DIR } from '@config';
 
-export type Post = {
+export type Article = {
   slug: string;
   title: string;
   description: string;
@@ -11,11 +11,11 @@ export type Post = {
   tags: string[];
 };
 
-export function getPosts(): Post[] {
-  const files = fs.readdirSync(BLOG_DIR);
+export function getArticles(): Article[] {
+  const files = fs.readdirSync(ARTICLE_DIR);
 
   return files.map((file) => {
-    const filePath = path.join(BLOG_DIR, file);
+    const filePath = path.join(ARTICLE_DIR, file);
     const fileContents = fs.readFileSync(filePath, 'utf-8');
     const { data } = matter(fileContents);
 
