@@ -12,6 +12,7 @@ export default async function Article({ params }: { params: any }) {
       <header className="mb-6">
         <Breadcrumb />
         <h1 className="text-4xl font-bold text-white-800">{metadata.title}</h1>
+        <p className="text-base italic text-white-400">{metadata.description}</p>
         <p className="text-sm text-gray-500 mt-2">{metadata.date}</p>
         <ul className="flex flex-wrap gap-2 mt-1">
           {metadata.tags.map((tag: string) => (
