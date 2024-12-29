@@ -9,36 +9,51 @@ export default async function TagPage({ params }: { params: { tag: string } }) {
   return (
     <main className="container mx-auto px-4 py-8">
       <Breadcrumb />
-      <h1 className="text-4xl font-bold text-center mb-6">Prime tales</h1>
+      <h1 className="text-4xl font-bold text-center mb-6">Prime Tales</h1>
       <p className="text-lg text-center mb-10">
         This is a test page. It will host <b>Prime Tales</b>.
       </p>
-      <ul className="grid grid-cols-1 gap-3">
+      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {articles
           .sort((a: Article, b: Article) => new Date(b.date).getTime() - new Date(a.date).getTime())
           .map((article: Article) => (
-            <li className="mb-4" key={article.slug}>
-              <div>
-                <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                  <a href={`/primetales/${article.slug}`} className="block p-6">
-                    <h2 className="text-2xl font-semibold text-[var(--color-accent2)]">{article.title}</h2>
-                    <small className="text-sm text-gray-500 mb-4">{article.date}</small>
-                    <p className="text-gray-700">{article.description}</p>
-                  </a>
-                </div>
-                <ul className="flex flex-wrap gap-2 mt-1">
-                  {article.tags.map((tag: string) => (
-                    <li key={tag}>
-                      <Link
-                        href={`/primetales/tags/${tag}`}
-                        className="text-sm text-gray-600 bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-300"
-                      >
-                        #{tag}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+            <li key={article.slug}>
+              <div className="bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:rotate-1">
+                <a href={`/primetales/${article.slug}`} className="block p-6">
+                  {/* Card Image or Cover */}
+                  <div className="mb-4 rounded-lg overflow-hidden">
+                    <img
+                      src={
+                        article.coverImage.startsWith("/")
+                          ? article.coverImage
+                          : `/${article.coverImage}`
+                      }
+                      alt={article.title}
+                      className="w-full h-48 object-cover"
+                    />
+                  </div>
+
+                  {/* Titolo */}
+                  <h2 className="text-2xl font-semibold text-[var(--color-accent2)] mb-2">{article.title}</h2>
+
+                  {/* Data e Descrizione */}
+                  <div className="text-sm text-gray-500 mb-4">{article.date}</div>
+                  <p className="text-gray-700 text-base">{article.description}</p>
+                </a>
               </div>
+              {/* Tags */}
+              <ul className="flex flex-wrap gap-2 mt-3">
+                {article.tags.map((tag: string) => (
+                  <li key={tag}>
+                    <Link
+                      href={`/primetales/tags/${tag}`}
+                      className="text-sm text-gray-600 bg-gray-200 rounded-full px-4 py-2 hover:bg-gray-300 transition-colors duration-200"
+                    >
+                      #{tag}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </li>
           ))}
       </ul>

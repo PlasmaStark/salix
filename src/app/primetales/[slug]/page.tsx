@@ -28,6 +28,15 @@ export default async function Article({ params }: { params: any }) {
       </header>
 
       {/* Contenuto */}
+      <img
+        src={
+          metadata.coverImage.startsWith("/")
+            ? metadata.coverImage
+            : `/${metadata.coverImage}`
+        }
+        alt={metadata.title}
+        className="w-full h-48 object-cover mb-6"
+      />
       <div
         className="prose prose-lg prose-invert"
         dangerouslySetInnerHTML={{ __html: content }}

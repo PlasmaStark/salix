@@ -2,6 +2,7 @@
 title: "Exploring the World of Quantum Computing"
 date: "2023-07-15"
 description: "TEST TEST: An introduction to quantum computing and its potential."
+coverImage: "default-image.jpg"
 tags:
   - Technology
   - Quantum

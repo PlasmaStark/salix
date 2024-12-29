@@ -9,6 +9,7 @@ export type Article = {
   description: string;
   date: string;
   tags: string[];
+  coverImage: string;
 };
 
 export function getArticles(): Article[] {
@@ -25,6 +26,7 @@ export function getArticles(): Article[] {
       description: data.description,
       date: data.date,
       tags: data.tags || [],
+      coverImage: data.coverImage
     };
   });
 }

@@ -23,12 +23,16 @@ export default function PrimeTales({ params }: { params: { slug: string } }) {
           .sort((a: Article, b: Article) => new Date(b.date).getTime() - new Date(a.date).getTime())
           .map((article: Article) => (
             <li key={article.slug}>
-              <div className="bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105">
+              <div className="bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:rotate-1">
                 <a href={`/primetales/${article.slug}`} className="block p-6">
                   {/* Card Image or Cover */}
                   <div className="mb-4 rounded-lg overflow-hidden">
                     <img
-                      src={article.coverImage || "/default-image.jpg"}
+                      src={
+                        article.coverImage.startsWith("/")
+                          ? article.coverImage
+                          : `/${article.coverImage}`
+                      }
                       alt={article.title}
                       className="w-full h-48 object-cover"
                     />
@@ -41,20 +45,20 @@ export default function PrimeTales({ params }: { params: { slug: string } }) {
                   <div className="text-sm text-gray-500 mb-4">{article.date}</div>
                   <p className="text-gray-700 text-base">{article.description}</p>
                 </a>
-                {/* Tags */}
-                <ul className="flex flex-wrap gap-2 mt-3">
-                  {article.tags.map((tag: string) => (
-                    <li key={tag}>
-                      <Link
-                        href={`/primetales/tags/${tag}`}
-                        className="text-sm text-gray-600 bg-gray-200 rounded-full px-4 py-2 hover:bg-gray-300 transition-colors duration-200"
-                      >
-                        #{tag}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
               </div>
+              {/* Tags */}
+              <ul className="flex flex-wrap gap-2 mt-3">
+                {article.tags.map((tag: string) => (
+                  <li key={tag}>
+                    <Link
+                      href={`/primetales/tags/${tag}`}
+                      className="text-sm text-gray-600 bg-gray-200 rounded-full px-4 py-2 hover:bg-gray-300 transition-colors duration-200"
+                    >
+                      #{tag}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </li>
           ))}
       </ul>
