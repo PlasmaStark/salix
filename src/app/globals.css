@@ -1,15 +1,16 @@
-@import 'https://cdnjs.cloudflare.com/ajax/libs/katex/0.15.2/katex.min.css';
+@import "https://cdnjs.cloudflare.com/ajax/libs/katex/0.15.2/katex.min.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* GENERALI */
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --color-primary: #1F2B32;
-  --color-secondary: #00453E;
-  --color-accent: #EC9929;
+  --color-primary: #1f2b32;
+  --color-secondary: #00453e;
+  --color-accent: #ec9929;
   --color-accent2: #385157;
   --font-base: "Inter", sans-serif;
   --font-heading: "GeistSans", sans-serif;
@@ -45,13 +46,13 @@ h3 {
   font-family: var(--font-heading);
 }
 
-h1{
+h1 {
   font-size: larger;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-h2{
+h2 {
   font-size: large;
   font-weight: bold;
 }
@@ -67,6 +68,8 @@ div.content {
   padding: var(--spacing-unit);
 }
 
+/* SCHEDE CONTENUTI BLOG */
+
 .tag {
   background-color: #e5e7eb;
   color: #374151;
@@ -79,4 +82,43 @@ div.content {
 
 .tag:hover {
   background-color: #d1d5db;
+}
+
+/* BIBLIOGRAFIA NEGLI ARTICOLI */
+
+.bibliography {
+  list-style: none; 
+  padding: 0;
+  margin: 0;
+}
+
+.bibliography li {
+  display: flex; 
+  align-items: flex-start; 
+  padding-bottom: 8px; 
+  counter-increment: li; 
+  gap: 12px; 
+}
+
+.bibliography li::before {
+  content: counter(li); 
+  color: white;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0; 
+}
+
+.bibliography li p {
+  margin: 0; 
+}
+
+.citation {
+  display: inline;
+  font-size: 0.9em;
+  color: var(--color-accent);
 }

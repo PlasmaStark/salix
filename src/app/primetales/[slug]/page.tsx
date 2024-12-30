@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default async function Article({ params }: { params: any }) {
   const { slug } = await params;
-  const { metadata, content } = await getArticleContent(slug);  // Usa 'await' qui
+  const { metadata, content, bibliography } = await getArticleContent(slug);  // Usa 'await' qui
 
   if (!metadata) {
     return <p>Articolo non trovato</p>;
@@ -47,6 +47,10 @@ export default async function Article({ params }: { params: any }) {
         className="prose prose-lg prose-invert"
         dangerouslySetInnerHTML={{ __html: content }}
       />
+      <footer className="mt-12">
+        <h2 className="text-2xl font-semibold mb-4">Bibliography</h2>
+        <div dangerouslySetInnerHTML={{ __html: bibliography }} />
+      </footer>
     </article>
   );
 }
