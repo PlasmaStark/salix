@@ -4,12 +4,17 @@ import Link from 'next/link';
 
 export default async function Article({ params }: { params: any }) {
   const { slug } = await params;
-  const { metadata, content } = getArticleContent(slug);
+  const { metadata, content } = await getArticleContent(slug);  // Usa 'await' qui
+
+  if (!metadata) {
+    return <p>Articolo non trovato</p>;
+  }
 
   return (
     <article className="max-w-3xl mx-auto px-4 py-8">
       {/* Titolo */}
       <header className="mb-6">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" />
         <Breadcrumb />
         <h1 className="text-4xl font-bold text-white-800">{metadata.title}</h1>
         <p className="text-base italic text-white-400">{metadata.description}</p>
