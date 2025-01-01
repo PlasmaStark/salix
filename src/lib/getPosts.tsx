@@ -1,21 +1,21 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { BLOG_DIR } from '@config';
 
-export type Post = {
+export type ContentItem = {
   slug: string;
   title: string;
   description: string;
   date: string;
   tags: string[];
+  coverImage: string;
 };
 
-export function getPosts(): Post[] {
-  const files = fs.readdirSync(BLOG_DIR);
+export function getContentList(directory: string): ContentItem[] {
+  const files = fs.readdirSync(directory);
 
   return files.map((file) => {
-    const filePath = path.join(BLOG_DIR, file);
+    const filePath = path.join(directory, file);
     const fileContents = fs.readFileSync(filePath, 'utf-8');
     const { data } = matter(fileContents);
 
@@ -25,6 +25,8 @@ export function getPosts(): Post[] {
       description: data.description,
       date: data.date,
       tags: data.tags || [],
+      coverImage: data.coverImage || null,
     };
   });
 }
+

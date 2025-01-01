@@ -1,10 +1,13 @@
-import { getArticleContent } from '@lib/article';
+import { getContent } from '@lib/post';
 import Breadcrumb from '@components/breadcrumb';
 import Link from 'next/link';
+import { ARTICLE_DIR, BIBLIOGRAPHY_DIR } from '@/config';
 
 export default async function Article({ params }: { params: any }) {
   const { slug } = await params;
-  const { metadata, content, bibliography } = await getArticleContent(slug);  // Usa 'await' qui
+  const { metadata, content, bibliography } = await getContent(slug, ARTICLE_DIR, {
+    bibliographyPath: BIBLIOGRAPHY_DIR,
+  });
 
   if (!metadata) {
     return <p>Articolo non trovato</p>;

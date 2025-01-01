@@ -1,9 +1,10 @@
 import Link from 'next/link';
-import { getPosts, Post } from '@lib/getPosts';
 import Breadcrumb from '@components/breadcrumb';
+import { getContentList, ContentItem } from '@lib/getPosts';
+import { BLOG_DIR } from '@/config';
 
-export default function BlogPage({ params }: { params: { slug: string } }) {
-  const posts = getPosts();
+export default async function BlogPage() {
+  const posts: ContentItem[] = await getContentList(BLOG_DIR);
 
   return (
     <main className="container mx-auto px-4 py-8">
@@ -14,16 +15,16 @@ export default function BlogPage({ params }: { params: { slug: string } }) {
       </p>
       <ul className="grid grid-cols-1 gap-3">
         {posts
-          .sort((a: Post, b: Post) => new Date(b.date).getTime() - new Date(a.date).getTime())
-          .map((post: Post) => (
+          .sort((a: ContentItem, b: ContentItem) => new Date(b.date).getTime() - new Date(a.date).getTime())
+          .map((post: ContentItem) => (
             <li className="mb-4" key={post.slug}>
               <div>
                 <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                  <a href={`/chronicles/${post.slug}`} className="block p-6">
-                    <h2 className="text-2xl font-semibold text-[var(--color-accent2)]">{post.title}</h2>
-                    <small className="text-sm text-gray-500 mb-4">{post.date}</small>
-                    <p className="text-gray-700">{post.description}</p>
-                  </a>
+                  <Link href={`/chronicles/${post.slug}`} className="block p-6">
+                      <h2 className="text-2xl font-semibold text-[var(--color-accent2)]">{post.title}</h2>
+                      <small className="text-sm text-gray-500 mb-4">{post.date}</small>
+                      <p className="text-gray-700">{post.description}</p>
+                  </Link>
                 </div>
                 <ul className="flex flex-wrap gap-2 mt-1">
                   {post.tags.map((tag: string) => (

@@ -1,10 +1,11 @@
 import Link from 'next/link';
-import { getArticles, Article } from '@lib/getArticles';
+import { getContentList, ContentItem } from '@lib/getPosts';
 import Breadcrumb from '@components/breadcrumb';
+import { ARTICLE_DIR } from '@/config';
 
 export default async function TagPage({ params }: { params: { tag: string } }) {
   const { tag } = await params;
-  const articles = getArticles().filter((article) => article.tags.includes(tag));;
+  const articles = getContentList(ARTICLE_DIR).filter((article) => article.tags.includes(tag));;
 
   return (
     <main className="container mx-auto px-4 py-8">
@@ -15,10 +16,10 @@ export default async function TagPage({ params }: { params: { tag: string } }) {
       </p>
       <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {articles
-          .sort((a: Article, b: Article) => new Date(b.date).getTime() - new Date(a.date).getTime())
-          .map((article: Article) => (
+          .sort((a: ContentItem, b: ContentItem) => new Date(b.date).getTime() - new Date(a.date).getTime())
+          .map((article: ContentItem) => (
             <li key={article.slug}>
-              <div className="bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:rotate-1">
+              <div className="bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform">
                 <a href={`/primetales/${article.slug}`} className="block p-6">
                   {/* Card Image or Cover */}
                   <div className="mb-4 rounded-lg overflow-hidden">

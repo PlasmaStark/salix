@@ -1,10 +1,13 @@
-import { getPostContent } from '@lib/post';
+import { getContent } from '@lib/post';
 import Breadcrumb from '@components/breadcrumb';
 import Link from 'next/link';
+import { BIBLIOGRAPHY_DIR, BLOG_DIR } from '@/config';
 
 export default async function BlogPost({ params }: { params: any }) {
   const { slug } = await params;
-  const { metadata, content } = getPostContent(slug);
+  const { metadata, content, bibliography } = await getContent(slug, BLOG_DIR, {
+    bibliographyPath: BIBLIOGRAPHY_DIR,
+  });
 
   return (
     <article className="max-w-3xl mx-auto px-4 py-8">
