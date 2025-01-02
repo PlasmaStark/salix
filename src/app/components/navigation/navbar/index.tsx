@@ -31,9 +31,6 @@ export default function Navbar() {
           <a href="/chronicles" className="block text-white-600 hover:text-gray-400">
             Chronicles
           </a>
-          <a href="/cryptopedia" className="block text-white-600 hover:text-gray-400">
-            Cryptopedia
-          </a>
         </nav>
       </div>
 
@@ -51,9 +48,6 @@ export default function Navbar() {
           </a>
           <a href="/chronicles" className="block text-white-600 hover:text-gray-400">
             Chronicles
-          </a>
-          <a href="/cryptopedia" className="block text-white-600 hover:text-gray-400">
-            Cryptopedia
           </a>
         </nav>
       </Sidebar>

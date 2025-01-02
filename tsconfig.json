@@ -22,9 +22,9 @@
       "@/*": ["./src/*"],
       "@contents/*": ["./src/contents/*"],
       "@config": ["./src/config"],
-      "@lib/post": ["./src/lib/post"],
-      "@lib/getPosts": ["./src/lib/getPosts"],
-      "@components/breadcrumb": ["./src/app/components/navigation/breadcrumb"]
+      "@lib/*": ["./src/lib/*"],
+      "@components/breadcrumb": ["./src/app/components/navigation/breadcrumb"],
+      "@components/ArticleList": ["./src/app/components/navigation/breadcrumb"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

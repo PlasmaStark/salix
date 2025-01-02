@@ -1,4 +1,4 @@
-import fs from 'fs';
+import { promises as fs } from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { unified } from 'unified';
@@ -10,54 +10,57 @@ import rehypeKatex from 'rehype-katex';
 
 const Cite = require('citation-js');
 
-type ContentOptions = {
-  bibliographyPath?: string;
-};
+const contentCache = new Map();
+let bibliographyCache: any = null;
+
+async function loadBibliographyOnce(bibFilePath: string) {
+  if (!bibliographyCache) {
+    const bibContent = await fs.readFile(bibFilePath, 'utf-8');
+    bibliographyCache = new Cite(bibContent);
+  }
+  return bibliographyCache;
+}
+
+function createProcessor(hasMath = false) {
+  const processor = unified().use(remarkParse);
+  if (hasMath) {
+    processor.use(remarkMath).use(rehypeKatex);
+  }
+  return processor.use(remarkRehype).use(rehypeStringify);
+}
 
 export async function getContent(
   slug: string,
   directory: string,
-  options: ContentOptions = {}
+  bibliographyFile: string
 ) {
+  const cacheKey = `${slug}-${directory}-${bibliographyFile}`;
+  if (contentCache.has(cacheKey)) {
+    return contentCache.get(cacheKey);
+  }
+
   const filePath = path.join(directory, `${slug}.md`);
-  if (!fs.existsSync(filePath)) {
-    throw new Error(`File not found: ${filePath}`);
+  try {
+    const fileContent = await fs.readFile(filePath, 'utf-8');
+    const { data, content } = matter(fileContent);
+
+    const processor = createProcessor(data.hasMath ?? false);
+    const processedContent = await processor.process(content);
+
+    const bibliography = await loadBibliographyOnce(bibliographyFile);
+    const citationProcessing = processCitations(processedContent.toString(), bibliography);
+
+    const result = {
+      metadata: data,
+      content: citationProcessing.htmlContent,
+      bibliography: citationProcessing.bibliographyHtml,
+    };
+
+    contentCache.set(cacheKey, result);
+    return result;
+  } catch (err) {
+    throw new Error(`Error processing content for slug "${slug}": ${err}`);
   }
-
-  const fileContent = fs.readFileSync(filePath, 'utf-8');
-  const { data, content } = matter(fileContent);
-
-  // Gestione di LaTeX
-  const processor = unified()
-    .use(remarkParse)
-    .use(remarkMath)
-    .use(remarkRehype)
-    .use(rehypeKatex)
-    .use(rehypeStringify);
-
-  const processedContent = await processor.process(content);
-
-  // Gestione delle citazioni BibTeX
-  let bibliographyHtml = '';
-  let htmlContent = processedContent.toString();
-
-  if (options.bibliographyPath) {
-    const bibliography = loadBibliography(options.bibliographyPath);
-    const citationProcessing = processCitations(htmlContent, bibliography);
-    htmlContent = citationProcessing.htmlContent;
-    bibliographyHtml = citationProcessing.bibliographyHtml;
-  }
-
-  return {
-    metadata: data,
-    content: htmlContent,
-    bibliography: bibliographyHtml,
-  };
-}
-
-function loadBibliography(bibFilePath: string) {
-  const bibContent = fs.readFileSync(bibFilePath, 'utf-8');
-  return new Cite(bibContent);
 }
 
 function processCitations(content: string, bibliography: any) {
