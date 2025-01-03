@@ -19,7 +19,7 @@ export default async function BlogPost({ params }: { params: any }) {
             <li key={tag}>
               <Link
                 href={`/chronicles/tags/${tag}`}
-                className="text-sm text-gray-600 bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-300"
+                className="text-sm text-gray-600 bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-300 no-underline"
               >
                 #{tag}
               </Link>

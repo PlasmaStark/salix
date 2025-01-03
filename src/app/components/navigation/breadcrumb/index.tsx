@@ -10,9 +10,9 @@ export default function Breadcrumb({ }: BreadcrumbProps) {
     const nonClickableParts = ["tags"];
 
     return (
-        <nav className="text-sm text-gray-500 mb-4">
+        <nav className="text-sm text-gray mb-4">
             <>
-                <Link href="/" className="hover:underline">
+                <Link href="/" className="hover:underline text-gray no-underline">
                     home
                 </Link>
                 {parts.length > 0 && <span className="mx-2">/</span>}
@@ -25,7 +25,7 @@ export default function Breadcrumb({ }: BreadcrumbProps) {
                         <span key={href}>
                             {!isNonClickable ? (
                                 !isLast ? (
-                                    <Link href={href} className="hover:underline">
+                                    <Link href={href} className="hover:underline text-gray no-underline">
                                         {decodeURIComponent(part).toLowerCase()}
                                     </Link>
                                 ) : (

@@ -12,11 +12,11 @@ export default function About() {
       <Breadcrumb />
       <h1 className="text-4xl font-bold text-center mb-6">About me</h1>
       <p className="text-lg text-left mb-5">
-        I am Leonardo, apprentice researcher in mathematics and cryptography.
+        I am <b>Leonardo</b>, apprentice researcher in mathematics and cryptography.
         <br></br>
-        My interests include reading, learning and scientific communication.
+        My interests include reading, learning and scientific communication. <a href="#thoughts">some thoughts</a>.
       </p>
-      <h2 className="text-3xl font-semibold mb-3">Some thoughts</h2>
+      <h2 className="text-3xl font-semibold mb-3" id="thoughts">Some thoughts</h2>
       <h3 className="text-xl font-semibold">Shaping the Future one (tiny) Step at a Time</h3>
       <p className="text-lg text-left mb-6">
         What has brought Homo sapiens to where we stand today?

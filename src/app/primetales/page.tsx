@@ -25,7 +25,7 @@ export default async function PrimeTales({ params }: { params: { slug: string } 
           .map((article: ContentItem) => (
             <li key={article.slug}>
               <div className="bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform">
-                <a href={`/primetales/${article.slug}`} className="block p-6">
+                <a href={`/primetales/${article.slug}`} className="block p-6 no-underline">
                   {/* Card Image or Cover */}
                   <div className="mb-4 rounded-lg overflow-hidden">
                     <img
@@ -53,7 +53,7 @@ export default async function PrimeTales({ params }: { params: { slug: string } 
                   <li key={tag}>
                     <Link
                       href={`/primetales/tags/${tag}`}
-                      className="text-sm text-gray-600 bg-gray-200 rounded-full px-4 py-2 hover:bg-gray-300 transition-colors duration-200"
+                      className="text-sm text-gray-600 bg-gray-200 rounded-full px-4 py-2 hover:bg-gray-300 transition-colors duration-200  no-underline"
                     >
                       #{tag}
                     </Link>

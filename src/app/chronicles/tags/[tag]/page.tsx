@@ -21,7 +21,7 @@ export default async function TagPage({ params }: { params: { tag: string } }) {
             <li className="mb-4" key={post.slug}>
               <div>
                 <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                  <Link href={`/chronicles/${post.slug}`} className="block p-6">
+                  <Link href={`/chronicles/${post.slug}`} className="block p-6 no-underline">
                     <h2 className="text-2xl font-semibold text-[var(--color-accent2)]">{post.title}</h2>
                     <small className="text-sm text-gray-500 mb-4">{post.date}</small>
                     <p className="text-gray-700">{post.description}</p>
@@ -32,7 +32,7 @@ export default async function TagPage({ params }: { params: { tag: string } }) {
                     <li key={tag}>
                       <Link
                         href={`/chronicles/tags/${tag}`}
-                        className="text-sm text-gray-600 bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-300"
+                        className="text-sm text-gray-600 bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-300  no-underline"
                       >
                         #{tag}
                       </Link>
