@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { NavbarContainer, MenuButton, Sidebar } from "./style";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHome, faBook, faUser, faAddressBook } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -11,7 +13,7 @@ export default function Navbar() {
       <div className="flex items-center text-decoration-line: none; justify-between px-4 py-3 md:px-8">
         {/* Logo */}
         <a href="/" className="text-white hover:text-gray-400 no-underline">
-          <div className="text-xl font-bold">my site</div>
+          <div className="text-xl font-bold">Leonardo Errati</div>
         </a>
 
         {/* Menu button for mobile */}

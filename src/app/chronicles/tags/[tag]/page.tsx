@@ -12,7 +12,7 @@ export default async function TagPage({ params }: { params: { tag: string } }) {
       <Breadcrumb />
       <h1 className="text-4xl font-bold text-center mb-6">Chronicles</h1>
       <p className="text-lg text-center mb-10">
-        A collection of personal tales.
+        <b>Chronicles</b> is a curated collection of personal tales: some amusing, others cautionary.
       </p>
       <ul className="grid grid-cols-1 gap-3">
         {posts

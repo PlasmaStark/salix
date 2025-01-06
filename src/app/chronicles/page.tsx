@@ -11,7 +11,7 @@ export default async function BlogPage() {
       <Breadcrumb />
       <h1 className="text-4xl font-bold text-center mb-6">Chronicles</h1>
       <p className="text-lg text-center mb-10">
-        A collection of personal tales.
+        <b>Chronicles</b> is a curated collection of personal tales: some amusing, others cautionary.
       </p>
       <ul className="grid grid-cols-1 gap-3">
         {posts
@@ -21,9 +21,9 @@ export default async function BlogPage() {
               <div>
                 <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
                   <Link href={`/chronicles/${post.slug}`} className="block p-6 no-underline">
-                      <h2 className="text-2xl font-semibold text-[var(--color-accent2)]">{post.title}</h2>
-                      <small className="text-sm text-gray-500 mb-4">{post.date}</small>
-                      <p className="text-gray-700">{post.description}</p>
+                    <h2 className="text-2xl font-semibold text-[var(--color-accent2)]">{post.title}</h2>
+                    <small className="text-sm text-gray-500 mb-4">{post.date}</small>
+                    <p className="text-gray-700">{post.description}</p>
                   </Link>
                 </div>
                 <ul className="flex flex-wrap gap-2 mt-1">
