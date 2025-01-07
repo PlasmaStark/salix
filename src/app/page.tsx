@@ -1,7 +1,7 @@
 "use client"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleInfo, faPersonDigging } from "@fortawesome/free-solid-svg-icons";
+import { faPersonDigging } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -16,20 +16,24 @@ export default function Home() {
   return (
     <main className="container mx-auto px-4 py-8">
       {/* Work in Progress Banner */}
-      <section className="bg-accent text-white py-4 text-center rounded-lg mb-6">
-        <div className="flex items-center justify-center space-x-3">
-          <FontAwesomeIcon icon={faPersonDigging} className="text-xl sm:text-2xl" />
+      <section className="bg-accent text-white text-center rounded-lg mb-6 h-10 sm:h-20">
+        <div className="flex items-center justify-center space-x-3 h-full">
+          <FontAwesomeIcon
+            icon={faPersonDigging}
+            className="text-xl sm:text-2xl h-6 w-6 sm:h-8 sm:w-8"
+          />
           <p className="text-md sm:text-lg font-semibold">
-            Site currently under construction.
+            Site currently under construction, most content is missing.
           </p>
         </div>
       </section>
 
+
       {/* Hero Section */}
       <section className="relative bg-background-100 rounded-lg shadow-md overflow-hidden mb-4">
-        <div className="relative h-64 sm:h-96">
+        <div className="relative h-42 sm:h-96">
           <Image
-            src="/background.jpg"
+            src="/background.png"
             alt="Hero background"
             fill
             style={{
@@ -51,29 +55,10 @@ export default function Home() {
             </p>
           </div>
         </div>
+        <div className="absolute bottom-4 right-4 bg-accent rounded-lg p-2">
+          <a className="text-lg italic sm:text-sm text-white drop-shadow-lg  font-semibold no-underline" href="/primetales/2023-primespiral">What is this image?</a>
+        </div>
       </section>
-      <div className="bg-black text-white rounded-lg p-4 mb-10">
-        <h4 className="text-xl font-bold mb-4">What is this image?</h4>
-        <p>
-          This is <b>Ulam's prime spiral</b>, a representation of prime numbers.
-          Squinting my eyes, I noticed it looks like a galaxy and rendered it accordingly with Python.
-          The frequency of some star classes is compared to the frequency of some prime number classes:
-          <ul className="md:text-base">
-            <li>
-              <i>Twin primes</i> are <span className="text-yellow-400">yellow</span> (class-G stars, like the Sun),
-            </li>
-            <li>
-              <i>Primordial primes</i> are <span className="text-blue-400">blue</span> (class-B stars, blue giants),
-            </li>
-            <li>
-              <i>Sophie-Germaine primes</i> are <span className="text-cyan-400">azure</span> (class-F stars),
-            </li>
-            <li>
-              <i>Mersenne primes</i> are <span className="text-red-400">red</span> (class-M stars, red dwarves).
-            </li>
-          </ul>
-        </p>
-      </div>
 
       {/* Categories Section */}
       <section id="categories" className="mb-16">

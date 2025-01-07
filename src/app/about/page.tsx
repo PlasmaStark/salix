@@ -20,8 +20,9 @@ export default function About() {
           <br />
           My interests include reading, learning, and scientific communication.
         </p>
+
+        {/* Profile picture */}
         <div className="flex justify-center mt-6">
-          {/* Placeholder for a profile picture */}
           <img
             src="/profile-image.jpg"
             alt="Leonardo's profile"
@@ -39,18 +40,16 @@ export default function About() {
 
         {/* Thought 1 */}
         <div className="mb-10">
-          <h3 className="text-2xl font-semibold text-gray-800 mb-2">
+          <h3 className="text-2xl font-semibold mb-2">
             Shaping the Future
           </h3>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            What brought Homo sapiens to where we stand today?
+          <p className="text-lg leading-relaxed">
+            What brought us Homo sapiens to where we stand today?
             <br />
-            A lion might have defeated one of us, but it would soon face fifty angry,
-            rock-throwing, collaborating monkeys.
-            <br />
-            I firmly believe that scientific communication is key to our society: educating thousands
-            is where the power to shape the future truly lies. While this doesn't guarantee action,
-            it's one of the best tools at our disposal.
+            A lion might have defeated one of us, but it would soon have to face fifty angry,
+            rock-throwing, cooperating monkeys. I believe that working together is where the 
+            power to shape (and fix) the future truly lies. 
+            It's one of the best tools at our disposal.
           </p>
         </div>
 

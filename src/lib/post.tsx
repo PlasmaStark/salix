@@ -6,6 +6,7 @@ import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
 import remarkMath from 'remark-math';
+import remarkGfm from 'remark-gfm';
 import rehypeKatex from 'rehype-katex';
 
 const Cite = require('citation-js');
@@ -22,11 +23,14 @@ async function loadBibliographyOnce(bibFilePath: string) {
 }
 
 function createProcessor(hasMath = false) {
-  const processor = unified().use(remarkParse);
-  if (hasMath) {
-    processor.use(remarkMath).use(rehypeKatex);
-  }
-  return processor.use(remarkRehype).use(rehypeStringify);
+  const processor = unified()
+  .use(remarkParse)
+  .use(remarkMath)
+  .use(remarkGfm) 
+  .use(remarkRehype)
+  .use(rehypeKatex)
+  .use(rehypeStringify);
+  return processor;
 }
 
 export async function getContent(
@@ -75,14 +79,13 @@ function processCitations(content: string, bibliography: any) {
       citationCounter++;
     }
     const citationNumber = citationMap.get(citationKey);
-    const reference = bibliography.data.find((entry: any) => entry.id === citationKey);
-    const title = reference?.title || 'Unknown title';
+    /*const reference = bibliography.data.find((entry: any) => entry.id === citationKey);
+    const title = reference?.title || 'Unknown title';*/
 
-    return `<span class="citation">"${title}" [${citationNumber}]</span>`;
+    return `<span class="citation">[${citationNumber}]</span>`;
   });
 
   const bibliographyHtml = generateBibliographyHtml(citationOrder, bibliography);
-
   return { htmlContent, bibliographyHtml };
 }
 
