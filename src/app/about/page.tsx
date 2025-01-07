@@ -18,7 +18,8 @@ export default function About() {
         <p className="text-lg">
           I am <b>Leonardo</b>, apprentice researcher in mathematics and cryptography.
           <br />
-          My interests include reading, learning, and scientific communication.
+          My interests include reading, learning, and <a href="#communication">scientific communication</a>.
+          I believe in the creation of a <a href="#community">community</a> of mathematicians.
         </p>
 
         {/* Profile picture */}
@@ -40,29 +41,33 @@ export default function About() {
 
         {/* Thought 1 */}
         <div className="mb-10">
-          <h3 className="text-2xl font-semibold mb-2">
-            Shaping the Future
+          <h3 className="text-2xl font-semibold mb-2" id="community">
+            Community - shaping the future together
           </h3>
           <p className="text-lg leading-relaxed">
             What brought us Homo sapiens to where we stand today?
             <br />
             A lion might have defeated one of us, but it would soon have to face fifty angry,
-            rock-throwing, cooperating monkeys. I believe that working together is where the 
-            power to shape (and fix) the future truly lies. 
-            It's one of the best tools at our disposal.
+            rock-throwing, cooperating monkeys. Collaboration has always been our greatest
+            strength, and it's the key to shaping - and fixing - the future.
+            As people of science, this means coming together, providing our perspective
+            and put to use our abilities for society.
           </p>
         </div>
 
         {/* Thought 2 */}
         <div className="mb-10">
-          <h3 className="text-2xl font-semibold text-gray-800 mb-2">One (tiny) step at a time</h3>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            Memory reminds us that politics and science have often been at odds. Yet,
-            I believe that the effort to build a strong and unified community of
-            researchers is worthwhile and essential. Such a
-            community could shape future discussions and advocate effectively to
-            ensure their voices are truly heard. This is extremely hard, and its key
-            lies in fostering genuine dialogue and collaboration.
+          <h3 className="text-2xl font-semibold mb-2" id="communication">
+            Communication - one (tiny) step at a time
+          </h3>
+          <p className="text-lg leading-relaxed">
+            In the same spirit as above, our ability to communicate has always been
+            a key strength. Teaching others how to craft obsidian tools without losing
+            fingers surely gave us an edge (pun intended!).
+            <br />
+            believe in the power of scientific communication: step by step,
+            it shares knowledge, enables informed decisions, and shapes our technical future.
+            That is real power.
           </p>
         </div>
       </section>
@@ -73,25 +78,26 @@ export default function About() {
       {/* Projects Section */}
       <section>
         <h2 className="text-4xl font-bold text-accent mb-6">Some projects</h2>
-        <p className="text-lg text-gray-700 mb-6">
+        <p className="text-lg leading-relaxed mb-6">
           A selection of my past and ongoing projects.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="p-6 bg-white shadow-md rounded-md hover:shadow-lg transition">
-            <h3 className="text-xl font-semibold text-gray-800">Project 1</h3>
+            <h3 className="text-xl font-semibold text-gray-800">Project</h3>
             <p className="text-gray-600">description</p>
           </div>
           <div className="p-6 bg-white shadow-md rounded-md hover:shadow-lg transition">
-            <h3 className="text-xl font-semibold text-gray-800">Project 2</h3>
+            <h3 className="text-xl font-semibold text-gray-800">Project</h3>
             <p className="text-gray-600">description</p>
           </div>
         </div>
       </section>
 
       {/* Divider */}
+
+      {/* 
       <hr className="border-gray-300 my-8" />
 
-      {/* Contacts Section */}
       <section>
         <h2 className="text-4xl font-bold text-accent mb-6">Contacts</h2>
         <p className="text-lg text-gray-700 mb-4">
@@ -99,13 +105,14 @@ export default function About() {
         </p>
         <div className="flex justify-center">
           <a
-            href="mailto:youremail@example.com"
+            href="mailto:"
             className="px-6 py-3 bg-blue-600 text-white rounded-md shadow-md hover:bg-blue-700 transition"
           >
             Get in Touch
           </a>
         </div>
       </section>
+      Contacts Section */}
     </main>
   );
 }

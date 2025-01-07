@@ -16,8 +16,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Salix alpha - home",
-  description: "Home page",
+  title: "Leonardo's home",
+  description: "Leonardo's home page",
 };
 
 export default function RootLayout({

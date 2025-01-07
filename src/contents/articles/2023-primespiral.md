@@ -76,7 +76,7 @@ Let us have a look at the lucky winners:
 - **Safe primes** are those primes $p$ of form $p=2q+1$, where $q$ is another prime. They are of strong cryptographic interest.
 - **Sophie-Germain primes** are the converse, those primes $p$ such that $q=2p+1$, is another prime. Of course, they share the relevance of safe primes.
 
-Finally, drawing all comparisons, we get the following.
+All comparisons drawn, we get the following result.
 
 | Star class   | Chromaticity    | Percentage | Prime number class     | Percentage  |
 |--------------|-----------------|------------|------------------------|-------------|
@@ -86,4 +86,11 @@ Finally, drawing all comparisons, we get the following.
 | F            | yellowish white | 3.00%      | Palindromic primes     | 1.67%       |
 | G            | yellow          | 7.60%      | Safe primes            | 7.76%       |
 | K            | light orange    | 12.00%     | Sophie-Germaine primes | 13.44%      |
-| M            | yellowish white | 76.00%      | all other primes       | 76.219975%  |
+| M            | yellowish white | 76.00%      | all other primes      | 76.219975%  |
+
+## Plotting the galaxy
+
+We now have everything we need: our seven prime number classes, their respective colors, and the interval $[0,40000]$. All that remains is to plot them. This just takes a few lines in Python, resulting in the picture above.
+
+Keen observers might notice some packs of purple mist in the background. I added as nebulae [**Carmichael's numbers**](https://en.wikipedia.org/wiki/Carmichael_number) - which are *not* prime! The surprising fact about them is that they manage to fool all possible instances of Fermat's primality test while not being prime. Being somewhat rare and fooling a famous primality test, it only seemed fitting to grant them a spot.
+
