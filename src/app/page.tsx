@@ -41,19 +41,19 @@ export default function Home() {
           />
         </div>
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
-          <h1 className="text-3xl sm:text-5xl font-bold drop-shadow-lg">
+          <h1 className="text-3xl sm:text-xl font-bold drop-shadow-lg">
             Welcome, digital traveller
           </h1>
           <div className="bg-black bg-opacity-50 rounded-lg px-4 py-3 mt-6">
-            <p className="text-base sm:text-lg font-semibold text-white drop-shadow-lg">
+            <p className="text-base font-semibold text-white drop-shadow-lg">
               You are visitor number #{visitorNumber}.
             </p>
-            <p className="text-sm sm:text-sm italic text-white drop-shadow-lg">
+            <p className="text-sm italic text-white drop-shadow-lg">
               disclaimer: visitor counts may be wildly inaccurate
             </p>
           </div>
         </div>
-        <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 bg-accent rounded-lg p-2">
+        <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 bg-accent rounded-lg p-2 mt-2">
           <Link className="text-sm sm:text-lg italic text-white drop-shadow-lg font-semibold no-underline" href="/primetales/2023-primespiral">
             What is this image?
           </Link>
