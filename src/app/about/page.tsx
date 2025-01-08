@@ -26,7 +26,7 @@ export default function About() {
         {/* Profile picture */}
         <div className="flex justify-center mt-6">
           <Image
-            src="{basePath}/profile-image.jpg"
+            src="salix/profile-image.jpg"
             alt="Leonardo's profile"
             width="256"
             height="256"
