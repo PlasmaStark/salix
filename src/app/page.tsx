@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPersonDigging, faUser, faBook, faPenNib } from "@fortawesome/free-solid-svg-icons";
@@ -17,18 +17,18 @@ export default function Home() {
   return (
     <main className="container mx-auto px-4 py-8">
       {/* Work in Progress Banner */}
-      <section className="bg-accent text-white text-center rounded-lg mb-6 h-8 sm:h-14">
+      <section className="bg-accent text-white text-center rounded-lg mb-6 h-10 sm:h-16">
         <div className="flex items-center justify-center space-x-3 h-full px-4">
           <FontAwesomeIcon
             icon={faPersonDigging}
-            className="text-lg sm:text-xl h-6 w-6"
+            style={{ height: "1.5rem", width: "1.5rem" }}
+            className="text-lg sm:text-xl"
           />
           <p className="text-sm font-medium">
             Site currently under construction, most content is missing.
           </p>
         </div>
       </section>
-
 
       {/* Hero Section */}
       <section className="relative bg-background-100 rounded-lg shadow-md overflow-hidden mb-4">
@@ -59,7 +59,6 @@ export default function Home() {
           </div>
         </div>
 
-
         {/* CTA Button */}
         <div className="absolute bottom-4 right-4">
           <Link
@@ -80,7 +79,8 @@ export default function Home() {
               <div className="flex justify-center mb-4">
                 <FontAwesomeIcon
                   icon={faUser}
-                  className="text-accent text-4xl h-13 w-13  transition-transform group-hover:rotate-12"
+                  style={{ height: "2.5rem", width: "2.5rem" }} 
+                  className="text-accent transition-transform group-hover:rotate-12"
                 />
               </div>
               <h3 className="text-xl text-accent font-bold mb-2">About Me</h3>
@@ -96,7 +96,8 @@ export default function Home() {
               <div className="flex justify-center mb-4">
                 <FontAwesomeIcon
                   icon={faBook}
-                  className="text-accent text-4xl h-13 w-13 transition-transform group-hover:rotate-12"
+                  style={{ height: "2.5rem", width: "2.5rem" }}
+                  className="text-accent transition-transform group-hover:rotate-12"
                 />
               </div>
               <h3 className="text-xl text-accent font-bold mb-2">Prime Tales</h3>
@@ -112,7 +113,8 @@ export default function Home() {
               <div className="flex justify-center mb-4">
                 <FontAwesomeIcon
                   icon={faPenNib}
-                  className="text-accent text-4xl h-13 w-13 transition-transform group-hover:rotate-12"
+                  style={{ height: "2.5rem", width: "2.5rem" }} 
+                  className="text-accent transition-transform group-hover:rotate-12"
                 />
               </div>
               <h3 className="text-xl text-accent font-bold mb-2">Chronicles</h3>
@@ -130,6 +132,6 @@ export default function Home() {
           © {new Date().getFullYear()} Leonardo Errati.
         </p>
       </footer>
-    </main >
+    </main>
   );
 }
