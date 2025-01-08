@@ -3,6 +3,14 @@ import Breadcrumb from '@components/breadcrumb';
 import Link from 'next/link';
 import { ARTICLE_DIR, BIBLIOGRAPHY_DIR } from '@/config';
 import Image from 'next/image'
+import { getContentList } from '@/lib/getPosts';
+
+export async function generateStaticParams() {
+  const posts = getContentList(ARTICLE_DIR); 
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
+}
 
 export default async function Article({ params }: { params: any }) {
   const { slug } = await params;

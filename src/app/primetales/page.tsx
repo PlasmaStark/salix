@@ -4,6 +4,14 @@ import Breadcrumb from '@components/breadcrumb';
 import type { Metadata } from "next";
 import { ARTICLE_DIR } from '@/config'
 import Image from 'next/image';
+import { getAllTags } from '@/lib/getPosts';
+
+export async function generateStaticParams() {
+  const tags = await getAllTags(ARTICLE_DIR); 
+  return tags.map((tag: string) => ({
+    tag,
+  }));
+}
 
 export const metadata: Metadata = {
   title: "Prime Tales",

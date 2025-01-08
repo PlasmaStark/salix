@@ -2,6 +2,14 @@ import Link from 'next/link';
 import Breadcrumb from '@components/breadcrumb';
 import { getContentList, ContentItem } from '@lib/getPosts';
 import { BLOG_DIR } from '@/config';
+import { getAllTags } from '@/lib/getPosts';
+
+export async function generateStaticParams() {
+  const tags = await getAllTags(BLOG_DIR); 
+  return tags.map((tag: string) => ({
+    tag,
+  }));
+}
 
 export default async function BlogPage() {
   const posts: ContentItem[] = await getContentList(BLOG_DIR);

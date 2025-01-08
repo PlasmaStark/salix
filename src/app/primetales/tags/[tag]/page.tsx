@@ -3,6 +3,14 @@ import { getContentList, ContentItem } from '@lib/getPosts';
 import Breadcrumb from '@components/breadcrumb';
 import { ARTICLE_DIR } from '@/config';
 import Image from 'next/image'
+import { getAllTags } from '@/lib/getPosts';
+
+export async function generateStaticParams() {
+  const tags = await getAllTags(ARTICLE_DIR); 
+  return tags.map((tag: string) => ({
+    tag,
+  }));
+}
 
 export default async function TagPage({ params }: { params: Promise<{ tag: string }> }) {
   const { tag } = await params;

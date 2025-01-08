@@ -2,6 +2,14 @@ import { getContent } from '@lib/post';
 import Breadcrumb from '@components/breadcrumb';
 import Link from 'next/link';
 import { BIBLIOGRAPHY_DIR, BLOG_DIR } from '@/config';
+import { getContentList } from '@/lib/getPosts';
+
+export async function generateStaticParams() {
+  const posts = getContentList(BLOG_DIR); 
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
+}
 
 export default async function BlogPost({ params }: { params: any }) {
   const { slug } = await params;

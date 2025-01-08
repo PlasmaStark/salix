@@ -30,3 +30,8 @@ export function getContentList(directory: string): ContentItem[] {
   });
 }
 
+export function getAllTags(directory: string): string[] {
+  const contentList = getContentList(directory);
+  const tags = contentList.flatMap((content) => content.tags);
+  return Array.from(new Set(tags));
+}
