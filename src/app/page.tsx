@@ -37,8 +37,8 @@ export default function Home() {
           <Image
             src="/background.png"
             alt="Hero background"
-            width={1920}
-            height={1080}
+            fill
+            sizes="(max-width: 840px) 100vw, (max-width: 1224px) 100vw, 100vw"
             className="object-cover object-center"
             priority
           />
