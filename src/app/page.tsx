@@ -1,7 +1,7 @@
 "use client"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPersonDigging } from "@fortawesome/free-solid-svg-icons";
+import { faPersonDigging, faUser, faBook, faPenNib } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -31,45 +31,58 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative bg-background-100 rounded-lg shadow-md overflow-hidden mb-4">
-        <div className="relative h-42 sm:h-96 w-full">
+        {/* Background Image */}
+        <div className="relative h-[40vh] sm:h-[60vh] lg:h-[75vh] w-full">
           <Image
             src="/salix/background.png"
             alt="Hero background"
-            width={1920}
-            height={1080}
-            className="object-cover w-full h-full"
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
+            className="object-cover object-center"
+            priority
           />
         </div>
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
-          <h1 className="text-3xl sm:text-xl font-bold drop-shadow-lg">
-            Welcome, digital traveller
-          </h1>
-          <div className="bg-black bg-opacity-50 rounded-lg px-4 py-3 mt-6">
-            <p className="text-base font-semibold text-white drop-shadow-lg">
-              You are visitor number #{visitorNumber}.
+
+        {/* Content Overlay */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6">
+          <div className="bg-black bg-opacity-50 rounded-lg px-6 py-4 mt-6 max-w-md">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight drop-shadow-lg leading-snug">
+              Welcome, digital traveller
+            </h1>
+            <p className="text-lg sm:text-xl font-semibold drop-shadow-lg">
+              You are visitor #{visitorNumber}.
             </p>
-            <p className="text-sm italic text-white drop-shadow-lg">
-              disclaimer: visitor counts may be wildly inaccurate
+            <p className="text-sm italic drop-shadow-lg">
+              disclaimer: counter may be randomised
             </p>
           </div>
         </div>
-        <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 bg-accent rounded-lg p-2 mt-2">
-          <Link className="text-sm sm:text-lg italic text-white drop-shadow-lg font-semibold no-underline" href="/primetales/2023-primespiral">
+
+        {/* CTA Button */}
+        <div className="absolute bottom-4 right-4">
+          <Link
+            href="/primetales/2023-primespiral"
+            className="text-sm sm:text-base bg-accent text-white font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-accent-dark transition-all duration-300 no-underline"
+          >
             What is this image?
           </Link>
         </div>
       </section>
-
-
 
       {/* Categories Section */}
       <section id="categories" className="mb-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* About Me Card */}
           <Link href="/about" className="no-underline">
-            <div className="bg-gray-800 rounded-lg shadow-md p-6 text-center border-2 border-transparent transition-all hover:border-accent">
-              <h3 className="text-xl text-accent font-bold mb-4">About Me</h3>
-              <p className="text-white mb-6">
+            <div className="bg-gray-800 rounded-lg shadow-md p-6 sm:p-4 text-center border-2 border-transparent transition-all hover:border-accent hover:scale-105 group">
+              <div className="flex justify-center mb-4">
+                <FontAwesomeIcon
+                  icon={faUser}
+                  className="text-accent text-4xl transition-transform group-hover:rotate-12"
+                />
+              </div>
+              <h3 className="text-xl text-accent font-bold mb-2">About Me</h3>
+              <p className="text-white text-sm sm:text-base">
                 Do I know what I do and why? Find it out.
               </p>
             </div>
@@ -77,9 +90,15 @@ export default function Home() {
 
           {/* Prime Tales Card */}
           <Link href="/primetales" className="no-underline">
-            <div className="bg-gray-800 rounded-lg shadow-md p-6 text-center border-2 border-transparent transition-all hover:border-accent">
-              <h3 className="text-xl text-accent font-bold mb-4">Prime Tales</h3>
-              <p className="text-white mb-6">
+            <div className="bg-gray-800 rounded-lg shadow-md p-6 sm:p-4 text-center border-2 border-transparent transition-all hover:border-accent hover:scale-105 group">
+              <div className="flex justify-center mb-4">
+                <FontAwesomeIcon
+                  icon={faBook}
+                  className="text-accent text-4xl transition-transform group-hover:rotate-12"
+                />
+              </div>
+              <h3 className="text-xl text-accent font-bold mb-2">Prime Tales</h3>
+              <p className="text-white text-sm sm:text-base">
                 Scientific tales and algebraic anecdotes.
               </p>
             </div>
@@ -87,9 +106,15 @@ export default function Home() {
 
           {/* Chronicles Card */}
           <Link href="/chronicles" className="no-underline">
-            <div className="bg-gray-800 rounded-lg shadow-md p-6 text-center border-2 border-transparent transition-all hover:border-accent">
-              <h3 className="text-xl text-accent font-bold mb-4">Chronicles</h3>
-              <p className="text-white mb-6">
+            <div className="bg-gray-800 rounded-lg shadow-md p-6 sm:p-4 text-center border-2 border-transparent transition-all hover:border-accent hover:scale-105 group">
+              <div className="flex justify-center mb-4">
+                <FontAwesomeIcon
+                  icon={faPenNib}
+                  className="text-accent text-4xl transition-transform group-hover:rotate-12"
+                />
+              </div>
+              <h3 className="text-xl text-accent font-bold mb-2">Chronicles</h3>
+              <p className="text-white text-sm sm:text-base">
                 A curated collection of personal stories.
               </p>
             </div>
