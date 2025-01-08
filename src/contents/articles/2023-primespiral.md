@@ -28,7 +28,7 @@ The following can be found [on Wikipedia](https://en.wikipedia.org/wiki/Stellar_
 | K          | light orange    | 12.00%     |
 | M          | yellowish white | 76.00%     |
 
-A cool fact is that these classes can be memorised with the mnemonic _"Our Bright Astronomers Frequently Generate Killer Mnemonics!"_ and to each corresponds a different color. That is not how we see them filtered from the atmosphere, but rather how they look from space. In the words of Mitchell Charity [@WEB:Charity01],
+A cool fact is that they can be memorised with the mnemonic _"*O*ur *B*right *A*stronomers *F*requently *G*enerate *K*iller *M*nemonics!"_ and to each class corresponds a different color ("chromaticity"). That is not how we see them from earth, filtered by the atmosphere, but rather how they look from space. In the words of Mitchell Charity [@WEB:Charity01],
 
 > The colors here are for the big balls of hot gas in space, rather than the pin-pricks of light in the local sky.
 
@@ -72,15 +72,15 @@ Let us have a look at the lucky winners.
 
 **Circular primes** are stubborn numbers that keep being prime even if one rotates their digits. An example is $37\rightarrow73$, but also $113\rightarrow131\rightarrow311$.
 
-**Even primes** are those primes that are also odd. Unsurprisingly, the only one is $2$.
+**Even primes** are those primes that are also odd. Unsurprisingly, $2$ is the only one.
 
 **Mersenne primes** are those of form $2^n-1$ for some integer $n$, they are very well-known for the [(original) Mersenne conjecture](https://en.wikipedia.org/wiki/Mersenne_conjectures#Original_Mersenne_conjecture).
 
-**Palindromic primes** are primes where their palindrome is also prime. They are not well-known, even though Belphegor's Prime $$1000000000000066600000000000001$$ has some fame. A fun fact: palyndromic primes whose center is $666$ are called **beastly palindromic primes** .
+**Palindromic primes** are primes where their palindrome is also prime. They are not well-known, even though Belphegor's Prime $$1000000000000066600000000000001$$ has some fame. A fun fact: palyndromic primes whose center is $666$ are called **beastly palindromic primes**. Perhaps a fitting name.
 
 **Safe primes** are those primes $p$ of form $p=2q+1$, where $q$ is another prime. They are of strong cryptographic interest.
 
-**Sophie-Germain primes** are the converse, those primes $p$ such that $q=2p+1$, is another prime. Of course, they share the relevance of safe primes.
+**Sophie-Germain primes** are the converse of safe primes, they are primes $p$ such that $q=2p+1$ is another prime. Of course, they share the relevance of safe primes.
 
 All comparisons drawn, we get the following result.
 

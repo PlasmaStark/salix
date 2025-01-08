@@ -33,14 +33,13 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative bg-background-100 rounded-lg shadow-md overflow-hidden mb-4">
         {/* Background Image */}
-        <div className="relative h-[40vh] sm:h-[60vh] lg:h-[75vh] w-full">
+        <div className="relative h-42 sm:h-96 w-full">
           <Image
-            src="/background.png"
+            src="/salix/background.png"
             alt="Hero background"
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
-            className="object-cover object-center"
-            priority
+            width={1920}
+            height={1080}
+            className="object-cover w-full h-full"
           />
         </div>
 
