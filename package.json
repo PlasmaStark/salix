@@ -1,6 +1,6 @@
 {
   "name": "salix",
-  "version": "25.1.alpha",
+  "version": "25.1.alpha-1",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
