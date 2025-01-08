@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { getContentList } from '@/lib/getPosts';
 
 export async function generateStaticParams() {
-  const posts = getContentList(ARTICLE_DIR); 
+  const posts = getContentList(ARTICLE_DIR);
   return posts.map((post) => ({
     slug: post.slug,
   }));
