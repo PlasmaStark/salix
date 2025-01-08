@@ -80,7 +80,7 @@ export default function Home() {
               <div className="flex justify-center mb-4">
                 <FontAwesomeIcon
                   icon={faUser}
-                  className="text-accent text-4xl transition-transform group-hover:rotate-12"
+                  className="text-accent text-4xl  h-20 w-20  transition-transform group-hover:rotate-12"
                 />
               </div>
               <h3 className="text-xl text-accent font-bold mb-2">About Me</h3>
@@ -96,7 +96,7 @@ export default function Home() {
               <div className="flex justify-center mb-4">
                 <FontAwesomeIcon
                   icon={faBook}
-                  className="text-accent text-4xl transition-transform group-hover:rotate-12"
+                  className="text-accent text-4xl  h-20 w-20 transition-transform group-hover:rotate-12"
                 />
               </div>
               <h3 className="text-xl text-accent font-bold mb-2">Prime Tales</h3>
@@ -112,7 +112,7 @@ export default function Home() {
               <div className="flex justify-center mb-4">
                 <FontAwesomeIcon
                   icon={faPenNib}
-                  className="text-accent text-4xl transition-transform group-hover:rotate-12"
+                  className="text-accent text-4xl h-20 w-20 transition-transform group-hover:rotate-12"
                 />
               </div>
               <h3 className="text-xl text-accent font-bold mb-2">Chronicles</h3>
