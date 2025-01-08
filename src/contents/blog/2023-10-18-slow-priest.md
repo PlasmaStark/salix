@@ -4,7 +4,6 @@ date: "2023-10-18"
 description: "A job interview for public administration."
 tags:
   - Bureaucracy
-  - Interviews
 ---
 
 One of my most cathartic experiences was a job interview for a partially state-owned company, which shall only be named _Slow SpA_.

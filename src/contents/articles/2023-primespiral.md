@@ -68,14 +68,19 @@ For the algebra nerds among us, this table represents all candidate classes and 
 | Strong primes              | 48.94%        | ✅          |
 | Twin primes                | 28.10%        | ✅          |
 
-Let us have a look at the lucky winners:
+Let us have a look at the lucky winners.
 
-- **Circular primes** are stubborn numbers that keep being prime even if one rotates their digits. An example is $37\rightarrow73$, but also $113\rightarrow131\rightarrow311$.
-- **Even primes** are those primes that are also odd. Unsurprisingly, the only one is $2$.
-- **Mersenne primes** are those of form $2^n-1$ for some integer $n$, they are very well-known for the [(original) Mersenne conjecture](https://en.wikipedia.org/wiki/Mersenne_conjectures#Original_Mersenne_conjecture).
-- **Palindromic primes** are primes where their palindrome is also prime. They are not well-known, even though Belphegor's Prime $$1000000000000066600000000000001$$ has some fame. A fun fact: palyndromic primes whose center is $666$ are called **beastly palindromic primes** .
-- **Safe primes** are those primes $p$ of form $p=2q+1$, where $q$ is another prime. They are of strong cryptographic interest.
-- **Sophie-Germain primes** are the converse, those primes $p$ such that $q=2p+1$, is another prime. Of course, they share the relevance of safe primes.
+**Circular primes** are stubborn numbers that keep being prime even if one rotates their digits. An example is $37\rightarrow73$, but also $113\rightarrow131\rightarrow311$.
+
+**Even primes** are those primes that are also odd. Unsurprisingly, the only one is $2$.
+
+**Mersenne primes** are those of form $2^n-1$ for some integer $n$, they are very well-known for the [(original) Mersenne conjecture](https://en.wikipedia.org/wiki/Mersenne_conjectures#Original_Mersenne_conjecture).
+
+**Palindromic primes** are primes where their palindrome is also prime. They are not well-known, even though Belphegor's Prime $$1000000000000066600000000000001$$ has some fame. A fun fact: palyndromic primes whose center is $666$ are called **beastly palindromic primes** .
+
+**Safe primes** are those primes $p$ of form $p=2q+1$, where $q$ is another prime. They are of strong cryptographic interest.
+
+**Sophie-Germain primes** are the converse, those primes $p$ such that $q=2p+1$, is another prime. Of course, they share the relevance of safe primes.
 
 All comparisons drawn, we get the following result.
 
