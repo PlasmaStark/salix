@@ -40,7 +40,7 @@ export default async function TagPage({ params }: { params: Promise<{ tag: strin
                     <li key={tag}>
                       <Link
                         href={`/chronicles/tags/${tag}`}
-                        className="text-sm text-gray-600 bg-gray-200 rounded-full px-1 py-1 hover:bg-gray-300 no-underline"
+                        className="text-xs text-gray-600 bg-gray-200 rounded-full px-4 py-2 hover:bg-gray-300 no-underline"
                       >
                         #{tag}
                       </Link>
