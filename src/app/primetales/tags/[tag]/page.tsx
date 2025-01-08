@@ -32,11 +32,11 @@ export default async function TagPage({ params }: { params: Promise<{ tag: strin
                 <Link href={`/primetales/${article.slug}`} className="block p-6 no-underline">
                   {/* Card Image or Cover */}
                   <div className="mb-4 rounded-lg overflow-hidden h-48">
-                    <Image
+                  <Image
                       src={
                         article.coverImage.startsWith("/")
-                          ? `/salix${article.coverImage}`
-                          : `/salix/${article.coverImage}`
+                          ? `${article.coverImage}`
+                          : `/${article.coverImage}`
                       }
                       height="800"
                       width="800"

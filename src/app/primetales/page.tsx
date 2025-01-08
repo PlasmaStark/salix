@@ -40,8 +40,8 @@ export default async function PrimeTales() {
                     <Image
                       src={
                         article.coverImage.startsWith("/")
-                          ? `/salix${article.coverImage}`
-                          : `/salix/${article.coverImage}`
+                          ? `${article.coverImage}`
+                          : `/${article.coverImage}`
                       }
                       height="800"
                       width="800"

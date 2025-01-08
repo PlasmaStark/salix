@@ -34,7 +34,7 @@ export default function Home() {
         {/* Background Image */}
         <div className="relative h-[40vh] sm:h-[60vh] lg:h-[75vh] w-full">
           <Image
-            src="/salix/background.png"
+            src="/background.png"
             alt="Hero background"
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
