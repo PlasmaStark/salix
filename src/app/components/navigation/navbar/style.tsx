@@ -70,7 +70,7 @@ export const Sidebar = ({
         <>
             {/* Overlay scuro */}
             <div
-                className="fixed inset-0 bg-[var(--foreground)] bg-opacity-40 z-40"
+                className="fixed inset-0 bg-[var(--background)] bg-opacity-40 z-40"
                 onClick={onClose}
             ></div>
 

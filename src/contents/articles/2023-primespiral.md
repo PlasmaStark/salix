@@ -1,7 +1,7 @@
 ---
 title: "A galaxy of prime numbers"
 date: "2023-04-15"
-description: "A personal twist on the prime number spiral"
+description: "A personal twist on the prime number spiral."
 coverImage: "background.png"
 tags:
   - Primes
@@ -79,15 +79,15 @@ Let us have a look at the lucky winners:
 
 All comparisons drawn, we get the following result.
 
-| Star class | Frequency | Prime number class     | Frequency  |
-| ---------- | --------- | ---------------------- | ---------- |
-| O          | 0.00003%  | Even primes            | 0.000025%  |
-| B          | 0.12%     | Mersenne primes        | 0.12%      |
-| A          | 0.61%     | Circular primes        | 0.79%      |
-| F          | 3.00%     | Palindromic primes     | 1.67%      |
-| G          | 7.60%     | Safe primes            | 7.76%      |
-| K          | 12.00%    | Sophie-Germaine primes | 13.44%     |
-| M          | 76.00%    | all other primes       | 76.219975% |
+| Star class | Frequency | Prime number class     | Frequency |
+| ---------- | --------- | ---------------------- | --------- |
+| O          | 0.00003%  | Even primes            | 0.000025% |
+| B          | 0.12%     | Mersenne primes        | 0.12%     |
+| A          | 0.61%     | Circular primes        | 0.79%     |
+| F          | 3.00%     | Palindromic primes     | 1.67%     |
+| G          | 7.60%     | Safe primes            | 7.76%     |
+| K          | 12.00%    | Sophie-Germaine primes | 13.44%    |
+| M          | 76.00%    | all other primes       | 76.21...% |
 
 ## Plotting the galaxy
 

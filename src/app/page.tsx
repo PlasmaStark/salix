@@ -44,9 +44,9 @@ export default function Home() {
         </div>
 
         {/* Content Overlay */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6">
-          <div className="bg-black bg-opacity-50 rounded-lg px-6 py-4 mt-6 max-w-md">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight drop-shadow-lg leading-snug">
+        <div className="absolute inset-0 flex flex-col items-center justify-start text-center text-white px-6 mt-10 sm:px-4 pt-8 sm:pt-6">
+          <div className="bg-black bg-opacity-50 rounded-lg px-6 py-4 max-w-md">
+            <h1 className="text-4xl sm:text-4xl lg:text-6xl font-extrabold tracking-tight drop-shadow-lg leading-snug">
               Welcome, digital traveller
             </h1>
             <p className="text-lg sm:text-xl font-semibold drop-shadow-lg">
@@ -57,6 +57,7 @@ export default function Home() {
             </p>
           </div>
         </div>
+
 
         {/* CTA Button */}
         <div className="absolute bottom-4 right-4">
