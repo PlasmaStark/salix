@@ -1,5 +1,9 @@
-//robots.txt
-
-# Allow all crawlers
+# *
 User-agent: *
 Allow: /
+
+# Host
+Host: www.leonardoerrati.com
+
+# Sitemaps
+Sitemap: www.leonardoerrati.com/sitemap.xml

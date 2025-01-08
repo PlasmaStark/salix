@@ -17,17 +17,18 @@ export default function Home() {
   return (
     <main className="container mx-auto px-4 py-8">
       {/* Work in Progress Banner */}
-      <section className="bg-accent text-white text-center rounded-lg mb-6 h-10 sm:h-20">
+      <section className="bg-accent text-white text-center rounded-lg mb-6 h-8 sm:h-14">
         <div className="flex items-center justify-center space-x-3 h-full px-4">
           <FontAwesomeIcon
             icon={faPersonDigging}
-            className="text-xl sm:text-2xl h-6 w-6 sm:h-8 sm:w-8"
+            className="text-lg sm:text-xl h-5 w-5 sm:h-6 sm:w-6"
           />
-          <p className="text-sm sm:text-lg font-semibold">
+          <p className="text-xs sm:text-sm font-medium">
             Site currently under construction, most content is missing.
           </p>
         </div>
       </section>
+
 
       {/* Hero Section */}
       <section className="relative bg-background-100 rounded-lg shadow-md overflow-hidden mb-4">
