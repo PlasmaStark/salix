@@ -33,7 +33,7 @@ export default async function TagPage({ params }: { params: Promise<{ tag: strin
                   <small className="text-sm text-gray-500 mb-4 block">{post.date}</small>
                   <p className="text-gray-700 text-sm sm:text-base">{post.description}</p>
                 </Link>
-                <ul className="flex flex-wrap gap-2 mt-4 px-4 pb-4">
+                <ul className="flex flex-wrap gap-2 mt-1 px-4 pb-4">
                   {post.tags.map((tag: string) => (
                     <li key={tag}>
                       <Link

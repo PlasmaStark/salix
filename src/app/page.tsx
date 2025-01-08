@@ -31,17 +31,13 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative bg-background-100 rounded-lg shadow-md overflow-hidden mb-4">
-        <div className="relative h-42 sm:h-96">
+        <div className="relative h-42 sm:h-96 w-full">
           <Image
             src="/salix/background.png"
             alt="Hero background"
-            width="1920"
-            height="1080"
-            layout="fill"
-            objectFit="cover"
-            style={{
-              opacity: 0.7,
-            }}
+            width={1920}
+            height={1080}
+            className="object-cover w-full h-full"
           />
         </div>
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
@@ -65,13 +61,14 @@ export default function Home() {
       </section>
 
 
+
       {/* Categories Section */}
       <section id="categories" className="mb-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* About Me Card */}
           <Link href="/about" className="no-underline">
             <div className="bg-gray-800 rounded-lg shadow-md p-6 text-center border-2 border-transparent transition-all hover:border-accent">
-              <h3 className="text-xl font-bold mb-4">About Me</h3>
+              <h3 className="text-xl text-accent font-bold mb-4">About Me</h3>
               <p className="text-white mb-6">
                 Do I know what I do and why? Find it out.
               </p>
@@ -81,7 +78,7 @@ export default function Home() {
           {/* Prime Tales Card */}
           <Link href="/primetales" className="no-underline">
             <div className="bg-gray-800 rounded-lg shadow-md p-6 text-center border-2 border-transparent transition-all hover:border-accent">
-              <h3 className="text-xl font-bold mb-4">Prime Tales</h3>
+              <h3 className="text-xl text-accent font-bold mb-4">Prime Tales</h3>
               <p className="text-white mb-6">
                 Scientific tales and algebraic anecdotes.
               </p>
@@ -91,7 +88,7 @@ export default function Home() {
           {/* Chronicles Card */}
           <Link href="/chronicles" className="no-underline">
             <div className="bg-gray-800 rounded-lg shadow-md p-6 text-center border-2 border-transparent transition-all hover:border-accent">
-              <h3 className="text-xl font-bold mb-4">Chronicles</h3>
+              <h3 className="text-xl text-accent font-bold mb-4">Chronicles</h3>
               <p className="text-white mb-6">
                 A curated collection of personal stories.
               </p>
