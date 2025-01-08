@@ -18,7 +18,11 @@ export default {
         '5': '5px',
         '6': '6px',
         '8': '8px',
+      },
+      opacity: {
+        '60': '0.60',
       }
+
     },
   },
   plugins: [require('@tailwindcss/typography')],

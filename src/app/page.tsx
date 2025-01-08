@@ -45,9 +45,9 @@ export default function Home() {
 
         {/* Content Overlay */}
         <div className="absolute inset-0 flex flex-col items-center justify-start top-0 text-center text-white px-6 sm:px-4 pt-8 sm:pt-6">
-          <div className="bg-black bg-opacity-50 rounded-lg px-4 py-4 max-w-md">
+          <div className="bg-black bg-opacity-60 rounded-lg px-4 py-4 max-w-md">
             <h1 className="text-4xl sm:text-3xl lg:text-6xl font-extrabold tracking-tight drop-shadow-lg leading-snug py-1">
-              Welcome, digital traveller
+              Welcome, traveller
             </h1>
             <p className="text-lg sm:text-xl font-semibold drop-shadow-lg">
               You are visitor #{visitorNumber}.
