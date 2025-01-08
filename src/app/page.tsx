@@ -21,9 +21,9 @@ export default function Home() {
         <div className="flex items-center justify-center space-x-3 h-full px-4">
           <FontAwesomeIcon
             icon={faPersonDigging}
-            className="text-lg sm:text-xl h-5 w-5 sm:h-6 sm:w-6"
+            className="text-lg sm:text-xl h-6 w-6"
           />
-          <p className="text-xs sm:text-sm font-medium">
+          <p className="text-sm font-medium">
             Site currently under construction, most content is missing.
           </p>
         </div>
@@ -80,7 +80,7 @@ export default function Home() {
               <div className="flex justify-center mb-4">
                 <FontAwesomeIcon
                   icon={faUser}
-                  className="text-accent text-4xl  h-20 w-20  transition-transform group-hover:rotate-12"
+                  className="text-accent text-4xl h-13 w-13  transition-transform group-hover:rotate-12"
                 />
               </div>
               <h3 className="text-xl text-accent font-bold mb-2">About Me</h3>
@@ -96,7 +96,7 @@ export default function Home() {
               <div className="flex justify-center mb-4">
                 <FontAwesomeIcon
                   icon={faBook}
-                  className="text-accent text-4xl  h-20 w-20 transition-transform group-hover:rotate-12"
+                  className="text-accent text-4xl h-13 w-13 transition-transform group-hover:rotate-12"
                 />
               </div>
               <h3 className="text-xl text-accent font-bold mb-2">Prime Tales</h3>
@@ -112,7 +112,7 @@ export default function Home() {
               <div className="flex justify-center mb-4">
                 <FontAwesomeIcon
                   icon={faPenNib}
-                  className="text-accent text-4xl h-20 w-20 transition-transform group-hover:rotate-12"
+                  className="text-accent text-4xl h-13 w-13 transition-transform group-hover:rotate-12"
                 />
               </div>
               <h3 className="text-xl text-accent font-bold mb-2">Chronicles</h3>

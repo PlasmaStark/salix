@@ -15,7 +15,7 @@ export default function About() {
 
       {/* Hero Section */}
       <section className="text-center mb-12">
-        <h1 className="text-5xl font-extrabold mb-4 text">About Me</h1>
+        <h1 className="mb-4 text">About Me</h1>
         <p className="text-lg">
           I am <b>Leonardo</b>, apprentice researcher in mathematics and cryptography.
           <br />
