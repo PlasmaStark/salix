@@ -5,9 +5,13 @@ const nextConfig: NextConfig = {
   config options here 
   deployment info: https://www.freecodecamp.org/news/how-to-deploy-next-js-app-to-github-pages/
   */
-  output: "export",  
+  output: "export",
   reactStrictMode: true,
   basePath: "/salix",
+  assetPrefix: '/salix',
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;
