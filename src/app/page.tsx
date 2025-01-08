@@ -36,7 +36,8 @@ export default function Home() {
           <Image
             src="/salix/background.png"
             alt="Hero background"
-            fill
+            width="1920"
+            height="1080"
             style={{
               objectFit: "cover",
               opacity: 0.7,

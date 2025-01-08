@@ -7,6 +7,10 @@ import Link from "next/link";
 export default function Navbar() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
 
+  const handleLinkClick = () => {
+    setSidebarOpen(false);
+  };
+
   return (
     <NavbarContainer>
       <div className="flex items-center text-decoration-line: none; justify-between px-4 py-3 md:px-8">
@@ -38,16 +42,32 @@ export default function Navbar() {
       {/* Sidebar for mobile */}
       <Sidebar isOpen={isSidebarOpen} onClose={() => setSidebarOpen(false)}>
         <nav className="space-y-2">
-          <Link href="/" className="text-white hover:text-gray-400 no-underline">
+          <Link
+            href="/"
+            className="block text-white hover:text-gray-400 no-underline"
+            onClick={handleLinkClick}
+          >
             Home
           </Link>
-          <Link href="/about" className="block text-white hover:text-gray-400 no-underline">
+          <Link
+            href="/about"
+            className="block text-white hover:text-gray-400 no-underline"
+            onClick={handleLinkClick}
+          >
             About
           </Link>
-          <Link href="/contacts" className="block text-white hover:text-gray-400 no-underline">
-            Contacts
+          <Link
+            href="/primetales"
+            className="block text-white hover:text-gray-400 no-underline"
+            onClick={handleLinkClick}
+          >
+            Prime Tales
           </Link>
-          <Link href="/chronicles" className="block text-white hover:text-gray-400 no-underline">
+          <Link
+            href="/chronicles"
+            className="block text-white hover:text-gray-400 no-underline"
+            onClick={handleLinkClick}
+          >
             Chronicles
           </Link>
         </nav>

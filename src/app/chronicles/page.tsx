@@ -27,7 +27,7 @@ export default async function BlogPage() {
           .map((post: ContentItem) => (
             <li className="mb-4" key={post.slug}>
               <div>
-                <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <div className="bg-white rounded-lg">
                   <Link href={`/chronicles/${post.slug}`} className="block p-6 no-underline">
                     <h2 className="text-2xl font-semibold text-[var(--color-accent2)]">{post.title}</h2>
                     <small className="text-sm text-gray-500 mb-4">{post.date}</small>
