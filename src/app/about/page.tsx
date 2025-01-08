@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Breadcrumb from "@components/breadcrumb";
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: "About",
@@ -24,10 +25,12 @@ export default function About() {
 
         {/* Profile picture */}
         <div className="flex justify-center mt-6">
-          <img
+          <Image
             src="/profile-image.jpg"
             alt="Leonardo's profile"
-            className="rounded-full w-64 h-64 shadow-md border-4 border-accent"
+            width="256"
+            height="256"
+            className="rounded-full border-4 border-accent object-cover"
           />
         </div>
       </section>
@@ -49,7 +52,7 @@ export default function About() {
             <br />
             A lion might have defeated one of us, but it would soon have to face fifty angry,
             rock-throwing, cooperating monkeys. Collaboration has always been our greatest
-            strength, and it's the key to shaping - and fixing - the future.
+            strength, and it is the key to shaping - and fixing - the future.
             As people of science, this means coming together, providing our perspective
             and put to use our abilities for society.
           </p>

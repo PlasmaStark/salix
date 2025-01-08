@@ -2,6 +2,7 @@ import { getContent } from '@lib/post';
 import Breadcrumb from '@components/breadcrumb';
 import Link from 'next/link';
 import { ARTICLE_DIR, BIBLIOGRAPHY_DIR } from '@/config';
+import Image from 'next/image'
 
 export default async function Article({ params }: { params: any }) {
   const { slug } = await params;
@@ -35,15 +36,19 @@ export default async function Article({ params }: { params: any }) {
       </header>
 
       {/* Contenuto */}
-      <img
-        src={
-          metadata.coverImage.startsWith("/")
-            ? metadata.coverImage
-            : `/${metadata.coverImage}`
-        }
-        alt={metadata.title}
-        className="w-full h-48 object-cover mb-6"
-      />
+      <div className="mb-4 rounded-lg overflow-hidden h-48">
+        <Image
+          src={
+            metadata.coverImage.startsWith("/")
+              ? metadata.coverImage
+              : `/${metadata.coverImage}`
+          }
+          height="1000"
+          width="4000"
+          alt={metadata.title}
+          className="w-full h-48 object-cover mb-6"
+        />
+      </div>
       <div
         className="prose prose-lg prose-invert"
         dangerouslySetInnerHTML={{ __html: content }}

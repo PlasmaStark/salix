@@ -3,7 +3,7 @@ import Breadcrumb from '@components/breadcrumb';
 import { getContentList, ContentItem } from '@lib/getPosts';
 import { BLOG_DIR } from '@/config';
 
-export default async function TagPage({ params }: { params: { tag: string } }) {
+export default async function TagPage({ params }: { params: Promise<{ tag: string }> }) {
   const { tag } = await params;
   const posts = getContentList(BLOG_DIR).filter((post) => post.tags.includes(tag));;
 

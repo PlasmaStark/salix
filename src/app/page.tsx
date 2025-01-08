@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPersonDigging } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const [visitorNumber, setVisitorNumber] = useState(0);
@@ -56,7 +57,7 @@ export default function Home() {
           </div>
         </div>
         <div className="absolute bottom-4 right-4 bg-accent rounded-lg p-2">
-          <a className="text-lg italic sm:text-sm text-white drop-shadow-lg  font-semibold no-underline" href="/primetales/2023-primespiral">What is this image?</a>
+          <Link className="text-lg italic sm:text-sm text-white drop-shadow-lg  font-semibold no-underline" href="/primetales/2023-primespiral">What is this image?</Link>
         </div>
       </section>
 
@@ -64,34 +65,34 @@ export default function Home() {
       <section id="categories" className="mb-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* About Me Card */}
-          <a href="/about" className="no-underline">
+          <Link href="/about" className="no-underline">
             <div className="bg-gray-800 rounded-lg shadow-md p-6 text-center border-2 border-transparent transition-all hover:border-accent">
               <h3 className="text-xl font-bold mb-4">About Me</h3>
               <p className="text-white mb-6">
                 Do I know what I do and why? Find it out.
               </p>
             </div>
-          </a>
+          </Link>
 
           {/* Prime Tales Card */}
-          <a href="/primetales" className="no-underline">
+          <Link href="/primetales" className="no-underline">
             <div className="bg-gray-800 rounded-lg shadow-md p-6 text-center border-2 border-transparent transition-all hover:border-accent">
               <h3 className="text-xl font-bold mb-4">Prime Tales</h3>
               <p className="text-white mb-6">
                 Scientific tales and algebraic anecdotes.
               </p>
             </div>
-          </a>
+          </Link>
 
           {/* Chronicles Card */}
-          <a href="/chronicles" className="no-underline">
+          <Link href="/chronicles" className="no-underline">
             <div className="bg-gray-800 rounded-lg shadow-md p-6 text-center border-2 border-transparent transition-all hover:border-accent">
               <h3 className="text-xl font-bold mb-4">Chronicles</h3>
               <p className="text-white mb-6">
                 A curated collection of personal stories.
               </p>
             </div>
-          </a>
+          </Link>
         </div>
       </section>
 

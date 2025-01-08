@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 import { NavbarContainer, MenuButton, Sidebar } from "./style";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faBook, faUser, faAddressBook } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -12,9 +11,9 @@ export default function Navbar() {
     <NavbarContainer>
       <div className="flex items-center text-decoration-line: none; justify-between px-4 py-3 md:px-8">
         {/* Logo */}
-        <a href="/" className="text-white hover:text-gray-400 no-underline">
+        <Link href="/" className="text-white hover:text-gray-400 no-underline">
           <div className="text-xl font-bold">Leonardo Errati</div>
-        </a>
+        </Link>
 
         {/* Menu button for mobile */}
         <MenuButton
@@ -24,33 +23,33 @@ export default function Navbar() {
 
         {/* Menu items for desktop */}
         <nav className="hidden md:flex space-x-4">
-          <a href="/about" className="block text-white hover:text-gray-400 no-underline">
+          <Link href="/about" className="block text-white hover:text-gray-400 no-underline">
             About
-          </a>
-          <a href="/primetales" className="block text-white hover:text-gray-400 no-underline">
+          </Link>
+          <Link href="/primetales" className="block text-white hover:text-gray-400 no-underline">
             Prime Tales
-          </a>
-          <a href="/chronicles" className="block text-white hover:text-gray-400 no-underline">
+          </Link>
+          <Link href="/chronicles" className="block text-white hover:text-gray-400 no-underline">
             Chronicles
-          </a>
+          </Link>
         </nav>
       </div>
 
       {/* Sidebar for mobile */}
       <Sidebar isOpen={isSidebarOpen} onClose={() => setSidebarOpen(false)}>
         <nav className="space-y-2">
-          <a href="/" className="text-white hover:text-gray-400 no-underline">
+          <Link href="/" className="text-white hover:text-gray-400 no-underline">
             Home
-          </a>
-          <a href="/about" className="block text-white hover:text-gray-400 no-underline">
+          </Link>
+          <Link href="/about" className="block text-white hover:text-gray-400 no-underline">
             About
-          </a>
-          <a href="/contacts" className="block text-white hover:text-gray-400 no-underline">
+          </Link>
+          <Link href="/contacts" className="block text-white hover:text-gray-400 no-underline">
             Contacts
-          </a>
-          <a href="/chronicles" className="block text-white hover:text-gray-400 no-underline">
+          </Link>
+          <Link href="/chronicles" className="block text-white hover:text-gray-400 no-underline">
             Chronicles
-          </a>
+          </Link>
         </nav>
       </Sidebar>
     </NavbarContainer>

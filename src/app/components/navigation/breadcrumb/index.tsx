@@ -2,7 +2,7 @@
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
-type BreadcrumbProps = {};
+type BreadcrumbProps = Record<string, unknown>
 
 export default function Breadcrumb({ }: BreadcrumbProps) {
     const pathname = usePathname();

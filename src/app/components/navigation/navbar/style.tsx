@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 
-// Contenitore principale della Navbar
 export const NavbarContainer = ({ children }: { children: React.ReactNode }) => (
     <header className="fixed top-0 left-0 w-full bg-[var(--color-primary)] text-white shadow-lg z-50">
         {children}

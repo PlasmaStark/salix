@@ -22,7 +22,7 @@ async function loadBibliographyOnce(bibFilePath: string) {
   return bibliographyCache;
 }
 
-function createProcessor(hasMath = false) {
+function createProcessor() {
   const processor = unified()
   .use(remarkParse)
   .use(remarkMath)
@@ -48,7 +48,7 @@ export async function getContent(
     const fileContent = await fs.readFile(filePath, 'utf-8');
     const { data, content } = matter(fileContent);
 
-    const processor = createProcessor(data.hasMath ?? false);
+    const processor = createProcessor();
     const processedContent = await processor.process(content);
 
     const bibliography = await loadBibliographyOnce(bibliographyFile);

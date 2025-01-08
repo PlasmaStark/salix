@@ -2,16 +2,15 @@ import Link from 'next/link';
 import { getContentList, ContentItem } from '@lib/getPosts';
 import Breadcrumb from '@components/breadcrumb';
 import type { Metadata } from "next";
-import { ARTICLE_DIR } from '@/config';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPersonDigging } from '@fortawesome/free-solid-svg-icons';
+import { ARTICLE_DIR } from '@/config'
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: "Prime Tales",
   description: "Mathematical shenanigans",
 };
 
-export default async function PrimeTales({ params }: { params: { slug: string } }) {
+export default async function PrimeTales() {
   const articles: ContentItem[] = await getContentList(ARTICLE_DIR);
 
   return (
@@ -26,18 +25,20 @@ export default async function PrimeTales({ params }: { params: { slug: string } 
           .sort((a: ContentItem, b: ContentItem) => new Date(b.date).getTime() - new Date(a.date).getTime())
           .map((article: ContentItem) => (
             <li key={article.slug}>
-              <div className="bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform">
-                <a href={`/primetales/${article.slug}`} className="block p-6 no-underline">
+              <div className="bg-white rounded-lg">
+                <Link href={`/primetales/${article.slug}`} className="block p-6 no-underline">
                   {/* Card Image or Cover */}
-                  <div className="mb-4 rounded-lg overflow-hidden">
-                    <img
+                  <div className="mb-4 rounded-lg overflow-hidden h-48">
+                    <Image
                       src={
                         article.coverImage.startsWith("/")
                           ? article.coverImage
                           : `/${article.coverImage}`
                       }
+                      height="800"
+                      width="800"
                       alt={article.title}
-                      className="w-full h-48 object-cover"
+                      className="w-full h-full object-cover"
                     />
                   </div>
 
@@ -47,7 +48,7 @@ export default async function PrimeTales({ params }: { params: { slug: string } 
                   {/* Data e Descrizione */}
                   <div className="text-sm text-gray-500 mb-4">{article.date}</div>
                   <p className="text-gray-700 text-base">{article.description}</p>
-                </a>
+                </Link>
               </div>
               {/* Tags */}
               <ul className="flex flex-wrap gap-2 mt-3">

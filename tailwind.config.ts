@@ -14,6 +14,11 @@ export default {
         accent: "var(--color-accent)",
         accent2: "var(--color-accent2)",
       },
+      borderWidth: {
+        '5': '5px',
+        '6': '6px',
+        '8': '8px',
+      }
     },
   },
   plugins: [require('@tailwindcss/typography')],

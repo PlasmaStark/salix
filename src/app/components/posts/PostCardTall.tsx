@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image'
 
 export type Post = {
     slug: string;
@@ -16,7 +17,7 @@ export default function PostCard({ post }: { post: Post }) {
                 <Link href={`/primetales/${post.slug}`} className="block p-6">
                     {/* Card Image or Cover */}
                     <div className="mb-4 rounded-lg overflow-hidden">
-                        <img
+                        <Image
                             src={
                                 post.coverImage.startsWith("/")
                                     ? post.coverImage
