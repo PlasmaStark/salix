@@ -86,11 +86,11 @@ export default function About() {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="p-6 bg-white shadow-md rounded-md hover:shadow-lg transition">
-            <h3 className="text-xl font-semibold text-gray-800">Project</h3>
+            <h3 className="text-xl font-semibold text-gray-800">Project 1</h3>
             <p className="text-gray-600">description</p>
           </div>
           <div className="p-6 bg-white shadow-md rounded-md hover:shadow-lg transition">
-            <h3 className="text-xl font-semibold text-gray-800">Project</h3>
+            <h3 className="text-xl font-semibold text-gray-800">Project 2</h3>
             <p className="text-gray-600">description</p>
           </div>
         </div>
