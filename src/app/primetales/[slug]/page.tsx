@@ -48,8 +48,8 @@ export default async function Article({ params }: { params: any }) {
         <Image
           src={
             metadata.coverImage.startsWith("/")
-              ? metadata.coverImage
-              : `/${metadata.coverImage}`
+              ? `/salix${metadata.coverImage}`
+              : `/salix/${metadata.coverImage}`
           }
           height="1000"
           width="4000"

@@ -34,7 +34,7 @@ export default function Home() {
       <section className="relative bg-background-100 rounded-lg shadow-md overflow-hidden mb-4">
         <div className="relative h-42 sm:h-96">
           <Image
-            src="/background.png"
+            src="/salix/background.png"
             alt="Hero background"
             fill
             style={{

@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { getAllTags } from '@/lib/getPosts';
 
 export async function generateStaticParams() {
-  const tags = await getAllTags(ARTICLE_DIR); 
+  const tags = await getAllTags(ARTICLE_DIR);
   return tags.map((tag: string) => ({
     tag,
   }));
@@ -35,8 +35,8 @@ export default async function TagPage({ params }: { params: Promise<{ tag: strin
                     <Image
                       src={
                         article.coverImage.startsWith("/")
-                          ? article.coverImage
-                          : `/${article.coverImage}`
+                          ? `/salix${article.coverImage}`
+                          : `/salix/${article.coverImage}`
                       }
                       height="800"
                       width="800"
