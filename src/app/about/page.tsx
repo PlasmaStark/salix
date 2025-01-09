@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Breadcrumb from "@components/breadcrumb";
 import Image from 'next/image'
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About",
@@ -82,17 +83,15 @@ export default function About() {
       <section>
         <h2 className="text-4xl font-bold text-accent mb-6">Some projects</h2>
         <p className="text-lg leading-relaxed mb-6">
-          A selection of my past and ongoing projects.
+          A selection of past and ongoing projects.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="p-6 bg-white shadow-md rounded-md hover:shadow-lg transition">
-            <h3 className="text-xl font-semibold text-gray-800">Project 1</h3>
-            <p className="text-gray-600">description</p>
-          </div>
-          <div className="p-6 bg-white shadow-md rounded-md hover:shadow-lg transition">
-            <h3 className="text-xl font-semibold text-gray-800">Project 2</h3>
-            <p className="text-gray-600">description</p>
-          </div>
+          <Link href="/about/prometheus" className="no-underline">
+            <div className="p-6 bg-white shadow-md rounded-md transition-all hover:scale-105 group">
+              <h3 className="text-xl font-semibold text-gray-800">Project Prometheus</h3>
+              <p className="text-gray-600">A few lecture notes to rule them all.</p>
+            </div>
+          </Link>
         </div>
       </section>
 
