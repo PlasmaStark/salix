@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import Breadcrumb from "@components/breadcrumb";
 import Image from 'next/image'
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faBook, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+
 
 export const metadata: Metadata = {
   title: "About",
@@ -16,7 +20,7 @@ export default function About() {
 
       {/* Hero Section */}
       <section className="text-center mb-12">
-        <h1 className="mb-4 text">About Me</h1>
+        <h1 className="text-4xl font-bold text-center mb-6">About Me</h1>
         <p className="text-lg">
           I am <b>Leonardo</b>, apprentice researcher in mathematics and cryptography.
           <br />
@@ -92,29 +96,67 @@ export default function About() {
               <p className="text-gray-600">A few lecture notes to rule them all.</p>
             </div>
           </Link>
+          <Link href="/about" className="no-underline">
+            <div className="p-6 bg-white shadow-md rounded-md transition-all hover:scale-105 group">
+              <h3 className="text-xl font-semibold text-gray-800">Project 2</h3>
+              <p className="text-gray-600">Description</p>
+            </div>
+          </Link>
         </div>
       </section>
 
       {/* Divider */}
-
-      {/* 
       <hr className="border-gray-300 my-8" />
 
-      <section>
-        <h2 className="text-4xl font-bold text-accent mb-6">Contacts</h2>
-        <p className="text-lg text-gray-700 mb-4">
-          Feel free to reach out to me for collaborations or questions.
-        </p>
-        <div className="flex justify-center">
-          <a
-            href="mailto:"
-            className="px-6 py-3 bg-blue-600 text-white rounded-md shadow-md hover:bg-blue-700 transition"
+      {/* Contacts */}
+      <h2 className="text-4xl font-bold text-accent mb-6">Contacts</h2>
+      <section className="text-center">
+        <div className="flex justify-center gap-4">
+          {/* Goodreads */}
+          <Link
+            href="https://www.goodreads.com/user/show/155458214-leonardus-iii-emperor-of-taured"
+            className="flex items-center no-underline px-4 py-2 bg-gray-800 text-white rounded-full shadow-md hover:bg-accent transition"
           >
-            Get in Touch
-          </a>
+            <div className="flex items-center">
+              <FontAwesomeIcon
+                icon={faBook}
+                style={{ height: "1rem", width: "1rem" }}
+                className="text-white transition-transform group-hover:rotate-12"
+              />
+              <p className="ml-3">GoodReads</p>
+            </div>
+          </Link>
+          {/* GitHub */}
+          <Link
+            href="https://github.com/PlasmaStark"
+            className="flex items-center no-underline px-4 py-2 bg-gray-800 text-white rounded-full shadow-md hover:bg-accent transition"
+          >
+            <div className="flex items-center">
+              <FontAwesomeIcon
+                icon={faGithub}
+                style={{ height: "1rem", width: "1rem" }}
+                className="text-white transition-transform group-hover:rotate-12"
+              />
+              <p className="ml-3">GitHub</p>
+            </div>
+          </Link>
+          {/* Email */}
+          <Link
+            href="mailto:leonardoerrati.lwe@gmail.com"
+            className="flex items-center no-underline px-4 py-2 bg-gray-800 text-white rounded-full shadow-md hover:bg-accent transition"
+          >
+            <div className="flex items-center">
+              <FontAwesomeIcon
+                icon={faEnvelope}
+                style={{ height: "1rem", width: "1rem" }}
+                className="text-white transition-transform group-hover:rotate-12"
+              />
+              <p className="ml-3">Email</p>
+            </div>
+          </Link>
         </div>
       </section>
-      Contacts Section */}
+
     </main>
   );
 }
