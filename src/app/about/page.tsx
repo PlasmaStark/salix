@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faBook, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faBook, faEnvelope, faIdCard } from "@fortawesome/free-solid-svg-icons";
 
 
 export const metadata: Metadata = {
@@ -111,7 +111,7 @@ export default function About() {
       {/* Contacts */}
       <h2 className="text-4xl font-bold text-accent mb-6">Contacts</h2>
       <section className="text-center">
-        <div className="flex justify-center gap-4">
+        <div className="flex flex-wrap justify-center gap-3">
           {/* Goodreads */}
           <Link
             href="https://www.goodreads.com/user/show/155458214-leonardus-iii-emperor-of-taured"
@@ -154,9 +154,36 @@ export default function About() {
               <p className="ml-3">Email</p>
             </div>
           </Link>
+          {/* Pagina PoliTo */}
+          <Link
+            href="https://www.polito.it/personale?p=leonardo.errati"
+            className="flex items-center no-underline px-4 py-2 bg-gray-800 text-white rounded-full shadow-md hover:bg-accent transition"
+          >
+            <div className="flex items-center">
+              <FontAwesomeIcon
+                icon={faIdCard}
+                style={{ height: "1rem", width: "1rem" }}
+                className="text-white transition-transform group-hover:rotate-12"
+              />
+              <p className="ml-3">PoliTo</p>
+            </div>
+          </Link>
+          {/* Pagina UniTn */}
+          <Link
+            href="https://webapps.unitn.it/du/it/Persona/PER0208861"
+            className="flex items-center no-underline px-4 py-2 bg-gray-800 text-white rounded-full shadow-md hover:bg-accent transition"
+          >
+            <div className="flex items-center">
+              <FontAwesomeIcon
+                icon={faIdCard}
+                style={{ height: "1rem", width: "1rem" }}
+                className="text-white transition-transform group-hover:rotate-12"
+              />
+              <p className="ml-3">UniTn</p>
+            </div>
+          </Link>
         </div>
       </section>
-
     </main>
   );
 }
