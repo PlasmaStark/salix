@@ -53,13 +53,13 @@ export default function About() {
             Community - shaping the future together
           </h3>
           <p className="text-lg leading-relaxed">
-            What brought us Homo sapiens to where we stand today?
+            What brought us Homo Sapiens to where we stand today?
             <br />
             A lion might have defeated one of us, but it would soon have to face fifty angry,
-            rock-throwing, cooperating monkeys. Collaboration has always been our greatest
-            strength, and it is the key to shaping - and fixing - the future.
+            rock-throwing, cooperating monkeys. Collaboration has always been one of our greatest
+            strengths, and it is probably the key to shaping - and fixing - the future.
             As people of science, this means coming together, providing our perspective
-            and put to use our abilities for society.
+            and putting our abilities to use for society.
           </p>
         </div>
 
@@ -73,7 +73,7 @@ export default function About() {
             a key strength. Teaching others how to craft obsidian tools without losing
             fingers surely gave us an edge (pun intended!).
             <br />
-            believe in the power of scientific communication: step by step,
+            I believe in the power of scientific communication: step by step,
             it shares knowledge, enables informed decisions, and shapes our technical future.
             That is real power.
           </p>
