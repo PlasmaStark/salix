@@ -9,7 +9,7 @@ tags:
 ---
 
 Most mathematicians know that the representation of prime numbers $p$ in **polar coordinates** $(r,\theta) = (p,p)$ results in a cool-looking spiral. 
-![Classical prime spiral](/2023-primes-white.png)
+![Classical prime spiral](./2023-primes-white.png)
 For now, this will not be an in-depth overview.
 
 One day I noticed that it looks quite like a galaxy. Can we add more to it?
