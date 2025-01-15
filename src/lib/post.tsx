@@ -30,7 +30,7 @@ function createProcessor() {
   .use(remarkGfm) 
   .use(remarkRehype)
   .use(rehypeKatex)
-  .use(rehypeImgSize)
+  .use(rehypeImgSize, { dir: './public/content' })
   .use(rehypeStringify);
   return processor;
 }
