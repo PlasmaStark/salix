@@ -44,7 +44,7 @@ I noticed that adding too many prime numbers makes for a weird-looking spiral. A
 
 ### Which primes?
 
-Now, we have to find the correct prime number classes.
+Now, we have to find the correct prime number classes. Remember that we are considering all primes up to $40000$: what is the frequency of each class?
 For the algebra nerds among us, this table represents all candidate classes and my conclusions. The wisest among you might wish to skip it.
 
 | Prime number class         | Percentage    | Well-known? |

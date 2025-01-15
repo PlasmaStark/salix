@@ -33,7 +33,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative bg-background-100 rounded-lg shadow-md overflow-hidden mb-4">
         {/* Background Image */}
-        <div className="relative h-[40vh] sm:h-[60vh] lg:h-[75vh] w-full">
+        <div className="relative h-64 sm:h-80 lg:h-96 w-full">
           <Image
             src="/background.png"
             alt="Hero background"
@@ -45,33 +45,34 @@ export default function Home() {
         </div>
 
         {/* Content Overlay */}
-        <div className="absolute inset-0 flex flex-col items-center justify-start lg:top-5 text-center text-white px-6 sm:px-4 pt-8 sm:pt-6">
-          <div className="bg-black bg-opacity-60 rounded-lg px-4 py-4 max-w-md">
-            <h1 className="text-4xl sm:text-3xl lg:text-6xl font-extrabold tracking-tight drop-shadow-lg leading-snug py-1">
+        <div className="absolute inset-0 flex flex-col items-center justify-start lg:justify-center text-center text-white px-6 sm:px-4 pt-6 sm:pt-4">
+          <div className="bg-black bg-opacity-60 rounded-lg px-4 py-3 max-w-md lg:max-w-sm">
+            <h1 className="text-4xl sm:text-3xl lg:text-5xl font-extrabold tracking-tight drop-shadow-lg leading-snug py-1">
               Welcome, traveller
             </h1>
-            <p className="text-lg sm:text-xl font-semibold drop-shadow-lg">
+            <p className="text-lg sm:text-xl lg:text-base font-semibold drop-shadow-lg">
               You are visitor #{visitorNumber}.
             </p>
-            <p className="text-sm italic drop-shadow-lg">
+            <p className="text-sm lg:text-xs italic drop-shadow-lg">
               disclaimer: counter may be randomised
             </p>
           </div>
-        </div>
 
-        {/* CTA Button */}
-        <div className="absolute bottom-4 right-4">
-          <Link
-            href="/primetales/2023-primespiral"
-            className="text-sm sm:text-base bg-accent text-white font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-accent-dark transition-all duration-300 no-underline"
-          >
-            What is this image?
-          </Link>
+          {/* CTA Button */}
+          <div className="absolute bottom-2 sm:bottom-4 right-4">
+            <Link
+              href="/primetales/2023-primespiral"
+              className="text-sm sm:text-base bg-accent text-white font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-accent-dark transition-all duration-300 no-underline"
+            >
+              What is this image?
+            </Link>
+          </div>
         </div>
       </section>
 
+
       {/* Categories Section */}
-      <section id="categories" className="mb-16 mt-3">
+      <section id="categories" className="mb-16 mt-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* About Me Card */}
           <Link href="/about" className="no-underline">
@@ -79,7 +80,7 @@ export default function Home() {
               <div className="flex justify-center mb-4">
                 <FontAwesomeIcon
                   icon={faUser}
-                  style={{ height: "2.5rem", width: "2.5rem" }} 
+                  style={{ height: "2.5rem", width: "2.5rem" }}
                   className="text-accent transition-transform group-hover:rotate-12"
                 />
               </div>
@@ -113,7 +114,7 @@ export default function Home() {
               <div className="flex justify-center mb-4">
                 <FontAwesomeIcon
                   icon={faPenNib}
-                  style={{ height: "2.5rem", width: "2.5rem" }} 
+                  style={{ height: "2.5rem", width: "2.5rem" }}
                   className="text-accent transition-transform group-hover:rotate-12"
                 />
               </div>
