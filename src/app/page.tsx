@@ -59,7 +59,7 @@ export default function Home() {
           </div>
 
           {/* CTA Button */}
-          <div className="absolute bottom-2 sm:bottom-4 right-4">
+          <div className="absolute bottom-5 right-4">
             <Link
               href="/primetales/2023-primespiral"
               className="text-sm sm:text-base bg-accent text-white font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-accent-dark transition-all duration-300 no-underline"
@@ -72,7 +72,7 @@ export default function Home() {
 
 
       {/* Categories Section */}
-      <section id="categories" className="mb-16 mt-4">
+      <section id="categories" className="mb-16 mt-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* About Me Card */}
           <Link href="/about" className="no-underline">
