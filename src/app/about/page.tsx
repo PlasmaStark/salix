@@ -3,7 +3,7 @@ import Breadcrumb from "@components/breadcrumb";
 import Image from 'next/image'
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faBook, faEnvelope, faIdCard } from "@fortawesome/free-solid-svg-icons";
 
 
@@ -25,7 +25,8 @@ export default function About() {
           I am <b>Leonardo</b>, apprentice researcher in mathematics and cryptography.
           <br />
           My interests include reading, learning, and <a href="#communication">scientific communication</a>.
-          I believe in the creation of a <a href="#community">community</a> of mathematicians.
+          I believe in the power of a <a href="#community">community</a> of scientists coming together and
+          work towards it.
         </p>
 
         {/* Profile picture */}
@@ -90,16 +91,16 @@ export default function About() {
           A selection of past and ongoing projects.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="p-6 bg-gray-300 shadow-md rounded-md">
+            <h3 className="text-xl font-semibold text-gray-800">Project Archimedes</h3>
+            <p className="text-gray-600 text-sm font-semibold">(2021-2023)</p>
+            <p className="text-gray-600">Table games for scientific communication</p>
+          </div>
           <Link href="/about/prometheus" className="no-underline">
             <div className="p-6 bg-white shadow-md rounded-md transition-all hover:scale-105 group">
               <h3 className="text-xl font-semibold text-gray-800">Project Prometheus</h3>
-              <p className="text-gray-600">A few lecture notes to rule them all.</p>
-            </div>
-          </Link>
-          <Link href="/about" className="no-underline">
-            <div className="p-6 bg-white shadow-md rounded-md transition-all hover:scale-105 group">
-              <h3 className="text-xl font-semibold text-gray-800">Project 2</h3>
-              <p className="text-gray-600">Description</p>
+              <p className="text-gray-600 text-sm font-semibold">(2018-2021)</p>
+              <p className="text-gray-600">Building lecture notes to rule them all.</p>
             </div>
           </Link>
         </div>
@@ -124,6 +125,20 @@ export default function About() {
                 className="text-white transition-transform group-hover:rotate-12"
               />
               <p className="ml-3">GoodReads</p>
+            </div>
+          </Link>
+          {/* LinkedIn */}
+          <Link
+            href="https://www.linkedin.com/in/leonardo-errati-76507b213"
+            className="flex items-center no-underline px-4 py-2 bg-gray-800 text-white rounded-full shadow-md hover:bg-accent transition"
+          >
+            <div className="flex items-center">
+              <FontAwesomeIcon
+                icon={faLinkedin}
+                style={{ height: "1rem", width: "1rem" }}
+                className="text-white transition-transform group-hover:rotate-12"
+              />
+              <p className="ml-3">LinkedIn</p>
             </div>
           </Link>
           {/* GitHub */}
