@@ -9,7 +9,7 @@ tags:
 ---
 
 Most mathematicians know that the representation of prime numbers $p$ in **polar coordinates** $(r,\theta) = (p,p)$ results in a cool-looking spiral. 
-![Classical prime spiral](./2023-primes-white.png)
+![Classical prime spiral](./primetales/2023-primes-white.png)
 For now, this will not be an in-depth overview.
 
 One day I noticed that it looks quite like a galaxy: a "barred spiral galaxy" to be precise, like our own! Can we add more to it?
@@ -99,5 +99,5 @@ All comparisons drawn, we get the following result.
 ## Plotting the galaxy
 
 We now have everything we need: our seven prime number classes, their respective colors, and the interval $[0,40000]$. All that remains is to plot them. This just takes a few lines in Python, resulting in the picture below.
-![Galaxy prime spiral](./2023-primes.png)
+![Galaxy prime spiral](./primetales/2023-primes.png)
 Keen observers might notice some packs of purple mist in the background. I added as nebulae [**Carmichael's numbers**](https://en.wikipedia.org/wiki/Carmichael_number) - which are _not_ prime! The surprising fact about them is that they manage to fool all possible instances of Fermat's primality test in thinking they are prime, while they are not. Being somewhat rare and deceiving a famous primality test, it only seemed fitting to grant them a spot.
