@@ -39,7 +39,20 @@ export default function About() {
             className="rounded-full border-4 border-accent object-cover"
           />
         </div>
+
+        {/* CV Button */}
+        <div className="mt-6">
+          <Link
+            href="https://drive.google.com/file/d/1QWRnP8H8_RhVB8BWxjG5aE5LmfFYxPs0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="no-underline px-4 py-2 bg-gray-800 text-white rounded-full shadow-md hover:bg-accent transition"
+          >
+            View My CV
+          </Link>
+        </div>
       </section>
+
 
       {/* Divider */}
       <hr className="border-gray-300 my-8" />
