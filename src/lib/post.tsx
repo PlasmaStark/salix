@@ -25,13 +25,13 @@ async function loadBibliographyOnce(bibFilePath: string) {
 
 function createProcessor() {
   const processor = unified()
-  .use(remarkParse)
-  .use(remarkMath)
-  .use(remarkGfm) 
-  .use(remarkRehype)
-  .use(rehypeKatex)
-  .use(rehypeImgSize, { dir: './public/' })
-  .use(rehypeStringify);
+    .use(remarkParse)
+    .use(remarkMath)
+    .use(remarkGfm)
+    .use(remarkRehype)
+    .use(rehypeKatex)
+    .use(rehypeImgSize, { dir: path.join(process.cwd(), 'public') })
+    .use(rehypeStringify);
   return processor;
 }
 
