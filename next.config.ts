@@ -7,8 +7,6 @@ const nextConfig: NextConfig = {
   */
   output: "export",
   reactStrictMode: true,
-  basePath: "/salix",
-  assetPrefix: '/salix',
   images: {
     unoptimized: true,
   },
