@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: www.leonardoerrati.com
+Host: https://www.leonardoerrati.com
 
 # Sitemaps
-Sitemap: www.leonardoerrati.com/sitemap.xml
+Sitemap: https://www.leonardoerrati.com/sitemap.xml

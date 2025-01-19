@@ -48,7 +48,7 @@ export default function About() {
             rel="noopener noreferrer"
             className="no-underline px-4 py-2 bg-gray-800 text-white rounded-full shadow-md hover:bg-accent transition"
           >
-            View My CV
+            View my CV
           </Link>
         </div>
       </section>
