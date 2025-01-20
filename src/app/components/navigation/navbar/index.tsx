@@ -73,6 +73,13 @@ export default function Navbar() {
           >
             Chronicles
           </Link>
+          <Link
+            href="/talks"
+            className="block text-white hover:text-gray-400 no-underline"
+            onClick={handleLinkClick}
+          >
+            Talks
+          </Link>
         </nav>
       </Sidebar>
     </NavbarContainer>
