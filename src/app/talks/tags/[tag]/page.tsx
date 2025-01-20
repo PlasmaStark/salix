@@ -3,7 +3,6 @@ import Breadcrumb from '@components/breadcrumb';
 import { getContentList, ContentItem } from '@lib/getPosts';
 import { TALKS_DIR } from '@/config';
 import { getAllTags } from '@/lib/getPosts';
-import Image from 'next/image';
 
 export async function generateStaticParams() {
   const tags = await getAllTags(TALKS_DIR);
