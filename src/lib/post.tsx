@@ -8,7 +8,7 @@ import rehypeStringify from 'rehype-stringify';
 import remarkMath from 'remark-math';
 import remarkGfm from 'remark-gfm';
 import rehypeKatex from 'rehype-katex';
-import rehypeImgSize from 'rehype-img-size';
+import remarkImages from './plugins/remark-images';
 
 const Cite = require('citation-js');
 
@@ -28,9 +28,9 @@ function createProcessor() {
     .use(remarkParse)
     .use(remarkMath)
     .use(remarkGfm)
+    .use(remarkImages)
     .use(remarkRehype)
     .use(rehypeKatex)
-    .use(rehypeImgSize, { dir: path.join(process.cwd(), 'public') })
     .use(rehypeStringify);
   return processor;
 }
