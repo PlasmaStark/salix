@@ -32,12 +32,12 @@ export default async function PrimeTales() {
         {articles
           .sort((a: ContentItem, b: ContentItem) => new Date(b.date).getTime() - new Date(a.date).getTime())
           .map((article: ContentItem) => (
-            <li key={article.slug}>
+            <li key={article.slug} className="px-3 py-2 text-primary rounded-full hover:scale-105 transition-transform duration-300 ease-in-out">
               <div className="bg-white rounded-lg">
                 <Link href={`/primetales/${article.slug}`} className="block p-6 no-underline">
                   {/* Card Image or Cover */}
                   <div className="mb-4 rounded-lg overflow-hidden h-48">
-                    <Image
+                    <Image 
                       src={
                         article.coverImage.startsWith("/")
                           ? `${article.coverImage}`

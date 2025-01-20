@@ -36,6 +36,9 @@ export default function Navbar() {
           <Link href="/chronicles" className="block text-white hover:text-gray-400 no-underline">
             Chronicles
           </Link>
+          <Link href="/talks" className="block text-white hover:text-gray-400 no-underline">
+            Talks
+          </Link>
         </nav>
       </div>
 
