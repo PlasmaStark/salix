@@ -137,7 +137,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl text-accent font-bold mb-2">Talks</h3>
               <p className="text-white text-sm sm:text-base">
-                Materials for some of my talks.
+                A set of materials for some of my talks.
               </p>
             </div>
           </Link>

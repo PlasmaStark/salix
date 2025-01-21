@@ -26,22 +26,22 @@ export default async function BlogPost({ params }: { params: any }) {
       {/* Titolo */}
       <div className="flex rounded-lg bg-white items-start p-4">
         {/* Immagine */}
-        <div className="w-[120px] mr-4">
+        <div className="w-[120px] flex-shrink-0 mr-4">
           <Image
             src={
               metadata.coverImage.startsWith("/")
                 ? `${metadata.coverImage}`
                 : `/${metadata.coverImage}`
             }
-            height="640"
-            width="480"
+            height="480"
+            width="640"
             alt={metadata.title}
-            className="w-full h-full object-cover rounded-md"
+            className="w-full h-auto object-cover rounded-md"
           />
         </div>
         <div className="flex flex-col justify-center">
-          <h1 className="text-4xl mb-1 font-bold text-accent">{metadata.title}</h1>
-          <p className="text-sm text-gray-500 mt-2">{metadata.date}</p>
+          <h1 className="text-3xl font-bold text-accent">{metadata.title}</h1>
+          <p className="text-sm text-gray-500">{metadata.date}</p>
           <p className="text-lg text-gray-700">{metadata.description}</p>
         </div>
       </div>

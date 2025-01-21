@@ -23,16 +23,16 @@ export default async function TagPage({ params }: { params: Promise<{ tag: strin
       <p className="text-lg text-center mb-10">
         <b>Chronicles</b> is a curated collection of personal tales: some amusing, others cautionary.
       </p>
-      <ul className="grid grid-cols-1 gap-2">
+      <ul className="grid grid-cols-1 gap-2 mx-10">
         {posts
           .sort((a: ContentItem, b: ContentItem) => new Date(b.date).getTime() - new Date(a.date).getTime())
           .map((post: ContentItem) => (
             <li
               key={post.slug}
-              className="hover:shadow-2xl hover:scale-105 transition-transform duration-300 ease-in-out"
+              className="hover:scale-105 transition-transform duration-300 ease-in-out"
             >
               {/* Link che avvolge la card */}
-              <Link href={`/chronicles/${post.slug}`} className="bg-white rounded-lg shadow-lg no-underline flex flex-col sm:flex-row">
+              <Link href={`/chronicles/${post.slug}`} className="bg-white rounded-lg no-underline flex flex-col sm:flex-row">
                 {/* Contenitore immagine con bordo bianco */}
                 {post.coverImage && (
                   <div className="w-full sm:w-1/3 max-w-[150px] mx-auto sm:mx-0 flex-shrink-0 p-2 bg-white rounded-lg">
