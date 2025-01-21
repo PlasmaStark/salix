@@ -2,6 +2,7 @@
 title: "Crusading in Asimov's name"
 date: "2022-09-28"
 description: "The impossible search for 'The Gods Themselves'."
+coverImage: "chronicles/2022-asimov.jpg"
 tags:
   - Books
   - Asimov

@@ -2,6 +2,7 @@
 title: "The Slow Priest of 'Slow SPA'"
 date: "2023-10-18"
 description: "A job interview for public administration."
+coverImage: "chronicles/2023-priest.jpg"
 tags:
   - Bureaucracy
 ---
