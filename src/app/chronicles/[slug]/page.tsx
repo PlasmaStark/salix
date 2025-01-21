@@ -3,9 +3,10 @@ import Breadcrumb from '@components/breadcrumb';
 import Link from 'next/link';
 import { BIBLIOGRAPHY_DIR, BLOG_DIR } from '@/config';
 import { getContentList } from '@/lib/getPosts';
+import Image from 'next/image'
 
 export async function generateStaticParams() {
-  const posts = getContentList(BLOG_DIR); 
+  const posts = getContentList(BLOG_DIR);
   return posts.map((post) => ({
     slug: post.slug,
   }));
@@ -13,28 +14,50 @@ export async function generateStaticParams() {
 
 export default async function BlogPost({ params }: { params: any }) {
   const { slug } = await params;
-  const { metadata, content} = await getContent(slug, BLOG_DIR, BIBLIOGRAPHY_DIR);
+  const { metadata, content } = await getContent(slug, BLOG_DIR, BIBLIOGRAPHY_DIR);
 
   return (
     <article className="max-w-3xl mx-auto px-4 py-8">
-      {/* Titolo */}
+      {/* Header */}
       <header className="mb-6">
         <Breadcrumb />
-        <h1 className="text-4xl font-bold text-white-800">{metadata.title}</h1>
-        <p className="text-sm text-gray-500 mt-2">{metadata.date}</p>
-        <ul className="flex flex-wrap gap-2 mt-1">
-          {metadata.tags.map((tag: string) => (
-            <li key={tag}>
-              <Link
-                href={`/chronicles/tags/${tag}`}
-                className="text-sm text-gray-600 bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-300 no-underline"
-              >
-                #{tag}
-              </Link>
-            </li>
-          ))}
-        </ul>
       </header>
+
+      {/* Titolo */}
+      <div className="flex rounded-lg bg-white items-start p-4">
+        {/* Immagine */}
+        <div className="w-[120px] mr-4">
+          <Image
+            src={
+              metadata.coverImage.startsWith("/")
+                ? `${metadata.coverImage}`
+                : `/${metadata.coverImage}`
+            }
+            height="640"
+            width="480"
+            alt={metadata.title}
+            className="w-full h-full object-cover rounded-md"
+          />
+        </div>
+        <div className="flex flex-col justify-center">
+          <h1 className="text-4xl mb-1 font-bold text-accent">{metadata.title}</h1>
+          <p className="text-sm text-gray-500 mt-2">{metadata.date}</p>
+          <p className="text-lg text-gray-700">{metadata.description}</p>
+        </div>
+      </div>
+      <ul className="flex flex-wrap gap-2 mb-6 mt-2">
+        {metadata.tags.map((tag: string) => (
+          <li key={tag}>
+            <Link
+              href={`/chronicles/tags/${tag}`}
+              className="text-sm text-gray-600 bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-300 no-underline"
+            >
+              #{tag}
+            </Link>
+          </li>
+        ))}
+      </ul>
+
 
       {/* Contenuto */}
       <div

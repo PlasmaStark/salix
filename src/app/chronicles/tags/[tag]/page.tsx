@@ -23,7 +23,7 @@ export default async function TagPage({ params }: { params: Promise<{ tag: strin
       <p className="text-lg text-center mb-10">
         <b>Chronicles</b> is a curated collection of personal tales: some amusing, others cautionary.
       </p>
-      <ul className="grid grid-cols-1 gap-6">
+      <ul className="grid grid-cols-1 gap-2">
         {posts
           .sort((a: ContentItem, b: ContentItem) => new Date(b.date).getTime() - new Date(a.date).getTime())
           .map((post: ContentItem) => (

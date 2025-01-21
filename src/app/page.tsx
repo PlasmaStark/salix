@@ -1,7 +1,7 @@
 "use client";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPersonDigging, faUser, faBook, faPenNib } from "@fortawesome/free-solid-svg-icons";
+import { faPersonDigging, faUser, faBook, faPenNib, faComments } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -73,7 +73,7 @@ export default function Home() {
 
       {/* Categories Section */}
       <section id="categories" className="mb-16 mt-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* About Me Card */}
           <Link href="/about" className="no-underline">
             <div className="bg-gray-800 rounded-lg shadow-md p-6 sm:p-4 text-center border-2 border-transparent transition-all hover:border-accent hover:scale-105 group">
@@ -121,6 +121,23 @@ export default function Home() {
               <h3 className="text-xl text-accent font-bold mb-2">Chronicles</h3>
               <p className="text-white text-sm sm:text-base">
                 A curated collection of personal stories.
+              </p>
+            </div>
+          </Link>
+
+          {/* Talks Card */}
+          <Link href="/talks" className="no-underline">
+            <div className="bg-gray-800 rounded-lg shadow-md p-6 sm:p-4 text-center border-2 border-transparent transition-all hover:border-accent hover:scale-105 group">
+              <div className="flex justify-center mb-4">
+                <FontAwesomeIcon
+                  icon={faComments}
+                  style={{ height: "2.5rem", width: "2.5rem" }}
+                  className="text-accent transition-transform group-hover:rotate-12"
+                />
+              </div>
+              <h3 className="text-xl text-accent font-bold mb-2">Talks</h3>
+              <p className="text-white text-sm sm:text-base">
+                Materials for some of my talks.
               </p>
             </div>
           </Link>

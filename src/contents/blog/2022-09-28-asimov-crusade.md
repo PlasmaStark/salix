@@ -1,5 +1,5 @@
 ---
-title: "Crusading in Asimov's name"
+title: "A Crusade in Asimov's name"
 date: "2022-09-28"
 description: "The impossible search for 'The Gods Themselves'."
 coverImage: "chronicles/2022-asimov.jpg"
@@ -8,8 +8,7 @@ tags:
   - Asimov
 ---
 
-**Note:** This is just one of the many random quests I embark upon. Life would be boring without them. Some are really old, so I’ll add them gradually as inspiration strikes.
-
+**Note:** This is just one of the many arbitrary quests I embark upon. Life would be boring without them.
 
 ## The Graal
 
@@ -26,19 +25,22 @@ Here’s the kicker: the book is rare, especially in Italian. The publishing hou
 It would be easy indeed, but don't let your crusading spirit go astray. The point of a good crusade is bringing home a beautiful artifact (or isn't it?). Searching we shall, and searching we will.
 
 #### Against Greed...
-When the crusade started, I naively thought finding an old edition would be simple. Turns out, it’s anything but that. The publishing house Mondadori doesn't print them again — some believe this is to inflate the prices of future reprints. Conspiracies aside, it's a fact that they are printing a lot of books, even by Asimov. But not this one... 
+
+When the crusade started, I naively thought finding an old edition would be simple. Turns out, it’s anything but that. The publishing house Mondadori doesn't print them again — some believe this is to inflate the prices of future reprints. Conspiracies aside, it's a fact that they are printing a lot of books, even by Asimov. But not this one...
 There are English editions, but I prefer to read fiction in Italian. Perhaps I associate english to research papers.
 
 #### ... the Readers Themselves...
-*Mondadori*'s bookstore confirmed it to be out of print. However, I tracked down all bookstores in the city. Used book fairs were fair game too, but they did not yield results. Soon, all the city’s booksellers knew me by name. (I wish I was joking here.)
-After a dozen bookstores it was time for heavier artillery: tracking down old issues from the *Urania Collezione* science fiction series, one of those series sold at news kiosks. It turned out that the book [was included in *Urania Collezione #222* of July 2021](https://arretrati.mondadori.it/privati/fascicolo-n-20210222-di-urania-collezione.html). Alas, their online service confirmed that it was sold out.
+
+_Mondadori_'s bookstore confirmed it to be out of print. However, I tracked down all bookstores in the city. Used book fairs were fair game too, but they did not yield results. Soon, all the city’s booksellers knew me by name. (I wish I was joking here.)
+After a dozen bookstores it was time for heavier artillery: tracking down old issues from the _Urania Collezione_ science fiction series, one of those series sold at news kiosks. It turned out that the book [was included in _Urania Collezione #222_ of July 2021](https://arretrati.mondadori.it/privati/fascicolo-n-20210222-di-urania-collezione.html). Alas, their online service confirmed that it was sold out.
 Resigned, I ordered an English edition, which arrived in under 24 hours.
 
 #### ... Contend in Vain?
+
 After a Pyrrhic victory, I shifted my focus to other Asimov works. By April 2023, I had read the Empire and Foundation series. Naturally, the next target was the Robot series — but guess what?
-*Mondadori* hasn’t reprinted it in decades, [despite teasing its release with a cover back in 2020](https://www.facebook.com/oscarmondadorivault/posts/lettori-di-asimov-per-celebrare-il-centenario-della-nascita-dellimmenso-isaac-as/2694808057412598/?locale=it_IT). They’ve reprinted almost all of Asimov’s works, even minor ones, but the Robot series? Nowhere to be found. I frankly lost hope in that publishing house, and dusted off my old trusty Kobo e-reader.
+_Mondadori_ hasn’t reprinted it in decades, [despite teasing its release with a cover back in 2020](https://www.facebook.com/oscarmondadorivault/posts/lettori-di-asimov-per-celebrare-il-centenario-della-nascita-dellimmenso-isaac-as/2694808057412598/?locale=it_IT). They’ve reprinted almost all of Asimov’s works, even minor ones, but the Robot series? Nowhere to be found. I frankly lost hope in that publishing house, and dusted off my old trusty Kobo e-reader.
 
 ## The Crusade Ends
 
-This was't necessarily a bad conclusion. I had too many physical books anyway, and moving towards digital e-books was indeed warranted. I still prefer physical copies, but the advantages of digital are undeniable. 
-Alas, as a true crusade, sometimes you just go home empty-handed. And with the spoils of a razed Byzantium. 
+This was't necessarily a bad conclusion. I had too many physical books anyway, and moving towards digital e-books was indeed warranted. I still prefer physical copies, but the advantages of digital are undeniable.
+Alas, in some crusades you just go home empty-handed. In others, you go home with the spoils of a razed Byzantium. That's life.

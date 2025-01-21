@@ -20,7 +20,7 @@ export default async function TagPage({ params }: { params: Promise<{ tag: strin
       <Breadcrumb />
       <h1 className="text-4xl font-bold text-center mb-6">Talks</h1>
       <p className="text-lg text-center mb-10">
-        This page contains public <b>talks</b> for diffusion or future fruition, regularly updated each time they are given.
+        This page contains public <b>talks</b> for diffusion or future fruition, regularly updated each time they are given. With time, these will become transcripts of most of my talks.
       </p>
       <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {posts
