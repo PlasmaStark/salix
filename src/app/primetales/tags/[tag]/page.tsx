@@ -46,7 +46,7 @@ export default async function TagPage({ params }: { params: Promise<{ tag: strin
                   </div>
 
                   {/* Titolo */}
-                  <h2 className="text-2xl font-semibold text-[var(--color-accent2)] mb-2">{article.title}</h2>
+                  <h2 className="text-2xl font-semibold text-accent mb-2">{article.title}</h2>
 
                   {/* Data e Descrizione */}
                   <div className="text-sm text-gray-500 mb-4">{article.date}</div>
