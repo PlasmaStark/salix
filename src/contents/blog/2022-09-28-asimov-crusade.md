@@ -1,7 +1,7 @@
 ---
 title: "A Crusade in Asimov's name"
 date: "2022-09-28"
-description: "Hunting for a book."
+description: "The hunt for a book."
 coverImage: "chronicles/2022-asimov.jpg"
 tags:
   - Books
