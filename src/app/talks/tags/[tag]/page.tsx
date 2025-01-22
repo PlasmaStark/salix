@@ -29,7 +29,7 @@ export default async function TagPage({ params }: { params: Promise<{ tag: strin
             <li key={post.slug} className="bg-white rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300 ease-in-out"
             >
               <Link href={`/talks/${post.slug}`} className="block p-6 no-underline">
-                <h2 className="text-2xl font-semibold text-accent">
+                <h2 className="text-2xl font-bold text-accent">
                   {post.title}
                 </h2>
                 <small className="block text-sm text-gray-500 mb-2">{post.date}</small>

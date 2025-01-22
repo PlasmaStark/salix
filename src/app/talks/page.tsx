@@ -19,7 +19,7 @@ export default async function TalksPage() {
       <Breadcrumb />
       <h1 className="text-4xl font-bold text-center mb-6">Talks</h1>
       <p className="text-lg text-center mb-10">
-        This page contains public <b>talks</b> for diffusion or future fruition, regularly updated each time they are given. With time, these will become transcripts of most of my talks. 
+        This page contains public <b>talks</b> for diffusion or future fruition, regularly updated each time they are given. With time, these will become transcripts of most of my talks for <b>professionals</b> or <b>amateurs</b>. 
       </p>
       <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {posts
@@ -27,14 +27,14 @@ export default async function TalksPage() {
           .map((post: ContentItem) => (
             <li key={post.slug} className="bg-white rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300 ease-in-out"
             >
-              <Link href={`/talks/${post.slug}`} className="block p-6 no-underline">
-                <h2 className="text-2xl font-semibold text-accent">
+              <Link href={`/talks/${post.slug}`} className="block p-2 m-3 mb-0 no-underline">
+                <h2 className="text-2xl font-bold text-accent">
                   {post.title}
                 </h2>
-                <small className="block text-sm text-gray-500 mb-2">{post.date}</small>
+                <small className="block text-sm text-gray-500 mb-2">first made: {post.date}</small>
                 <p className="text-base text-gray-700">{post.description}</p>
               </Link>
-              <ul className="flex flex-wrap gap-2 mt-4 px-6 pb-4">
+              <ul className="flex flex-wrap gap-2 px-6 pb-4">
                 {post.tags.map((tag: string) => (
                   <li key={tag}>
                     <Link
