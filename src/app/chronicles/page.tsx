@@ -44,15 +44,13 @@ export default async function BlogPage() {
                     />
                   </div>
                   <div className="flex flex-col justify-center">
-                    <h2 className="text-3xl font-bold text-accent">{post.title}</h2>
+                    <h2 className="text-2xl font-bold text-accent">{post.title}</h2>
                     <p className="text-sm text-gray-500">{post.date}</p>
                     <p className="text-lg text-gray-700">{post.description}</p>
                   </div>
                 </div>
               </Link>
 
-
-              {/* Tags sotto la card */}
               <ul className="flex flex-wrap gap-2 mt-2 pb-4">
                 {post.tags.map((tag: string) => (
                   <li key={tag}>
