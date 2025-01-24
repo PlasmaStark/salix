@@ -1,7 +1,7 @@
 ---
 title: "Piracy Shield: an Italian debacle"
-date: "2025-01-24"
-description: "The big shutdown button to save the internet."
+date: "2024-10-09"
+description: "Nuking the internet."
 coverImage: "chronicles/2025-shield.jpg"
 tags:
   - Bureaucracy
@@ -16,7 +16,7 @@ Born to "protect" football broadcasters and risen to fame after blocking access 
 
 I don't really follow football, but I find this an excellent cautionary tale about good security practices and bad political ideas. This story is pieced together from personal experience and online sources. **_I will update this as the story develops._**
 
-# ACT 1, Piracy Shield: origins
+## ACT 1, Piracy Shield: origins
 
 ### The money trail
 
@@ -80,7 +80,7 @@ and that was the end of it.
 
 ![Piracy Shield under development](/chronicles/2025-shield-coding.jpg)
 
-# ACT 2, Piracy Shield in action
+## ACT 2, Piracy Shield in action
 
 ### The first cracks
 
@@ -88,7 +88,7 @@ Lega Serie A gifted Piracy Shield to the governative agency [AGCOM](https://en.w
 
 A first mishap occurred while providing VPN credentials. For instance, the username given to DAZN would be `dazn@piracyshield.net`. This is just an id, not an e-mail address. Usernames and passwords were allegedly sent as plain text via e-mail in a .zip compressed file; moreover in a few days an anonymous bought the `piracyshield.net` domain, so e-mails from addresses like `info@piracyshield.net` are now a threat.
 
-Right on point, Piracy Shield's code, interface, and documentation were leaked three mere weeks after deployment [cite], allowing for some insight. For instance, one must be sure the Death Star does not destroy important
+Right on point, Piracy Shield's code, interface, and documentation [were leaked](https://github.com/fuckpiracyshield) three mere weeks after deployment, allowing for some insight. For instance, one must be sure the Death Star does not destroy important
 websites (like `www.google.com`) or components: how would you implement it? Most likely, not like this.
 
 ```python
@@ -147,17 +147,27 @@ Incidents have been so many that it's best to just use a table and stick to the 
 
 | YYYY-MM-DD | downtime | friendly target                                                  |
 | ---------- | -------- | ---------------------------------------------------------------- |
-| 2024-02-24 |          | Zenlayers's CDN (`IP 104.166.170.62`) [@WEB:TF24]                |
-| 2024-02-24 |          | Cloudflare's CDN (`IP 188.114.97.7`) [@WEB:DD24a]                |
-| 2024-08-18 | 37d      | Samsung's IPTV (`https://tizen.smartone-iptv.com`) [@WEB:HDB24b] |
-| 2024-08-18 | 37d      | LG's IPTV (`https://lg.smartone-iptv.com`) [@WEB:HDB24b]         |
-| 2024-10-19 | 6h       | Google's CDN (`drive.usercontent.google.com`) [@WEB:LS24]        |
+| 2024-02-24 |          | Zenlayers's CDN 
+
+(`IP 104.166.170.62`) [@WEB:TF24]                |
+| 2024-02-24 |          | Cloudflare's CDN 
+
+(`IP 188.114.97.7`) [@WEB:DD24a]                |
+| 2024-08-18 | 37d      | Samsung's IPTV 
+
+(`https://tizen.smartone-iptv.com`) [@WEB:HDB24b] |
+| 2024-08-18 | 37d      | LG's IPTV 
+
+(`https://lg.smartone-iptv.com`) [@WEB:HDB24b]         |
+| 2024-10-19 | 6h       | Google's CDN 
+
+(`drive.usercontent.google.com`) [@WEB:LS24]        |
 | 2024-10-19 | 6h       | Imperva's CDN (unknown) [@WEB:G24]                               |
 | 2024-12-01 |          | DDay's CDN [@WEB:DD24b]                                          |
 
 Non-malicious websites could technicallyask AGCOM to be unblocked, but the service was unavailable for the first few weeks.
 
-# ACT 3, Piracy Shield versus the backlash
+## ACT 3, Piracy Shield versus the backlash
 
 This is a short act. With voices about "Piracy Shield v2" coming from AGCOM - I kid you not - our story is not over yet. Still, what happened after Piracy Shield took out Google, CloudFlare, and such?
 
@@ -168,7 +178,7 @@ AGCOM is ruled by a board of four commissioners, elected from either the Senate 
 
 Some politicians [@WEB:F24a] and AGCOM commissioners [@WEB:F24b], however, are starting to disargee.
 
-# (Partial) conclusion
+## (Partial) conclusion
 
 Famous politician Nicolò Machiavelli once wrote that "the end justifies the means". He would probably have a change of heart knowing about Piracy Shield. Its end is reasonable, but its means are inherently flawed: due to the structure of the web it will perhaps never work as intended.
 
