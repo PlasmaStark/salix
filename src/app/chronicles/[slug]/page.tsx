@@ -14,7 +14,7 @@ export async function generateStaticParams() {
 
 export default async function BlogPost({ params }: { params: any }) {
   const { slug } = await params;
-  const { metadata, content } = await getContent(slug, BLOG_DIR, BIBLIOGRAPHY_DIR);
+  const { metadata, content, bibliography } = await getContent(slug, BLOG_DIR, BIBLIOGRAPHY_DIR);
 
   return (
     <article className="max-w-3xl mx-auto px-4 py-8">
@@ -64,6 +64,11 @@ export default async function BlogPost({ params }: { params: any }) {
         className="prose prose-lg prose-invert"
         dangerouslySetInnerHTML={{ __html: content }}
       />
+      <footer className="mt-12">
+        <h2 className="text-2xl font-semibold mb-4">Bibliography</h2>
+        <div dangerouslySetInnerHTML={{ __html: bibliography }} />
+      </footer>
     </article>
+
   );
 }

@@ -10,6 +10,7 @@ import remarkGfm from 'remark-gfm';
 import rehypeKatex from 'rehype-katex';
 import remarkImages from './plugins/remark-images';
 
+const highlight = require('rehype-highlight')
 const Cite = require('citation-js');
 
 const contentCache = new Map();
