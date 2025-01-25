@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
     <main className="container mx-auto px-4 py-8">
-      {/* Work in Progress Banner */}
+      {/*  
       <section className="bg-accent text-white text-center rounded-lg mb-6 h-10 sm:h-16">
         <div className="flex items-center justify-center space-x-3 h-full px-4">
           <FontAwesomeIcon
@@ -29,7 +29,7 @@ export default function Home() {
           </p>
         </div>
       </section>
-
+      */}
       {/* Hero Section */}
       <section className="relative bg-background-100 rounded-lg shadow-md overflow-hidden mb-4">
         {/* Background Image */}
