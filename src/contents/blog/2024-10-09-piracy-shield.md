@@ -171,7 +171,7 @@ Some politicians [@WEB:F24a] and AGCOM commissioners [@WEB:F24b], however, are s
 
 ## (Partial) conclusion
 
-Famous politician Nicolò Machiavelli once wrote that "the end justifies the means". He would probably have a change of heart knowing about Piracy Shield. Its end is reasonable, but its means are inherently flawed: due to the structure of the web it will perhaps never work as intended.
+Famous politician [Niccolò Machiavelli](https://en.wikipedia.org/wiki/Niccol%C3%B2_Machiavelli) once wrote that "the end justifies the means". He would probably have a change of heart knowing about Piracy Shield. Its end is reasonable, but its means are inherently flawed: due to the structure of the web it will perhaps never work as intended.
 
 While experts agree on this, commissar Capitanio [says this is "fake news"](https://www.hdblog.it/mercato/articoli/n578790/piracy-shield-siti-legali-blocchi-agcom-polemica/). The worst part? Allegedly, it is not even solving the original money problem as A-Series rights holders have seen [no increase in revenue](https://www.tomshw.it/hardware/piracy-shield-non-sta-funzionando-i-risultati-sono-deludenti-2025-01-20). We are sure there must be a lesson in all this.
 
