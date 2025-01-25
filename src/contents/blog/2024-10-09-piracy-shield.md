@@ -1,7 +1,7 @@
 ---
-title: "Italian debacles: PiracyShield"
+title: "Italian fiascos: PiracyShield"
 date: "2024-10-09"
-description: "A button to nuke the web."
+description: "The big red button to nuke the web."
 coverImage: "chronicles/2025-shield.jpg"
 tags:
   - Bureaucracy
