@@ -100,7 +100,7 @@ return True
 return False
 ```
 
-This code just checks whether the name contans `cloudflare`, `namecheap`, `amazon` or `google`. Totally unexploitable.
+This code just checks whether the name contains `cloudflare`, `namecheap`, `amazon` or `google`. Totally unexploitable.
 Regarding the leak,
 
 > [...] Piracy Shield was absolutely not hacked; rather, some confidential information was merely shared on GitHub, [...] this did not affect its functionality in any way. An investigation into this leak is currently underway by the competent authorities.
@@ -109,7 +109,7 @@ Regarding the leak,
 
 We will be meeting Massimiliano Capitanio again, keep him in mind.
 
-And what about government websites? Well, the platform has [an hardcoded list of 11 thousand sensible government websites](https://www.wired.it/article/piracy-shield-nuovo-emendamenti-carcere-agcom-white-list/).
+And what about government websites? Well, the platform has [an hardcoded list of 11 thousand sensible websites](https://www.wired.it/article/piracy-shield-nuovo-emendamenti-carcere-agcom-white-list/), including those of the government.
 
 ### Heretics
 
@@ -128,9 +128,9 @@ Internet Service Providers were forced to block content at an unsustainable rate
 ### Patient zero
 
 On February 15th 2024, Piracy Shield blocked access to Zenlayer's whole Content Distribution Network (CDN). A CDN is a network of strategically distributed servers, connecting you to the closest one to improve connection speed.
-What hapened, and how?
+What happened, and how?
 
-A Zenlayer-hosted website was likely (and illegaly) streaming movies or football games, and Service Providers received a takedown ticket; we can only speculate on what happens after this step.
+A Zenlayer-hosted website was likely (and illegally) streaming movies or football games, copyright holders produced a takedown ticket and Service Providers received it; we can only speculate on what happens after this step.
 
 - If Piracy Shield provides an IP address, Service Providers probably block them for their users.
 - If Piracy Shield provides the FQDN instead, Service Providers probably try to find and block all connected IPs. For instance, my website `www.leonardoerrati.com` has four (`185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`)
@@ -145,15 +145,15 @@ As far as I know, this is the first large victim of Piracy Shield.
 
 Incidents have been so many that it's best to just use a table and stick to the largest ones. I will include all that came to my attention. If I manage to find reliable sources, I will also add the downtime.
 
-| YYYY-MM-DD | downtime | friendly target                                                  |
-| ---------- | -------- | ---------------------------------------------------------------- |
-| 2024-02-24 |          | Zenlayers's CDN (`IP 104.166.170.62`) [@WEB:TF24]                |
-| 2024-02-24 |          | Cloudflare's CDN (`IP 188.114.97.7`) [@WEB:DD24a]                |
-| 2024-08-18 | 37d      | Samsung's IPTV (`https://tizen.smartone-iptv.com`) [@WEB:HDB24b] |
-| 2024-08-18 | 37d      | LG's IPTV (`https://lg.smartone-iptv.com`) [@WEB:HDB24b]         |
-| 2024-10-19 | 6h       | Google's CDN (`drive.usercontent.google.com`) [@WEB:LS24]        |
-| 2024-10-19 | 6h       | Imperva's CDN (unknown) [@WEB:G24]                               |
-| 2024-12-01 |          | DDay's CDN [@WEB:DD24b]                                          |
+| YYYY-MM-DD | downtime | friendly target                                                                                                                                                        |
+| ---------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2024-02-24 |          | [Zenlayers's CDN](https://torrentfreak.com/piracy-shield-iptv-blocks-reportedly-hit-zenlayer-cdns-innocent-customers-240215/)                                          |
+| 2024-02-24 |          | [Cloudflare's CDN](https://www.dday.it/redazione/48554/piracyshield-ci-ricasca-bloccate-decine-di-siti-leciti-dietro-un-ip-di-cloudflare-danni-collaterali-o-illecito) |
+| 2024-08-18 | 37d      | [Samsung's IPTV] (https://www.hdblog.it/internet/articoli/n599152/dazn-piracy-shield-blocco-smartone-lg-tizen/)                                                        |
+| 2024-08-18 | 37d      | [LG's IPTV](https://www.hdblog.it/internet/articoli/n599152/dazn-piracy-shield-blocco-smartone-lg-tizen/)                                                              |
+| 2024-10-19 | 6h       | [Google's & YouTube's CDN](https://www.lastampa.it/sport/2024/10/20/news/piracy_shield_agcom_blocca_google_drive-14734331/)                                            |
+| 2024-10-19 | 6h       | [Imperva's CDN](https://www.giornalettismo.com/altri-ip-bloccati-da-piracy-shield-imperva/)                                                                            |
+| 2024-12-01 |          | [DDay's CDN](https://www.dday.it/redazione/51374/piracy-shield-oscura-dday-la-piattaforma-agcom-blocca-un-ip-della-cdn-usata-dal-nostro-sito)                          |
 
 Non-malicious websites could technicall yask AGCOM to be unblocked, but the service was unavailable for the first few weeks, and wouldn't cover any kind of damage anyway.
 
@@ -164,9 +164,10 @@ This is a short act. With voices about "Piracy Shield v2" coming from AGCOM - I 
 AGCOM is ruled by a board of four commissioners, elected from either the Senate or the Parliament. Our old friend Massimiliano Capitanio is currently one of them; he leads the Piracy Shield project and strongly defended it [in various occasions](https://www.youtube.com/watch?v=2CUzcZZQZSs).
 
 > These are absolutely false and unfounded claims. [...] Since the platform's launch, no DNS or IP address owner has, as provided by law, submitted a request to AGCOM to have a site reinstated. There is such a rigorous procedure for those who report issues that, to my knowledge, no Public Administration websites have been blocked in these weeks.
-> (Massimiliano Capitanio [@WEB:A24])
 
-Some politicians [@WEB:F24a] and AGCOM commissioners [@WEB:F24b], however, are starting to disargee.
+(Massimiliano Capitanio [@WEB:A24])
+
+Some politicians [@WEB:F24a] and AGCOM commissioners [@WEB:F24b], however, are starting to disagree.
 
 ## (Partial) conclusion
 
