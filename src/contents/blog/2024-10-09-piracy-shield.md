@@ -145,9 +145,9 @@ As far as I know, Zenlayer is the first large victim of Piracy Shield.
 
 Incidents have been so many that it's best to just use a table and stick to the largest ones. I will include all that came to my attention. If I manage to find reliable sources, I will also add the downtime.
 
-| YYYY-MM-DD | downtime | friendly target                                                                                                                                                        |
+| date | downtime | friendly target                                                                                                                                                        |
 | ---------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2024-02-24 |          | [Zenlayers's CDN](https://torrentfreak.com/piracy-shield-iptv-blocks-reportedly-hit-zenlayer-cdns-innocent-customers-240215/)                                          |
+| 2024-02-15 |          | [Zenlayers's CDN](https://torrentfreak.com/piracy-shield-iptv-blocks-reportedly-hit-zenlayer-cdns-innocent-customers-240215/)                                          |
 | 2024-02-24 |          | [Cloudflare's CDN](https://www.dday.it/redazione/48554/piracyshield-ci-ricasca-bloccate-decine-di-siti-leciti-dietro-un-ip-di-cloudflare-danni-collaterali-o-illecito) |
 | 2024-08-18 | 37d      | [Samsung's IPTV](https://www.hdblog.it/internet/articoli/n599152/dazn-piracy-shield-blocco-smartone-lg-tizen/)                                                         |
 | 2024-08-18 | 37d      | [LG's IPTV](https://www.hdblog.it/internet/articoli/n599152/dazn-piracy-shield-blocco-smartone-lg-tizen/)                                                              |
