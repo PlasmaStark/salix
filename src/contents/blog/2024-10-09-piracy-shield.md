@@ -1,5 +1,5 @@
 ---
-title: "PiracyShield: an Italian fiasco"
+title: "Italian debacles: PiracyShield"
 date: "2024-10-09"
 description: "A button to nuke the web."
 coverImage: "chronicles/2025-shield.jpg"
@@ -132,12 +132,12 @@ What happened, and how?
 
 A Zenlayer-hosted website was likely (and illegally) streaming movies or football games, copyright holders produced a takedown ticket and Service Providers received it; we can only speculate on what happens after this step.
 
-- If Piracy Shield provides an IP address, Service Providers probably block them for their users.
-- If Piracy Shield provides the FQDN instead, Service Providers probably try to find and block all connected IPs. For instance, my website `www.leonardoerrati.com` has four (`185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`)
+- If Piracy Shield provides an IP address, Service Providers probably block them. This means Italian users will be unable to view them.
+- If Piracy Shield provides the FQDN instead, like `www.leonardoerrati.com.`, Service Providers allegedly try to find and block all connected IPs. For instance, my website has four (`185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`) and they would probably all be blocked.
 
 In most cases CDN-hosted websites share IP address, meaning that if you block the IP of one you block all. Blocking that pirate website caused the whole CDN to be unavailable from Italy.
 
-As far as I know, this is the first large victim of Piracy Shield.
+As far as I know, Zenlayer is the first large victim of Piracy Shield.
 
 ![Piracy Shield activated](/chronicles/2025-shield-fire.jpg)
 
@@ -149,7 +149,7 @@ Incidents have been so many that it's best to just use a table and stick to the 
 | ---------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 2024-02-24 |          | [Zenlayers's CDN](https://torrentfreak.com/piracy-shield-iptv-blocks-reportedly-hit-zenlayer-cdns-innocent-customers-240215/)                                          |
 | 2024-02-24 |          | [Cloudflare's CDN](https://www.dday.it/redazione/48554/piracyshield-ci-ricasca-bloccate-decine-di-siti-leciti-dietro-un-ip-di-cloudflare-danni-collaterali-o-illecito) |
-| 2024-08-18 | 37d      | [Samsung's IPTV] (https://www.hdblog.it/internet/articoli/n599152/dazn-piracy-shield-blocco-smartone-lg-tizen/)                                                        |
+| 2024-08-18 | 37d      | [Samsung's IPTV](https://www.hdblog.it/internet/articoli/n599152/dazn-piracy-shield-blocco-smartone-lg-tizen/)                                                         |
 | 2024-08-18 | 37d      | [LG's IPTV](https://www.hdblog.it/internet/articoli/n599152/dazn-piracy-shield-blocco-smartone-lg-tizen/)                                                              |
 | 2024-10-19 | 6h       | [Google's & YouTube's CDN](https://www.lastampa.it/sport/2024/10/20/news/piracy_shield_agcom_blocca_google_drive-14734331/)                                            |
 | 2024-10-19 | 6h       | [Imperva's CDN](https://www.giornalettismo.com/altri-ip-bloccati-da-piracy-shield-imperva/)                                                                            |
