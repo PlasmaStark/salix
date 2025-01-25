@@ -1,7 +1,7 @@
 "use client";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPersonDigging, faUser, faBook, faPenNib, faComments } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faBook, faPenNib, faComments } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
