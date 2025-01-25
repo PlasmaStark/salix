@@ -59,7 +59,8 @@ The final product is a cloud-based webpage running on Microsoft Azure, only reac
 ISPs are then forced to _completely halt any flux of information from the targets_ within 30 minutes.
 
 > Access service providers, search engine operators, and information society service providers involved in any capacity in the accessibility of the website or illegal services must implement the Authority's directive without delay and, in any case, within a maximum of 30 minutes from notification.
-> (July 14th 2023 law no. 93, Article 2, Comma 5)
+
+(July 14th 2023 law no. 93, Article 2, Comma 5)
 
 In July 2024, IT recruiting agency [DECKX](https://deckx.app/it/assumi-sviluppatori-e-sviluppatrici/) published [a job posting](https://www.simplyhired.it/job/qHcu2mLSe4o6etzqlj3N-7vcAvVAx3BHyjLjHMbPZwIJ-f1VJnN3aw):
 
@@ -76,7 +77,7 @@ Sp Tech Legal was displeased,
 
 > SP Tech Legal s.r.l. hereby states that the job advertisement [...] was erroneously published by the recruiting company Deckx s.r.l. without any assignment from SP Tech Legal s.r.l. itself. The text and content of the advertisement are, therefore, in no way attributable to SP Tech Legal s.r.l., which further specifies that it has promptly taken legal action against Deckx s.r.l. to protect its rights, which have been severely infringed by this unlawful conduct.
 
-and that was the end of it.
+and we never heard of this kerfuffle again.
 
 ![Piracy Shield under development](/chronicles/2025-shield-coding.jpg)
 
