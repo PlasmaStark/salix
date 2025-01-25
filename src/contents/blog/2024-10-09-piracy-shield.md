@@ -1,7 +1,7 @@
 ---
-title: "Piracy Shield: an Italian debacle"
+title: "PiracyShield: an Italian debacle"
 date: "2024-10-09"
-description: "Nuking the internet."
+description: "A big red button to nuke the web."
 coverImage: "chronicles/2025-shield.jpg"
 tags:
   - Bureaucracy
@@ -36,7 +36,7 @@ DAZN and Sky increased the cost of their subscriptions, but it was not enough. T
 
 ([Treccani Encyclopedia](<https://www.treccani.it/vocabolario/neo-pezzotto_(Neologismi)/>))
 
-They teamed up with a legal partner: enter [_Studio Previti_](https://www.previti.it/) ("Studio Previti Associazione Professionale"), a large Rome-based law firm founded by Cesare Previti, former politician, convicted in 2006 for judicial corruption and permanently disqualified from holding public office and practice law [@WEB:WikipediaPreviti]. The law firm is now run by his son.
+They teamed up with a legal partner: enter [_Studio Previti_](https://www.previti.it/) ("Studio Previti Associazione Professionale"), a large Rome-based law firm founded by Cesare Previti, former politician, convicted in 2006 for judicial corruption and permanently disqualified from holding public office and practice law. The law firm is now run by his son.
 
 Their strategy? They planned to construct their own Death Star, a superweapon to annihilate all pirate websites from the web. Well, the Italian web, at least.
 
@@ -147,25 +147,15 @@ Incidents have been so many that it's best to just use a table and stick to the 
 
 | YYYY-MM-DD | downtime | friendly target                                                  |
 | ---------- | -------- | ---------------------------------------------------------------- |
-| 2024-02-24 |          | Zenlayers's CDN 
-
-(`IP 104.166.170.62`) [@WEB:TF24]                |
-| 2024-02-24 |          | Cloudflare's CDN 
-
-(`IP 188.114.97.7`) [@WEB:DD24a]                |
-| 2024-08-18 | 37d      | Samsung's IPTV 
-
-(`https://tizen.smartone-iptv.com`) [@WEB:HDB24b] |
-| 2024-08-18 | 37d      | LG's IPTV 
-
-(`https://lg.smartone-iptv.com`) [@WEB:HDB24b]         |
-| 2024-10-19 | 6h       | Google's CDN 
-
-(`drive.usercontent.google.com`) [@WEB:LS24]        |
+| 2024-02-24 |          | Zenlayers's CDN (`IP 104.166.170.62`) [@WEB:TF24]                |
+| 2024-02-24 |          | Cloudflare's CDN (`IP 188.114.97.7`) [@WEB:DD24a]                |
+| 2024-08-18 | 37d      | Samsung's IPTV (`https://tizen.smartone-iptv.com`) [@WEB:HDB24b] |
+| 2024-08-18 | 37d      | LG's IPTV (`https://lg.smartone-iptv.com`) [@WEB:HDB24b]         |
+| 2024-10-19 | 6h       | Google's CDN (`drive.usercontent.google.com`) [@WEB:LS24]        |
 | 2024-10-19 | 6h       | Imperva's CDN (unknown) [@WEB:G24]                               |
 | 2024-12-01 |          | DDay's CDN [@WEB:DD24b]                                          |
 
-Non-malicious websites could technicallyask AGCOM to be unblocked, but the service was unavailable for the first few weeks.
+Non-malicious websites could technicall yask AGCOM to be unblocked, but the service was unavailable for the first few weeks, and wouldn't cover any kind of damage anyway.
 
 ## ACT 3, Piracy Shield versus the backlash
 
