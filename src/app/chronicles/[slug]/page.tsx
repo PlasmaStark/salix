@@ -64,10 +64,12 @@ export default async function BlogPost({ params }: { params: any }) {
         className="prose prose-lg prose-invert"
         dangerouslySetInnerHTML={{ __html: content }}
       />
-      <footer className="mt-12">
-        <h2 className="text-2xl font-semibold mb-4">Bibliography</h2>
-        <div dangerouslySetInnerHTML={{ __html: bibliography }} />
-      </footer>
+      {bibliography && bibliography.trim() !== '<ol class="bibliography"></ol>' && (
+        <footer className="mt-12">
+          <h2 className="text-2xl font-semibold mb-4">Bibliography</h2>
+          <div dangerouslySetInnerHTML={{ __html: bibliography }} />
+        </footer>
+      )}
     </article>
 
   );

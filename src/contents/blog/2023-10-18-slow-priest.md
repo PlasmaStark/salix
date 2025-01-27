@@ -11,11 +11,11 @@ One of my most cathartic experiences was a job interview for a partially state-o
 
 ## The summoning
 
-While studying for an unspecified exam, I was called and summoned to a mystical and inevitable job interview. Mystical due to the atmosphere of the place—as we will see. Inevitable because I could either agree to the given time and date or be rejected: it was pointless to object that they managed to hit an institutional commitment, but I managed to move it and could proceed. _"Surely the interviewer of Slow SpA is just a busy man,"_ I naively thought.
+While studying for an unspecified exam, I was called and summoned to a mystical and inevitable job interview. Mystical due to the atmosphere of the place—as we will see. Inevitable because I could either agree to the given time and date or be rejected: it was pointless to object that they managed to hit an institutional commitment. Luckily, I was able to reschedule that and proceed. _"Surely the interviewer of Slow SpA is just a busy man,"_ I naively thought.
 
 ## Entering the building
 
-Excited by the chance of witnessing an office of the legendary Italian public administration, I was unamused at first. From the gate of Slow SpA, I had a clear view of their central building. It was—and perhaps still is—an unassuming block of marble with glass doors, with a little gatehouse connecting it to the street. The guardian was a kind woman who promptly opened the gate and greeted me with energy.
+Excited by the chance to witness an office of the legendary Italian public administration, I was unimpressed at first. From the gate of Slow SpA, I had a clear view of their central building. It was—and perhaps still is—an unassuming block of marble with glass doors, with a little gatehouse connecting it to the street. The guardian was a kind woman who promptly opened the gate and greeted me with energy.
 
 But moving on, I found every legend dwarfed by reality.  
 The gatehouse was just a facade, and the central building a majestic temple to... for lack of a better word, **slowness**. The employees were quite like marble statues: one could almost hear the sound of stone grinding against the floor as they dragged themselves along, and the floor tried to stop them. Like in Dante's _Inferno_, none of this was due to their fault or desire; it was merely their nature, and they were content. It would have been an affront to the very place to disturb its peace. It was as natural as the sun slowly rising over the mountains. Every day, for millions of days. Even time seemed to slow down. I took my seat with a couple of others. They, too, were chosen to witness this.
@@ -28,7 +28,7 @@ The slow and grand ceremony began with the arrival of the head of the Human Reso
 
 He solemnly declared that the interview was to start in about five minutes and entered the room. Every step He took was slowly calculated; every word was uttered with titanic effort. The Priest, majestic Star of Slowness, flanked by His two assistants, sat at an impossibly long glass table. And everything was perfect, as if that place had been built to house His figure in perpetual waiting.
 
-My turn finally came, and I was calmly called into the room. Slowly and methodically, He asked about my studies. _"This is a test,"_ I thought. _"Surely he read them in my CV and is testing me."_ I answered him. He listened carefully, every wrinkle on His face weighing slowly upon His brow: little vertical jolts revealed which phrases caught His attention.
+My turn finally came, and I was calmly called into the room. Slowly and methodically, He asked about my studies. _"This is a test,"_ I thought. _"Of course, he read them in my CV and is just testing me."_ I answered him. He listened carefully, every wrinkle on His face weighing slowly upon His brow, little vertical jolts revealing which phrases caught His attention.
 
 Before I even realized it, it was all over. The Priest's assistants informed me that I would be contacted for a second ceremony, and I left that place as a changed person. Bewildered, astonished, slowed.
 
