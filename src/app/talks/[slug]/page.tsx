@@ -21,8 +21,8 @@ export default async function BlogPost({ params }: { params: any }) {
       <header className="mb-6">
         <Breadcrumb />
         <h1 className="text-4xl font-bold text-white-800">{metadata.title}</h1>
-        <p className="text-sm text-gray-500 mt-2">{metadata.date}</p>
-        <ul className="flex flex-wrap gap-2 mt-1">
+        <p className="text-sm text-gray-500 mt-2">first made: {metadata.date}</p>
+        <ul className="flex flex-wrap gap-2 mt-4">
           {metadata.tags.map((tag: string) => (
             <li key={tag}>
               <Link
