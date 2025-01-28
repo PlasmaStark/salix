@@ -73,6 +73,9 @@ export default function Home() {
 
       {/* Categories Section */}
       <section id="categories" className="mb-16 mt-2 sm:mt-3">
+        <h2 className="text-xl mx-20 mb-6 sm:mb-3 bg-accent text-white text-center px-auto py-2 rounded-lg shadow-md">
+          Content
+        </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-3">
           {/* About Me Card */}
           <Link href="/about" className="no-underline">
