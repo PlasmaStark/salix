@@ -53,7 +53,7 @@ export default function Home() {
             <p className="text-lg sm:text-xl lg:text-base font-semibold drop-shadow-lg">
               You are visitor #{visitorNumber}.
             </p>
-            <p className="text-sm lg:text-xs italic drop-shadow-lg">
+            <p className="text-sm italic drop-shadow-lg">
               disclaimer: counter may be randomised
             </p>
           </div>
