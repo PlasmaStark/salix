@@ -15,7 +15,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="container mx-auto px-4 py-8">
+    <main className="container mx-auto px-4 py-6 sm:py-1">
       {/*  
       <section className="bg-accent text-white text-center rounded-lg mb-6 h-10 sm:h-16">
         <div className="flex items-center justify-center space-x-3 h-full px-4">
@@ -31,9 +31,9 @@ export default function Home() {
       </section>
       */}
       {/* Hero Section */}
-      <section className="relative bg-background-100 rounded-lg shadow-md overflow-hidden mb-4">
+      <section className="relative bg-background-100 rounded-lg shadow-md overflow-hidden mb-6 sm:mb-2">
         {/* Background Image */}
-        <div className="relative h-64 sm:h-80 lg:h-96 w-full">
+        <div className="relative h-64 sm:h-50 w-full">
           <Image
             src="/background.png"
             alt="Hero background"
@@ -72,8 +72,8 @@ export default function Home() {
 
 
       {/* Categories Section */}
-      <section id="categories" className="mb-16 mt-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <section id="categories" className="mb-16 mt-2 sm:mt-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-3">
           {/* About Me Card */}
           <Link href="/about" className="no-underline">
             <div className="bg-gray-800 rounded-lg shadow-md p-6 sm:p-4 text-center border-2 border-transparent transition-all hover:border-accent hover:scale-105 group">
