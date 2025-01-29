@@ -101,9 +101,16 @@ export default function About() {
       <section>
         <h2 className="text-4xl font-bold text-accent mb-6">Some projects</h2>
         <p className="text-lg leading-relaxed mb-6">
-          A selection of past and ongoing projects.
+          A selection of the most interesting past and ongoing projects.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <Link href="/" className="no-underline">
+            <div className="p-6 bg-white shadow-md rounded-md transition-all hover:scale-105 group">
+              <h3 className="text-xl font-semibold text-gray-800">Salix</h3>
+              <p className="text-gray-600 text-sm font-semibold">(2025-now)</p>
+              <p className="text-gray-600">This website! Programmed with React.</p>
+            </div>
+          </Link>
           <div className="p-6 bg-gray-300 shadow-md rounded-md">
             <h3 className="text-xl font-semibold text-gray-800">Project Archimedes</h3>
             <p className="text-gray-600 text-sm font-semibold">(2021-2023)</p>
