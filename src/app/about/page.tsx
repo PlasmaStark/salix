@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faBook, faEnvelope, faIdCard } from "@fortawesome/free-solid-svg-icons";
+import { faBook, faEnvelope, faIdCard, faX } from "@fortawesome/free-solid-svg-icons";
 
 
 export const metadata: Metadata = {
@@ -208,6 +208,20 @@ export default function About() {
                 className="text-white transition-transform group-hover:rotate-12"
               />
               <p className="ml-3">UniTn</p>
+            </div>
+          </Link>
+          {/* Pagina X */}
+          <Link
+            href="https://x.com/PlasmaStark"
+            className="flex items-center no-underline px-4 py-2 bg-gray-800 text-white rounded-full shadow-md hover:bg-accent transition"
+          >
+            <div className="flex items-center">
+              <FontAwesomeIcon
+                icon={faX}
+                style={{ height: "1rem", width: "1rem" }}
+                className="text-white transition-transform group-hover:rotate-12"
+              />
+              <p className="ml-3">Twitter/X</p>
             </div>
           </Link>
         </div>
