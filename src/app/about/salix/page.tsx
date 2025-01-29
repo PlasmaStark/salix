@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Breadcrumb from "@components/breadcrumb";
-import Link from "next/link";
 
 export const metadata: Metadata = {
     title: "Salix",
