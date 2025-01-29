@@ -104,7 +104,7 @@ export default function About() {
           A selection of the most interesting past and ongoing projects.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <Link href="/" className="no-underline">
+          <Link href="/about/salix" className="no-underline">
             <div className="p-6 bg-white shadow-md rounded-md transition-all hover:scale-105 group">
               <h3 className="text-xl font-semibold text-gray-800">Salix</h3>
               <p className="text-gray-600 text-sm font-semibold">(2025-now)</p>
