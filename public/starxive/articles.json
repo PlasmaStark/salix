@@ -1,68 +1,75 @@
 [
   {
-    "ID": "Damgard07",
-    "AUTHORS": "Ivan Damgard",
-    "TITLE": "A “proof-reading” of some issues in cryptography",
-    "DATE": 2007,
-    "CLASS": "Position paper",
-    "TAGS": "security",
-    "URL": "https://cs.au.dk/~ivan/positionpaper.pdf",
-    "DESCRIPTION": "Issues with security proofs and why we still need them",
-    "COMMENT": "High level introduction"
+    "id": "Damgard07",
+    "authors": "Ivan Damgard",
+    "title": "A “proof-reading” of some issues in cryptography",
+    "date": 2007,
+    "class": "Position paper",
+    "tags": [
+      "security"
+    ],
+    "url": "https://cs.au.dk/~ivan/positionpaper.pdf",
+    "description": "Issues with security proofs and why we still need them"
   },
   {
-    "ID": "Kamara17",
-    "AUTHORS": "Seny Kamara",
-    "TITLE": "A Brief Introduction to Cryptography",
-    "DATE": 2017,
-    "CLASS": "Lecture notes",
-    "TAGS": "security",
-    "URL": "https://cs.brown.edu/~seny/2950-v/intro.pdf",
-    "DESCRIPTION": "Game-based & simulation-based techniques, their relations and issues",
-    "COMMENT": "Hands-on introduction"
+    "id": "Kamara17",
+    "authors": "Seny Kamara",
+    "title": "A Brief Introduction to Cryptography",
+    "date": 2017,
+    "class": "Lecture notes",
+    "tags": [
+      "security"
+    ],
+    "url": "https://cs.brown.edu/~seny/2950-v/intro.pdf",
+    "description": "Game-based & simulation-based techniques, hands-on introduction"
   },
   {
-    "ID": "GolBel08",
-    "AUTHORS": "Shafi Goldwasser, Mihi Bellare",
-    "TITLE": "Lecture Notes on Cryptography",
-    "DATE": 2008,
-    "CLASS": "Lecture notes",
-    "TAGS": "security",
-    "URL": "https://cseweb.ucsd.edu//~mihir/papers/gb.pdf",
-    "DESCRIPTION": "Complete theory with a focus on security arguments",
-    "COMMENT": "Complete course"
+    "id": "GolBel08",
+    "authors": "Shafi Goldwasser, Mihi Bellare",
+    "title": "Lecture Notes on Cryptography",
+    "date": 2008,
+    "class": "Lecture notes",
+    "tags": [
+      "security"
+    ],
+    "url": "https://cseweb.ucsd.edu//~mihir/papers/gb.pdf",
+    "description": "Complete theory with a focus on security arguments"
   },
   {
-    "ID": "SanBalChia22",
-    "AUTHORS": "Paolo Santini, Marco Baldi, Franco Chiaraluce", 
-    "TITLE": "Computational Hardness of the Permuted Kernel and Subcode Equivalence Problems",
-    "DATE": 2022,
-    "CLASS": "Article",
-    "TAGS": "pkp",
-    "URL": "https://eprint.iacr.org/2022/1749.pdf",
-    "DESCRIPTION": "PKP, SEP and their equivalence",
-    "COMMENT": "Good introduction"
+    "id": "EPRINT: SanBalChia22",
+    "authors": "Paolo Santini, Marco Baldi, Franco Chiaraluce",
+    "title": "Computational Hardness of the Permuted Kernel and Subcode Equivalence Problems",
+    "date": 2022,
+    "class": "Article",
+    "tags": [
+      "pkp"
+    ],
+    "url": "https://eprint.iacr.org/2022/1749.pdf",
+    "description": "PKP, SEP and their equivalence"
   },
   {
-    "ID": "SanBalChia22",
-    "AUTHORS": "Paolo Santini, Marco Baldi, Franco Chiaraluce", 
-    "TITLE": "A Novel Attack on the Permuted Kernel Problem",
-    "DATE": 2022,
-    "CLASS": "Article",
-    "TAGS": "pkp",
-    "URL": "https://arxiv.org/pdf/2206.14547",
-    "DESCRIPTION": "Improved the classical PKP attack",
-    "COMMENT": "Follows classical ideas"
+    "id": "ARXIV: SanBalChia22",
+    "authors": "Paolo Santini, Marco Baldi, Franco Chiaraluce",
+    "title": "A Novel Attack on the Permuted Kernel Problem",
+    "date": 2022,
+    "class": "Article",
+    "tags": [
+      "pkp"
+    ],
+    "url": "https://arxiv.org/pdf/2206.14547",
+    "description": "Improved the classical PKP attack"
   },
   {
-    "ID": "Shamir89",
-    "AUTHORS": "Adi Shamir", 
-    "TITLE": "An Efficient Identification Scheme Based on Permuted Kernels",
-    "DATE": 1989,
-    "CLASS": "Extended Abstract",
-    "TAGS": "pkp",
-    "URL": "https://link.springer.com/chapter/10.1007/0-387-34805-0_54",
-    "DESCRIPTION": "Defines PKP and builds an identification scheme",
-    "COMMENT": "Good introduction"
+    "id": "CRYPTO: Shamir89",
+    "authors": "Adi Shamir",
+    "title": "An Efficient Identification Scheme Based on Permuted Kernels",
+    "date": 1989,
+    "class": "Extended Abstract",
+    "tags": [
+      "pkp",
+      "identification"
+    ],
+    "url": "https://link.springer.com/chapter/10.1007/0-387-34805-0_54",
+    "description": "Defines PKP and builds an identification scheme"
   }
 ]
