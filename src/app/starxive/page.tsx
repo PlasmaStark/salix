@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getAllTags, ContentItem, getContentListFromJson, getAllTagsFromContent } from '@/lib/getPosts';
+import { ContentItem, getContentListFromJson, getAllTagsFromContent } from '@/lib/getPosts';
 import { STARXIVE_FILE } from "@/config";
 import Breadcrumb from "../components/navigation/breadcrumb";
 
