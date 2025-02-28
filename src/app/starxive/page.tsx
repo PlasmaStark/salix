@@ -18,7 +18,7 @@ interface Entry {
 
 const tagColors: Record<string, string> = {
     security: "border-red-500",
-    cryptography: "border-blue-500",
+    pkp: "border-blue-500",
     mathematics: "border-green-500",
     algorithms: "border-yellow-500",
     default: "border-gray-400"
