@@ -8,3 +8,4 @@ Personal website built with Nextjs.
 | 25.1.alpha-2  | 2025 jan | alpha 2     |
 | 25.1.beta     | 2025 jan | beta 1      |
 | 25.1.1        | 2025 jan | v1          |
+| 25.2.1        | 2025 feb | v2          |

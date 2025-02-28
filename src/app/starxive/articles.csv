@@ -1,4 +1,0 @@
-ID;AUTHORS;TITLE;DATE;CLASS;TAGS;URL;DESCRIPTION;COMMENT
-Damgard07;Ivan Damgard;A “proof-reading” of some issues in cryptography;2007;Position paper;security;https://cs.au.dk/~ivan/positionpaper.pdf;Issues with security proofs and why we still need them.;High level introduction
-Kamara17;Seny Kamara;A Brief Introduction to Cryptography;2017;Lecture notes;security;https://cs.brown.edu/~seny/2950-v/intro.pdf;Game-based & simulation-based proof techniques, their relation and their issues.;Hands-on introduction
-GolBel08;Shafi Goldwasser, Mihi Bellare;Lecture Notes on Cryptography;2008;Lecture notes;security;https://cseweb.ucsd.edu//~mihir/papers/gb.pdf;Complete theory of cryptography with a focus on security arguments for the protocols;Complete course

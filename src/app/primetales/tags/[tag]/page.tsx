@@ -32,7 +32,7 @@ export default async function TagPage({ params }: { params: Promise<{ tag: strin
                 <Link href={`/primetales/${article.slug}`} className="block p-6 no-underline">
                   {/* Card Image or Cover */}
                   <div className="mb-4 rounded-lg overflow-hidden h-48">
-                  <Image
+                    <Image
                       src={
                         article.coverImage.startsWith("/")
                           ? `${article.coverImage}`
@@ -45,11 +45,8 @@ export default async function TagPage({ params }: { params: Promise<{ tag: strin
                     />
                   </div>
 
-                  {/* Titolo */}
-                  <h2 className="text-2xl font-bold text-accent mb-2">{article.title}</h2>
-
-                  {/* Data e Descrizione */}
-                  <div className="text-sm text-gray-500 mb-4">{article.date}</div>
+                  <h2 className="text-2xl font-bold text-accent">{article.title}</h2>
+                  <div className="text-xs text-right text-gray-500 mb-2">{article.date}</div>
                   <p className="text-gray-700 text-base">{article.description}</p>
                 </Link>
               </div>

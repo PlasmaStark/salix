@@ -1,0 +1,35 @@
+[
+  {
+    "ID": "Damgard07",
+    "AUTHORS": "Ivan Damgard",
+    "TITLE": "A “proof-reading” of some issues in cryptography",
+    "DATE": 2007,
+    "CLASS": "Position paper",
+    "TAGS": "security",
+    "URL": "https://cs.au.dk/~ivan/positionpaper.pdf",
+    "DESCRIPTION": "Issues with security proofs and why we still need them.",
+    "COMMENT": "High level introduction"
+  },
+  {
+    "ID": "Kamara17",
+    "AUTHORS": "Seny Kamara",
+    "TITLE": "A Brief Introduction to Cryptography",
+    "DATE": 2017,
+    "CLASS": "Lecture notes",
+    "TAGS": "security",
+    "URL": "https://cs.brown.edu/~seny/2950-v/intro.pdf",
+    "DESCRIPTION": "Game-based & simulation-based techniques, their relations and issues.",
+    "COMMENT": "Hands-on introduction"
+  },
+  {
+    "ID": "GolBel08",
+    "AUTHORS": "Shafi Goldwasser, Mihi Bellare",
+    "TITLE": "Lecture Notes on Cryptography",
+    "DATE": 2008,
+    "CLASS": "Lecture notes",
+    "TAGS": "security",
+    "URL": "https://cseweb.ucsd.edu//~mihir/papers/gb.pdf",
+    "DESCRIPTION": "Complete theory with a focus on security arguments",
+    "COMMENT": "Complete course"
+  }
+]
