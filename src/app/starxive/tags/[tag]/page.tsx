@@ -32,7 +32,7 @@ export default async function StarXiveTagPage({params}: {params: Promise<{ tag: 
 
             {/* Articles Section */}
             <h2 className="text-2xl text-accent font-bold mb-6">Articles tagged with #{tag}</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-4 gap-3 mb-6">
                 {filteredEntries.map((entry) => {
                     const firstTag = entry.tags[0];
                     const borderColor = tagColors[firstTag] || "border-gray-400";

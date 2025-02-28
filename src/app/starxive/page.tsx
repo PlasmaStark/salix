@@ -41,7 +41,7 @@ export default async function StarXivePage() {
 
             {/* Articles Section */}
             <h2 className="text-2xl text-accent font-bold mb-6">Articles</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-4 gap-3 mb-6">
                 {entries
                     .sort((a, b) => a.slug.localeCompare(b.slug))
                     .map((entry) => {
