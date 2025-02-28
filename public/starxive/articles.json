@@ -7,7 +7,7 @@
     "CLASS": "Position paper",
     "TAGS": "security",
     "URL": "https://cs.au.dk/~ivan/positionpaper.pdf",
-    "DESCRIPTION": "Issues with security proofs and why we still need them.",
+    "DESCRIPTION": "Issues with security proofs and why we still need them",
     "COMMENT": "High level introduction"
   },
   {
@@ -18,7 +18,7 @@
     "CLASS": "Lecture notes",
     "TAGS": "security",
     "URL": "https://cs.brown.edu/~seny/2950-v/intro.pdf",
-    "DESCRIPTION": "Game-based & simulation-based techniques, their relations and issues.",
+    "DESCRIPTION": "Game-based & simulation-based techniques, their relations and issues",
     "COMMENT": "Hands-on introduction"
   },
   {
@@ -31,5 +31,38 @@
     "URL": "https://cseweb.ucsd.edu//~mihir/papers/gb.pdf",
     "DESCRIPTION": "Complete theory with a focus on security arguments",
     "COMMENT": "Complete course"
+  },
+  {
+    "ID": "SanBalChia22",
+    "AUTHORS": "Paolo Santini, Marco Baldi, Franco Chiaraluce", 
+    "TITLE": "Computational Hardness of the Permuted Kernel and Subcode Equivalence Problems",
+    "DATE": 2022,
+    "CLASS": "Article",
+    "TAGS": "pkp",
+    "URL": "https://eprint.iacr.org/2022/1749.pdf",
+    "DESCRIPTION": "PKP, SEP and their equivalence",
+    "COMMENT": "Good introduction"
+  },
+  {
+    "ID": "SanBalChia22",
+    "AUTHORS": "Paolo Santini, Marco Baldi, Franco Chiaraluce", 
+    "TITLE": "A Novel Attack on the Permuted Kernel Problem",
+    "DATE": 2022,
+    "CLASS": "Article",
+    "TAGS": "pkp",
+    "URL": "https://arxiv.org/pdf/2206.14547",
+    "DESCRIPTION": "Improved the classical PKP attack",
+    "COMMENT": "Follows classical ideas"
+  },
+  {
+    "ID": "Shamir89",
+    "AUTHORS": "Adi Shamir", 
+    "TITLE": "An Efficient Identification Scheme Based on Permuted Kernels",
+    "DATE": 1989,
+    "CLASS": "Extended Abstract",
+    "TAGS": "pkp",
+    "URL": "https://link.springer.com/chapter/10.1007/0-387-34805-0_54",
+    "DESCRIPTION": "Defines PKP and builds an identification scheme",
+    "COMMENT": "Good introduction"
   }
 ]
