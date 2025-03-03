@@ -33,7 +33,7 @@ export default async function StarXiveTagPage({ params }: { params: Promise<{ ta
                 Star<span className="text-5xl text-red-500">X</span>ive
             </h1>
             <p className="text-lg text-center mb-10">
-                Welcome to Leonardo's omnium archive, built for sharing. <br></br>
+                Welcome to Leonardo's omnium archive. <br></br>
                 You are viewing all results for tag <b>{tag}</b>.
             </p>
             {sortedTypes.map((type) => (
