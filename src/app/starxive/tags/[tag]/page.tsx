@@ -33,11 +33,12 @@ export default async function StarXiveTagPage({ params }: { params: Promise<{ ta
                 Star<span className="text-5xl text-red-500">X</span>ive
             </h1>
             <p className="text-lg text-center mb-10">
-                Welcome to Leonardo's omnium archive.
+                Welcome to Leonardo's omnium archive, built for sharing. <br></br>
+                You are viewing all results for tag <b>{tag}</b>.
             </p>
             {sortedTypes.map((type) => (
                 <div key={type}>
-                    <h2 className="text-2xl text-accent font-bold mb-6">{type} tagged with #{tag}</h2>
+                    <h2 className="text-2xl text-accent font-bold mb-6">{type} with #{tag}</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-3 mb-6">
                         {groupedByType[type].map((entry) => {
                             const backgroundStyle = { background: getGradientBackground(entry.tags) };
@@ -57,7 +58,7 @@ export default async function StarXiveTagPage({ params }: { params: Promise<{ ta
                                     <p className="text-xs mt-1 text-white-500 italic line-clamp-3">{entry.description}</p>
                                     <div className="mt-auto flex flex-wrap gap-1">
                                         {entry.tags.map((tag) => (
-                                            <span key={tag} className="bg-white text-gray-700 text-[10px] px-1 mt-1 rounded-full">
+                                            <span key={tag} className="bg-white text-gray-700 text-[10px] px-2 mt-1 rounded-full">
                                                 #{tag}
                                             </span>
                                         ))}

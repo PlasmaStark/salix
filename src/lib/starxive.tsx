@@ -3,6 +3,7 @@ export const tagColors: Record<string, string> = {
     pkp: "#3b82f6", // Blu
     identification: "#a855f7", // Viola
     codes: "#10b981", // Verde 
+    signatures: "#f59e0b", // Arancione ambrato
 };
 
 

@@ -6,4 +6,4 @@ export const TALKS_DIR = path.join(process.cwd(), 'src/contents/talks');
 export const ARTICLE_DIR = path.join(process.cwd(), 'src/contents/articles');
 export const BIBLIOGRAPHY_DIR = path.join(process.cwd(), 'src/contents/bibliography/references.bib');
 export const WIKI_DIR = path.join(process.cwd(), 'src/contents/encryptopedia');
-export const STARXIVE_FILE = path.join(process.cwd(), 'public/starxive/articles.json');
+export const STARXIVE_FILE = path.join(process.cwd(), 'public/starxive/starxive.json');

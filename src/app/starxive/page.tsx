@@ -26,7 +26,8 @@ export default async function StarXivePage() {
                 Star<span className="text-5xl text-red-500">X</span>ive
             </h1>
             <p className="text-lg text-center mb-10">
-                Welcome to Leonardo's omnium archive.
+                Welcome to Leonardo's omnium archive. <br></br>
+                View all or filter by <b>tag</b>.
             </p>
 
             {/* Tags Section */}
@@ -66,7 +67,7 @@ export default async function StarXivePage() {
                                     <p className="text-xs mt-1 text-white-500 italic line-clamp-3">{entry.description}</p>
                                     <div className="mt-auto flex flex-wrap gap-1">
                                         {entry.tags.map((tag) => (
-                                            <span key={tag} className="bg-white text-gray-700 text-[10px] px-1 mt-1 rounded-full">
+                                            <span key={tag} className="bg-white text-gray-700 text-[10px] px-2 mt-1 rounded-full">
                                                 #{tag}
                                             </span>
                                         ))}

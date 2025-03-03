@@ -105,5 +105,46 @@
     ],
     "url": "http://user.math.uzh.ch/weger/VT_Summer_School.pdf",
     "description": "Introduction to most subclasses of the Code Equivalence Problem"
+  },
+  {
+    "id": "EPRINT: AABN02",
+    "authors": "M. Abdalla, J. Anm M. Bellare, C. Namprempre",
+    "title": "From Identification to Signatures via the Fiat-Shamir Transform",
+    "date": 2002,
+    "class": "Article",
+    "type": "Articles",
+    "tags": [
+      "security",
+      "identification",
+      "signatures"
+    ],
+    "url": "https://eprint.iacr.org/2002/022.pdf",
+    "description": "Proof of security of the Fiat-Shamir paradigm"
+  },
+  {
+    "id": "EUROCRYPT: Shoup97",
+    "authors": "V. Shoup",
+    "title": "Lower Bounds for Discrete Logarithms and Related Problems",
+    "date": 1997,
+    "class": "Extended Abstract",
+    "type": "Articles",
+    "tags": [
+      "security"
+    ],
+    "url": "https://www.shoup.net/papers/dlbounds1.pdf",
+    "description": "Introduction of the generic group model"
+  },
+  {
+    "id": "HwaKimLee",
+    "authors": "S. Hwang, I. Kim, W. Lee",
+    "title": "Modern Cryptography with Proof Techniques and Implementations",
+    "date": 2023,
+    "class": "Book",
+    "type": "Books",
+    "tags": [
+      "security"
+    ],
+    "url": "https://www.routledge.com/Modern-Cryptography-with-Proof-Techniques-and-Implementations/OunHwang-Kim-Lee/p/book/9780367723231",
+    "description": "Theory of provable cryptography"
   }
 ]
