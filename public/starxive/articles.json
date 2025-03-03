@@ -1,10 +1,11 @@
 [
   {
     "id": "Damgard07",
-    "authors": "Ivan Damgard",
+    "authors": "I. Damgard",
     "title": "A “proof-reading” of some issues in cryptography",
     "date": 2007,
     "class": "Position paper",
+    "type": "Articles",
     "tags": [
       "security"
     ],
@@ -13,10 +14,11 @@
   },
   {
     "id": "Kamara17",
-    "authors": "Seny Kamara",
+    "authors": "S. Kamara",
     "title": "A Brief Introduction to Cryptography",
     "date": 2017,
     "class": "Lecture notes",
+    "type": "Lecture notes",
     "tags": [
       "security"
     ],
@@ -25,10 +27,11 @@
   },
   {
     "id": "GolBel08",
-    "authors": "Shafi Goldwasser, Mihi Bellare",
+    "authors": "S. Goldwasser, M. Bellare",
     "title": "Lecture Notes on Cryptography",
     "date": 2008,
     "class": "Lecture notes",
+    "type": "Lecture notes",
     "tags": [
       "security"
     ],
@@ -37,39 +40,70 @@
   },
   {
     "id": "EPRINT: SanBalChia22",
-    "authors": "Paolo Santini, Marco Baldi, Franco Chiaraluce",
+    "authors": "P. Santini, M. Baldi, F. Chiaraluce",
     "title": "Computational Hardness of the Permuted Kernel and Subcode Equivalence Problems",
     "date": 2022,
     "class": "Article",
+    "type": "Articles",
     "tags": [
-      "pkp"
+      "pkp",
+      "codes"
     ],
     "url": "https://eprint.iacr.org/2022/1749.pdf",
     "description": "PKP, SEP and their equivalence"
   },
   {
     "id": "ARXIV: SanBalChia22",
-    "authors": "Paolo Santini, Marco Baldi, Franco Chiaraluce",
+    "authors": "P. Santini, M. Baldi, F. Chiaraluce",
     "title": "A Novel Attack on the Permuted Kernel Problem",
     "date": 2022,
     "class": "Article",
+    "type": "Articles",
     "tags": [
-      "pkp"
+      "pkp",
+      "codes"
     ],
     "url": "https://arxiv.org/pdf/2206.14547",
     "description": "Improved the classical PKP attack"
   },
   {
     "id": "CRYPTO: Shamir89",
-    "authors": "Adi Shamir",
+    "authors": "A. Shamir",
     "title": "An Efficient Identification Scheme Based on Permuted Kernels",
     "date": 1989,
     "class": "Extended Abstract",
+    "type": "Articles",
     "tags": [
       "pkp",
       "identification"
     ],
     "url": "https://link.springer.com/chapter/10.1007/0-387-34805-0_54",
     "description": "Defines PKP and builds an identification scheme"
+  },
+  {
+    "id": "ARXIV: Sanna24",
+    "authors": "C. Sanna",
+    "title": "On the number of solutions to a random instance of the permuted kernel problem",
+    "date": 2024,
+    "class": "Article",
+    "type": "Articles",
+    "tags": [
+      "pkp"
+    ],
+    "url": "https://arxiv.org/pdf/2406.00453",
+    "description": "The standard heuristic differs a lot from the expected value"
+  },
+  {
+    "id": "Weger24",
+    "authors": "V. Weger",
+    "title": "The Mysterious Case of Code Equivalence",
+    "date": 2024,
+    "class": "Lecture notes",
+    "type": "Lecture notes",
+    "tags": [
+      "codes"
+    ],
+    "url": "http://user.math.uzh.ch/weger/VT_Summer_School.pdf",
+    "description": "Introduction to most subclasses of the Code Equivalence Problem"
   }
 ]

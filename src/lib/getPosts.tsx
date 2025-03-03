@@ -12,6 +12,7 @@ export type ContentItem = {
   id?: string;
   authors?: string;
   url?: string;
+  type?: string;
 };
 
 export function getContentList(directory: string): ContentItem[] {
@@ -49,6 +50,7 @@ export function getContentListFromJson(filepath: string): ContentItem[] {
     authors: item.authors || null,
     url: item.url || null,
     coverImage: item.coverImage || null,
+    type: item.type,
   }));
 }
 
