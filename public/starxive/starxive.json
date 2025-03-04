@@ -153,7 +153,7 @@
     "title": "A Graduate Course in Applied Cryptography",
     "date": 2023,
     "class": "Extended Abstract",
-    "type": "books",
+    "type": "Books",
     "tags":  [
       "security",
       "signatures"
