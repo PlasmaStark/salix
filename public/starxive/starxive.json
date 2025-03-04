@@ -146,5 +146,19 @@
     ],
     "url": "https://www.routledge.com/Modern-Cryptography-with-Proof-Techniques-and-Implementations/OunHwang-Kim-Lee/p/book/9780367723231",
     "description": "Theory of provable cryptography"
+  },
+  {
+    "id": "BonSho23",
+    "authors": "D. Boneh, V. Shoup", 
+    "title": "A Graduate Course in Applied Cryptography",
+    "date": 2023,
+    "class": "Extended Abstract",
+    "type": "books",
+    "tags":  [
+      "security",
+      "signatures"
+    ],
+    "url": "https://crypto.stanford.edu/~dabo/cryptobook/BonehShoup_0_5.pdf",
+    "comment": "Incomplete but excellent"
   }
 ]
