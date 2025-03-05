@@ -159,7 +159,7 @@
       "signatures"
     ],
     "url": "https://crypto.stanford.edu/~dabo/cryptobook/BonehShoup_0_5.pdf",
-    "comment": "Incomplete but excellent"
+    "description": "Incomplete but excellent"
   },
   {
     "id": "BelDaiLi19",
@@ -173,7 +173,7 @@
       "signatures"
     ],
     "url": "https://eprint.iacr.org/2019/1017.pdf",
-    "comment": "A forking lemma only reprogramming one point"
+    "description": "A forking lemma only reprogramming one point"
   },
   {
     "id": "CriKomMal23",
@@ -187,6 +187,6 @@
       "signatures"
     ],
     "url": "https://eprint.iacr.org/archive/2023/445/1679907858.pdf",
-    "comment": "Threshold signatures with adaptive security"
+    "description": "Threshold signatures with adaptive security"
   }
 ]
