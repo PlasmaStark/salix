@@ -152,7 +152,7 @@
     "authors": "D. Boneh, V. Shoup", 
     "title": "A Graduate Course in Applied Cryptography",
     "date": 2023,
-    "class": "Extended Abstract",
+    "class": "Draft",
     "type": "Books",
     "tags":  [
       "security",
@@ -160,5 +160,33 @@
     ],
     "url": "https://crypto.stanford.edu/~dabo/cryptobook/BonehShoup_0_5.pdf",
     "comment": "Incomplete but excellent"
+  },
+  {
+    "id": "BelDaiLi19",
+    "authors": "M. Bellare, W. Dai, L. Li", 
+    "title": "The Local Forking Lemma and its Application to Deterministic Encryption",
+    "date": 2019,
+    "class": "Article",
+    "type": "Articles",
+    "tags":  [
+      "security",
+      "signatures"
+    ],
+    "url": "https://eprint.iacr.org/2019/1017.pdf",
+    "comment": "A forking lemma only reprogramming one point"
+  },
+  {
+    "id": "CriKomMal23",
+    "authors": "E. Crites, C. Komlo, M. Maller", 
+    "title": "Fully Adaptive Schnorr Threshold Signatures",
+    "date": 2023,
+    "class": "Article",
+    "type": "Articles",
+    "tags":  [
+      "security",
+      "signatures"
+    ],
+    "url": "https://eprint.iacr.org/archive/2023/445/1679907858.pdf",
+    "comment": "Threshold signatures with adaptive security"
   }
 ]
