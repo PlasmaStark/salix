@@ -4,7 +4,10 @@ export const tagColors: Record<string, string> = {
     identification: "#a855f7", // Viola
     codes: "#10b981", // Verde 
     signatures: "#f59e0b", // Arancione ambrato
+    isogenies: "#eab308", // Giallo
+    lep: "#38bdf8", // Azzurro
 };
+
 
 
 export const getGradientBackground = (tags: string[]): string => {

@@ -162,7 +162,7 @@
     "description": "Incomplete but excellent"
   },
   {
-    "id": "BelDaiLi19",
+    "id": "EPRINT: BelDaiLi19",
     "authors": "M. Bellare, W. Dai, L. Li", 
     "title": "The Local Forking Lemma and its Application to Deterministic Encryption",
     "date": 2019,
@@ -176,7 +176,7 @@
     "description": "A forking lemma only reprogramming one point"
   },
   {
-    "id": "CriKomMal23",
+    "id": "EPRINT: CriKomMal23",
     "authors": "E. Crites, C. Komlo, M. Maller", 
     "title": "Fully Adaptive Schnorr Threshold Signatures",
     "date": 2023,
@@ -188,5 +188,34 @@
     ],
     "url": "https://eprint.iacr.org/archive/2023/445/1679907858.pdf",
     "description": "Threshold signatures with adaptive security"
+  },
+  {
+    "id": "EPRINT: ChoPerSan23",
+    "authors": "T. Chou, E. Persichetti, P. Santini", 
+    "title": "On Linear Equivalence, Canonical Forms, and Digital Signatures",
+    "date": 2023,
+    "class": "Article",
+    "type": "Articles",
+    "tags":  [
+      "codes",
+      "lep",
+      "signatures"
+    ],
+    "url": "https://eprint.iacr.org/2023/1533.pdf",
+    "description": "Compress the zero-knowledge proof via CF-LEP."
+  },
+  {
+    "id": "EPRINT: DKLPW20",
+    "authors": "L. De Feo, D. Kohel, A. Leroux, C. Petit, B. Wesolowski", 
+    "title": "SQISign: compact post-quantum signatures from quaternions and isogenies",
+    "date": 2020,
+    "class": "Article",
+    "type": "Articles",
+    "tags":  [
+      "isogenies",
+      "signatures"
+    ],
+    "url": "https://eprint.iacr.org/2020/1240.pdf",
+    "description": "Constructs SQISign from an identification protocol."
   }
 ]
