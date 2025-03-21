@@ -15,7 +15,7 @@ We will discuss it and its role in the cryptographic historical context, using t
 
 ## Notes
 
-This seminar was part of the _Percorso Eccellenza in Matematica_ ("Excellency Path in Mathematics") of the University of Trento. The topic was suggested and supervised by Prof. Nadir Murru from the University of Trento, whom I thank for his prompt availability.
+This talk was part of the _Percorso Eccellenza in Matematica_ ("Excellency Path in Mathematics") of the University of Trento. The topic was suggested and supervised by Prof. Nadir Murru from the University of Trento, whom I thank for his prompt availability.
 
 ## Material
 
