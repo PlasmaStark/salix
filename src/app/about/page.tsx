@@ -19,14 +19,15 @@ export default function About() {
       <Breadcrumb />
 
       {/* Hero Section */}
-      <section className="text-center mb-12">
+      <section className="text-center mb-12 mx-10">
         <h1 className="text-4xl font-bold text-center mb-6">About Me</h1>
         <p className="text-lg">
-          I am <b>Leonardo</b>, apprentice researcher in mathematics and cryptography.
+          I am <b>Leonardo</b>, apprentice researcher in cryptography.
           <br />
           My interests include maths and <a href="#communication">scientific communication</a>.
-          <br />
           I enjoy reading a bit too much, and love learning new things.
+          <br />
+          I believe in the power of a <a href="#community">strong community</a> of researchers and am working to make it happen.
         </p>
 
         {/* Profile picture */}
@@ -63,7 +64,8 @@ export default function About() {
 
         <div className="mb-10">
           <p className="text-lg leading-relaxed">
-            My research areas are cryptography, complexity theory, number theory.
+            My main research areas are cryptography, complexity theory, number theory.
+            <br />
             I am currently working on <b>provable security</b> and <b>digital signatures</b>.
           </p>
         </div>
