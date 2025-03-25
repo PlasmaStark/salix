@@ -24,9 +24,9 @@ export default function About() {
         <p className="text-lg">
           I am <b>Leonardo</b>, apprentice researcher in mathematics and cryptography.
           <br />
-          My interests include reading, learning, and <a href="#communication">scientific communication</a>.
-          I believe in the power of a <a href="#community">community</a> of scientists coming together and
-          work towards it.
+          My interests include maths and <a href="#communication">scientific communication</a>.
+          <br />
+          I enjoy reading a bit too much, and love learning new things.
         </p>
 
         {/* Profile picture */}
@@ -53,6 +53,21 @@ export default function About() {
         </div>
       </section>
 
+
+      {/* Divider */}
+      <hr className="border-gray-300 my-8" />
+      
+      {/* Research Section */}
+      <section>
+        <h2 className="text-4xl font-bold text-accent mb-6">Research</h2>
+
+        <div className="mb-10">
+          <p className="text-lg leading-relaxed">
+            My research areas are cryptography, complexity theory, number theory.
+            I am currently working on <b>provable security</b> and <b>digital signatures</b>.
+          </p>
+        </div>
+      </section>
 
       {/* Divider */}
       <hr className="border-gray-300 my-8" />
