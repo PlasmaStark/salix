@@ -3,8 +3,8 @@ title: "Quadratic Sieve"
 date: "2021-10-19"
 description: "Top-notch integer factorisation since 1981."
 tags:
-  - professionals
   - factorisation
+  - professionals
 ---
 
 ## Abstract
