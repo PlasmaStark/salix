@@ -21,7 +21,7 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 w-full bg-[var(--color-primary)] text-white shadow-lg z-50">
-      <div className="flex items-center justify-between px-4 py-3 mr-2 md:px-8">
+      <div className="flex items-center justify-between px-4 py-3 mr-4 md:px-8">
         {/* Logo */}
         <Link href="/" className="text-white hover:text-gray-400 no-underline">
           <div className="text-xl font-bold">Leonardo Errati</div>
@@ -39,13 +39,13 @@ export default function Navbar() {
           {navLinks
             .filter(({ path }) => path !== "") // exclude Home from desktop nav
             .map(({ path, label }) => (
-              <Link
-                key={path}
-                href={`/${path}`}
-                className="block text-white hover:text-gray-400 no-underline"
-              >
-                {label}
-              </Link>
+          <Link
+            key={path}
+            href={`/${path}`}
+            className="relative block text-white no-underline after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-1 after:w-0 after:bg-[var(--color-accent)] after:transition-all after:duration-300 hover:after:w-full"
+          >
+            {label}
+          </Link>
             ))}
         </nav>
       </div>
@@ -56,7 +56,7 @@ export default function Navbar() {
           <Link
             key={path}
             href={`/${path}`}
-            className="flex items-center space-x-3 text-white hover:text-gray-400 no-underline"
+            className="flex items-center space-x-3 text-white no-underline"
             onClick={closeSidebar}
           >
             {icon && <FontAwesomeIcon icon={icon} className="w-5 h-5" />}
