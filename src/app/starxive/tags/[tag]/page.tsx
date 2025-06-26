@@ -10,8 +10,8 @@ export async function generateStaticParams() {
     return tags.map(tag => ({ tag }));
 }
 
-export default async function StarXiveTagPage({ params }: { params: Promise<{ tag: string }> }) {
-    const { tag } = await params;
+export default async function TagPage({ params }: { params: Promise<{ tag: string }> }) {
+  const { tag } = await params;
     const entries: ContentItem[] = await getContentListFromJson(STARXIVE_FILE);
     const filteredEntries = entries.filter(entry => entry.tags.includes(tag));
 

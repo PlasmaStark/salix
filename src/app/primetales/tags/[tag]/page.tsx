@@ -8,7 +8,7 @@ export async function generateStaticParams() {
   return tags.map((tag: string) => ({ tag }));
 }
 
-export default async function TagPage({ params }: { params: { tag: string } }) {
+export default async function TagPage({ params }: { params: Promise<{ tag: string }> }) {
   const { tag } = await params;
   const allArticles = await getContentList(ARTICLE_DIR);
   const articles = allArticles.filter(article => article.tags.includes(tag));
