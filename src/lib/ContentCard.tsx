@@ -46,7 +46,7 @@ export default function ContentCard({
           <p className="text-sm text-gray-500">{post.date}</p>
           <p className="text-normal text-gray-700 truncate max-w-xl">{post.description}</p>
         </Link>
-        <ul className="flex flex-wrap gap-2 ml-4">
+        <ul className="flex flex-wrap gap-2 mb-1">
           {post.tags.map((tag) => (
             <li key={tag}>
               <Link
@@ -91,7 +91,7 @@ export default function ContentCard({
             <li key={tag}>
               <Link
                 href={`/${baseRoute}/tags/${tag}`}
-                className="text-sm no-underline text-gray-600 bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-300 transition-colors"
+                className="text-xs no-underline text-gray-600 bg-gray-200 rounded-full px-2 py-1 hover:bg-gray-300 transition-colors"
               >
                 #{tag}
               </Link>
