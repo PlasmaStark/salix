@@ -37,7 +37,7 @@ export default function Navbar() {
         {/* Desktop nav */}
         <nav className="hidden md:flex space-x-4">
           {navLinks
-            .filter(({ path }) => path !== "") // exclude Home from desktop nav
+            .filter(({ path }) => path !== "") 
             .map(({ path, label }) => (
           <Link
             key={path}

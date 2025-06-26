@@ -53,10 +53,6 @@ export default function About() {
           </Link>
         </div>
       </section>
-
-
-      {/* Divider */}
-      <hr className="border-gray-300 my-8" />
       
       {/* Research Section */}
       <section>
@@ -64,15 +60,12 @@ export default function About() {
 
         <div className="mb-10">
           <p className="text-lg leading-relaxed">
-            My main research areas are cryptography, complexity theory, number theory.
+            My main research areas are cryptography, complexity theory, number theory, and in my spare time I read about the history of mathematics.
             <br />
-            I am currently working on <b>provable security</b> and <b>digital signatures</b>.
+            I am currently working on <b>cryptographic group actions</b> and <b>digital signatures</b>.
           </p>
         </div>
       </section>
-
-      {/* Divider */}
-      <hr className="border-gray-300 my-8" />
 
       {/* Some Thoughts Section */}
       <section>
@@ -111,10 +104,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Divider */}
-      <hr className="border-gray-300 my-8" />
-
-      {/* Projects Section */}
+      {/* Projects Section 
       <section>
         <h2 className="text-4xl font-bold text-accent mb-6">Some projects</h2>
         <p className="text-lg leading-relaxed mb-6">
@@ -142,114 +132,9 @@ export default function About() {
           </Link>
         </div>
       </section>
-
-      {/* Divider */}
       <hr className="border-gray-300 my-8" />
+    */} 
 
-      {/* Contacts */}
-      <h2 className="text-4xl font-bold text-accent mb-6">Contacts</h2>
-      <section className="text-center">
-        <div className="flex flex-wrap justify-center gap-3">
-          {/* Goodreads */}
-          <Link
-            href="https://www.goodreads.com/user/show/155458214-leonardus-iii-emperor-of-taured"
-            className="flex items-center no-underline px-4 py-2 bg-gray-800 text-white rounded-full shadow-md hover:bg-accent transition"
-          >
-            <div className="flex items-center">
-              <FontAwesomeIcon
-                icon={faBook}
-                style={{ height: "1rem", width: "1rem" }}
-                className="text-white transition-transform group-hover:rotate-12"
-              />
-              <p className="ml-3">GoodReads</p>
-            </div>
-          </Link>
-          {/* LinkedIn */}
-          <Link
-            href="https://www.linkedin.com/in/leonardo-errati-76507b213"
-            className="flex items-center no-underline px-4 py-2 bg-gray-800 text-white rounded-full shadow-md hover:bg-accent transition"
-          >
-            <div className="flex items-center">
-              <FontAwesomeIcon
-                icon={faLinkedin}
-                style={{ height: "1rem", width: "1rem" }}
-                className="text-white transition-transform group-hover:rotate-12"
-              />
-              <p className="ml-3">LinkedIn</p>
-            </div>
-          </Link>
-          {/* GitHub */}
-          <Link
-            href="https://github.com/PlasmaStark"
-            className="flex items-center no-underline px-4 py-2 bg-gray-800 text-white rounded-full shadow-md hover:bg-accent transition"
-          >
-            <div className="flex items-center">
-              <FontAwesomeIcon
-                icon={faGithub}
-                style={{ height: "1rem", width: "1rem" }}
-                className="text-white transition-transform group-hover:rotate-12"
-              />
-              <p className="ml-3">GitHub</p>
-            </div>
-          </Link>
-          {/* Email */}
-          <Link
-            href="mailto:leonardoerrati.lwe@gmail.com"
-            className="flex items-center no-underline px-4 py-2 bg-gray-800 text-white rounded-full shadow-md hover:bg-accent transition"
-          >
-            <div className="flex items-center">
-              <FontAwesomeIcon
-                icon={faEnvelope}
-                style={{ height: "1rem", width: "1rem" }}
-                className="text-white transition-transform group-hover:rotate-12"
-              />
-              <p className="ml-3">Email</p>
-            </div>
-          </Link>
-          {/* Pagina PoliTo */}
-          <Link
-            href="https://www.polito.it/personale?p=leonardo.errati"
-            className="flex items-center no-underline px-4 py-2 bg-gray-800 text-white rounded-full shadow-md hover:bg-accent transition"
-          >
-            <div className="flex items-center">
-              <FontAwesomeIcon
-                icon={faIdCard}
-                style={{ height: "1rem", width: "1rem" }}
-                className="text-white transition-transform group-hover:rotate-12"
-              />
-              <p className="ml-3">PoliTo</p>
-            </div>
-          </Link>
-          {/* Pagina UniTn */}
-          <Link
-            href="https://webapps.unitn.it/du/it/Persona/PER0208861"
-            className="flex items-center no-underline px-4 py-2 bg-gray-800 text-white rounded-full shadow-md hover:bg-accent transition"
-          >
-            <div className="flex items-center">
-              <FontAwesomeIcon
-                icon={faIdCard}
-                style={{ height: "1rem", width: "1rem" }}
-                className="text-white transition-transform group-hover:rotate-12"
-              />
-              <p className="ml-3">UniTn</p>
-            </div>
-          </Link>
-          {/* Pagina X */}
-          <Link
-            href="https://x.com/PlasmaStark"
-            className="flex items-center no-underline px-4 py-2 bg-gray-800 text-white rounded-full shadow-md hover:bg-accent transition"
-          >
-            <div className="flex items-center">
-              <FontAwesomeIcon
-                icon={faX}
-                style={{ height: "1rem", width: "1rem" }}
-                className="text-white transition-transform group-hover:rotate-12"
-              />
-              <p className="ml-3">Twitter/X</p>
-            </div>
-          </Link>
-        </div>
-      </section>
     </main>
   );
 }
