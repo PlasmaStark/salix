@@ -33,7 +33,7 @@ export default function RootLayout({
         <Navigation/>
         {children}
         
-        <footer className="bg-gray-800 text-white py-6 text-center">
+        <footer className="bg-gray-800 text-white mt-20 py-6 text-center">
           <p className="text-sm">
             © {new Date().getFullYear()} Leonardo Errati.
           </p>

@@ -9,13 +9,14 @@ export async function generateStaticParams() {
 }
 
 export default async function TagPage({ params }: { params: { tag: string } }) {
+  const { tag } = await params;
   const allArticles = await getContentList(ARTICLE_DIR);
-  const articles = allArticles.filter(article => article.tags.includes(params.tag));
+  const articles = allArticles.filter(article => article.tags.includes(tag));
 
   return (
     <main className="container mx-auto px-4 py-8">
       <Breadcrumb />
-      <h1 className="text-4xl font-bold text-center mb-6">Prime Tales: <b>{params.tag}</b></h1>
+      <h1 className="text-4xl font-bold text-center mb-6">Prime Tales: <b>{tag}</b></h1>
       <p className="text-lg text-center mb-10">
         <b>Prime Tales</b> is a sequence of scientific tales and algebraic anecdotes.
       </p>

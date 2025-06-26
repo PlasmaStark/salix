@@ -9,13 +9,14 @@ export async function generateStaticParams() {
 }
 
 export default async function TagPage({ params }: { params: { tag: string } }) {
+  const { tag } = await params;
   const allTalks = await getContentList(TALKS_DIR);
-  const posts = allTalks.filter(post => post.tags.includes(params.tag));
+  const posts = allTalks.filter(post => post.tags.includes(tag));
 
   return (
     <main className="container mx-auto px-4 py-8">
       <Breadcrumb />
-      <h1 className="text-4xl font-bold text-center mb-6">Talks: <b>{params.tag}</b></h1>
+      <h1 className="text-4xl font-bold text-center mb-6">Talks: <b>{tag}</b></h1>
       <p className="text-lg text-center mb-10">
         Public <b>talks</b> for diffusion or future fruition.
       </p>

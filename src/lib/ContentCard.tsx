@@ -72,10 +72,10 @@ export default function ContentCard({
               <div className="w-[100px] flex-shrink-0 mr-4">
                 <Image
                   src={post.coverImage.startsWith("/") ? post.coverImage : `/${post.coverImage}`}
-                  height={480}
-                  width={640}
+                  width={100}
+                  height={100}
+                  className="object-cover rounded-md"
                   alt={post.title}
-                  className="w-full h-auto object-cover rounded-md"
                 />
               </div>
               <div className="flex flex-col justify-center">
