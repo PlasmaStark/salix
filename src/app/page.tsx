@@ -4,7 +4,7 @@ import { faUser, faBook, faPenNib, faComments } from "@fortawesome/free-solid-sv
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import NavCard from "./components/navigation/navcard/NavCard";
+import NavCard from "./components/navigation/navcards/NavCard";
 
 export default function Home() {
   const [visitorNumber, setVisitorNumber] = useState(0);

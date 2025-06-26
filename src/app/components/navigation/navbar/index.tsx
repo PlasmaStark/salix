@@ -1,87 +1,69 @@
 "use client";
 
 import { useState } from "react";
-import { NavbarContainer, MenuButton, Sidebar } from "./style";
 import Link from "next/link";
+import { MobileSidebar } from "./MobileSidebar";
+import { HamburgerButton } from "./HamburgerButton";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBook, faComments, faHome, faPenNib, faUser } from "@fortawesome/free-solid-svg-icons";
+
+const navLinks = [
+  { path: "", label: "Home", icon: faHome },
+  { path: "about", label: "About", icon: faUser },
+  { path: "primetales", label: "Prime Tales", icon: faBook },
+  { path: "chronicles", label: "Chronicles", icon: faPenNib },
+  { path: "talks", label: "Talks", icon: faComments },
+];
 
 export default function Navbar() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
-
-  const handleLinkClick = () => {
-    setSidebarOpen(false);
-  };
+  const closeSidebar = () => setSidebarOpen(false);
 
   return (
-    <NavbarContainer>
-      <div className="flex items-center text-decoration-line: none; justify-between px-4 py-3 md:px-8">
+    <header className="fixed top-0 left-0 w-full bg-[var(--color-primary)] text-white shadow-lg z-50">
+      <div className="flex items-center justify-between px-4 py-3 mr-2 md:px-8">
         {/* Logo */}
         <Link href="/" className="text-white hover:text-gray-400 no-underline">
           <div className="text-xl font-bold">Leonardo Errati</div>
         </Link>
 
-        {/* Menu button for mobile */}
-        <MenuButton
+        {/* Mobile hamburger */}
+        <HamburgerButton
           isOpen={isSidebarOpen}
           onClick={() => setSidebarOpen(!isSidebarOpen)}
+          className="relative z-[60]" 
         />
 
-        {/* Menu items for desktop */}
+        {/* Desktop nav */}
         <nav className="hidden md:flex space-x-4">
-          <Link href="/about" className="block text-white hover:text-gray-400 no-underline">
-            About
-          </Link>
-          <Link href="/primetales" className="block text-white hover:text-gray-400 no-underline">
-            Prime Tales
-          </Link>
-          <Link href="/chronicles" className="block text-white hover:text-gray-400 no-underline">
-            Chronicles
-          </Link>
-          <Link href="/talks" className="block text-white hover:text-gray-400 no-underline">
-            Talks
-          </Link>
+          {navLinks
+            .filter(({ path }) => path !== "") // exclude Home from desktop nav
+            .map(({ path, label }) => (
+              <Link
+                key={path}
+                href={`/${path}`}
+                className="block text-white hover:text-gray-400 no-underline"
+              >
+                {label}
+              </Link>
+            ))}
         </nav>
       </div>
 
-      {/* Sidebar for mobile */}
-      <Sidebar isOpen={isSidebarOpen} onClose={() => setSidebarOpen(false)}>
-        <nav className="space-y-2">
+      {/* Mobile Sidebar */}
+      <MobileSidebar isOpen={isSidebarOpen} onClose={closeSidebar}>
+        {navLinks.map(({ path, label, icon }) => (
           <Link
-            href="/"
-            className="block text-white hover:text-gray-400 no-underline"
-            onClick={handleLinkClick}
+            key={path}
+            href={`/${path}`}
+            className="flex items-center space-x-3 text-white hover:text-gray-400 no-underline"
+            onClick={closeSidebar}
           >
-            Home
+            {icon && <FontAwesomeIcon icon={icon} className="w-5 h-5" />}
+            <span>{label}</span>
           </Link>
-          <Link
-            href="/about"
-            className="block text-white hover:text-gray-400 no-underline"
-            onClick={handleLinkClick}
-          >
-            About
-          </Link>
-          <Link
-            href="/primetales"
-            className="block text-white hover:text-gray-400 no-underline"
-            onClick={handleLinkClick}
-          >
-            Prime Tales
-          </Link>
-          <Link
-            href="/chronicles"
-            className="block text-white hover:text-gray-400 no-underline"
-            onClick={handleLinkClick}
-          >
-            Chronicles
-          </Link>
-          <Link
-            href="/talks"
-            className="block text-white hover:text-gray-400 no-underline"
-            onClick={handleLinkClick}
-          >
-            Talks
-          </Link>
-        </nav>
-      </Sidebar>
-    </NavbarContainer>
+        ))}
+      </MobileSidebar>
+    </header>
   );
 }
