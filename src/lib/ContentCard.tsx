@@ -28,7 +28,7 @@ export default function ContentCard({
             )}
           </div>
           <div>
-            <h3 className="text-lg font-semibold text-accent">{post.title}</h3>
+            <h3 className="text-xl font-semibold text-accent">{post.title}</h3>
             <p className="text-sm text-gray-500">{post.date}</p>
           </div>
         </Link>
@@ -38,9 +38,9 @@ export default function ContentCard({
 
   if (variant === 'textual') {
     return (
-      <li className="bg-white rounded-md p-4 mb-4 flex flex-col">
+      <li className="bg-white rounded-md p-4 flex flex-col">
         <Link href={`/${baseRoute}/${post.slug}`} className="no-underline mb-2">
-          <h3 className="text-lg font-semibold text-accent truncate max-w-xl">
+          <h3 className="text-xl font-semibold text-accent truncate max-w-xl">
             {post.title}
           </h3>
           <p className="text-sm text-gray-500">{post.date}</p>
@@ -65,10 +65,10 @@ export default function ContentCard({
 
   if (variant === 'horizontal') {
     return (
-      <li>
+      <li className="rounded-lg bg-white p-2">
         <Link href={`/${baseRoute}/${post.slug}`} className="no-underline">
           {post.coverImage && (
-            <div className="flex rounded-lg bg-white items-start p-4">
+            <div className="flex items-start">
               <div className="w-[100px] flex-shrink-0 mr-4">
                 <Image
                   src={post.coverImage.startsWith("/") ? post.coverImage : `/${post.coverImage}`}
@@ -79,14 +79,14 @@ export default function ContentCard({
                 />
               </div>
               <div className="flex flex-col justify-center">
-                <h2 className="text-lg font-bold text-accent">{post.title}</h2>
+                <h2 className="text-xl font-bold text-accent">{post.title}</h2>
                 <p className="text-sm text-gray-500">{post.date}</p>
                 <p className="text-normal text-gray-700">{post.description}</p>
               </div>
             </div>
           )}
         </Link>
-        <ul className="flex flex-wrap gap-2 mt-1 pb-4">
+        <ul className="flex flex-wrap gap-2 ml-1 mt-2 mb-1">
           {post.tags.map((tag) => (
             <li key={tag}>
               <Link
@@ -104,9 +104,9 @@ export default function ContentCard({
 
   // Default variant
   return (
-    <li className="shadow-lg">
-      <Link href={`/${baseRoute}/${post.slug}`} className="block px-4 py-3 pb-4 bg-white rounded-lg no-underline">
-        <h2 className="text-2xl font-bold text-accent">{post.title}</h2>
+    <li className="bg-white rounded-lg">
+      <Link href={`/${baseRoute}/${post.slug}`} className="block px-4 py-2 no-underline">
+        <h2 className="text-xl font-bold text-accent">{post.title}</h2>
         <small className="block text-sm text-gray-500 mb-2">{post.date}</small>
         {post.coverImage && (
           <div className="mb-4 rounded-md overflow-hidden">
@@ -121,7 +121,7 @@ export default function ContentCard({
         )}
         <p className="text-normal text-gray-700">{post.description}</p>
       </Link>
-      <ul className="flex flex-wrap gap-2 mt-2 pb-4">
+      <ul className="flex flex-wrap gap-2 px-4 pb-4">
         {post.tags.map((tag) => (
           <li key={tag}>
             <Link

@@ -1,15 +1,15 @@
 import { getAllTags, getContentList } from '@lib/getPosts';
-import { PRIME_TALES_DIR} from '@/config';
+import { ARTICLE_DIR} from '@/config';
 import ContentList from '@/lib/ContentList';
 import Breadcrumb from '../components/navigation/breadcrumb';
 
 export async function generateStaticParams() {
-  const tags = await getAllTags(PRIME_TALES_DIR);
+  const tags = await getAllTags(ARTICLE_DIR);
   return tags.map((tag) => ({ tag }));
 }
 
 export default async function PrimeTales() {
-  const articles = await getContentList(PRIME_TALES_DIR);
+  const articles = await getContentList(ARTICLE_DIR);
 
   return (
     <main className="container mx-auto px-4 py-8">

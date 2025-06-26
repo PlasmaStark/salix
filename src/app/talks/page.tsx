@@ -18,7 +18,7 @@ export default async function TalksPage() {
       <Breadcrumb />
       <h1 className="text-4xl font-bold text-center mb-6">Talks</h1>
       <p className="text-lg text-center mb-10">
-        This page contains public <b>talks</b> for diffusion or future fruition.
+        Public <b>talks</b> for diffusion or future fruition.
       </p>
       <ContentList
         contents={posts}

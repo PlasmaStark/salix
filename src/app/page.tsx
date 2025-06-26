@@ -143,13 +143,6 @@ export default function Home() {
           </Link>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white py-6 text-center">
-        <p className="text-sm">
-          © {new Date().getFullYear()} Leonardo Errati.
-        </p>
-      </footer>
     </main>
   );
 }

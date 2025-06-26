@@ -32,7 +32,12 @@ export default function RootLayout({
       >
         <Navigation/>
         {children}
-        <Footer/>
+        
+        <footer className="bg-gray-800 text-white py-6 text-center">
+          <p className="text-sm">
+            © {new Date().getFullYear()} Leonardo Errati.
+          </p>
+        </footer>
       </body>
     </html>
   );
