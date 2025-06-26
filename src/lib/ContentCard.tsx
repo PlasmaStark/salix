@@ -121,7 +121,7 @@ export default function ContentCard({
         )}
         <p className="text-normal text-gray-700">{post.description}</p>
       </Link>
-      <ul className="flex flex-wrap gap-2 px-4 pb-4">
+      <ul className="flex flex-wrap gap-2 px-4 mb-4">
         {post.tags.map((tag) => (
           <li key={tag}>
             <Link

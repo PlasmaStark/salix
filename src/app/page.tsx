@@ -1,10 +1,10 @@
 "use client";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faBook, faPenNib, faComments } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import NavCard from "./components/navigation/navcard/NavCard";
 
 export default function Home() {
   const [visitorNumber, setVisitorNumber] = useState(0);
@@ -16,20 +16,7 @@ export default function Home() {
 
   return (
     <main className="container mx-auto px-4 py-6 sm:py-1">
-      {/*  
-      <section className="bg-accent text-white text-center rounded-lg mb-6 h-10 sm:h-16">
-        <div className="flex items-center justify-center space-x-3 h-full px-4">
-          <FontAwesomeIcon
-            icon={faPersonDigging}
-            style={{ height: "1.5rem", width: "1.5rem" }}
-            className="text-lg sm:text-xl"
-          />
-          <p className="text-sm font-medium">
-            Site currently under construction, most content is missing.
-          </p>
-        </div>
-      </section>
-      */}
+      
       {/* Hero Section */}
       <section className="relative bg-background-100 rounded-lg shadow-md overflow-hidden mb-6 sm:mb-2">
         {/* Background Image */}
@@ -70,77 +57,33 @@ export default function Home() {
         </div>
       </section>
 
-
       {/* Categories Section */}
       <section id="categories" className="mb-16 mt-2 sm:mt-3">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-3">
-          {/* About Me Card */}
-          <Link href="/about" className="no-underline">
-            <div className="bg-gray-800 rounded-lg shadow-md p-6 sm:p-4 text-center border-2 border-transparent transition-all hover:border-accent hover:scale-105 group">
-              <div className="flex justify-center mb-4">
-                <FontAwesomeIcon
-                  icon={faUser}
-                  style={{ height: "2.5rem", width: "2.5rem" }}
-                  className="text-accent transition-transform group-hover:rotate-12"
-                />
-              </div>
-              <h3 className="text-xl text-accent font-bold mb-2">About Me</h3>
-              <p className="text-white text-sm sm:text-base">
-                Do I know what I do and why? Find it out.
-              </p>
-            </div>
-          </Link>
-
-          {/* Prime Tales Card */}
-          <Link href="/primetales" className="no-underline">
-            <div className="bg-gray-800 rounded-lg shadow-md p-6 sm:p-4 text-center border-2 border-transparent transition-all hover:border-accent hover:scale-105 group">
-              <div className="flex justify-center mb-4">
-                <FontAwesomeIcon
-                  icon={faBook}
-                  style={{ height: "2.5rem", width: "2.5rem" }}
-                  className="text-accent transition-transform group-hover:rotate-12"
-                />
-              </div>
-              <h3 className="text-xl text-accent font-bold mb-2">Prime Tales</h3>
-              <p className="text-white text-sm sm:text-base">
-                Scientific tales and algebraic anecdotes.
-              </p>
-            </div>
-          </Link>
-
-          {/* Chronicles Card */}
-          <Link href="/chronicles" className="no-underline">
-            <div className="bg-gray-800 rounded-lg shadow-md p-6 sm:p-4 text-center border-2 border-transparent transition-all hover:border-accent hover:scale-105 group">
-              <div className="flex justify-center mb-4">
-                <FontAwesomeIcon
-                  icon={faPenNib}
-                  style={{ height: "2.5rem", width: "2.5rem" }}
-                  className="text-accent transition-transform group-hover:rotate-12"
-                />
-              </div>
-              <h3 className="text-xl text-accent font-bold mb-2">Chronicles</h3>
-              <p className="text-white text-sm sm:text-base">
-                A curated collection of personal stories.
-              </p>
-            </div>
-          </Link>
-
-          {/* Talks Card */}
-          <Link href="/talks" className="no-underline">
-            <div className="bg-gray-800 rounded-lg shadow-md p-6 sm:p-4 text-center border-2 border-transparent transition-all hover:border-accent hover:scale-105 group">
-              <div className="flex justify-center mb-4">
-                <FontAwesomeIcon
-                  icon={faComments}
-                  style={{ height: "2.5rem", width: "2.5rem" }}
-                  className="text-accent transition-transform group-hover:rotate-12"
-                />
-              </div>
-              <h3 className="text-xl text-accent font-bold mb-2">Talks</h3>
-              <p className="text-white text-sm sm:text-base">
-                A set of materials for some of my talks.
-              </p>
-            </div>
-          </Link>
+          <NavCard
+            href="/about"
+            icon={faUser}
+            title="About Me"
+            description="Do I know what I do and why? Find it out."
+          />
+          <NavCard
+            href="/primetales"
+            icon={faBook}
+            title="Prime Tales"
+            description="Scientific tales and algebraic anecdotes."
+          />
+          <NavCard
+            href="/chronicles"
+            icon={faPenNib}
+            title="Chronicles"
+            description="A curated collection of personal stories."
+          />
+          <NavCard
+            href="/talks"
+            icon={faComments}
+            title="Talks"
+            description="A set of materials for some of my talks."
+          />
         </div>
       </section>
     </main>
