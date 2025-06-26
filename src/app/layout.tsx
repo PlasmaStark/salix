@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navigation from "./components/navigation/navbar";
-import Footer from "./components/footer"
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -32,7 +31,12 @@ export default function RootLayout({
       >
         <Navigation/>
         {children}
-        <Footer/>
+        
+        <footer className="bg-gray-800 text-white mt-20 py-6 text-center">
+          <p className="text-sm">
+            © {new Date().getFullYear()} Leonardo Errati.
+          </p>
+        </footer>
       </body>
     </html>
   );

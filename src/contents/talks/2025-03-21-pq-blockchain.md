@@ -3,9 +3,9 @@ title: "Post-quantum signatures for blockchain"
 date: "2025-03-21"
 description: "Quantum-resistance for ledgers."
 tags:
-  - amateurs
-  - blockchain
-  - postquantum
+  - Amateurs
+  - Blockchain
+  - Postquantum
 ---
 
 ## Abstract
