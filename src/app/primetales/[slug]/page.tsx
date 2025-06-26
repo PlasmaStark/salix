@@ -21,7 +21,7 @@ export default async function Article({ params }: { params: any }) {
   }
 
   return (
-    <article className="max-w-3xl mx-auto px-4 py-8">
+    <article className="max-w-3xl mx-auto px-2 py-2">
       {/* Titolo */}
       <header className="mb-6">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" />

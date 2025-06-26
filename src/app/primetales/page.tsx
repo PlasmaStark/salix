@@ -12,7 +12,7 @@ export default async function PrimeTales() {
   const articles = await getContentList(ARTICLE_DIR);
 
   return (
-    <main className="container mx-auto px-4 py-8">
+    <main className="container mx-auto px-2 py-2">
       <Breadcrumb />
       <h1 className="text-4xl font-bold text-center mb-6">Prime Tales</h1>
       <p className="text-lg text-center mb-10">

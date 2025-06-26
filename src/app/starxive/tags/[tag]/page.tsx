@@ -27,7 +27,7 @@ export default async function TagPage({ params }: { params: Promise<{ tag: strin
     const sortedTypes = Object.keys(groupedByType).sort();
 
     return (
-        <div className="p-6 max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto px-2 py-2">
             <Breadcrumb />
             <h1 className="text-4xl font-bold text-center mb-6">
                 Star<span className="text-5xl text-red-500">X</span>ive

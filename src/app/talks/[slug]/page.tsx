@@ -16,7 +16,7 @@ export default async function BlogPost({ params }: { params: any }) {
   const { metadata, content } = await getContent(slug, TALKS_DIR, BIBLIOGRAPHY_DIR);
 
   return (
-    <article className="max-w-3xl mx-auto px-4 py-8">
+    <article className="max-w-3xl mx-auto px-2 py-2">
       {/* Titolo */}
       <header className="mb-6">
         <Breadcrumb />

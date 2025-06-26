@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function Prometheus() {
     return (
-        <main className="container mx-auto px-4 py-8">
+        <main className="container mx-auto px-2 py-2">
             {/* Breadcrumb */}
             <Breadcrumb />
 
