@@ -44,7 +44,7 @@ export default function RootLayout({
           <main className="flex-1 px-4 pr-5 md:px-8 py-6 max-w-screen-lg mx-auto">
 
             {/* Mobile Profile */}
-            <div className="block md:hidden mb-6">
+            <div className="block md:hidden">
               <ProfileInfo compact />
             </div>
 
