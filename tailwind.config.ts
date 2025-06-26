@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-
 export default {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -21,9 +20,12 @@ export default {
       },
       opacity: {
         '60': '0.60',
+      },
+      scale: {
+        '101': '101',
       }
-
     },
   },
   plugins: [require('@tailwindcss/typography')],
 } satisfies Config;
+
