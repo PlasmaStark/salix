@@ -2,9 +2,6 @@ import type { Metadata } from "next";
 import Breadcrumb from "@components/breadcrumb";
 import Image from 'next/image'
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faBook, faEnvelope, faIdCard, faX } from "@fortawesome/free-solid-svg-icons";
 
 
 export const metadata: Metadata = {

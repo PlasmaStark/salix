@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -10,10 +13,27 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 
 export default function ProfileInfo({ compact = false }: { compact?: boolean }) {
+  const [open, setOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setOpen(false);
+      }
+    }
+    if (open) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [open]);
+
   return (
     <div
       className={`text-white ${
-        compact ? "flex items-center gap-4" : "space-y-4 w-full px-2"
+        compact ? "flex items-center gap-4 relative ml-1" : "space-y-4 w-full px-2"
       }`}
     >
       {/* Profile image */}
@@ -21,34 +41,78 @@ export default function ProfileInfo({ compact = false }: { compact?: boolean }) 
         <Image
           src="/profile-image.jpg"
           alt="Leonardo's profile"
-          width={compact ? 48 : 128}
-          height={compact ? 48 : 128}
+          width={compact ? 70 : 128}
+          height={compact ? 70 : 128}
           className="rounded-full border-2 border-accent object-cover"
         />
       </div>
 
-      {/* Name and title */}
-      <div className={compact ? "" : "text-center"}>
-        <h2 className={`text-lg text-accent font-semibold`}>
-          Leonardo Errati
-        </h2>
-        <p className="text-sm italic">PhD student in cryptography at PoliTo, Italy.</p>
+      {/* Name and dropdown in compact mode */}
+      <div className={compact ? "w-full" : "text-center"}>
+        {compact ? (
+          <>
+            <div className="flex items-center gap-3">
+              <h2 className="text-lg text-accent font-semibold">Leonardo Errati</h2>
 
-        {/* Only show links in full (non-compact) version */}
-        {!compact && (
-          <div className="flex flex-wrap justify-center gap-2 mt-4">
-            <SocialLink href="mailto:leonardoerrati.lwe@gmail.com" icon={faEnvelope} label="Email" />
-            <SocialLink href="https://github.com/PlasmaStark" icon={faGithub} label="GitHub" />
-            <SocialLink href="https://www.linkedin.com/in/leonardo-errati-76507b213" icon={faLinkedin} label="LinkedIn" />
-            <SocialLink href="https://orcid.org/0009-0004-0460-9742" iconClass="ai ai-orcid" label="ORCID" />
-            <SocialLink href="https://www.polito.it/personale?p=leonardo.errati" icon={faIdCard} label="PoliTo" />
-            <SocialLink href="https://webapps.unitn.it/du/it/Persona/PER0208861" icon={faIdCard} label="UniTn" />
-            <SocialLink href="https://www.goodreads.com/user/show/155458214-leonardus-iii-emperor-of-taured" icon={faBook} label="GoodReads" />
-            {/*<SocialLink href="#" icon={faIdCard} label="Google Scholar (soon)" />*/}
-            <SocialLink href="https://x.com/PlasmaStark" icon={faX} label="Twitter/X" />
-          </div>
+              {/* Pulsante affianco al nome */}
+              <div className="relative" ref={dropdownRef}>
+                <button
+                  onClick={() => setOpen(!open)}
+                  className={`ml-4 px-4 py-1 rounded-full text-sm transition ${
+                    open ? 'bg-accent hover:bg-accent-dark' : 'bg-accent2 hover:bg-accent'
+                  }`}
+                  aria-haspopup="true"
+                  aria-expanded={open}
+                >
+                  Follow
+                </button>
+
+                {/* Dropdown menu animato */}
+                {open && (
+                  <div
+                    className="absolute right-0 mt-2 w-48 bg-gray-900 border border-gray-700 rounded-md shadow-lg origin-top-right
+                    animate-fade-slide z-50"
+                    style={{ animationFillMode: "forwards" }}
+                  >
+                    <div className="flex flex-col p-2 space-y-2">
+                      {/* Qui i tuoi DropdownLink */}
+                      <DropdownLink href="mailto:leonardoerrati.lwe@gmail.com" icon={faEnvelope} label="Email" />
+                      <DropdownLink href="https://github.com/PlasmaStark" icon={faGithub} label="GitHub" />
+                      <DropdownLink href="https://www.linkedin.com/in/leonardo-errati-76507b213" icon={faLinkedin} label="LinkedIn" />
+                      <DropdownLink href="https://orcid.org/0009-0004-0460-9742" iconClass="ai ai-orcid" label="ORCID" />
+                      <DropdownLink href="https://www.polito.it/personale?p=leonardo.errati" icon={faIdCard} label="PoliTo" />
+                      <DropdownLink href="https://webapps.unitn.it/du/it/Persona/PER0208861" icon={faIdCard} label="UniTn" />
+                      <DropdownLink href="https://www.goodreads.com/user/show/155458214-leonardus-iii-emperor-of-taured" icon={faBook} label="GoodReads" />
+                      <DropdownLink href="https://x.com/PlasmaStark" icon={faX} label="Twitter/X" />
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+            <p className="text-sm italic mt-1">PhD student in cryptography at PoliTo, Italy.</p>
+          </>
+        ) : (
+          <>
+            <h2 className="text-lg text-accent font-semibold">Leonardo Errati</h2>
+            <p className="text-sm italic">PhD student in cryptography at Politecnico di Torino, Italy. </p>
+          </>
         )}
       </div>
+
+
+      {/* Only show full list in non-compact version */}
+      {!compact && (
+        <div className="flex flex-wrap justify-center gap-2 mt-4">
+          <SocialLink href="mailto:leonardoerrati.lwe@gmail.com" icon={faEnvelope} label="Email" />
+          <SocialLink href="https://github.com/PlasmaStark" icon={faGithub} label="GitHub" />
+          <SocialLink href="https://www.linkedin.com/in/leonardo-errati-76507b213" icon={faLinkedin} label="LinkedIn" />
+          <SocialLink href="https://orcid.org/0009-0004-0460-9742" iconClass="ai ai-orcid" label="ORCID" />
+          <SocialLink href="https://www.polito.it/personale?p=leonardo.errati" icon={faIdCard} label="PoliTo" />
+          <SocialLink href="https://webapps.unitn.it/du/it/Persona/PER0208861" icon={faIdCard} label="UniTn" />
+          <SocialLink href="https://www.goodreads.com/user/show/155458214-leonardus-iii-emperor-of-taured" icon={faBook} label="GoodReads" />
+          <SocialLink href="https://x.com/PlasmaStark" icon={faX} label="Twitter/X" />
+        </div>
+      )}
     </div>
   );
 }
@@ -60,8 +124,8 @@ function SocialLink({
   label,
 }: {
   href: string;
-  icon?: any; // solo FontAwesome
-  iconClass?: string; // Academicons
+  icon?: any;
+  iconClass?: string;
   label: string;
 }) {
   return (
@@ -74,7 +138,35 @@ function SocialLink({
       {icon ? (
         <FontAwesomeIcon icon={icon} className="w-4 h-4" />
       ) : (
-        <i className={`${iconClass} text-white text-sm`}></i>
+        <i className={`${iconClass} text-white text-sm`} />
+      )}
+      <span>{label}</span>
+    </Link>
+  );
+}
+
+function DropdownLink({
+  href,
+  icon,
+  iconClass,
+  label,
+}: {
+  href: string;
+  icon?: any;
+  iconClass?: string;
+  label: string;
+}) {
+  return (
+    <Link
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-2 text-white text-sm px-2 py-1 hover:bg-accent rounded transition no-underline"
+    >
+      {icon ? (
+        <FontAwesomeIcon icon={icon} className="w-4 h-4" />
+      ) : (
+        <i className={`${iconClass} text-white text-sm`} />
       )}
       <span>{label}</span>
     </Link>
