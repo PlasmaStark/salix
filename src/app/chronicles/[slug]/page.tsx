@@ -24,7 +24,7 @@ export default async function BlogPost({ params }: { params: any }) {
       </header>
 
       {/* Titolo */}
-      <div className="flex rounded-lg bg-white items-start p-4">
+      <div className="flex rounded-lg bg-white items-start p-4 max-w-2xl mx-auto">
         {/* Immagine */}
         <div className="w-[120px] flex-shrink-0 mr-4">
           <Image
@@ -45,7 +45,7 @@ export default async function BlogPost({ params }: { params: any }) {
           <p className="text-lg text-gray-700">{metadata.description}</p>
         </div>
       </div>
-      <ul className="flex flex-wrap gap-2 mb-6 mt-1">
+      <ul className="flex items-start gap-2  mt-2 max-w-2xl mx-auto">
         {metadata.tags.map((tag: string) => (
           <li key={tag}>
             <Link
@@ -61,7 +61,8 @@ export default async function BlogPost({ params }: { params: any }) {
 
       {/* Contenuto */}
       <div
-        className="prose prose-lg prose-invert"
+        className="prose prose-lg prose-invert max-w-full"
+        style={{ overflowWrap: 'break-word' }}
         dangerouslySetInnerHTML={{ __html: content }}
       />
       {bibliography && bibliography.trim() !== '<ol class="bibliography"></ol>' && (

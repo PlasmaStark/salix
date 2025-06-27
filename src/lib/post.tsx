@@ -93,15 +93,24 @@ function processCitations(content: string, bibliography: any) {
 
 function generateBibliographyHtml(citationOrder: string[], bibliography: any): string {
   const bibliographyEntries = citationOrder.map((citationKey, index) => {
+    const rawEntry = bibliography.get({ selector: citationKey, type: 'json' })[0];
     const formattedEntry = bibliography.format('bibliography', {
       type: 'html',
       entry: citationKey,
     });
 
-    return formattedEntry
-      ? `<li id="ref-${index + 1}">${formattedEntry}</li>`
-      : `<li id="ref-${index + 1}" class="citation-missing">[${citationKey}] Citazione non trovata</li>`;
+    const url = rawEntry?.URL || rawEntry?.url || rawEntry?.note;
+    const cleanedEntry = formattedEntry.replace(/https?:\/\/[^\s<]+/g, '');
+
+    let wrappedEntry = url
+      ? `<a href="${url}" target="_blank" rel="noopener noreferrer">${cleanedEntry}</a>`
+      : formattedEntry;
+
+    return `<li id="ref-${index + 1}">${wrappedEntry}</li>`;
   });
 
   return `<ol class="bibliography">${bibliographyEntries.join('')}</ol>`;
 }
+
+
+
