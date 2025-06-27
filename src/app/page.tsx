@@ -17,7 +17,6 @@ export default function Home() {
   return (
     <main className="container mx-auto px-4 py-6 sm:py-1">
       
-      {/* Hero Section */}
       <section className="relative bg-background-100 rounded-lg shadow-md overflow-hidden mb-6 sm:mb-2">
         {/* Background Image */}
         <div className="relative h-64 sm:h-50 w-full">
@@ -32,7 +31,7 @@ export default function Home() {
         </div>
 
         {/* Content Overlay */}
-        <div className="absolute inset-0 flex flex-col items-center justify-start lg:justify-center text-center text-white px-6 sm:px-4 pt-6 sm:pt-4">
+        <div className="absolute inset-0 flex flex-col items-center justify-start text-center text-white px-6 sm:px-4 pt-6 sm:pt-4">
           <div className="bg-black bg-opacity-60 rounded-lg px-4 py-3 max-w-md lg:max-w-sm">
             <h1 className="text-4xl sm:text-3xl lg:text-5xl font-extrabold tracking-tight drop-shadow-lg leading-snug py-1">
               Welcome, traveller
@@ -44,18 +43,19 @@ export default function Home() {
               disclaimer: counter may be randomised
             </p>
           </div>
+        </div>
 
-          {/* CTA Button */}
-          <div className="absolute bottom-4 right-4">
-            <Link
-              href="/primetales/2023-primespiral"
-              className="text-sm sm:text-base bg-accent text-white font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-accent-dark transition-all duration-300 no-underline"
-            >
-              What is this image?
-            </Link>
-          </div>
+        {/* CTA Button — Outside content overlay, still within section */}
+        <div className="absolute bottom-4 right-4 z-10">
+          <Link
+            href="/primetales/2023-primespiral"
+            className="text-sm sm:text-base bg-accent text-white font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-accent-dark transition-all duration-300 no-underline"
+          >
+            What is this image?
+          </Link>
         </div>
       </section>
+
 
       {/* Categories Section */}
       <section id="categories" className="mb-16 mt-2 sm:mt-3">

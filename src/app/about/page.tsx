@@ -16,16 +16,8 @@ export default function About() {
       <Breadcrumb />
 
       {/* Hero Section */}
-      <section className="text-center mb-12 mx-10">
+      <section className="text-center mb-12">
         <h1 className="text-4xl font-bold text-center mb-6">About Me</h1>
-        <p className="text-lg">
-          I am <b>Leonardo</b>, apprentice researcher in cryptography.
-          <br />
-          My interests include maths and <a href="#communication">scientific communication</a>.
-          I enjoy reading a bit too much, and love learning new things.
-          <br />
-          I believe in the power of a <a href="#community">strong community</a> of researchers and am working to make it happen.
-        </p>
 
         {/* Profile picture */}
         <div className="flex justify-center mt-6">
@@ -34,9 +26,18 @@ export default function About() {
             alt="Leonardo's profile"
             width="256"
             height="256"
-            className="rounded-full border-4 border-accent object-cover"
+            className="rounded-full border-4 mb-4 border-accent object-cover"
           />
         </div>
+
+        <p className="text-normal">
+          I am <b>Leonardo</b>, apprentice researcher in cryptography.
+          <br />
+          My interests include maths and <a href="#communication">scientific communication</a>.
+          I enjoy reading a bit too much, and love learning new things.
+          <br />
+          I believe in the power of a <a href="#community">strong community</a> of researchers and am working to make it happen.
+        </p>
 
         {/* CV Button */}
         <div className="mt-6">
@@ -56,7 +57,7 @@ export default function About() {
         <h2 className="text-4xl font-bold text-accent mb-6">Research</h2>
 
         <div className="mb-10">
-          <p className="text-lg leading-relaxed">
+          <p className="text-normalleading-relaxed">
             My main research areas are cryptography, complexity theory, number theory, and in my spare time I read about the history of mathematics.
             <br />
             I am currently working on <b>cryptographic group actions</b> and <b>digital signatures</b>.
@@ -73,7 +74,7 @@ export default function About() {
           <h3 className="text-2xl font-semibold mb-2" id="community">
             Community - shaping the future together
           </h3>
-          <p className="text-lg leading-relaxed">
+          <p className="text-normalleading-relaxed">
             What brought Homo Sapiens to where it stands today?
             <br />
             A lion might have defeated one of us, but it would soon have to face fifty angry,
@@ -89,7 +90,7 @@ export default function About() {
           <h3 className="text-2xl font-semibold mb-2" id="communication">
             Communication - one (tiny) step at a time
           </h3>
-          <p className="text-lg leading-relaxed">
+          <p className="text-normalleading-relaxed">
             Our ability to communicate effectively has always been
             a key strength. Thousands of years ago, teaching others how to craft obsidian
             tools without losing fingers surely gave us an edge (pun intended!).
