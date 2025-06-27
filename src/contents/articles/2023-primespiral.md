@@ -9,9 +9,9 @@ tags:
 ---
 
 Most mathematicians know that the representation of prime numbers $p$ in **polar coordinates** $(r,\theta) = (p,p)$ results in a cool-looking spiral.
-<div style="overflow-x: auto">
+
 ![Classical prime spiral](/primetales/2023-primes-white.png)
-</div>
+
 For now, this will not be an in-depth overview.
 
 One day I noticed that it looks quite like a galaxy: a "barred spiral galaxy" to be precise, like our own! Can we add more to it?
@@ -22,7 +22,7 @@ Astronomers classify stars according to their spectral characteristics. I enjoy 
 
 The following can be found [on Wikipedia](https://en.wikipedia.org/wiki/Stellar_classification#Harvard_spectral_classification) [@WEB:Wikistars], and is a list of star classes in order of temperature:
 
-<div style="overflow-x: auto">
+
 
 | Class | Chromaticity | Freq.    |
 |-------|--------------|----------|
@@ -34,7 +34,7 @@ The following can be found [on Wikipedia](https://en.wikipedia.org/wiki/Stellar_
 | K     | light orange | 12.00%   |
 | M     | yellow-white | 76.00%   |
 
-</div>
+
 
 A cool fact is that they can be memorised with the mnemonic _"*O*ur *B*right *A*stronomers *F*requently *G*enerate *K*iller *M*nemonics!"_ and to each class corresponds a different color ("chromaticity"). That is not how we see them from earth, filtered by the atmosphere, but rather how they look from space. In the words of Mitchell Charity [@WEB:Charity01],
 
@@ -55,7 +55,7 @@ I noticed that adding too many prime numbers makes for a weird-looking spiral. D
 Now, we have to find the correct prime number classes. Remember that we are considering all primes up to $40000$: what is the frequency of each class?
 For the algebra nerds among us, this table represents all candidate classes and my conclusions. The wisest among you might wish to skip it.
 
-<div style="overflow-x: auto">
+
 
 
 | Prime number class         | Freq.         | Well-known?  |
@@ -79,7 +79,7 @@ For the algebra nerds among us, this table represents all candidate classes and 
 | Strong primes              | 48.94%        | ✅           |
 | Twin primes                | 28.10%        | ✅           |
 
-</div>
+
 
 Let us have a look at the lucky winners.
 
@@ -97,7 +97,7 @@ Let us have a look at the lucky winners.
 
 All comparisons drawn, we get the following result.
 
-<div style="overflow-x: auto">
+
 
 | Star class | Freq.    | Prime number class | Freq.     |
 |------------|----------|--------------------|-----------|
@@ -109,13 +109,13 @@ All comparisons drawn, we get the following result.
 | K          | 12.00%   | Sophie-Germain     | 13.44%    |
 | M          | 76.00%   | All others         | 76.21...% |
 
-</div>
+
 
 
 ## Plotting the galaxy
 
 We now have everything we need: our seven prime number classes, their respective colors, and the interval $[0,40000]$. All that remains is to plot them. This just takes a few lines in Python, resulting in the picture below.
-<div style="overflow-x: auto">
+
 ![Galaxy prime spiral](/primetales/2023-primes.png)
-</div>
+
 Keen observers might notice some packs of purple mist in the background. I added as nebulae [**Carmichael's numbers**](https://en.wikipedia.org/wiki/Carmichael_number) - which are _not_ prime! The surprising fact about them is that they manage to fool all possible instances of Fermat's primality test in thinking they are prime, while they are not. Being somewhat rare and deceiving a famous primality test, it only seemed fitting to grant them a spot.
