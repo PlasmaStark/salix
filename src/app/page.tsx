@@ -46,7 +46,7 @@ export default function Home() {
           </div>
 
           {/* CTA Button */}
-          <div className="absolute bottom-5 right-4">
+          <div className="absolute bottom-4 right-4">
             <Link
               href="/primetales/2023-primespiral"
               className="text-sm sm:text-base bg-accent text-white font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-accent-dark transition-all duration-300 no-underline"
