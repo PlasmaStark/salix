@@ -20,15 +20,15 @@ Astronomers classify stars according to their spectral characteristics. I enjoy 
 
 The following can be found [on Wikipedia](https://en.wikipedia.org/wiki/Stellar_classification#Harvard_spectral_classification) [@WEB:Wikistars], and is a list of star classes in order of temperature:
 
-| Star class | Chromaticity    | Percent    |
-| ---------- | --------------- | ---------- |
-| O          | blue            | 0.00003%   |
-| B          | bluish white    | 0.12%      |
-| A          | white           | 0.61%      |
-| F          | yellowish white | 3.00%      |
-| G          | yellow          | 7.60%      |
-| K          | light orange    | 12.00%     |
-| M          | yellowish white | 76.00%     |
+| Class | Chromaticity | Percent  |
+|-------|--------------|----------|
+| O     | blue         | 0.00003% |
+| B     | blue-white   | 0.12%    |
+| A     | white        | 0.61%    |
+| F     | yellow-white | 3.00%    |
+| G     | yellow       | 7.60%    |
+| K     | light orange | 12.00%   |
+| M     | yellow-white | 76.00%   |
 
 A cool fact is that they can be memorised with the mnemonic _"*O*ur *B*right *A*stronomers *F*requently *G*enerate *K*iller *M*nemonics!"_ and to each class corresponds a different color ("chromaticity"). That is not how we see them from earth, filtered by the atmosphere, but rather how they look from space. In the words of Mitchell Charity [@WEB:Charity01],
 
