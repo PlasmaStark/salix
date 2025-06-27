@@ -40,9 +40,9 @@ export default async function BlogPost({ params }: { params: any }) {
           />
         </div>
         <div className="flex flex-col justify-center">
-          <h1 className="normal-case text-2xl font-bold text-accent">{metadata.title}</h1>
+          <h1 className="text-lg text-2xl font-bold text-accent">{metadata.title}</h1>
           <p className="text-sm text-gray-500">{metadata.date}</p>
-          <p className="text-lg text-gray-700">{metadata.description}</p>
+          <p className="text-normal text-gray-700">{metadata.description}</p>
         </div>
       </div>
       <ul className="flex items-start gap-2  mt-2 max-w-2xl mx-auto">

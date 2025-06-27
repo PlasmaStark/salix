@@ -24,15 +24,15 @@ The following can be found [on Wikipedia](https://en.wikipedia.org/wiki/Stellar_
 
 <div style="overflow-x: auto">
 
-| Class | Chromaticity | Frequency |
-|-------|--------------|-----------|
-| O     | blue         | 0.00003%  |
-| B     | blue-white   | 0.12%     |
-| A     | white        | 0.61%     |
-| F     | yellow-white | 3.00%     |
-| G     | yellow       | 7.60%     |
-| K     | light orange | 12.00%    |
-| M     | yellow-white | 76.00%    |
+| Class | Chromaticity | Freq.    |
+|-------|--------------|----------|
+| O     | blue         | 0.00003% |
+| B     | blue-white   | 0.12%    |
+| A     | white        | 0.61%    |
+| F     | yellow-white | 3.00%    |
+| G     | yellow       | 7.60%    |
+| K     | light orange | 12.00%   |
+| M     | yellow-white | 76.00%   |
 
 </div>
 
@@ -58,8 +58,8 @@ For the algebra nerds among us, this table represents all candidate classes and 
 <div style="overflow-x: auto">
 
 
-| Prime number class         | Frequency     | Well-known? |
-|----------------------------|---------------|-------------|
+| Prime number class         | Freq.         | Well-known?  |
+|----------------------------|---------------|--------------|
 | Balanced                   | 4.95%         | ❌           |
 | **Circular primes**        | **0.79%**     | ❌           |
 | Cousin primes              | 27.62%        | ❌           |
@@ -99,15 +99,15 @@ All comparisons drawn, we get the following result.
 
 <div style="overflow-x: auto">
 
-| Star class | Freq.    | Prime number class    | Freq.     |
-|------------|----------|-----------------------|-----------|
-| O          | 0.00003% | Even primes           | 0.000025% |
-| B          | 0.12%    | Mersenne primes       | 0.12%     |
-| A          | 0.61%    | Circular primes       | 0.79%     |
-| F          | 3.00%    | Palindromic primes    | 1.67%     |
-| G          | 7.60%    | Safe primes           | 7.76%     |
-| K          | 12.00%   | Sophie-Germain primes | 13.44%    |
-| M          | 76.00%   | All other primes      | 76.21...% |
+| Star class | Freq.    | Prime number class | Freq.     |
+|------------|----------|--------------------|-----------|
+| O          | 0.00003% | Even               | 0.000025% |
+| B          | 0.12%    | Mersenne           | 0.12%     |
+| A          | 0.61%    | Circular           | 0.79%     |
+| F          | 3.00%    | Palind.            | 1.67%     |
+| G          | 7.60%    | Safe               | 7.76%     |
+| K          | 12.00%   | Sophie-Germain     | 13.44%    |
+| M          | 76.00%   | All others         | 76.21...% |
 
 </div>
 

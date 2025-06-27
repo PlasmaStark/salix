@@ -92,17 +92,7 @@ A first mishap occurred while providing VPN credentials. For instance, the usern
 Right on point, Piracy Shield's code, interface, and documentation [were leaked](https://github.com/fuckpiracyshield) three mere weeks after deployment, allowing for some insight. For instance, one must be sure the Death Star does not destroy important
 websites (like `www.google.com`) or components: how would you implement it? Most likely, not like this.
 
-```python
-def check_unwanteds(self, value):
-  result = self.whois.get_text(value)
-  result = result.lower()
-  if 'cloudflare' in result 
-  or 'namecheap' in result 
-  or 'amazon' in result 
-  or 'google' in result:
-    return True
-  return False
-```
+![A code snippet from Piracy Shield.](/chronicles/2025-shield-code.jpg)
 
 This code just checks whether the name contains `cloudflare`, `namecheap`, `amazon` or `google`. Totally unexploitable.
 Regarding the leak,
