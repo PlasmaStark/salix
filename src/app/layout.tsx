@@ -53,7 +53,7 @@ export default function RootLayout({
         </div>
 
         <footer className="bg-gray-800 text-white py-8 mt-2 text-center">
-          <p className="text-sm">© {new Date().getFullYear()} Leonardo Errati.</p>
+          <p className="text-sm">© {new Date().getFullYear()} myself</p>
         </footer>
       </body>
 

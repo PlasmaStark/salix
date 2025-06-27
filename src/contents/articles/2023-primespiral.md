@@ -20,7 +20,7 @@ Astronomers classify stars according to their spectral characteristics. I enjoy 
 
 The following can be found [on Wikipedia](https://en.wikipedia.org/wiki/Stellar_classification#Harvard_spectral_classification) [@WEB:Wikistars], and is a list of star classes in order of temperature:
 
-| Star class | Chromaticity    | Percentage |
+| Star class | Chromaticity    | Percent    |
 | ---------- | --------------- | ---------- |
 | O          | blue            | 0.00003%   |
 | B          | bluish white    | 0.12%      |
