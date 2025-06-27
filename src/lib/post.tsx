@@ -102,7 +102,7 @@ function generateBibliographyHtml(citationOrder: string[], bibliography: any): s
     const url = rawEntry?.URL || rawEntry?.url || rawEntry?.note;
     const cleanedEntry = formattedEntry.replace(/https?:\/\/[^\s<]+/g, '');
 
-    let wrappedEntry = url
+    const wrappedEntry = url
       ? `<a href="${url}" target="_blank" rel="noopener noreferrer">${cleanedEntry}</a>`
       : formattedEntry;
 
