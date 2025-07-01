@@ -89,12 +89,12 @@ export default function ProfileInfo({ compact = false }: { compact?: boolean }) 
                 )}
               </div>
             </div>
-            <p className="text-sm italic mt-1 mb-0">PhD student in cryptography at PoliTo, Italy.</p>
+            <p className="text-sm italic mt-1 mb-0">Cryptography PhD student at PoliTo, Italy.</p>
           </>
         ) : (
           <>
             <h2 className="text-lg text-accent font-semibold">Leonardo Errati</h2>
-            <p className="text-sm italic">PhD student in cryptography at Politecnico di Torino, Italy. </p>
+            <p className="text-sm italic">Cryptography PhD student at PoliTo, Italy.</p>
           </>
         )}
       </div>
