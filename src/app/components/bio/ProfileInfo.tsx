@@ -39,7 +39,7 @@ export default function ProfileInfo({ compact = false }: { compact?: boolean }) 
       {/* Profile image */}
       <div className={compact ? "" : "flex justify-center"}>
         <Image
-          src="/profile-image.jpg"
+          src="/profile-image.webp"
           alt="Leonardo's profile"
           width={compact ? 70 : 128}
           height={compact ? 70 : 128}
