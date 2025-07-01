@@ -33,7 +33,7 @@ export default function ProfileInfo({ compact = false }: { compact?: boolean }) 
   return (
     <div
       className={`text-white ${
-        compact ? "flex items-center gap-4 relative ml-1" : "space-y-4 w-full px-2"
+        compact ? " mb-1 flex items-center gap-4 relative ml-1" : "space-y-4 w-full px-2"
       }`}
     >
       {/* Profile image */}

@@ -40,7 +40,7 @@ export default function Home() {
               You are visitor #{visitorNumber}.
             </p>
             <p className="text-sm italic drop-shadow-lg">
-              disclaimer: counter may be randomised
+              (counter may be randomised)
             </p>
           </div>
         </div>
