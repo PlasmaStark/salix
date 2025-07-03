@@ -17,6 +17,7 @@
     "@tailwindcss/line-clamp": "^0.4.4",
     "@tailwindcss/typography": "^0.5.15",
     "citation-js": "^0.7.16",
+    "framer-motion": "^12.23.0",
     "gray-matter": "^4.0.3",
     "katex": "^0.16.19",
     "marked": "^15.0.3",
