@@ -14,12 +14,12 @@ export default function NotFound() {
           className="bg-gray-900 border border-gray-700 rounded-lg p-6 shadow-md"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.2, delay: 0.1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
           <motion.p
-            className="font-mono text-green-400 text-sm sm:text-base break-words"
+            className="font-mono text-green-400 text-sm sm:text-base break-words pb-4"
             animate={{
-                color: ['#f87171', '#f43f5e', '#f87171'],
+                color: ['#f43f5e', '#f87171', '#f43f5e'],
                 opacity: [0.6, 1, 0.6],
             }}
             transition={{
@@ -31,20 +31,20 @@ export default function NotFound() {
             {fakeCipher} :: error <br />
             Page not found.
           </motion.p>
-        </motion.div>
 
         {/* Messaggio testuale */}
-        <p className="text-lg text-gray-300">
+        <p className="text-lg text-gray-300 pb-3">
           Even quantum attackers couldn't recover this one.
         </p>
 
         {/* CTA */}
         <Link
           href="/"
-          className="inline-block no-underline bg-accent2 font-semibold px-5 py-2 rounded-lg shadow hover:bg-accent-dark transition"
+          className="inline-block no-underline bg-accent2 font-semibold px-5 py-2 rounded-lg shadow hover:bg-accent"
         >
           Return to Homepage
         </Link>
+        </motion.div>
       </div>
     </div>
   );
