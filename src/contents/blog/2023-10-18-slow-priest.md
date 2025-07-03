@@ -2,7 +2,7 @@
 title: "The Slow Priest"
 date: "2023-10-18"
 description: "A job interview for public administration."
-coverImage: "chronicles/2023-priest.jpg"
+coverImage: "chronicles/2023-priest.webp"
 tags:
   - Bureaucracy
 ---

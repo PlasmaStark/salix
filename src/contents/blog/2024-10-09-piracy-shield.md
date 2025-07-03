@@ -2,7 +2,7 @@
 title: "Italian fiascos: PiracyShield"
 date: "2024-10-09"
 description: "The big red button to nuke the internet."
-coverImage: "chronicles/2025-shield.jpg"
+coverImage: "chronicles/2025-shield.webp"
 tags:
   - Bureaucracy
   - Cybersecurity
@@ -40,7 +40,7 @@ They teamed up with a legal partner: enter [_Studio Previti_](https://www.previt
 
 Their strategy? They planned to construct their own Death Star, a superweapon to annihilate all pirate websites from the web. Well, the Italian web, at least.
 
-![Plans for Piracy Shield](/chronicles/2025-shield-plans.jpg)
+![Plans for Piracy Shield](/chronicles/2025-shield-plans.webp)
 
 ### Coding Piracy Shield
 
@@ -79,7 +79,7 @@ Sp Tech Legal was displeased,
 
 and we never heard of this kerfuffle again.
 
-![Piracy Shield under development](/chronicles/2025-shield-coding.jpg)
+![Piracy Shield under development](/chronicles/2025-shield-coding.webp)
 
 ## ACT 2, Piracy Shield in action
 
@@ -92,7 +92,7 @@ A first mishap occurred while providing VPN credentials. For instance, the usern
 Right on point, Piracy Shield's code, interface, and documentation [were leaked](https://github.com/fuckpiracyshield) three mere weeks after deployment, allowing for some insight. For instance, one must be sure the Death Star does not destroy important
 websites (like `www.google.com`) or components: how would you implement it? Most likely, not like this.
 
-![A code snippet from Piracy Shield.](/chronicles/2025-shield-code.jpg)
+![A code snippet from Piracy Shield.](/chronicles/2025-shield-code.webp)
 
 This code just checks whether the name contains `cloudflare`, `namecheap`, `amazon` or `google`. Totally unexploitable.
 Regarding the leak,
@@ -117,7 +117,7 @@ They had their request rejected in January 2024, as
 
 Internet Service Providers were forced to block content at an unsustainable rate, with questionable techniques and under serious legal threats; this is the result of bad design and bad politics. All pieces were set and catastrophe was inevitable.
 
-![Piracy Shield is ready](/chronicles/2025-shield-ready.jpg)
+![Piracy Shield is ready](/chronicles/2025-shield-ready.webp)
 
 ### Patient zero
 
@@ -133,7 +133,7 @@ In most cases CDN-hosted websites share IP address, meaning that if you block th
 
 As far as I know, Zenlayer is the first large victim of Piracy Shield.
 
-![Piracy Shield activated](/chronicles/2025-shield-fire.jpg)
+![Piracy Shield activated](/chronicles/2025-shield-fire.webp)
 
 ### Friendly fire
 
@@ -169,4 +169,4 @@ Famous politician [Niccolò Machiavelli](https://en.wikipedia.org/wiki/Niccol%C3
 
 While experts agree on this, commissar Capitanio [says this is "fake news"](https://www.hdblog.it/mercato/articoli/n578790/piracy-shield-siti-legali-blocchi-agcom-polemica/). The worst part? Allegedly, it is not even solving the original money problem as A-Series rights holders have seen [no increase in revenue](https://www.tomshw.it/hardware/piracy-shield-non-sta-funzionando-i-risultati-sono-deludenti-2025-01-20). We are sure there must be a lesson in all this.
 
-![Piracy Shield waiting...](/chronicles/2025-shield-next.jpg)
+![Piracy Shield waiting...](/chronicles/2025-shield-next.webp)

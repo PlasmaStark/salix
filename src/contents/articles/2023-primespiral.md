@@ -2,7 +2,7 @@
 title: "A galaxy of prime numbers"
 date: "2023-04-15"
 description: "A personal twist on the prime number spiral."
-coverImage: "background.png"
+coverImage: "background.webp"
 tags:
   - Primes
   - Python
@@ -10,7 +10,7 @@ tags:
 
 Most mathematicians know that the representation of prime numbers $p$ in **polar coordinates** $(r,\theta) = (p,p)$ results in a cool-looking spiral.
 
-![Classical prime spiral](/primetales/2023-primes-white.png)
+![Classical prime spiral](/primetales/2023-primes-white.webp)
 
 For now, this will not be an in-depth overview.
 
@@ -116,6 +116,6 @@ All comparisons drawn, we get the following result.
 
 We now have everything we need: our seven prime number classes, their respective colors, and the interval $[0,40000]$. All that remains is to plot them. This just takes a few lines in Python, resulting in the picture below.
 
-![Galaxy prime spiral](/primetales/2023-primes.png)
+![Galaxy prime spiral](/primetales/2023-primes.webp)
 
 Keen observers might notice some packs of purple mist in the background. I added as nebulae [**Carmichael's numbers**](https://en.wikipedia.org/wiki/Carmichael_number) - which are _not_ prime! The surprising fact about them is that they manage to fool all possible instances of Fermat's primality test in thinking they are prime, while they are not. Being somewhat rare and deceiving a famous primality test, it only seemed fitting to grant them a spot.
