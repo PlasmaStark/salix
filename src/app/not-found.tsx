@@ -14,7 +14,7 @@ export default function NotFound() {
           className="bg-gray-900 border border-gray-700 rounded-lg p-6 shadow-md"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.2, delay: 0.1 }}
         >
           <motion.p
             className="font-mono text-green-400 text-sm sm:text-base break-words"
