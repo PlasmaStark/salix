@@ -20,11 +20,11 @@ export function getContentList(directory: string): ContentItem[] {
 
   return files.map((file) => {
     const filePath = path.join(directory, file);
-    const fileContents = fs.readFileSync(filePath, 'utf-8');
+    const fileContents = fs.readFileSync(filePath, "utf-8");
     const { data } = matter(fileContents);
 
     return {
-      slug: file.replace('.md', ''),
+      slug: file.replace(".md", ""),
       title: data.title,
       description: data.description,
       date: data.date,

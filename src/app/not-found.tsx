@@ -18,32 +18,32 @@ export default function NotFound() {
           <motion.p
             className="font-mono text-green-400 text-sm sm:text-base break-words pb-4"
             animate={{
-                color: ['#f43f5e', '#f87171', '#f43f5e'],
-                opacity: [0.6, 1, 0.6],
-                x: [0, -1, 1, -2, 2, 0],
-                skewX: [0, 1, -1, 0.5, -0.5, 0],
+              color: ["#f43f5e", "#f87171", "#f43f5e"],
+              opacity: [0.6, 1, 0.6],
+              x: [0, -1, 1, -2, 2, 0],
+              skewX: [0, 1, -1, 0.5, -0.5, 0],
             }}
             transition={{
               duration: 1.2,
               repeat: Infinity,
-              ease: 'easeInOut',
+              ease: "easeInOut",
             }}
           >
             {fakeCipher} :: error <br />
             Page not found.
           </motion.p>
 
-        <p className="text-lg text-gray-300 pb-3">
-          Even quantum attackers couldn't recover this one.
-        </p>
+          <p className="text-lg text-gray-300 pb-3">
+            Even quantum attackers couldn't recover this one.
+          </p>
 
-        {/* CTA */}
-        <Link
-          href="/"
-          className="inline-block no-underline bg-accent2 font-semibold px-5 py-2 rounded-lg shadow hover:bg-accent"
-        >
-          Return to Homepage
-        </Link>
+          {/* CTA */}
+          <Link
+            href="/"
+            className="inline-block no-underline bg-accent2 font-semibold px-5 py-2 rounded-lg shadow hover:bg-accent"
+          >
+            Return to Homepage
+          </Link>
         </motion.div>
       </div>
     </div>

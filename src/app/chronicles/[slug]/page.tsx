@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { BIBLIOGRAPHY_DIR, BLOG_DIR } from '@/config';
 import { getContentList } from '@/lib/getPosts';
 import Image from 'next/image'
+import path from 'path';
+import fs from 'fs';
 
 export async function generateStaticParams() {
   const posts = getContentList(BLOG_DIR);
@@ -15,6 +17,9 @@ export async function generateStaticParams() {
 export default async function BlogPost({ params }: { params: any }) {
   const { slug } = await params;
   const { metadata, content, bibliography } = await getContent(slug, BLOG_DIR, BIBLIOGRAPHY_DIR);
+  const filePath = path.join(process.cwd(), 'src/contents/blog', `${slug}.md`);
+  const stats = fs.statSync(filePath);
+  const lastMod = stats.mtime.toISOString();
 
   return (
     <article className="max-w-3xl mx-auto px-2 py-2">
@@ -23,10 +28,9 @@ export default async function BlogPost({ params }: { params: any }) {
         <Breadcrumb />
       </header>
 
-      {/* Titolo */}
       <div className="flex rounded-lg bg-white items-start p-4 max-w-2xl mx-auto">
         {/* Immagine */}
-        <div className="w-[120px] flex-shrink-0 mr-4">
+        <div className="w-[80px] sm:w-[120px] flex-shrink-0 mr-4">
           <Image
             src={
               metadata.coverImage.startsWith("/")
@@ -39,13 +43,25 @@ export default async function BlogPost({ params }: { params: any }) {
             className="w-full h-auto object-cover rounded-md"
           />
         </div>
+        
         <div className="flex flex-col justify-center">
-          <h1 className="text-lg text-2xl font-bold text-accent">{metadata.title}</h1>
-          <p className="text-sm text-gray-500">{metadata.date}</p>
-          <p className="text-normal text-gray-700">{metadata.description}</p>
+          <h1 className="text-lg sm:text-3xl font-bold text-accent">{metadata.title}</h1>
+          <p className="text-normal sm:text-lg text-gray-700">{metadata.description}</p>
+
+          {/* Data visibile solo da sm in su */}
+          <p className="text-normal text-gray-500 hidden sm:block">
+            {new Date(metadata.date).toLocaleDateString("en-GB", { day: 'numeric', month: 'long', year: 'numeric' })}, last modified {new Date(lastMod).toLocaleDateString(undefined, { day: 'numeric', month: 'long', year: 'numeric' })}
+          </p>
         </div>
       </div>
-      <ul className="flex items-start gap-2  mt-2 max-w-2xl mx-auto">
+
+      <div className="flex items-start gap-2 mt-1 max-w-2xl mx-auto block sm:hidden">
+        <p className="text-normal text-gray-500">
+          {new Date(metadata.date).toLocaleDateString("en-GB", { day: 'numeric', month: 'long', year: 'numeric' })}, last modified {new Date(lastMod).toLocaleDateString(undefined, { day: 'numeric', month: 'long', year: 'numeric' })}
+        </p>
+      </div>
+      
+      <ul className="flex items-start gap-2 mt-1 max-w-2xl mx-auto">
         {metadata.tags.map((tag: string) => (
           <li key={tag}>
             <Link
@@ -57,8 +73,6 @@ export default async function BlogPost({ params }: { params: any }) {
           </li>
         ))}
       </ul>
-
-
       {/* Contenuto */}
       <div
         className="prose prose-lg prose-invert max-w-full"
@@ -72,6 +86,5 @@ export default async function BlogPost({ params }: { params: any }) {
         </footer>
       )}
     </article>
-
   );
 }

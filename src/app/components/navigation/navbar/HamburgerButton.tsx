@@ -9,7 +9,9 @@ export const HamburgerButton = ({
 }) => (
   <button
     onClick={onClick}
-    className={`md:hidden p-2 text-white hover:text-[var(--color-accent)] focus:outline-none transition-colors duration-300 ${className ?? ""}`}
+    className={`md:hidden p-2 text-white hover:text-[var(--color-accent)] focus:outline-none transition-colors duration-300 ${
+      className ?? ""
+    }`}
     aria-label="Toggle menu"
   >
     <span

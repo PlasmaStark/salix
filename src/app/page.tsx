@@ -16,7 +16,6 @@ export default function Home() {
 
   return (
     <main className="container mx-auto px-4 py-6 sm:py-1">
-      
       <section className="relative bg-background-100 rounded-lg shadow-md overflow-hidden mb-6 sm:mb-2">
         {/* Background Image */}
         <div className="relative h-64 sm:h-50 w-full">
@@ -55,7 +54,6 @@ export default function Home() {
           </Link>
         </div>
       </section>
-
 
       {/* Categories Section */}
       <section id="categories" className="mb-16 mt-2 sm:mt-3">

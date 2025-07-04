@@ -16,11 +16,18 @@ export default function ContentCard({
   if (variant === 'small') {
     return (
       <li className="p-2 border rounded shadow hover:shadow-lg transition">
-        <Link href={`/${baseRoute}/${post.slug}`} className="flex items-center gap-4 no-underline">
+        <Link
+          href={`/${baseRoute}/${post.slug}`}
+          className="flex items-center gap-4 no-underline"
+        >
           <div className="w-24 h-16 relative">
             {post.coverImage && (
               <Image
-                src={post.coverImage.startsWith('/') ? post.coverImage : `/${post.coverImage}`}
+                src={
+                  post.coverImage.startsWith("/")
+                    ? post.coverImage
+                    : `/${post.coverImage}`
+                }
                 alt={post.title}
                 fill
                 className="object-cover rounded"

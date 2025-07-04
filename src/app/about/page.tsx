@@ -33,10 +33,12 @@ export default function About() {
         <p className="text-normal">
           I am <b>Leonardo</b>, apprentice researcher in cryptography.
           <br />
-          My interests include maths and <a href="#communication">scientific communication</a>.
-          I enjoy reading a bit too much, and love learning new things.
-          <br />
-          I believe in the power of a <a href="#community">strong community</a> of researchers and am working to make it happen.
+          My interests include maths and{" "}
+          <a href="#communication">scientific communication</a>. I enjoy reading
+          a bit too much, and love learning new things.
+          <br />I believe in the power of a{" "}
+          <a href="#community">strong community</a> of researchers and am
+          working to make it happen.
         </p>
 
         {/* CV Button */}
@@ -51,16 +53,20 @@ export default function About() {
           </Link>
         </div>
       </section>
-      
+
       {/* Research Section */}
       <section>
         <h2 className="text-4xl font-bold text-accent mb-6">Research</h2>
 
         <div className="mb-10">
           <p className="text-normalleading-relaxed">
-            My main research areas are cryptography, complexity theory, number theory, and in my spare time I read about the history of mathematics.
-            <br />
-            I am currently working on <b>cryptographic group actions</b> and <b>digital signatures</b>.
+            My main research areas are cryptography, complexity theory, number
+            theory, and in my spare time I read about the history of
+            mathematics.
+            <br />I am currently working on <b>
+              cryptographic group actions
+            </b>{" "}
+            and <b>digital signatures</b>.
           </p>
         </div>
       </section>
@@ -76,12 +82,13 @@ export default function About() {
           </h3>
           <p className="text-normalleading-relaxed">
             What brought Homo Sapiens to where it stands today?
-            <br />
-            A lion might have defeated one of us, but it would soon have to face fifty angry,
-            rock-throwing, cooperating monkeys. Collaboration has always been one of our greatest
-            strengths, and it is probably the key to shaping - and fixing - the future.
-            As people of science this means coming together, providing our perspective to the public
-            and putting our abilities to use for society. We are the same.
+            <br />A lion might have defeated one of us, but it would soon have
+            to face fifty angry, rock-throwing, cooperating monkeys.
+            Collaboration has always been one of our greatest strengths, and it
+            is probably the key to shaping - and fixing - the future. As people
+            of science this means coming together, providing our perspective to
+            the public and putting our abilities to use for society. We are the
+            same.
           </p>
         </div>
 
@@ -91,13 +98,13 @@ export default function About() {
             Communication - one (tiny) step at a time
           </h3>
           <p className="text-normalleading-relaxed">
-            Our ability to communicate effectively has always been
-            a key strength. Thousands of years ago, teaching others how to craft obsidian
-            tools without losing fingers surely gave us an edge (pun intended!).
-            <br />
-            I believe in the power of scientific communication: step by step
-            it shares knowledge, enables informed decisions, and shapes our technical future.
-            That is real power.
+            Our ability to communicate effectively has always been a key
+            strength. Thousands of years ago, teaching others how to craft
+            obsidian tools without losing fingers surely gave us an edge (pun
+            intended!).
+            <br />I believe in the power of scientific communication: step by
+            step it shares knowledge, enables informed decisions, and shapes our
+            technical future. That is real power.
           </p>
         </div>
       </section>
@@ -131,8 +138,7 @@ export default function About() {
         </div>
       </section>
       <hr className="border-gray-300 my-8" />
-    */} 
-
+    */}
     </main>
   );
 }

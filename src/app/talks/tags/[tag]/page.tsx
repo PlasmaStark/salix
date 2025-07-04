@@ -16,15 +16,13 @@ export default async function TagPage({ params }: { params: Promise<{ tag: strin
   return (
     <main className="container mx-auto px-2 py-2">
       <Breadcrumb />
-      <h1 className="text-4xl font-bold text-center mb-6">Talks: <b>{tag}</b></h1>
+      <h1 className="text-4xl font-bold text-center mb-6">
+        Talks: <b>{tag}</b>
+      </h1>
       <p className="text-lg text-center mb-10">
         Public <b>talks</b> for diffusion or future fruition.
       </p>
-      <ContentList
-        contents={posts}
-        baseRoute="talks"
-        variant="textual"
-      />
+      <ContentList contents={posts} baseRoute="talks" variant="textual" />
     </main>
   );
 }

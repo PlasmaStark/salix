@@ -20,11 +20,7 @@ export default async function TalksPage() {
       <p className="text-lg text-center mb-10">
         Public <b>talks</b> for diffusion or future fruition.
       </p>
-      <ContentList
-        contents={posts}
-        baseRoute="talks"
-        variant="textual"
-      />
+      <ContentList contents={posts} baseRoute="talks" variant="textual" />
     </main>
   );
 }

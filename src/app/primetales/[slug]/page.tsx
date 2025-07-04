@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { ARTICLE_DIR, BIBLIOGRAPHY_DIR } from '@/config';
 import Image from 'next/image'
 import { getContentList } from '@/lib/getPosts';
+import path from 'path';
+import fs from 'fs';
 
 export async function generateStaticParams() {
   const posts = getContentList(ARTICLE_DIR);
@@ -15,20 +17,39 @@ export async function generateStaticParams() {
 export default async function Article({ params }: { params: any }) {
   const { slug } = await params;
   const { metadata, content, bibliography } = await getContent(slug, ARTICLE_DIR, BIBLIOGRAPHY_DIR);
+  const filePath = path.join(process.cwd(), 'src/contents/articles', `${slug}.md`);
+  const stats = fs.statSync(filePath);
+  const lastMod = stats.mtime.toISOString();
 
   if (!metadata) {
-    return <p>Articolo non trovato</p>;
+    return <p>Article not found...</p>;
   }
 
   return (
     <article className="max-w-3xl mx-auto px-2 py-2">
       {/* Titolo */}
       <header className="mb-6">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"
+        />
         <Breadcrumb />
         <h1 className="text-4xl font-bold text-white-800">{metadata.title}</h1>
-        <p className="text-base italic text-white-400">{metadata.description}</p>
-        <p className="text-sm text-gray-500 mt-2">{metadata.date}</p>
+        <p className="text-xl italic text-white-400">{metadata.description}</p>
+        <p className="text-normal text-gray-500">
+          first made{" "}
+          {new Date(metadata.date).toLocaleDateString("en-GB", {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+          })}
+          , last modified{" "}
+          {new Date(lastMod).toLocaleDateString("en-GB", {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+          })}{" "}
+        </p>
         <ul className="flex flex-wrap gap-2 mt-4">
           {metadata.tags.map((tag: string) => (
             <li key={tag}>

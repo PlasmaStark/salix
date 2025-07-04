@@ -16,7 +16,7 @@ const defaultClassByVariant: Record<string, string> = {
 export default function ContentList({
   contents,
   baseRoute,
-  variant = 'default',
+  variant = "default",
 }: ContentListProps) {
   return (
     <ul className={defaultClassByVariant[variant]}>

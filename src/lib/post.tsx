@@ -17,7 +17,7 @@ let bibliographyCache: any = null;
 
 async function loadBibliographyOnce(bibFilePath: string) {
   if (!bibliographyCache) {
-    const bibContent = await fs.readFile(bibFilePath, 'utf-8');
+    const bibContent = await fs.readFile(bibFilePath, "utf-8");
     bibliographyCache = new Cite(bibContent);
   }
   return bibliographyCache;

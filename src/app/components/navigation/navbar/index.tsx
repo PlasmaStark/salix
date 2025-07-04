@@ -31,21 +31,21 @@ export default function Navbar() {
         <HamburgerButton
           isOpen={isSidebarOpen}
           onClick={() => setSidebarOpen(!isSidebarOpen)}
-          className="relative z-[60]" 
+          className="relative z-[60]"
         />
 
         {/* Desktop nav */}
         <nav className="hidden md:flex space-x-4">
           {navLinks
-            .filter(({ path }) => path !== "") 
+            .filter(({ path }) => path !== "")
             .map(({ path, label }) => (
-          <Link
-            key={path}
-            href={`/${path}`}
-            className="relative block text-white no-underline after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-1 after:w-0 after:bg-[var(--color-accent)] after:transition-all after:duration-300 hover:after:w-full"
-          >
-            {label}
-          </Link>
+              <Link
+                key={path}
+                href={`/${path}`}
+                className="relative block text-white no-underline after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-1 after:w-0 after:bg-[var(--color-accent)] after:transition-all after:duration-300 hover:after:w-full"
+              >
+                {label}
+              </Link>
             ))}
         </nav>
       </div>

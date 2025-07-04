@@ -17,11 +17,14 @@ export default function ProfileInfo({ compact = false }: { compact?: boolean }) 
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setOpen(false);
+      function handleClickOutside(event: MouseEvent) {
+        if (
+          dropdownRef.current &&
+          !dropdownRef.current.contains(event.target as Node)
+        ) {
+          setOpen(false);
+        }
       }
-    }
     if (open) {
       document.addEventListener("mousedown", handleClickOutside);
     }
