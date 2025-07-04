@@ -1,11 +1,12 @@
 {
   "name": "salix",
-  "version": "25.6.1",
+  "version": "25.7.1",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "postbuild": "next-sitemap",
+    "map": "next-sitemap",
     "start": "next start",
     "lint": "next lint"
   },

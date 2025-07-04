@@ -10,3 +10,4 @@ Personal website built with Nextjs.
 | 25.1.1        | 2025 jan | v1          | MD automation.  |
 | 25.2.1        | 2025 feb | v2          | JS automation.  |
 | 25.6.1        | 2025 jun | v3          | JS graphics.    |
+| 25.7.1        | 2025 jul | v3.1        | Light graphics. |

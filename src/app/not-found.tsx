@@ -9,7 +9,6 @@ export default function NotFound() {
   return (
     <div className="min-h-screen bg-background text-foreground flex items-center justify-center px-4">
       <div className="max-w-xl w-full text-center space-y-6">
-        {/* Finta stringa cifrata animata */}
         <motion.div
           className="bg-gray-900 border border-gray-700 rounded-lg p-6 shadow-md"
           initial={{ opacity: 0, y: -10 }}
@@ -21,9 +20,11 @@ export default function NotFound() {
             animate={{
                 color: ['#f43f5e', '#f87171', '#f43f5e'],
                 opacity: [0.6, 1, 0.6],
+                x: [0, -1, 1, -2, 2, 0],
+                skewX: [0, 1, -1, 0.5, -0.5, 0],
             }}
             transition={{
-              duration: 1.5,
+              duration: 1.2,
               repeat: Infinity,
               ease: 'easeInOut',
             }}
@@ -32,7 +33,6 @@ export default function NotFound() {
             Page not found.
           </motion.p>
 
-        {/* Messaggio testuale */}
         <p className="text-lg text-gray-300 pb-3">
           Even quantum attackers couldn't recover this one.
         </p>
