@@ -50,14 +50,14 @@ export default async function BlogPost({ params }: { params: any }) {
 
           {/* Data visibile solo da sm in su */}
           <p className="text-normal text-gray-500 hidden sm:block">
-            {new Date(metadata.date).toLocaleDateString("en-GB", { day: 'numeric', month: 'long', year: 'numeric' })}, last modified {new Date(lastMod).toLocaleDateString(undefined, { day: 'numeric', month: 'long', year: 'numeric' })}
+            {new Date(metadata.date).toLocaleDateString("en-GB", { day: 'numeric', month: 'long', year: 'numeric' })}, last modified {new Date(lastMod).toLocaleDateString("en-GB", { day: 'numeric', month: 'long', year: 'numeric' })}
           </p>
         </div>
       </div>
 
       <div className="flex items-start gap-2 mt-1 max-w-2xl mx-auto block sm:hidden">
         <p className="text-normal text-gray-500">
-          {new Date(metadata.date).toLocaleDateString("en-GB", { day: 'numeric', month: 'long', year: 'numeric' })}, last modified {new Date(lastMod).toLocaleDateString(undefined, { day: 'numeric', month: 'long', year: 'numeric' })}
+          {new Date(metadata.date).toLocaleDateString("en-GB", { day: 'numeric', month: 'long', year: 'numeric' })}, last modified {new Date(lastMod).toLocaleDateString("en-GB", { day: 'numeric', month: 'long', year: 'numeric' })}
         </p>
       </div>
       
