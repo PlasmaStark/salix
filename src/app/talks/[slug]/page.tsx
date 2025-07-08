@@ -15,7 +15,7 @@ export async function generateStaticParams() {
 
 export default async function BlogPost({ params }: { params: any }) {
   const { slug } = await params;
-  const { metadata, content, toc } = await getContent(slug, TALKS_DIR, BIBLIOGRAPHY_DIR);
+  const { metadata, content } = await getContent(slug, TALKS_DIR, BIBLIOGRAPHY_DIR);
   const filePath = path.join(process.cwd(), "src/contents/talks", `${slug}.md`);
   const stats = fs.statSync(filePath);
   const lastMod = stats.mtime.toISOString();
