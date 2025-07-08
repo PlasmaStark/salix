@@ -9,6 +9,8 @@ import remarkMath from 'remark-math';
 import remarkGfm from 'remark-gfm';
 import rehypeKatex from 'rehype-katex';
 import remarkImages from './plugins/remark-images';
+import { remarkExtractToc } from './plugins/remark-extract-toc';
+import rehypeSlug from 'rehype-slug';
 
 const Cite = require('citation-js');
 
@@ -23,13 +25,15 @@ async function loadBibliographyOnce(bibFilePath: string) {
   return bibliographyCache;
 }
 
-function createProcessor() {
+function createProcessor(toc: any[]) {
   const processor = unified()
     .use(remarkParse)
     .use(remarkMath)
     .use(remarkGfm)
     .use(remarkImages)
+    .use(remarkExtractToc(toc))
     .use(remarkRehype)
+    .use(rehypeSlug)   
     .use(rehypeKatex)
     .use(rehypeStringify);
   return processor;
@@ -49,8 +53,8 @@ export async function getContent(
   try {
     const fileContent = await fs.readFile(filePath, 'utf-8');
     const { data, content } = matter(fileContent);
-
-    const processor = createProcessor();
+    const toc: { text: string; id: string; level: number }[] = [];
+    const processor = createProcessor(toc);
     const processedContent = await processor.process(content);
 
     const bibliography = await loadBibliographyOnce(bibliographyFile);
@@ -60,6 +64,7 @@ export async function getContent(
       metadata: data,
       content: citationProcessing.htmlContent,
       bibliography: citationProcessing.bibliographyHtml,
+      toc,
     };
 
     contentCache.set(cacheKey, result);

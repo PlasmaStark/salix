@@ -83,6 +83,7 @@ export default function ProfileInfo({ compact = false }: { compact?: boolean }) 
                       <DropdownLink href="https://github.com/PlasmaStark" icon={faGithub} label="GitHub" />
                       <DropdownLink href="https://www.linkedin.com/in/leonardo-errati-76507b213" icon={faLinkedin} label="LinkedIn" />
                       <DropdownLink href="https://orcid.org/0009-0004-0460-9742" iconClass="ai ai-orcid" label="ORCID" />
+                      <DropdownLink href="" iconClass="ai ai-google-scholar" label="Scholar" />
                       <DropdownLink href="https://www.polito.it/personale?p=leonardo.errati" icon={faIdCard} label="PoliTo" />
                       <DropdownLink href="https://webapps.unitn.it/du/it/Persona/PER0208861" icon={faIdCard} label="UniTn" />
                       <DropdownLink href="https://www.goodreads.com/user/show/155458214-leonardus-iii-emperor-of-taured" icon={faBook} label="GoodReads" />
@@ -92,12 +93,12 @@ export default function ProfileInfo({ compact = false }: { compact?: boolean }) 
                 )}
               </div>
             </div>
-            <p className="text-sm italic mt-1 mb-0">Cryptography PhD student at PoliTo, Italy.</p>
+            <p className="text-sm italic mt-1 mb-0">Cryptography PhD student @ PoliTo, Italy.</p>
           </>
         ) : (
           <>
             <h2 className="text-lg text-accent font-semibold">Leonardo Errati</h2>
-            <p className="text-sm italic">Cryptography PhD student at PoliTo, Italy.</p>
+            <p className="text-sm italic">Cryptography PhD student @ PoliTo, Italy.</p>
           </>
         )}
       </div>
@@ -110,6 +111,7 @@ export default function ProfileInfo({ compact = false }: { compact?: boolean }) 
           <SocialLink href="https://github.com/PlasmaStark" icon={faGithub} label="GitHub" />
           <SocialLink href="https://www.linkedin.com/in/leonardo-errati-76507b213" icon={faLinkedin} label="LinkedIn" />
           <SocialLink href="https://orcid.org/0009-0004-0460-9742" iconClass="ai ai-orcid" label="ORCID" />
+          <SocialLink href="" iconClass="ai ai-google-scholar" label="Scholar" />
           <SocialLink href="https://www.polito.it/personale?p=leonardo.errati" icon={faIdCard} label="PoliTo" />
           <SocialLink href="https://webapps.unitn.it/du/it/Persona/PER0208861" icon={faIdCard} label="UniTn" />
           <SocialLink href="https://www.goodreads.com/user/show/155458214-leonardus-iii-emperor-of-taured" icon={faBook} label="GoodReads" />

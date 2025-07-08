@@ -16,7 +16,7 @@ export async function generateStaticParams() {
 
 export default async function BlogPost({ params }: { params: any }) {
   const { slug } = await params;
-  const { metadata, content, bibliography } = await getContent(slug, BLOG_DIR, BIBLIOGRAPHY_DIR);
+  const { metadata, content, bibliography, toc } = await getContent(slug, BLOG_DIR, BIBLIOGRAPHY_DIR);
   const filePath = path.join(process.cwd(), 'src/contents/blog', `${slug}.md`);
   const stats = fs.statSync(filePath);
   const lastMod = stats.mtime.toISOString();
@@ -43,24 +43,48 @@ export default async function BlogPost({ params }: { params: any }) {
             className="w-full h-auto object-cover rounded-md"
           />
         </div>
-        
-        <div className="flex flex-col justify-center">
-          <h1 className="text-lg sm:text-3xl font-bold text-accent">{metadata.title}</h1>
-          <p className="text-normal sm:text-lg text-gray-700">{metadata.description}</p>
 
-          {/* Data visibile solo da sm in su */}
+        <div className="flex flex-col justify-center">
+          <h1 className="text-lg sm:text-3xl font-bold text-accent">
+            {metadata.title}
+          </h1>
+          <p className="text-normal sm:text-lg text-gray-700">
+            {metadata.description}
+          </p>
+
+          {/* visibile solo da sm in su */}
           <p className="text-normal text-gray-500 hidden sm:block">
-            {new Date(metadata.date).toLocaleDateString("en-GB", { day: 'numeric', month: 'long', year: 'numeric' })}, last modified {new Date(lastMod).toLocaleDateString("en-GB", { day: 'numeric', month: 'long', year: 'numeric' })}
+            {new Date(metadata.date).toLocaleDateString("en-GB", {
+              day: "numeric",
+              month: "long",
+              year: "numeric",
+            })}
+            , last modified{" "}
+            {new Date(lastMod).toLocaleDateString("en-GB", {
+              day: "numeric",
+              month: "long",
+              year: "numeric",
+            })}
           </p>
         </div>
       </div>
 
       <div className="flex items-start gap-2 mt-1 max-w-2xl mx-auto block sm:hidden">
         <p className="text-normal text-gray-500">
-          {new Date(metadata.date).toLocaleDateString("en-GB", { day: 'numeric', month: 'long', year: 'numeric' })}, last modified {new Date(lastMod).toLocaleDateString("en-GB", { day: 'numeric', month: 'long', year: 'numeric' })}
+          {new Date(metadata.date).toLocaleDateString("en-GB", {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+          })}
+          , last modified{" "}
+          {new Date(lastMod).toLocaleDateString("en-GB", {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+          })}
         </p>
       </div>
-      
+
       <ul className="flex items-start gap-2 mt-1 max-w-2xl mx-auto">
         {metadata.tags.map((tag: string) => (
           <li key={tag}>
@@ -73,18 +97,42 @@ export default async function BlogPost({ params }: { params: any }) {
           </li>
         ))}
       </ul>
+
+      {/* TOC */}
+      {toc.length > 0 && (
+        <nav className="p-4 mb-8 max-w-2xl mx-auto text-sm">
+          <p className="text-lg font-bold text-white mb-2">Contents:</p>
+          <ul className="space-y-1">
+            {toc
+              .filter((item: { level: number }) => item.level === 2)
+              .map((item: { text: string; id: string; level: number }) => (
+                <li key={item.id} className={`ml-6`}>
+                  <a
+                    href={`#${item.id}`}
+                    className="text-lg"
+                    style={{ color: "white" }}
+                  >
+                    {item.text}
+                  </a>
+                </li>
+              ))}
+          </ul>
+        </nav>
+      )}
+
       {/* Contenuto */}
       <div
         className="prose prose-lg prose-invert max-w-full"
-        style={{ overflowWrap: 'break-word' }}
+        style={{ overflowWrap: "break-word" }}
         dangerouslySetInnerHTML={{ __html: content }}
       />
-      {bibliography && bibliography.trim() !== '<ol class="bibliography"></ol>' && (
-        <footer className="mt-12">
-          <h2 className="text-2xl font-semibold mb-4">Bibliography</h2>
-          <div dangerouslySetInnerHTML={{ __html: bibliography }} />
-        </footer>
-      )}
+      {bibliography &&
+        bibliography.trim() !== '<ol class="bibliography"></ol>' && (
+          <footer className="mt-12">
+            <h2 className="text-2xl font-semibold mb-4">Bibliography</h2>
+            <div dangerouslySetInnerHTML={{ __html: bibliography }} />
+          </footer>
+        )}
     </article>
   );
 }

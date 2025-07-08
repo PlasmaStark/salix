@@ -161,7 +161,11 @@ AGCOM is ruled by a board of four commissioners, elected from either the Senate 
 
 (Massimiliano Capitanio [@WEB:A24])
 
-Some politicians [@WEB:F24a] and AGCOM commissioners [@WEB:F24b], however, are starting to disagree.
+Some politicians [@WEB:F24a] and AGCOM commissioners [@WEB:F24b], however, are starting to disagree. Further, in June 2025, the European Commission raised concerns to Italian Foreign Minister [Antonio Tajani](https://en.wikipedia.org/wiki/Antonio_Tajani) about Piracy Shield, whose mechanism they defined as "crude" and "rough". The Commission adds that due to concerns for freedom of expression and the lack of proper procedures (such as short timeframes for appeals and absence of independent oversight) the platform might be in violation of the Digital Services Act. Capitanio promptly answered:
+
+> These issues appear to be already addressed and resolved in previous consultations [...]. I don’t see any weakening or anything particularly obstructive in view of the final regulation which, once again, places Italy at the forefront globally in the fight against piracy mafias and illegal streaming.
+
+(Massimiliano Capitanio [@WEB:Corriere2025])
 
 ## (Partial) conclusion
 

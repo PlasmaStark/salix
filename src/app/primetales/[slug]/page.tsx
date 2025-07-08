@@ -16,7 +16,7 @@ export async function generateStaticParams() {
 
 export default async function Article({ params }: { params: any }) {
   const { slug } = await params;
-  const { metadata, content, bibliography } = await getContent(slug, ARTICLE_DIR, BIBLIOGRAPHY_DIR);
+  const { metadata, content, bibliography, toc } = await getContent(slug, ARTICLE_DIR, BIBLIOGRAPHY_DIR);
   const filePath = path.join(process.cwd(), 'src/contents/articles', `${slug}.md`);
   const stats = fs.statSync(filePath);
   const lastMod = stats.mtime.toISOString();
@@ -78,6 +78,29 @@ export default async function Article({ params }: { params: any }) {
           className="w-full h-48 object-cover mb-6"
         />
       </div>
+
+      {/* TOC */}
+      {toc.length > 0 && (
+        <nav className="mb-10 max-w-2xl ml-0 text-sm">
+          <p className="text-lg font-bold text-white mb-2">Contents:</p>
+          <ul className="space-y-1">
+            {toc
+              .filter((item: { level: number }) => item.level === 2)
+              .map((item: { text: string; id: string; level: number }) => (
+                <li key={item.id} className={`ml-6`}>
+                  <a
+                    href={`#${item.id}`}
+                    className="text-lg"
+                    style={{ color: "white" }}
+                  >
+                    {item.text}
+                  </a>
+                </li>
+              ))}
+          </ul>
+        </nav>
+      )}
+      
       <div
         className="prose prose-lg prose-invert"
         dangerouslySetInnerHTML={{ __html: content }}
