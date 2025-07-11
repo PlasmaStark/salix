@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Breadcrumb from "@components/breadcrumb";
 import Image from 'next/image'
 import Link from "next/link";
-
+import { FaFlask, FaRegCommentDots } from "react-icons/fa";
 
 export const metadata: Metadata = {
   title: "About",
@@ -56,9 +56,12 @@ export default function About() {
 
       {/* Research Section */}
       <section>
-        <h2 className="text-4xl font-bold text-accent mb-6">Research</h2>
+        <h2 className="text-3xl font-bold mb-6 flex items-center gap-2 text-white">
+          <FaFlask className="text-white" />
+          Research
+        </h2>
 
-        <div className="mb-10">
+        <div className="border-l-4 border-accent pl-4 mb-10">
           <p className="text-normalleading-relaxed">
             My main research areas are cryptography, complexity theory, number
             theory, and in my spare time I read about the history of
@@ -73,11 +76,13 @@ export default function About() {
 
       {/* Some Thoughts Section */}
       <section>
-        <h2 className="text-4xl font-bold text-accent mb-6">Some thoughts</h2>
+        <h2 className="text-3xl font-bold mb-6 flex items-center gap-2 text-white">
+          <FaRegCommentDots className="text-white" />
+          Some thoughts
+        </h2>
 
-        {/* Thought 1 */}
-        <div className="mb-10">
-          <h3 className="text-2xl font-semibold mb-2" id="community">
+        <div className="border-l-4 border-accent pl-4 mb-5">
+          <h3 className="text-xl font-semibold mb-2" id="community">
             Community - shaping the future together
           </h3>
           <p className="text-normalleading-relaxed">
@@ -92,9 +97,8 @@ export default function About() {
           </p>
         </div>
 
-        {/* Thought 2 */}
-        <div className="mb-10">
-          <h3 className="text-2xl font-semibold mb-2" id="communication">
+        <div className="border-l-4 border-accent pl-4 mb-10">
+          <h3 className="text-xl font-semibold mb-2" id="communication">
             Communication - one (tiny) step at a time
           </h3>
           <p className="text-normalleading-relaxed">

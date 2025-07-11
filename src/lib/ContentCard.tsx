@@ -48,7 +48,7 @@ export default function ContentCard({
       <li className="bg-white rounded-md p-4 flex flex-col">
         <Link href={`/${baseRoute}/${post.slug}`} className="no-underline mb-2">
           <p className="text-sm text-gray-500 mb-2 flex items-center gap-2">
-            <span className="font-semibold text-white bg-accent px-2 py-0.5 rounded">
+            <span className="font-semibold text-white bg-accent2 px-2 py-0.5 rounded">
               {post.target}
             </span>
             <span className="text-gray-400">• {post.date}</span>
@@ -119,13 +119,22 @@ export default function ContentCard({
   // Default variant
   return (
     <li className="bg-white rounded-lg">
-      <Link href={`/${baseRoute}/${post.slug}`} className="block px-4 py-2 no-underline">
+      <Link
+        href={`/${baseRoute}/${post.slug}`}
+        className="block px-4 py-2 no-underline"
+      >
+        <p className="text-sm text-gray-400 mt-2 flex items-center gap-2">
+          {post.date}
+        </p>
         <h2 className="text-xl font-bold text-accent">{post.title}</h2>
-        <small className="block text-sm text-gray-500 mb-2">{post.date}</small>
         {post.coverImage && (
-          <div className="mb-4 rounded-md overflow-hidden">
+          <div className="mb-4 mt-2 rounded-md overflow-hidden">
             <Image
-              src={post.coverImage.startsWith('/') ? post.coverImage : `/${post.coverImage}`}
+              src={
+                post.coverImage.startsWith("/")
+                  ? post.coverImage
+                  : `/${post.coverImage}`
+              }
               width={640}
               height={480}
               alt={post.title}

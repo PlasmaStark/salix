@@ -199,3 +199,16 @@ div.content {
   background-color: #330a0a; 
   color: #ffb3b3;
 }
+
+/* PROSE 
+
+.prose p:first-of-type::first-letter {
+  float: left;
+  font-size: 3rem;
+  line-height: 1;
+  margin-right: 0.1em;
+  font-weight: bold;
+  color: var(--color-accent);
+  font-family: 'Georgia', serif;
+}
+  */
