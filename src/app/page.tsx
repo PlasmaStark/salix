@@ -20,7 +20,7 @@ export default function Home() {
         {/* Background Image */}
         <div className="relative h-64 sm:h-50 w-full">
           <Image
-            src="/background.webp"
+            src="/images/background.webp"
             alt="Hero background"
             fill
             sizes="(max-width: 840px) 100vw, (max-width: 1224px) 100vw, 100vw"

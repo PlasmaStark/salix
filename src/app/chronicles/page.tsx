@@ -1,6 +1,6 @@
 import Breadcrumb from '@components/breadcrumb';
 import { getContentList } from '@lib/getPosts';
-import { BLOG_DIR } from '@/config';
+import { BLOG_DIR } from '../../../config';
 import { getAllTags } from '@/lib/getPosts';
 import ContentList from '@/lib/ContentList';
 

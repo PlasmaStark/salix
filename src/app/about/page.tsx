@@ -22,7 +22,7 @@ export default function About() {
         {/* Profile picture */}
         <div className="flex justify-center mt-6">
           <Image
-            src="/profile-image.webp"
+            src="/images/profile-image.webp"
             alt="Leonardo's profile"
             width="256"
             height="256"
@@ -44,7 +44,7 @@ export default function About() {
         {/* CV Button */}
         <div className="mt-6">
           <Link
-            href="https://drive.google.com/file/d/1QWRnP8H8_RhVB8BWxjG5aE5LmfFYxPs0"
+            href="/pdfs/cv_eng.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="no-underline px-4 py-2 bg-gray-800 text-white rounded-full shadow-md hover:bg-accent transition"

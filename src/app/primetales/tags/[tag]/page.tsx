@@ -1,5 +1,5 @@
 import { getContentList, getAllTags } from '@/lib/getPosts';
-import { ARTICLE_DIR } from '@/config';
+import { ARTICLE_DIR } from '../../../../../config';
 import Breadcrumb from '@components/breadcrumb';
 import ContentList from '@/lib/ContentList';
 

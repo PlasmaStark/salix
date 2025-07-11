@@ -3,9 +3,9 @@ title: "Post-quantum signatures for blockchain"
 date: "2025-03-21"
 description: "Quantum-resistance for ledgers."
 tags:
-  - Amateurs
   - Blockchain
-  - Postquantum
+  - Signatures
+target: Intermediate
 ---
 
 ## Abstract
@@ -20,5 +20,5 @@ This talk was part of the event [_Cryptography at work for blockchain_](https://
 
 ## Material
 
-- [slides](https://drive.google.com/file/d/1nupc8M4c0T9pb4deipZdrHNnuXmBzYf1)
+- [slides](/pdfs/presentation_pqsignatures_2025-03-21.pdf)
 

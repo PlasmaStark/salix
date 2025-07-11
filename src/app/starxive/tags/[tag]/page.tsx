@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getContentListFromJson, getAllTagsFromContent, ContentItem } from '@/lib/getPosts';
-import { STARXIVE_FILE } from "@/config";
+import { STARXIVE_FILE } from "../../../../../config";
 import Breadcrumb from "@/app/components/navigation/breadcrumb";
 import { getGradientBackground } from "@/lib/starxive";
 

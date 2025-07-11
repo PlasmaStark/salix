@@ -162,3 +162,40 @@ div.content {
 .animate-fade-slide {
   animation: fade-slide-down 0.25s ease forwards;
 }
+
+/* CALLOUTS */
+
+.callout {
+  border: 1.5px solid var(--color-accent);
+  background-color: #111; 
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(255 255 255 / 0.2);
+  box-shadow: 0 2px 8px rgba(var(--color-accent-rgb), 0.3); 
+  color: #eee;
+}
+
+.callout-title {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.callout.tip {
+  border-color: #22d3ee;
+  background-color: #0a2733;
+  color: #a0eaff;
+}
+
+.callout.warning {
+  border-color: #facc15;
+  background-color: #332b0a; 
+  color: #fff6a3;
+}
+
+.callout.danger {
+  border-color: #ef4444;
+  background-color: #330a0a; 
+  color: #ffb3b3;
+}

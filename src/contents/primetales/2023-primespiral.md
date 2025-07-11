@@ -2,7 +2,7 @@
 title: "A galaxy of prime numbers"
 date: "2023-04-15"
 description: "A personal twist on the prime number spiral."
-coverImage: "background.webp"
+coverImage: "images/primespiral.webp"
 tags:
   - Primes
   - Python
@@ -10,7 +10,7 @@ tags:
 
 Most mathematicians know that the representation of prime numbers $p$ in **polar coordinates** $(r,\theta) = (p,p)$ results in a cool-looking spiral.
 
-![Classical prime spiral](/primetales/2023-primes-white.webp)
+![Classical prime spiral](/images/primetales/2023-primes-white.webp)
 
 For now, this will not be an in-depth overview.
 
@@ -46,11 +46,15 @@ These pesky astronomers are clearly having fun and we are missing on it.
 
 My idea was to compare the frequency of star classes to the frequency of (some) prime number classes, and to each associate the respective chromaticity. This is a tricky business: to build an interesting plot we should use meaningful classes, but also keep them close to the star classes frequencies.
 
-### How many primes?
+<div class="callout tip">
+  Q1: But how many primes should we choose?
+</div>
 
 I noticed that adding too many prime numbers makes for a weird-looking spiral. Doing some tests, stopping at around $40000$ returned the closest thing to our galaxy. There are $4203$ primes up to $40000$, and we must keep it in mind to get matching percentages.
 
-### Which primes?
+<div class="callout tip">
+  Q2: And which primes should we choose?
+</div>
 
 Now, we have to find the correct prime number classes. Remember that we are considering all primes up to $40000$: what is the frequency of each class?
 For the algebra nerds among us, this table represents all candidate classes and my conclusions. The wisest among you might wish to skip it.
@@ -116,6 +120,6 @@ All comparisons drawn, we get the following result.
 
 We now have everything we need: our seven prime number classes, their respective colors, and the interval $[0,40000]$. All that remains is to plot them. This just takes a few lines in Python, resulting in the picture below.
 
-![Galaxy prime spiral](/primetales/2023-primes.webp)
+![Galaxy prime spiral](/images/primetales/2023-primes.webp)
 
 Keen observers might notice some packs of purple mist in the background. I added as nebulae [**Carmichael's numbers**](https://en.wikipedia.org/wiki/Carmichael_number) - which are _not_ prime! The surprising fact about them is that they manage to fool all possible instances of Fermat's primality test in thinking they are prime, while they are not. Being somewhat rare and deceiving a famous primality test, it only seemed fitting to grant them a spot.

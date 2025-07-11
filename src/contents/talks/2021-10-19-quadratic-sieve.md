@@ -4,7 +4,7 @@ date: "2021-10-19"
 description: "Top-notch integer factorisation since 1981."
 tags:
   - Factorisation
-  - Professionals
+target: Intermediate
 ---
 
 ## Abstract
@@ -19,8 +19,8 @@ This talk was part of the _Percorso Eccellenza in Matematica_ ("Excellency Path 
 
 ## Material
 
-- [pdf](https://drive.google.com/file/d/1dX_fvEcMBOYZncoNjZ1H1-_s6di0W0YI)
-- [slides](https://drive.google.com/file/d/1Ilz3U1xxqY_1zpfBbhIX1aO8ByyNHrnB)
+- [handout (IT)](/pdfs/handout_quadraticsieve_2021-10-19.pdf)
+- [slides (IT)](/pdfs/presentation_quadraticsieve_2021-10-19.pdf)
 
 ## Bibliography
 

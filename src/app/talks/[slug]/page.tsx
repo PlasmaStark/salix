@@ -1,7 +1,7 @@
 import { getContent } from '@lib/post';
 import Breadcrumb from '@components/breadcrumb';
 import Link from 'next/link';
-import { BIBLIOGRAPHY_DIR, TALKS_DIR } from '@/config';
+import { BIBLIOGRAPHY_DIR, TALKS_DIR } from '../../../../config';
 import { getContentList } from '@/lib/getPosts';
 import path from 'path';
 import fs from 'fs';
@@ -22,6 +22,10 @@ export default async function BlogPost({ params }: { params: any }) {
 
   return (
     <article className="max-w-3xl mx-auto px-2 py-2">
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"
+      />
       {/* Titolo */}
       <header className="mb-6">
         <Breadcrumb />

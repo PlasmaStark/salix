@@ -1,7 +1,7 @@
 import { getContent } from '@lib/post';
 import Breadcrumb from '@components/breadcrumb';
 import Link from 'next/link';
-import { ARTICLE_DIR, BIBLIOGRAPHY_DIR } from '@/config';
+import { ARTICLE_DIR, BIBLIOGRAPHY_DIR } from '../../../../config';
 import Image from 'next/image'
 import { getContentList } from '@/lib/getPosts';
 import path from 'path';
@@ -17,7 +17,7 @@ export async function generateStaticParams() {
 export default async function Article({ params }: { params: any }) {
   const { slug } = await params;
   const { metadata, content, bibliography, toc } = await getContent(slug, ARTICLE_DIR, BIBLIOGRAPHY_DIR);
-  const filePath = path.join(process.cwd(), 'src/contents/articles', `${slug}.md`);
+  const filePath = path.join(ARTICLE_DIR, `${slug}.md`);
   const stats = fs.statSync(filePath);
   const lastMod = stats.mtime.toISOString();
 
@@ -34,8 +34,8 @@ export default async function Article({ params }: { params: any }) {
           href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"
         />
         <Breadcrumb />
-        <h1 className="text-4xl font-bold text-white-800">{metadata.title}</h1>
-        <p className="text-xl italic text-white-400">{metadata.description}</p>
+        <h1 className="text-5xl font-bold text-white-800">{metadata.title}</h1>
+        <p className="text-2xl italic text-white-400">{metadata.description}</p>
         <p className="text-normal text-gray-500">
           first made{" "}
           {new Date(metadata.date).toLocaleDateString("en-GB", {
@@ -81,14 +81,14 @@ export default async function Article({ params }: { params: any }) {
 
       {/* TOC */}
       {toc.length > 0 && (
-        <nav className="mb-10 max-w-2xl ml-0 text-sm">
+        <nav className="mb-6 max-w-xl mx-auto text-sm text-left bg-[#1a1a1a] p-4 rounded-lg shadow-inner border border-gray-700">
           <p className="text-lg font-bold text-white mb-2">Contents:</p>
           <ul className="space-y-1">
             {toc
               .filter((item: { level: number }) => item.level === 2)
               .map((item: { text: string; id: string; level: number }) => (
                 <li key={item.id} className={`ml-6`}>
-                  <a
+                  - <a
                     href={`#${item.id}`}
                     className="text-lg"
                     style={{ color: "white" }}
@@ -100,7 +100,7 @@ export default async function Article({ params }: { params: any }) {
           </ul>
         </nav>
       )}
-      
+
       <div
         className="prose prose-lg prose-invert"
         dangerouslySetInnerHTML={{ __html: content }}

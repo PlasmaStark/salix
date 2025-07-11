@@ -13,6 +13,7 @@ export type ContentItem = {
   authors?: string;
   url?: string;
   type?: string;
+  target?: string;
 };
 
 export function getContentList(directory: string): ContentItem[] {
@@ -33,6 +34,7 @@ export function getContentList(directory: string): ContentItem[] {
       authors: data.authors || null,
       url: data.url || null,
       coverImage: data.coverImage || null,
+      target: data.target || null,
     };
   });
 }

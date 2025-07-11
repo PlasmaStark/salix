@@ -15,7 +15,7 @@ export default function remarkImages() {
             properties: {
               src: node.url,
               alt: node.alt || "",
-              className: "w-full max-w-2xl h-auto rounded shadow-md",
+              className: "w-full mx-auto max-w-2xl h-auto rounded shadow-md",
             },
           },
           node.title

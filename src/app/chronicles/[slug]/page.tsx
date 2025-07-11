@@ -1,7 +1,7 @@
 import { getContent } from '@lib/post';
 import Breadcrumb from '@components/breadcrumb';
 import Link from 'next/link';
-import { BIBLIOGRAPHY_DIR, BLOG_DIR } from '@/config';
+import { BIBLIOGRAPHY_DIR, BLOG_DIR } from '../../../../config';
 import { getContentList } from '@/lib/getPosts';
 import Image from 'next/image'
 import path from 'path';
@@ -17,7 +17,7 @@ export async function generateStaticParams() {
 export default async function BlogPost({ params }: { params: any }) {
   const { slug } = await params;
   const { metadata, content, bibliography, toc } = await getContent(slug, BLOG_DIR, BIBLIOGRAPHY_DIR);
-  const filePath = path.join(process.cwd(), 'src/contents/blog', `${slug}.md`);
+  const filePath = path.join(process.cwd(), 'src/contents/chronicles', `${slug}.md`);
   const stats = fs.statSync(filePath);
   const lastMod = stats.mtime.toISOString();
 

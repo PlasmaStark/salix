@@ -36,14 +36,16 @@ export default function ProfileInfo({ compact = false }: { compact?: boolean }) 
   return (
     <div
       className={`text-white ${
-        compact ? " mb-1 flex items-center gap-4 relative ml-1" : "space-y-4 w-full px-2"
+        compact
+          ? " mb-1 flex items-center gap-4 relative ml-1"
+          : "space-y-4 w-full px-2"
       }`}
     >
       {/* Profile image */}
       <div className={compact ? "" : "flex justify-center"}>
         <Image
-          src="/profile-image.webp"
-          alt="Leonardo's profile"
+          src="/images/profile-image.webp"
+          alt="Leonardo's profile image"
           width={compact ? 70 : 128}
           height={compact ? 70 : 128}
           className="rounded-full border-2 border-accent object-cover"
@@ -55,14 +57,18 @@ export default function ProfileInfo({ compact = false }: { compact?: boolean }) 
         {compact ? (
           <>
             <div className="flex items-center gap-3">
-              <h2 className="text-lg text-accent font-semibold">Leonardo Errati</h2>
+              <h2 className="text-lg text-accent font-semibold">
+                Leonardo Errati
+              </h2>
 
               {/* Pulsante affianco al nome */}
               <div className="relative" ref={dropdownRef}>
                 <button
                   onClick={() => setOpen(!open)}
                   className={`ml-4 px-4 py-1 rounded-full text-sm transition ${
-                    open ? 'bg-accent hover:bg-accent-dark' : 'bg-accent2 hover:bg-accent'
+                    open
+                      ? "bg-accent hover:bg-accent-dark"
+                      : "bg-accent2 hover:bg-accent"
                   }`}
                   aria-haspopup="true"
                   aria-expanded={open}
@@ -79,43 +85,120 @@ export default function ProfileInfo({ compact = false }: { compact?: boolean }) 
                   >
                     <div className="flex flex-col p-2 space-y-2">
                       {/* Qui i tuoi DropdownLink */}
-                      <DropdownLink href="mailto:leonardoerrati.lwe@gmail.com" icon={faEnvelope} label="Email" />
-                      <DropdownLink href="https://github.com/PlasmaStark" icon={faGithub} label="GitHub" />
-                      <DropdownLink href="https://www.linkedin.com/in/leonardo-errati-76507b213" icon={faLinkedin} label="LinkedIn" />
-                      <DropdownLink href="https://orcid.org/0009-0004-0460-9742" iconClass="ai ai-orcid" label="ORCID" />
-                      <DropdownLink href="" iconClass="ai ai-google-scholar" label="Scholar" />
-                      <DropdownLink href="https://www.polito.it/personale?p=leonardo.errati" icon={faIdCard} label="PoliTo" />
-                      <DropdownLink href="https://webapps.unitn.it/du/it/Persona/PER0208861" icon={faIdCard} label="UniTn" />
-                      <DropdownLink href="https://www.goodreads.com/user/show/155458214-leonardus-iii-emperor-of-taured" icon={faBook} label="GoodReads" />
-                      <DropdownLink href="https://x.com/PlasmaStark" icon={faX} label="Twitter/X" />
+                      <DropdownLink
+                        href="mailto:leonardoerrati.lwe@gmail.com"
+                        icon={faEnvelope}
+                        label="Email"
+                      />
+                      <DropdownLink
+                        href="https://github.com/PlasmaStark"
+                        icon={faGithub}
+                        label="GitHub"
+                      />
+                      <DropdownLink
+                        href="https://www.linkedin.com/in/leonardo-errati-76507b213"
+                        icon={faLinkedin}
+                        label="LinkedIn"
+                      />
+                      <DropdownLink
+                        href="https://orcid.org/0009-0004-0460-9742"
+                        iconClass="ai ai-orcid"
+                        label="ORCID"
+                      />
+                      <DropdownLink
+                        href=""
+                        iconClass="ai ai-google-scholar"
+                        label="Scholar"
+                      />
+                      <DropdownLink
+                        href="https://www.polito.it/personale?p=leonardo.errati"
+                        icon={faIdCard}
+                        label="PoliTo"
+                      />
+                      <DropdownLink
+                        href="https://webapps.unitn.it/du/it/Persona/PER0208861"
+                        icon={faIdCard}
+                        label="UniTn"
+                      />
+                      <DropdownLink
+                        href="https://www.goodreads.com/user/show/155458214-leonardus-iii-emperor-of-taured"
+                        icon={faBook}
+                        label="GoodReads"
+                      />
+                      <DropdownLink
+                        href="https://x.com/PlasmaStark"
+                        icon={faX}
+                        label="Twitter/X"
+                      />
                     </div>
                   </div>
                 )}
               </div>
             </div>
-            <p className="text-sm italic mt-1 mb-0">Cryptography PhD student @ PoliTo, Italy.</p>
+            <p className="text-sm italic mt-1 mb-0">
+              Cryptography PhD student @ PoliTo, Italy.
+            </p>
           </>
         ) : (
           <>
-            <h2 className="text-lg text-accent font-semibold">Leonardo Errati</h2>
-            <p className="text-sm italic">Cryptography PhD student @ PoliTo, Italy.</p>
+            <h2 className="text-lg text-accent font-semibold">
+              Leonardo Errati
+            </h2>
+            <p className="text-sm italic">
+              Cryptography PhD student @ PoliTo, Italy.
+            </p>
           </>
         )}
       </div>
 
-
       {/* Only show full list in non-compact version */}
       {!compact && (
         <div className="flex flex-wrap justify-center gap-2 mt-4">
-          <SocialLink href="mailto:leonardoerrati.lwe@gmail.com" icon={faEnvelope} label="Email" />
-          <SocialLink href="https://github.com/PlasmaStark" icon={faGithub} label="GitHub" />
-          <SocialLink href="https://www.linkedin.com/in/leonardo-errati-76507b213" icon={faLinkedin} label="LinkedIn" />
-          <SocialLink href="https://orcid.org/0009-0004-0460-9742" iconClass="ai ai-orcid" label="ORCID" />
-          <SocialLink href="" iconClass="ai ai-google-scholar" label="Scholar" />
-          <SocialLink href="https://www.polito.it/personale?p=leonardo.errati" icon={faIdCard} label="PoliTo" />
-          <SocialLink href="https://webapps.unitn.it/du/it/Persona/PER0208861" icon={faIdCard} label="UniTn" />
-          <SocialLink href="https://www.goodreads.com/user/show/155458214-leonardus-iii-emperor-of-taured" icon={faBook} label="GoodReads" />
-          <SocialLink href="https://x.com/PlasmaStark" icon={faX} label="Twitter/X" />
+          <SocialLink
+            href="mailto:leonardoerrati.lwe@gmail.com"
+            icon={faEnvelope}
+            label="Email"
+          />
+          <SocialLink
+            href="https://github.com/PlasmaStark"
+            icon={faGithub}
+            label="GitHub"
+          />
+          <SocialLink
+            href="https://www.linkedin.com/in/leonardo-errati-76507b213"
+            icon={faLinkedin}
+            label="LinkedIn"
+          />
+          <SocialLink
+            href="https://orcid.org/0009-0004-0460-9742"
+            iconClass="ai ai-orcid"
+            label="ORCID"
+          />
+          <SocialLink
+            href=""
+            iconClass="ai ai-google-scholar"
+            label="Scholar"
+          />
+          <SocialLink
+            href="https://www.polito.it/personale?p=leonardo.errati"
+            icon={faIdCard}
+            label="PoliTo"
+          />
+          <SocialLink
+            href="https://webapps.unitn.it/du/it/Persona/PER0208861"
+            icon={faIdCard}
+            label="UniTn"
+          />
+          <SocialLink
+            href="https://www.goodreads.com/user/show/155458214-leonardus-iii-emperor-of-taured"
+            icon={faBook}
+            label="GoodReads"
+          />
+          <SocialLink
+            href="https://x.com/PlasmaStark"
+            icon={faX}
+            label="Twitter/X"
+          />
         </div>
       )}
     </div>

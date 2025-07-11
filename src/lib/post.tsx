@@ -11,6 +11,7 @@ import rehypeKatex from 'rehype-katex';
 import remarkImages from './plugins/remark-images';
 import { remarkExtractToc } from './plugins/remark-extract-toc';
 import rehypeSlug from 'rehype-slug';
+import rehypeRaw from 'rehype-raw';
 
 const Cite = require('citation-js');
 
@@ -32,10 +33,11 @@ function createProcessor(toc: any[]) {
     .use(remarkGfm)
     .use(remarkImages)
     .use(remarkExtractToc(toc))
-    .use(remarkRehype)
-    .use(rehypeSlug)   
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeRaw)
+    .use(rehypeSlug)
     .use(rehypeKatex)
-    .use(rehypeStringify);
+    .use(rehypeStringify, { allowDangerousHtml: true });
   return processor;
 }
 

@@ -47,11 +47,18 @@ export default function ContentCard({
     return (
       <li className="bg-white rounded-md p-4 flex flex-col">
         <Link href={`/${baseRoute}/${post.slug}`} className="no-underline mb-2">
+          <p className="text-sm text-gray-500 mb-2 flex items-center gap-2">
+            <span className="font-semibold text-white bg-accent px-2 py-0.5 rounded">
+              {post.target}
+            </span>
+            <span className="text-gray-400">• {post.date}</span>
+          </p>
           <h3 className="text-xl font-semibold text-accent truncate max-w-xl">
             {post.title}
           </h3>
-          <p className="text-sm text-gray-500">{post.date}</p>
-          <p className="text-normal text-gray-700 truncate max-w-xl">{post.description}</p>
+          <p className="text-normal text-gray-700 truncate max-w-xl">
+            {post.description}
+          </p>
         </Link>
         <ul className="flex flex-wrap gap-2 mb-1">
           {post.tags.map((tag) => (
