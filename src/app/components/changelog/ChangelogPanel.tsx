@@ -3,10 +3,6 @@ type ChangeLogEntry = {
   message: string;
 };
 
-interface ChangelogProps {
-  entries: ChangeLogEntry[];
-}
-
 export default function Changelog({ entries }: { entries: { date: string; message: string }[] }) {
   return (
     <section className="bg-background-100 p-4 rounded-lg shadow-inner max-h-64 overflow-y-auto">
