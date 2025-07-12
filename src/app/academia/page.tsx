@@ -16,15 +16,15 @@ import { Metadata } from "next";
 
 const highlights = [
   {
-    icon: <MdScience className="text-purple-400" />,
-    text: "group actions, code-based cryptography, digital signatures",
+    icon: <MdScience className="text-indigo-400" />,
+    text: "group actions, codes, digital signatures",
   },
   {
     icon: <FaAtom className="text-emerald-400" />,
     text: "scientific communication and public outreach",
   },
   {
-    icon: <FaPeopleArrows className="text-indigo-400" />,
+    icon: <FaPeopleArrows className="text-rose-400" />,
     text: "Erdős number: 5",
   },
 ];
@@ -40,10 +40,7 @@ export default function AcademiaPage() {
       <Breadcrumb />
       <section className="text-center mb-12">
         <h1 className="text-4xl font-bold mb-2">Academia</h1>
-        <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-          Research in cryptography, number theory, and protocols.
-        </p>
-        <ul className="mt-6 text-sm text-left max-w-md mx-auto space-y-1">
+        <ul className="mt-6 text-normal text-left max-w-md mx-auto space-y-1">
           {highlights.map((item, idx) => (
             <li key={idx} className="flex items-center gap-2">
               <span>{item.icon}</span> <span>{item.text}</span>
@@ -78,7 +75,9 @@ export default function AcademiaPage() {
                   View Paper
                 </a>
               ) : (
-                <p className="text-sm mt-1 text-gray-500 italic">View Paper (TBA)</p>
+                <p className="text-sm mt-1 text-gray-500 italic">
+                  View Paper (TBA)
+                </p>
               )}
             </li>
           ))}
@@ -141,11 +140,7 @@ export default function AcademiaPage() {
                 {thesis.type}, {thesis.date}
               </p>
               <p className="text-sm mb-1">{thesis.description}</p>
-              <a
-                href={thesis.pdf}
-                className="text-sm"
-                target="_blank"
-              >
+              <a href={thesis.pdf} className="text-sm" target="_blank">
                 Download PDF
               </a>
             </li>
@@ -165,11 +160,7 @@ export default function AcademiaPage() {
               <p className="text-sm text-muted-foreground">{tool.date}</p>
               <p className="text-sm mb-1">{tool.description}</p>
               {tool.link && (
-                <a
-                  href={tool.link}
-                  className="text-sm"
-                  target="_blank"
-                >
+                <a href={tool.link} className="text-sm" target="_blank">
                   View Project
                 </a>
               )}
