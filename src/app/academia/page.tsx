@@ -1,7 +1,9 @@
 import {
+  FaAtom,
   FaBookOpen,
   FaFileAlt,
   FaMicrophoneAlt,
+  FaPeopleArrows,
   FaTools,
 } from "react-icons/fa";
 import Breadcrumb from "../components/navigation/breadcrumb";
@@ -17,6 +19,14 @@ const highlights = [
     icon: <MdScience className="text-purple-400" />,
     text: "group actions, code-based cryptography, digital signatures",
   },
+  {
+    icon: <FaAtom className="text-emerald-400" />,
+    text: "scientific communication and public outreach",
+  },
+  {
+    icon: <FaPeopleArrows className="text-indigo-400" />,
+    text: "Erdős number: 5",
+  },
 ];
 
 export const metadata: Metadata = {
@@ -31,8 +41,7 @@ export default function AcademiaPage() {
       <section className="text-center mb-12">
         <h1 className="text-4xl font-bold mb-2">Academia</h1>
         <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-          Research in cryptography, number theory, and protocols. Passionate
-          about communicating advanced ideas with clarity.
+          Research in cryptography, number theory, and protocols.
         </p>
         <ul className="mt-6 text-sm text-left max-w-md mx-auto space-y-1">
           {highlights.map((item, idx) => (
@@ -62,14 +71,14 @@ export default function AcademiaPage() {
               {pub.link ? (
                 <a
                   href={pub.link}
-                  className="text-sm text-blue-400 hover:underline"
+                  className="text-sm mt-1"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   View Paper
                 </a>
               ) : (
-                <p className="text-sm text-gray-500 italic">View Paper (TBA)</p>
+                <p className="text-sm mt-1 text-gray-500 italic">View Paper (TBA)</p>
               )}
             </li>
           ))}
@@ -107,7 +116,7 @@ export default function AcademiaPage() {
               {item.link && (
                 <a
                   href={item.link}
-                  className="text-sm text-blue-400 hover:underline"
+                  className="text-sm"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -134,7 +143,7 @@ export default function AcademiaPage() {
               <p className="text-sm mb-1">{thesis.description}</p>
               <a
                 href={thesis.pdf}
-                className="text-sm text-blue-400 hover:underline"
+                className="text-sm"
                 target="_blank"
               >
                 Download PDF
@@ -158,7 +167,7 @@ export default function AcademiaPage() {
               {tool.link && (
                 <a
                   href={tool.link}
-                  className="text-sm text-blue-400 hover:underline"
+                  className="text-sm"
                   target="_blank"
                 >
                   View Project
