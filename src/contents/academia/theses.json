@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Browkin's p-adic Continued Fractions",
+    "type": "MSc Thesis",
+    "date": "March 2024",
+    "description": "Construction of p-adic continued fractions algorithms, analysis of the perioicity conjecture.",
+    "pdf": "/pfds/msc_thesis.pdf"
+  },
+  {
+    "title": "Retrospettiva su variazioni del test di Lucas",
+    "type": "MSc Thesis",
+    "date": "November 2021",
+    "description": "Historical and theoretical background of variations of the primality test by Lucas. (Italian)",
+    "pdf": "/pfds/bsc_thesis.pdf"
+  }
+]

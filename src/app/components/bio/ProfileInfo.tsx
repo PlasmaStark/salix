@@ -4,10 +4,10 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faEnvelope,
   faIdCard,
   faBook,
   faX,
+  faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
@@ -86,11 +86,6 @@ export default function ProfileInfo({ compact = false }: { compact?: boolean }) 
                     <div className="flex flex-col p-2 space-y-2">
                       {/* Qui i tuoi DropdownLink */}
                       <DropdownLink
-                        href="mailto:leonardoerrati.lwe@gmail.com"
-                        icon={faEnvelope}
-                        label="Email"
-                      />
-                      <DropdownLink
                         href="https://github.com/PlasmaStark"
                         icon={faGithub}
                         label="GitHub"
@@ -116,11 +111,6 @@ export default function ProfileInfo({ compact = false }: { compact?: boolean }) 
                         label="PoliTo"
                       />
                       <DropdownLink
-                        href="https://webapps.unitn.it/du/it/Persona/PER0208861"
-                        icon={faIdCard}
-                        label="UniTn"
-                      />
-                      <DropdownLink
                         href="https://www.goodreads.com/user/show/155458214-leonardus-iii-emperor-of-taured"
                         icon={faBook}
                         label="GoodReads"
@@ -135,30 +125,37 @@ export default function ProfileInfo({ compact = false }: { compact?: boolean }) 
                 )}
               </div>
             </div>
+            {/* Mobile */}
             <p className="text-sm italic mt-1 mb-0">
               Cryptography PhD student @ PoliTo, Italy.
             </p>
           </>
         ) : (
           <>
+            {/* Desktop */}
             <h2 className="text-lg text-accent font-semibold">
               Leonardo Errati
             </h2>
             <p className="text-sm italic">
-              Cryptography PhD student @ PoliTo, Italy.
+              PhD student at Polytechnic of Turin in the Cryptography and Number
+              Theory group.
+            </p>
+            <p className="flex items-center justify-center gap-2 mt-2">
+              <FontAwesomeIcon
+                icon={faLocationDot}
+                aria-hidden="true"
+                className="text-white"
+              />
+              Turin, Italy 🇮🇹
             </p>
           </>
         )}
       </div>
 
-      {/* Only show full list in non-compact version */}
+      {/* Only show full list in non-compact version 
+      unitn: https://webapps.unitn.it/du/it/Persona/PER0208861*/}
       {!compact && (
         <div className="flex flex-wrap justify-center gap-2 mt-4">
-          <SocialLink
-            href="mailto:leonardoerrati.lwe@gmail.com"
-            icon={faEnvelope}
-            label="Email"
-          />
           <SocialLink
             href="https://github.com/PlasmaStark"
             icon={faGithub}
@@ -183,11 +180,6 @@ export default function ProfileInfo({ compact = false }: { compact?: boolean }) 
             href="https://www.polito.it/personale?p=leonardo.errati"
             icon={faIdCard}
             label="PoliTo"
-          />
-          <SocialLink
-            href="https://webapps.unitn.it/du/it/Persona/PER0208861"
-            icon={faIdCard}
-            label="UniTn"
           />
           <SocialLink
             href="https://www.goodreads.com/user/show/155458214-leonardus-iii-emperor-of-taured"

@@ -2,11 +2,17 @@ import { getAllTags, getContentList } from '@lib/getPosts';
 import { ARTICLE_DIR} from '../../../config';
 import ContentList from '@/lib/ContentList';
 import Breadcrumb from '../components/navigation/breadcrumb';
+import { Metadata } from 'next';
 
 export async function generateStaticParams() {
   const tags = await getAllTags(ARTICLE_DIR);
   return tags.map((tag) => ({ tag }));
 }
+
+export const metadata: Metadata = {
+  title: "PrimeTales",
+  description: "",
+};
 
 export default async function PrimeTales() {
   const articles = await getContentList(ARTICLE_DIR);

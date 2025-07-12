@@ -1,0 +1,19 @@
+[
+  {
+    "type": "talk",
+    "title": "Invited Talk: “Post-Quantum Signatures for Blockchain”",
+    "event": "XRP Commons Paris",
+    "date": "March 2025",
+    "description": "Introduction to digital signatures and recent advances in standardisation.",
+    "authors": "",
+    "link": "/talks/2025-03-21-pq-blockchain"
+  },
+  {
+    "type": "editorial",
+    "title": "Introduction to the proceedings of Cifris24",
+    "event": "De Cifris Koine vol. 5",
+    "date": "February 2025",
+    "authors": "Giulia Cavicchioni, Luca De Feo, Barbara Masucci, Massimiliano Sala",
+    "link": "https://doi.org/10.69091/koine/vol-5-I00"
+  }
+]

@@ -34,11 +34,21 @@ export default function About() {
           I am <b>Leonardo</b>, apprentice researcher in cryptography.
           <br />
           My interests include maths and{" "}
-          <a href="#communication">scientific communication</a>. I enjoy reading
-          a bit too much, and love learning new things.
+          <a
+            href="#communication"
+            className="text-accent hover:underline transition"
+          >
+            scientific communication
+          </a>
+          . I enjoy reading a bit too much, and love learning new things.
           <br />I believe in the power of a{" "}
-          <a href="#community">strong community</a> of researchers and am
-          working to make it happen.
+          <a
+            href="#community"
+            className="text-accent hover:underline transition"
+          >
+            strong community
+          </a>{" "}
+          of researchers and am working to make it happen.
         </p>
 
         {/* CV Button */}
@@ -146,3 +156,4 @@ export default function About() {
     </main>
   );
 }
+

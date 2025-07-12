@@ -12,6 +12,10 @@ export default {
         foreground: "var(--foreground)",
         accent: "var(--color-accent)",
         accent2: "var(--color-accent2)",
+        accent3: "var(--color-accent3)",
+        accent4: "var(--color-accent4)",
+        accent5: "var(--color-accent5)",
+        accent6: "var(--color-accent6)",
       },
       borderWidth: {
         '5': '5px',

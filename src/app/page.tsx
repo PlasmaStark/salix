@@ -1,36 +1,14 @@
 "use client";
 
-import { faUser, faBook, faPenNib, faComments } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import NavCard from "./components/navigation/navcards/NavCard";
 import Changelog from "./components/changelog/ChangelogPanel";
-
-type ChangeLogEntry = {
-  date: string;
-  message: string;
-};
+import changelog from "../contents/changelog.json";
+import HomeCategories from "./components/navigation/navcards/HomeCards";
 
 export default function Home() {
   const [visitorNumber, setVisitorNumber] = useState(0);
-  const [changelog, setChangelog] = useState<ChangeLogEntry[]>([]);
-
-  useEffect(() => {
-    fetch("/changelog.txt")
-      .then((res) => res.text())
-      .then((text) => {
-        const entries = text
-          .split("\n")
-          .map((line) => line.trim())
-          .filter((line) => line.length > 0)
-          .map((line) => {
-            const [date, message] = line.split("|");
-            return { date, message };
-          });
-        setChangelog(entries);
-      });
-  }, []);
 
   useEffect(() => {
     const randomVisitorNumber = Math.floor(Math.random() * 10000) + 1;
@@ -77,37 +55,8 @@ export default function Home() {
           </Link>
         </div>
       </section>
-
       {/* Categories Section */}
-      <section id="categories" className="mb-16 mt-2 sm:mt-3">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-3">
-          <NavCard
-            href="/about"
-            icon={faUser}
-            title="About Me"
-            description="Do I know what I do and why? Find it out."
-          />
-          <NavCard
-            href="/primetales"
-            icon={faBook}
-            title="Prime Tales"
-            description="Scientific tales and algebraic anecdotes."
-          />
-          <NavCard
-            href="/chronicles"
-            icon={faPenNib}
-            title="Chronicles"
-            description="A curated collection of personal stories."
-          />
-          <NavCard
-            href="/talks"
-            icon={faComments}
-            title="Talks"
-            description="A set of materials for some of my talks."
-          />
-        </div>
-      </section>
-
+      <HomeCategories />
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
         {/* Left Panel */}
         <div className="relative bg-background-100 p-6 border-l-4 border-accent rounded-lg shadow-inner">
@@ -120,7 +69,7 @@ export default function Home() {
               game is hard to win, but so much fun to play! And the stakes are
               worth it.”
             </blockquote>
-            <span className="absolute bottom-0 right-4 text-accent text-5xl leading-none opacity-20 select-none translate-y-8">
+            <span className="absolute bottom-0 right-1 text-accent text-5xl leading-none opacity-20 select-none translate-y-8">
               ”
             </span>
           </div>

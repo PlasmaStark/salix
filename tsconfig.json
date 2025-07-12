@@ -24,7 +24,8 @@
       "@config": ["./src/config"],
       "@lib/*": ["./src/lib/*"],
       "@components/breadcrumb": ["./src/app/components/navigation/breadcrumb"],
-      "@components/ArticleList": ["./src/app/components/navigation/breadcrumb"]
+      "@components/ArticleList": ["./src/app/components/navigation/breadcrumb"],
+      "@components/InlineButtonLink": ["./src/app/components/navigation/buttons/InlineButtonLink"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/lib/Atlas.js"],

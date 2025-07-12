@@ -41,10 +41,8 @@ export default function RootLayout({
         <Navigation />
         <div className="flex">
           {/* Sidebar desktop */}
-          <aside className="hidden md:block w-[250px] text-white px-4 py-8 border-r border-dashed border-[rgba(255,255,255,0.3)] ">
-            <div className="sticky top-24">
-              <ProfileInfo />
-            </div>
+          <aside className="hidden md:block w-[250px] text-white px-4 py-8 border-r border-dashed border-[rgba(255,255,255,0.3)] h-screen sticky top-0 overflow-y-auto">
+            <ProfileInfo />
           </aside>
 
           {/* Main content */}

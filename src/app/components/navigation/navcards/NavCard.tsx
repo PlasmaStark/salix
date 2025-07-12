@@ -12,7 +12,7 @@ type NavCardProps = {
 export default function NavCard({ href, icon, title, description }: NavCardProps) {
   return (
     <Link href={href} className="no-underline">
-      <div className="bg-gray-800 rounded-lg shadow-md p-6 sm:p-4 text-center border-2 border-transparent transition-all hover:border-accent hover:scale-105 group">
+      <div className="bg-gray-800 rounded-lg shadow-md p-6 sm:p-4 text-center border-2 border-transparent transition-all hover:border-accent hover:scale-105 group h-full flex flex-col justify-between">
         <div className="flex justify-center mb-4">
           <FontAwesomeIcon
             icon={icon}

@@ -2,6 +2,7 @@ import { getContentList, getAllTags } from '@/lib/getPosts';
 import { TALKS_DIR } from '../../../config';
 import Breadcrumb from '@components/breadcrumb';
 import ContentList from '@/lib/ContentList';
+import { Metadata } from 'next';
 
 export async function generateStaticParams() {
   const tags = await getAllTags(TALKS_DIR);
@@ -9,6 +10,11 @@ export async function generateStaticParams() {
     tag,
   }));
 }
+
+export const metadata: Metadata = {
+    title: "Talks",
+    description: "Some public talks",
+};
 
 export default async function TalksPage() {
   const posts = await getContentList(TALKS_DIR);

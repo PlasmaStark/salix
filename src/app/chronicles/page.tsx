@@ -3,6 +3,7 @@ import { getContentList } from '@lib/getPosts';
 import { BLOG_DIR } from '../../../config';
 import { getAllTags } from '@/lib/getPosts';
 import ContentList from '@/lib/ContentList';
+import { Metadata } from 'next';
 
 export async function generateStaticParams() {
   const tags = await getAllTags(BLOG_DIR);
@@ -10,6 +11,11 @@ export async function generateStaticParams() {
     tag,
   }));
 }
+
+export const metadata: Metadata = {
+    title: "Chronicles",
+    description: "A collection of personal chronicles",
+};
 
 export default async function ChroniclesPage() {
   const posts = await getContentList(BLOG_DIR);

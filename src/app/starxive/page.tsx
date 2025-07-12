@@ -1,8 +1,14 @@
 import Link from "next/link";
 import { ContentItem, getContentListFromJson, getAllTagsFromContent } from '@/lib/getPosts';
-import { STARXIVE_FILE } from "../../../config";
 import { getGradientBackground } from "@/lib/starxive";
 import Breadcrumb from "../components/navigation/breadcrumb";
+import { Metadata } from "next";
+import { STARXIVE_FILE } from "../../../config";
+
+export const metadata: Metadata = {
+    title: "StarXive",
+    description: "Leonardo's archive",
+};
 
 export default async function StarXivePage() {
     const entries: ContentItem[] = await getContentListFromJson(STARXIVE_FILE);

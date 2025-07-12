@@ -23,7 +23,8 @@ export const MobileSidebar = ({
           transform transition-transform duration-300 ease-in-out
           ${isOpen ? "translate-x-0" : "translate-x-full"}`}
       >
-        <nav className="space-y-4">{children}</nav>
+        <p className="space-y-4 font-bold text-accent  mt-10">Navigation:</p>
+        <nav className="space-y-4  mt-4">{children}</nav>
       </aside>
     </>
   );

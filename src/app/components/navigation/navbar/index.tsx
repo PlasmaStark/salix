@@ -5,13 +5,14 @@ import Link from "next/link";
 import { MobileSidebar } from "./MobileSidebar";
 import { HamburgerButton } from "./HamburgerButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBook, faComments, faHome, faPenNib, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faBook, faComments, faFlask, faHome, faScroll, faUser } from "@fortawesome/free-solid-svg-icons";
 
 const navLinks = [
   { path: "", label: "Home", icon: faHome },
   { path: "about", label: "About", icon: faUser },
+  { path: "academia", label: "Academia", icon: faFlask },
+  { path: "chronicles", label: "Chronicles", icon: faScroll },
   { path: "primetales", label: "Prime Tales", icon: faBook },
-  { path: "chronicles", label: "Chronicles", icon: faPenNib },
   { path: "talks", label: "Talks", icon: faComments },
 ];
 
@@ -23,9 +24,17 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 w-full bg-[var(--color-primary)] text-white shadow-lg z-50">
       <div className="flex items-center justify-between px-4 py-3 mr-4 md:px-8">
         {/* Logo */}
-        <Link href="/" className="text-white hover:text-gray-400 no-underline">
-          <div className="text-xl font-bold">Leonardo Errati</div>
+        <Link
+          href="/"
+          aria-label="Go to homepage"
+          className="group flex items-center no-underline transition-colors text-white hover:text-[var(--color-accent)]"
+        >
+          <FontAwesomeIcon
+            icon={faHome}
+            className="w-6 h-6 transition-transform duration-300 group-hover:rotate-12"
+          />
         </Link>
+
 
         {/* Mobile hamburger */}
         <HamburgerButton
