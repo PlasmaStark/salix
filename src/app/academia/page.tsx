@@ -21,7 +21,7 @@ const highlights = [
   },
   {
     icon: <FaAtom className="text-emerald-400" />,
-    text: "scientific communication and public outreach",
+    text: "scientific communication, public outreach",
   },
   {
     icon: <FaPeopleArrows className="text-rose-400" />,

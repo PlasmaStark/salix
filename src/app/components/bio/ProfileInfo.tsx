@@ -126,7 +126,7 @@ export default function ProfileInfo({ compact = false }: { compact?: boolean }) 
               </div>
             </div>
             {/* Mobile */}
-            <p className="text-sm italic mt-1 mb-0">
+            <p className="text-sm italic mt-2 sm:mt-1 mb-2 sm:mb-0">
               Cryptography PhD student @ PoliTo, Italy.
             </p>
           </>
