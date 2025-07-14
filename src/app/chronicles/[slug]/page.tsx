@@ -100,7 +100,7 @@ export default async function BlogPost({ params }: { params: any }) {
 
       {/* TOC */}
       {toc.length > 0 && (
-        <nav className="mb-6 max-w-xl mx-auto text-sm text-left bg-[#1a1a1a] p-4 rounded-lg shadow-inner border border-gray-700">
+        <nav className="mb-6 mt-6 max-w-xl mx-auto text-sm text-left bg-[#1a1a1a] p-4 rounded-lg shadow-inner border border-gray-700">
           <p className="text-lg font-bold text-white mb-2">Contents:</p>
           <ul className="space-y-1">
             {toc
