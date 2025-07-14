@@ -22,7 +22,7 @@ export default async function BlogPost({ params }: { params: any }) {
   const lastMod = stats.mtime.toISOString();
 
   return (
-    <article className="max-w-3xl mx-auto px-2 py-2">
+    <article className="container mx-auto px-2 py-2">
       {/* Header */}
       <header className="mb-6">
         <Breadcrumb />
@@ -100,13 +100,14 @@ export default async function BlogPost({ params }: { params: any }) {
 
       {/* TOC */}
       {toc.length > 0 && (
-        <nav className="p-4 mb-8 max-w-2xl mx-auto text-sm">
+        <nav className="mb-6 max-w-xl mx-auto text-sm text-left bg-[#1a1a1a] p-4 rounded-lg shadow-inner border border-gray-700">
           <p className="text-lg font-bold text-white mb-2">Contents:</p>
           <ul className="space-y-1">
             {toc
               .filter((item: { level: number }) => item.level === 2)
               .map((item: { text: string; id: string; level: number }) => (
                 <li key={item.id} className={`ml-6`}>
+                  -{" "}
                   <a
                     href={`#${item.id}`}
                     className="text-lg"

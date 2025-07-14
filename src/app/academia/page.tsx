@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 
 export default function AcademiaPage() {
   return (
-    <div className="max-w-3xl mx-auto px-4 py-8">
+    <main className="container mx-auto px-2 py-2">
       <Breadcrumb />
       <section className="text-center mb-12">
         <h1 className="text-4xl font-bold mb-2">Academia</h1>
@@ -169,6 +169,6 @@ export default function AcademiaPage() {
           ))}
         </ul>
       </section>
-    </div>
+    </main>
   );
 }

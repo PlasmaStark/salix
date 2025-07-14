@@ -26,7 +26,7 @@ export default async function Article({ params }: { params: any }) {
   }
 
   return (
-    <article className="max-w-3xl mx-auto px-2 py-2">
+    <article className="container mx-auto px-2 py-2">
       {/* Titolo */}
       <header className="mb-6">
         <link
@@ -102,7 +102,7 @@ export default async function Article({ params }: { params: any }) {
       )}
 
       <div
-        className="prose prose-lg prose-invert"
+        className="prose prose-lg prose-invert max-w-full"
         dangerouslySetInnerHTML={{ __html: content }}
       />
       <footer className="mt-12">

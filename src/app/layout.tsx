@@ -41,19 +41,21 @@ export default function RootLayout({
         <Navigation />
         <div className="flex">
           {/* Sidebar desktop */}
-          <aside className="hidden md:block w-[250px] text-white px-4 py-8 border-r border-dashed border-[rgba(255,255,255,0.3)] h-screen sticky top-0 overflow-y-auto">
-            <ProfileInfo />
+          <aside className="hidden md:block w-[250px] text-white px-4 py-8 border-r border-dashed border-[rgba(255,255,255,0.3)]">
+            <div className="sticky top-8 z-10">
+              <ProfileInfo />
+            </div>
           </aside>
 
           {/* Main content */}
-          <main className="flex-1 px-4 pr-5 md:px-8 py-6 max-w-screen-lg mx-auto">
+          <main className="flex-1 px-6 pr-5 md:px-8 max-w-screen-lg mx-auto">
             {/* Mobile Profile */}
             <div className="block md:hidden">
               <ProfileInfo compact />
             </div>
 
             {/* Content */}
-            <div className="sm:pt-4">{children}</div>
+            {children}
           </main>
         </div>
 
