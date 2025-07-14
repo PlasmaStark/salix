@@ -21,10 +21,10 @@ const highlights = [
   },
   {
     icon: <FaAtom className="text-emerald-400" />,
-    text: "scientific communication, public outreach",
+    text: "scientific communication & public outreach",
   },
   {
-    icon: <FaPeopleArrows className="text-rose-400" />,
+    icon: <FaPeopleArrows className="text-yellow-400" />,
     text: "Erdős number: 5",
   },
 ];
@@ -40,10 +40,11 @@ export default function AcademiaPage() {
       <Breadcrumb />
       <section className="text-center mb-12">
         <h1 className="text-4xl font-bold mb-2">Academia</h1>
-        <ul className="mt-6 text-normal text-left max-w-md mx-auto space-y-1">
+        <ul className="mt-6 text-sm text-center max-w-md mx-auto space-y-1">
           {highlights.map((item, idx) => (
-            <li key={idx} className="flex items-center gap-2">
-              <span>{item.icon}</span> <span>{item.text}</span>
+            <li key={idx} className="flex justify-center items-start gap-2">
+              <span className="mt-1">{item.icon}</span>
+              <span className="block">{item.text}</span>
             </li>
           ))}
         </ul>

@@ -53,7 +53,7 @@ export default function RootLayout({
             </div>
 
             {/* Content */}
-            {children}
+            <div className="sm:pt-4">{children}</div>
           </main>
         </div>
 

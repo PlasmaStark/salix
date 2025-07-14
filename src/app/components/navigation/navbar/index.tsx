@@ -22,16 +22,16 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 w-full bg-[var(--color-primary)] text-white shadow-lg z-50">
-      <div className="flex items-center justify-between px-4 py-3 ml-4 mr-4 md:px-8">
+      <div className="flex items-center justify-between px-4 py-2 ml-4 mr-4 md:px-8">
         {/* Logo */}
         <Link
           href="/"
           aria-label="Go to homepage"
-          className="group flex items-center no-underline transition-colors text-white hover:text-[var(--color-accent)]"
+          className="group flex items-center no-underline text-white"
         >
           <FontAwesomeIcon
             icon={faHome}
-            className="w-6 h-6 transition-transform duration-300 group-hover:rotate-12"
+            className="w-6 h-6"
           />
         </Link>
 

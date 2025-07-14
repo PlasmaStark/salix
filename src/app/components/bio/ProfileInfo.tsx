@@ -126,7 +126,7 @@ export default function ProfileInfo({ compact = false }: { compact?: boolean }) 
               </div>
             </div>
             {/* Mobile */}
-            <p className="text-sm italic mt-2 sm:mt-1 mb-2 sm:mb-0">
+            <p className="text-sm italic mt-1 mb-2 sm:mb-0">
               Cryptography PhD student @ PoliTo, Italy.
             </p>
           </>
@@ -140,7 +140,7 @@ export default function ProfileInfo({ compact = false }: { compact?: boolean }) 
               PhD student at Polytechnic of Turin in the Cryptography and Number
               Theory group.
             </p>
-            <p className="flex items-center justify-center gap-2 mt-2">
+            <p className="text-sm flex items-center justify-center gap-2 mt-2">
               <FontAwesomeIcon
                 icon={faLocationDot}
                 aria-hidden="true"
