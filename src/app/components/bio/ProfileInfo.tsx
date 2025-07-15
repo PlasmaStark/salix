@@ -16,22 +16,35 @@ export default function ProfileInfo({ compact = false }: { compact?: boolean }) 
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-      function handleClickOutside(event: MouseEvent) {
-        if (
-          dropdownRef.current &&
-          !dropdownRef.current.contains(event.target as Node)
-        ) {
-          setOpen(false);
-        }
-      }
-    if (open) {
-      document.addEventListener("mousedown", handleClickOutside);
+useEffect(() => {
+  function handleClickOutside(event: MouseEvent) {
+    if (
+      dropdownRef.current &&
+      !dropdownRef.current.contains(event.target as Node)
+    ) {
+      setOpen(false);
     }
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [open]);
+  }
+
+  function handleScroll() {
+    setOpen(false);
+  }
+
+  if (open) {
+    document.addEventListener("mousedown", handleClickOutside);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll);
+    window.addEventListener("blur", handleScroll);
+  }
+
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+    window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleScroll);
+    window.addEventListener("blur", handleScroll);
+  };
+}, [open]);
+
 
   return (
     <div
@@ -101,9 +114,14 @@ export default function ProfileInfo({ compact = false }: { compact?: boolean }) 
                         label="ORCID"
                       />
                       <DropdownLink
-                        href=""
+                        href="https://scholar.google.com/citations?user=gRylWFEAAAAJ"
                         iconClass="ai ai-google-scholar"
                         label="Scholar"
+                      />
+                      <DropdownLink
+                        href="https://www.researchgate.net/profile/Leonardo-Errati"
+                        iconClass="ai ai-researchgate"
+                        label="ResearchGate"
                       />
                       <DropdownLink
                         href="https://www.polito.it/personale?p=leonardo.errati"
@@ -172,9 +190,14 @@ export default function ProfileInfo({ compact = false }: { compact?: boolean }) 
             label="ORCID"
           />
           <SocialLink
-            href=""
+            href="https://scholar.google.com/citations?user=gRylWFEAAAAJ"
             iconClass="ai ai-google-scholar"
             label="Scholar"
+          />
+          <SocialLink
+            href="https://www.researchgate.net/profile/Leonardo-Errati"
+            iconClass="ai ai-researchgate"
+            label="ResearchGate"
           />
           <SocialLink
             href="https://www.polito.it/personale?p=leonardo.errati"
