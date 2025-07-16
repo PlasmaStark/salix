@@ -5,7 +5,6 @@ description: "Learning from boring presentations so you don’t give one."
 coverImage: "images/chronicles/2025-presentations.webp"
 tags:
   - Tips
-  - Presentations
 ---
 
 
