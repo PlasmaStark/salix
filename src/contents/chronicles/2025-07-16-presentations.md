@@ -10,9 +10,9 @@ tags:
 
 Everyone can end up giving a confusing or dull presentation - it happens, and it will happen. This list is meant as a practical checklist to help reduce that chance.
 
-It began at **Eurocrypt 2023**, in Lyon, where I started jotting down what made some talks fall flat. Over time it grew with observations from both others’ mistakes and my own. I found myself searching my list and referring back to it quite often, so this time I decided to write it down properly, with better wording and clearer ideas.
+It began at **Eurocrypt 2023**, in Lyon, and over time I found myself referring to it quite often, so this time I decided to write it down properly, with better wording and clearer ideas.
 
-This is not meant to be a precise guide, which would perhaps be impossible to write, but rather a short list of ideas to reflect on.
+This is not meant to be a precise guide, which would perhaps be impossible to write, but rather a short list of ideas to reflect on. Each setting is unique, and no list could fit all, so be wary.
 
 
 ## Before you start
@@ -42,7 +42,7 @@ Many fall apart at this stage, which is arguably the most crucial. Here you step
 This holds for any material (handouts, for instance), but especially for slides.
 
 - **Roughly one slide per minute**: This is just a rule of thumb, but remember to never exaggerate. Your best slide might be the one you never show.
-- **Avoid showing the total slide count**: If the audience got lost, seeing "Slide 7/54" will probably make them stop listening and start counting. Ponder about avoiding this.
+- **The audience exists**: If the audience got lost, seeing "Slide 7/54" will probably make them stop listening and start counting. Ponder about avoiding this, preferrably by engaging with them.
 - **Consistency makes life easier**: Do not use walls of text: mind spacing, and visuals. Slides are there for *support*, not reading. Layouts, colors, and notation should not distract or confuse.
 - **Recap often**: People zone out. Gently remind them what you’ve said and why it matters. Adding little recaps or "take aways" once in a while can work wonders.
 - **Plan for chaos (2)**: Be ready to skip or adjust content on the fly without breaking the narrative. Since you already know the material, rehearsals will naturally feel smoother and faster. Even if you don't rehearse, always increase your expected timing by 10–20%. 
@@ -53,7 +53,7 @@ This holds for any material (handouts, for instance), but especially for slides.
 Once you're on stage, things will move quickly. Delivering a good talk means staying calm, being clear, and reading the room as you go. Trust the work you've done. 
 
 - **Don't rush**: Speaking too fast will confuse the audience and hurt clarity, especially if you're not presenting in your mothertongue. Take your time.
-- **The audience exists**: Try not to stare at your slides. Keep some level of eye contact and watch for puzzled expressions, they’re cues for adjusting your pace or rephrasing.
+- **The audience exists (2)**: Try not to stare at your slides. Keep some level of contact and watch for puzzled expressions, they’re cues for adjusting your pace or rephrasing. Time permitting, you should engage with them.
 - **Be ready to adapt**: If you notice confusion or time slipping away, skip or compress gracefully. You don’t need to go over everything to reach your goal.
 - **A clever ending**: Avoid ending on just a dull "Thank you". While it is polite to keep that in, light joke, visual pun, or clever callback gives a more memorable and human finish.
 
