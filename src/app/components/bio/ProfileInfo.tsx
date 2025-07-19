@@ -162,7 +162,7 @@ useEffect(() => {
               <FontAwesomeIcon
                 icon={faLocationDot}
                 aria-hidden="true"
-                className="text-white"
+                className="text-white w-4 h-4"
               />
               Turin, Italy 🇮🇹
             </p>

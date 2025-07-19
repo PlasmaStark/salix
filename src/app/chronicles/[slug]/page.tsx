@@ -28,7 +28,6 @@ export default async function BlogPost({ params }: { params: any }) {
         <Breadcrumb />
       </header>
 
-
       <div className="flex items-start gap-2 mb-1 max-w-2xl mx-auto block sm:hidden">
         <p className="text-normal text-gray-500">
           {new Date(metadata.date).toLocaleDateString("en-GB", {
@@ -47,17 +46,17 @@ export default async function BlogPost({ params }: { params: any }) {
 
       <div className="flex rounded-lg bg-white items-start p-4 max-w-2xl mx-auto">
         {/* Immagine */}
-        <div className="w-[80px] sm:w-[120px] flex-shrink-0 mr-4">
+        <div className="w-[120px] aspect-[3/4] flex-shrink-0 mr-4 overflow-hidden rounded-md">
           <Image
             src={
               metadata.coverImage.startsWith("/")
-                ? `${metadata.coverImage}`
+                ? metadata.coverImage
                 : `/${metadata.coverImage}`
             }
-            height="480"
-            width="640"
+            width={480}
+            height={640}
             alt={metadata.title}
-            className="w-full h-auto object-cover rounded-md"
+            className="w-full h-full object-cover"
           />
         </div>
 
