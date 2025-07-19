@@ -10,21 +10,27 @@ tags:
 
 Everyone can end up giving a confusing or dull presentation - it happens, and it will happen. This list is meant as a practical checklist to help reduce that chance. It began at **Eurocrypt 2023**, in Lyon, and over time I found myself referring to it quite often, so this time I decided to write it down properly, with better wording and clearer ideas.
 
-A foreword. This is not meant to be a precise guide, which would perhaps be impossible to write, but rather a short list of ideas to reflect on. Each setting is unique, and no list could fit all, so be wary.
+This is not meant to be a precise guide, which would perhaps be impossible to write, but rather a short list of ideas to reflect on. Each setting is unique, and no list could fit all, so be wary. My main focus will be on academic presentations, but this might also be useful for others.
 
 
 ## Before you start
 
-Good communication comes down to three key phases: understanding your target audience, choosing your content, and delivering your presentation.
+Starting with a set goal, communication breaks down into three key phases: understanding your target audience, choosing your content, and delivering your presentation.
 
-The first is crucial: you need to understand your audience, their background, and how to connect with them. The second follows: even if you already have a topic, it still needs to be shaped to them. The third is the live moment, where delivery and clarity make or break your presentation. We will mainly focus on the last two.
+The first is crucial: you need to understand your audience, their collective background, and how to connect with them. They might be etherogeneous, in which case you need to proceed with particular care.
+
+The second follows: even if you already have a topic, it still needs to be shaped to them. This is perhaps the basis of scientific communication to a broad audience; a conference of experts is not much different, as many will have different perspectives on the same topic.
+
+The third is the live moment, where delivery and clarity make or break your presentation. You may want to engage your audience to various degrees depending on the context. No need jesting before serious government officials, so mind the circumstances.
+
+We will mainly focus on the last two, but just from the point of view of a presentation.
 
 
 ## Choosing your content
 
 You probably already have a topic in mind, but it needs to be shaped to fit the target audience. Always keep the goal of the presentation in mind. 
 
-There’s a large difference between being invited to present your own work and being invited to present your field. Not every talk is about showcasing your _results_. Sometimes, it’s about sharing your _understanding_ - be mindful of that. This is perhaps the cardinal sin of presentations.
+First, a foreword on what is perhaps the cardinal sin of presentations. There’s a large difference between being invited to present your own work and being invited to present your field. Not every talk is about showcasing your _results_. Sometimes, it’s about sharing your _understanding_. Be mindful of that and avoid boring with details on your articles an audience of beginners.
 
 - **You're not writing a paper**: Prioritize clarity over completeness. Mention ideas, but avoid diving into unnecessary details just because you feel you'd miss out.
 - **Aim for the sweet spot**: Your talk should feel _“easy”_ to those with little background, while still signaling depth and deliberate simplification to those who know the topic well.
