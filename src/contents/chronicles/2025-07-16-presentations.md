@@ -8,11 +8,9 @@ tags:
 ---
 
 
-Everyone can end up giving a confusing or dull presentation - it happens, and it will happen. This list is meant as a practical checklist to help reduce that chance.
+Everyone can end up giving a confusing or dull presentation - it happens, and it will happen. This list is meant as a practical checklist to help reduce that chance. It began at **Eurocrypt 2023**, in Lyon, and over time I found myself referring to it quite often, so this time I decided to write it down properly, with better wording and clearer ideas.
 
-It began at **Eurocrypt 2023**, in Lyon, and over time I found myself referring to it quite often, so this time I decided to write it down properly, with better wording and clearer ideas.
-
-This is not meant to be a precise guide, which would perhaps be impossible to write, but rather a short list of ideas to reflect on. Each setting is unique, and no list could fit all, so be wary.
+A foreword. This is not meant to be a precise guide, which would perhaps be impossible to write, but rather a short list of ideas to reflect on. Each setting is unique, and no list could fit all, so be wary.
 
 
 ## Before you start
@@ -26,7 +24,7 @@ The first is crucial: you need to understand your audience, their background, an
 
 You probably already have a topic in mind, but it needs to be shaped to fit the target audience. Always keep the goal of the presentation in mind. 
 
-There’s a large difference between being invited to present your own work and being invited to present your field. Not every talk is about showcasing your _results_. Sometimes, it’s about sharing your _understanding_ — be mindful of that. This is perhaps the cardinal sin of presentations.
+There’s a large difference between being invited to present your own work and being invited to present your field. Not every talk is about showcasing your _results_. Sometimes, it’s about sharing your _understanding_ - be mindful of that. This is perhaps the cardinal sin of presentations.
 
 - **You're not writing a paper**: Prioritize clarity over completeness. Mention ideas, but avoid diving into unnecessary details just because you feel you'd miss out.
 - **Aim for the sweet spot**: Your talk should feel _“easy”_ to those with little background, while still signaling depth and deliberate simplification to those who know the topic well.
