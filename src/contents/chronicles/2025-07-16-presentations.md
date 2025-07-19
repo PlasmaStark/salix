@@ -57,8 +57,8 @@ This holds for any material (handouts, for instance), but especially for slides.
 Once you're on stage, things will move quickly. Delivering a good talk means staying calm, being clear, and reading the room as you go. Trust the work you've done. 
 
 - **Don't rush**: Speaking too fast will confuse the audience and hurt clarity, especially if you're not presenting in your mother-tongue. Take your time.
-- **The audience exists (2)**: Try not to stare at your slides. Keep some level of contact and watch for puzzled expressions, they’re cues for adjusting your pace or rephrasing. Time permitting, you should engage with them.
-- **Be ready to adapt**: If you notice confusion or time slipping away, skip or compress gracefully. You don’t need to go over everything to reach your goal.
+- **The audience exists (2)**: Try not to stare at your slides. Keep some level of contact and watch for puzzled expressions, they’re cues for adjusting your pace or rephrasing. Time permitting, you should engage with the audience.
+- **Plan for chaos (3)**: If you notice confusion in the audience, try engaging and making things clearer. If time starts slipping away, gracefully skip or compress some content. You don’t need to go over everything to reach your goal.
 - **A clever ending**: Avoid ending on just a dull "Thank you". While it is polite to keep that in, light joke, visual pun, or clever callback gives a more memorable and human finish.
 
 
