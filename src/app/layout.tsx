@@ -42,7 +42,7 @@ export default function RootLayout({
         <div className="flex">
           {/* Sidebar desktop */}
           <aside className="hidden md:block w-[250px] text-white px-4 py-8 border-r border-dashed border-[rgba(255,255,255,0.3)]">
-            <div className="sticky top-8 z-10">
+            <div className="sticky top-0 z-10">
               <ProfileInfo />
             </div>
           </aside>

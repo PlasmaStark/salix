@@ -10,10 +10,9 @@ export default function Changelog({
       <h2 className="text-xl font-bold mb-4">Changelog</h2>
       <div className="space-y-3">
         {entries.map(({ date, message, link }, i) => (
-          <div key={i} className="flex items-center gap-2">
+          <div key={i} className="flex items-center gap-0">
             <p className="text-sm text-white min-w-[90px] m-0">{date}</p>
             <p className="text-base text-gray-500 m-0 flex items-center gap-2">
-              {message}
               {link && (
                 <a
                   href={link}
@@ -24,6 +23,8 @@ export default function Changelog({
                   <FaPaperclip className="inline-block" />
                 </a>
               )}
+              {!link && <span className="ml-4"></span>}
+              {message}
             </p>
           </div>
         ))}
