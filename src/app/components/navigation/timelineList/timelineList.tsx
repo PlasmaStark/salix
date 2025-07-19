@@ -8,6 +8,18 @@ interface Item {
   type?: string;
 }
 
+const badgeBgClasses: Record<
+  "border-accent" | "border-accent2" | "border-accent3" | "border-accent4" | "border-accent5" | "border-accent6",
+  string
+> = {
+  "border-accent": "bg-accent",
+  "border-accent2": "bg-accent2",
+  "border-accent3": "bg-accent3",
+  "border-accent4": "bg-accent4",
+  "border-accent5": "bg-accent5",
+  "border-accent6": "bg-accent6",
+};
+
 interface TimelineListProps {
   items: Item[];
   borderColor?: string;
@@ -21,8 +33,8 @@ export default function TimelineList({
   linkLabel = "Read more",
   noLinkLabel = "TBA",
 }: TimelineListProps) {
-  const badgeBg = borderColor.replace("border-", "bg-");
-  console.log(`text-xs font-semibold px-2 py-0.5 rounded-full uppercase ${badgeBg} text-black`)
+const key = borderColor as keyof typeof badgeBgClasses;
+const badgeBg = badgeBgClasses[key] ?? "bg-accent";
   return (
     <ul className="space-y-1">
       {items.map((item, idx) => (
