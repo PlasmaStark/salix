@@ -17,7 +17,7 @@ This is not meant to be a precise guide, which would perhaps be impossible to wr
 
 Starting with a set goal, communication breaks down into three key phases: understanding your target audience, choosing your content, and delivering your presentation.
 
-The first is crucial: you need to understand your audience, their collective background, and how to connect with them. They might be etherogeneous, in which case you need to proceed with particular care.
+The first is crucial: you need to understand your audience, their collective background, and how to connect with them. They might be heterogeneous, in which case you need to proceed with particular care.
 
 The second follows: even if you already have a topic, it still needs to be shaped to them. This is perhaps the basis of scientific communication to a broad audience; a conference of experts is not much different, as many will have different perspectives on the same topic.
 
@@ -46,7 +46,7 @@ Many fall apart at this stage, which is arguably the most crucial. Here you step
 This holds for any material (handouts, for instance), but especially for slides.
 
 - **Roughly one slide per minute**: This is just a rule of thumb, but remember to never exaggerate. Your best slide might be the one you never show.
-- **The audience exists**: If the audience got lost, seeing "Slide 7/54" will probably make them stop listening and start counting. Ponder about avoiding this, preferrably by engaging with them.
+- **The audience exists**: If the audience got lost, seeing "Slide 7/54" will probably make them stop listening and start counting. Ponder about avoiding this, preferably by engaging with them.
 - **Consistency makes life easier**: Do not use walls of text: mind spacing, and visuals. Slides are there for *support*, not reading. Layouts, colors, and notation should not distract or confuse.
 - **Recap often**: People zone out. Gently remind them what you’ve said and why it matters. Adding little recaps or "take aways" once in a while can work wonders.
 - **Plan for chaos (2)**: Be ready to skip or adjust content on the fly without breaking the narrative. Since you already know the material, rehearsals will naturally feel smoother and faster. Even if you don't rehearse, always increase your expected timing by 10–20%. 
@@ -56,7 +56,7 @@ This holds for any material (handouts, for instance), but especially for slides.
 
 Once you're on stage, things will move quickly. Delivering a good talk means staying calm, being clear, and reading the room as you go. Trust the work you've done. 
 
-- **Don't rush**: Speaking too fast will confuse the audience and hurt clarity, especially if you're not presenting in your mothertongue. Take your time.
+- **Don't rush**: Speaking too fast will confuse the audience and hurt clarity, especially if you're not presenting in your mother-tongue. Take your time.
 - **The audience exists (2)**: Try not to stare at your slides. Keep some level of contact and watch for puzzled expressions, they’re cues for adjusting your pace or rephrasing. Time permitting, you should engage with them.
 - **Be ready to adapt**: If you notice confusion or time slipping away, skip or compress gracefully. You don’t need to go over everything to reach your goal.
 - **A clever ending**: Avoid ending on just a dull "Thank you". While it is polite to keep that in, light joke, visual pun, or clever callback gives a more memorable and human finish.

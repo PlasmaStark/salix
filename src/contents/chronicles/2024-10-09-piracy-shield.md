@@ -22,7 +22,7 @@ I don't really follow football, but I find this an excellent cautionary tale abo
 
 [Giovanni Falcone](https://en.wikipedia.org/wiki/Giovanni_Falcone), Italian magistrate notorious for his fight against the Sicilian mafia, used to "follow the money trail". This forensic technique can also be applied to understand Piracy Shield.
 
-In October 2023 [@WEB:C23] [DAZN](https://en.wikipedia.org/wiki/DAZN) and [Sky](https://en.wikipedia.org/wiki/Sky_Italia) bought the 2024-2029 exclusive rights to [Italian A-series](https://en.wikipedia.org/wiki/Serie_A) football games for 900M Euros. Aurelio De Laurentiis, chair of the Napoli Footbal Club, prophetically commented:
+In October 2023 [@WEB:C23] [DAZN](https://en.wikipedia.org/wiki/DAZN) and [Sky](https://en.wikipedia.org/wiki/Sky_Italia) bought the 2024-2029 exclusive rights to [Italian A-series](https://en.wikipedia.org/wiki/Serie_A) football games for 900M Euros. Aurelio De Laurentiis, chair of the Napoli Football Club, prophetically commented:
 
 > It’s a defeat for Italian football. [...] DAZN is not competent and is not good for Italian football, just as Sky isn’t either.
 
@@ -38,7 +38,7 @@ DAZN and Sky increased the cost of their subscriptions, but it was not enough. T
 
 They teamed up with a legal partner: enter [_Studio Previti_](https://www.previti.it/) ("Studio Previti Associazione Professionale"), a large Rome-based law firm founded by Cesare Previti, former politician, convicted in 2006 for judicial corruption and permanently disqualified from holding public office and practice law. The law firm is now run by his son.
 
-Their strategy? They planned to construct their own Death Star, a superweapon to annihilate all pirate websites from the web. Well, the Italian web, at least.
+Their strategy? They planned to construct their own Death Star, a super-weapon to annihilate all pirate websites from the web. Well, the Italian web, at least.
 
 ![Plans for Piracy Shield](/images/chronicles//2025-shield-plans.webp)
 
@@ -94,7 +94,7 @@ websites (like `www.google.com`) or components: how would you implement it? Most
 
 ![A code snippet from Piracy Shield.](/images/chronicles//2025-shield-code.webp)
 
-This code just checks whether the name contains `cloudflare`, `namecheap`, `amazon` or `google`. Totally unexploitable.
+This code just checks whether the name contains `cloudflare`, `namecheap`, `amazon` or `google`. Absolutely unexploitable.
 Regarding the leak,
 
 > [...] Piracy Shield was absolutely not hacked; rather, some confidential information was merely shared on GitHub, [...] this did not affect its functionality in any way. An investigation into this leak is currently underway by the competent authorities.
@@ -149,7 +149,7 @@ Incidents have been so many that it's best to just use a table and stick to the 
 | 2024-10-19 | 6h       | [Imperva's CDN](https://www.giornalettismo.com/altri-ip-bloccati-da-piracy-shield-imperva/)                                                                            |
 | 2024-12-01 |          | [DDay's CDN](https://www.dday.it/redazione/51374/piracy-shield-oscura-dday-la-piattaforma-agcom-blocca-un-ip-della-cdn-usata-dal-nostro-sito)                          |
 
-Non-malicious websites could technicall yask AGCOM to be unblocked, but the service was unavailable for the first few weeks, and wouldn't cover any kind of damage anyway.
+Non-malicious websites could technicaly request to be unblocked by AGCOM, but the service was unavailable for the first few weeks, and wouldn't cover any kind of damage anyway.
 
 ## ACT 3, Piracy Shield versus the backlash
 

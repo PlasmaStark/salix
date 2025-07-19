@@ -10,7 +10,7 @@ target: Intermediate
 
 ## Abstract
 
-This talk introduces the notion of quantum-resistance for cryptographic signatures and its implications for the blockchain panorama for students at the XRP Commons Acquarium residence. The target is an intermediate and varying audience.
+This talk introduces the notion of quantum-resistance for cryptographic signatures and its implications for the blockchain panorama for students at the XRP Commons "Acquarium" residence. The target is an intermediate and varying audience.
 
 After a brief introduction, we will discuss the state of the signature standardization process, including the USA NIST calls. The presentation will conclude by highlighting the joint effort between University of Trento and Ripple Labs.
 
