@@ -22,7 +22,7 @@ export default function TimelineList({
   noLinkLabel = "TBA",
 }: TimelineListProps) {
   const badgeBg = borderColor.replace("border-", "bg-");
-
+  console.log(`text-xs font-semibold px-2 py-0.5 rounded-full uppercase ${badgeBg} text-black`)
   return (
     <ul className="space-y-1">
       {items.map((item, idx) => (
@@ -35,7 +35,7 @@ export default function TimelineList({
             {/* Badge tipo */}
             {item.type && (
               <span
-                className={`text-xs font-semibold px-2 py-0.5 rounded-full uppercase tracking-wider ${badgeBg} text-black`}
+                className={`text-xs font-semibold px-2 py-0.5 rounded-full uppercase ${badgeBg} text-black`}
               >
                 {item.type}
               </span>

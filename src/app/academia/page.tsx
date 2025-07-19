@@ -58,7 +58,7 @@ export default function AcademiaPage() {
         </h2>
         <TimelineList
           items={publications}
-          borderColor="border-accent"
+          borderColor="border-accent4"
           linkLabel="Read more"
           noLinkLabel="TBA"
         />
@@ -71,7 +71,7 @@ export default function AcademiaPage() {
         </h2>
         <TimelineList
           items={contributions}
-          borderColor="border-accent4"
+          borderColor="border-accent"
           linkLabel="Read more"
           noLinkLabel="TBA"
         />
