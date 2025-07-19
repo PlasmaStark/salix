@@ -13,6 +13,7 @@ import contributions from '../../contents/academia/contributions.json';
 import theses from '../../contents/academia/theses.json';
 import software from '../../contents/academia/software.json';
 import { Metadata } from "next";
+import TimelineList from "../components/navigation/timelineList/timelineList";
 
 const highlights = [
   {
@@ -55,34 +56,12 @@ export default function AcademiaPage() {
           <FaFileAlt className="text-white" aria-hidden="true" />
           Publications
         </h2>
-        <ul className="space-y-4">
-          {publications.map((pub, idx) => (
-            <li key={idx} className="border-l-4 border-accent pl-4">
-              <h3 className="text-lg font-bold">{pub.title}</h3>
-              <p className="text-sm text-muted-foreground">
-                {pub.venue}, {pub.date}
-              </p>
-              {pub.award && (
-                <span className="text-accent text-sm">🎖 {pub.award}</span>
-              )}
-              <p className="text-sm mt-1 italic">{pub.authors}</p>
-              {pub.link ? (
-                <a
-                  href={pub.link}
-                  className="text-sm mt-1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View Paper
-                </a>
-              ) : (
-                <p className="text-sm mt-1 text-gray-500 italic">
-                  View Paper (TBA)
-                </p>
-              )}
-            </li>
-          ))}
-        </ul>
+        <TimelineList
+          items={publications}
+          borderColor="border-accent"
+          linkLabel="Read more"
+          noLinkLabel="TBA"
+        />
       </section>
 
       <section className="mb-12">
@@ -90,42 +69,12 @@ export default function AcademiaPage() {
           <FaMicrophoneAlt className="text-white" aria-hidden="true" />
           Invited Talks & Contributions
         </h2>
-        <ul className="space-y-4">
-          {contributions.map((item, idx) => (
-            <li key={idx} className="border-l-4 border-accent4 pl-4">
-              <h3 className="text-lg font-semibold">{item.title}</h3>
-              <div className="flex items-center gap-2">
-                {/* Type Badge */}
-                <span className="bg-accent4 text-xs text-black font-semibold px-2 py-0.5 rounded-full uppercase tracking-wider">
-                  {item.type}
-                </span>
-                <p className="text-sm text-muted-foreground">
-                  {item.event}, {item.date}
-                </p>
-              </div>
-              {item.authors && (
-                <p className="text-sm italic text-muted-foreground">
-                  {item.authors}
-                </p>
-              )}
-
-              {item.description && (
-                <p className="text-sm mb-1">{item.description}</p>
-              )}
-
-              {item.link && (
-                <a
-                  href={item.link}
-                  className="text-sm"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Read more
-                </a>
-              )}
-            </li>
-          ))}
-        </ul>
+        <TimelineList
+          items={contributions}
+          borderColor="border-accent4"
+          linkLabel="Read more"
+          noLinkLabel="TBA"
+        />
       </section>
 
       <section className="mb-12">
@@ -133,20 +82,12 @@ export default function AcademiaPage() {
           <FaBookOpen className="text-white" aria-hidden="true" />
           Theses
         </h2>
-        <ul className="space-y-4">
-          {theses.map((thesis, idx) => (
-            <li key={idx} className="border-l-4 border-accent2 pl-4">
-              <h3 className="text-lg font-semibold">{thesis.title}</h3>
-              <p className="text-sm text-muted-foreground">
-                {thesis.type}, {thesis.date}
-              </p>
-              <p className="text-sm mb-1">{thesis.description}</p>
-              <a href={thesis.pdf} className="text-sm" target="_blank">
-                Download PDF
-              </a>
-            </li>
-          ))}
-        </ul>
+        <TimelineList
+          items={theses}
+          borderColor="border-accent2"
+          linkLabel="Read more"
+          noLinkLabel="TBA"
+        />
       </section>
 
       <section className="mb-12">
@@ -154,20 +95,12 @@ export default function AcademiaPage() {
           <FaTools className="text-white" aria-hidden="true" />
           Software & Tools
         </h2>
-        <ul className="space-y-4">
-          {software.map((tool, idx) => (
-            <li key={idx} className="border-l-4 border-accent5 pl-4">
-              <h3 className="text-lg font-semibold">{tool.name}</h3>
-              <p className="text-sm text-muted-foreground">{tool.date}</p>
-              <p className="text-sm mb-1">{tool.description}</p>
-              {tool.link && (
-                <a href={tool.link} className="text-sm" target="_blank">
-                  View Project
-                </a>
-              )}
-            </li>
-          ))}
-        </ul>
+        <TimelineList
+          items={software}
+          borderColor="border-accent5"
+          linkLabel="View project"
+          noLinkLabel="TBA"
+        />
       </section>
     </main>
   );

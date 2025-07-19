@@ -4,13 +4,15 @@
     "type": "MSc Thesis",
     "date": "March 2024",
     "description": "Construction of p-adic continued fractions algorithms, analysis of the perioicity conjecture.",
-    "pdf": "/pdfs/msc_thesis.pdf"
+    "link": "/pdfs/msc_thesis.pdf",
+    "authors": "L. Errati, N. Murru, G. Romeo"
   },
   {
     "title": "Retrospettiva su variazioni del test di Lucas",
-    "type": "MSc Thesis",
+    "type": "BSc Thesis",
     "date": "November 2021",
     "description": "Historical and theoretical background of variations of the primality test by Lucas. (Italian)",
-    "pdf": "/pdfs/bsc_thesis.pdf"
+    "link": "/pdfs/bsc_thesis.pdf",
+    "authors": "W. De Graaf, L. Errati"
   }
 ]

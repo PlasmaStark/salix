@@ -8,7 +8,7 @@ export default function Changelog({
   return (
     <section className="bg-background-100 p-4 rounded-lg shadow-inner max-h-64 overflow-y-auto">
       <h2 className="text-xl font-bold mb-4">Changelog</h2>
-      <div className="space-y-3">
+      <div className="space-y-1">
         {entries.map(({ date, message, link }, i) => (
           <div key={i} className="flex items-center gap-0">
             <p className="text-sm text-white min-w-[90px] m-0">{date}</p>
