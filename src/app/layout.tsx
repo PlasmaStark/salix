@@ -55,11 +55,11 @@ export default function RootLayout({
             </div>
 
             {/* Content */}
-            {children}
+            <div className="mb-20">{children}</div>
           </main>
         </div>
 
-        <footer className="bg-gray-800 text-white py-8 mt-2 text-center">
+        <footer className="bg-gray-800 text-white py-8 mt-5 text-center">
           <p className="text-sm">© {new Date().getFullYear()} myself</p>
           {lastMod && (
             <p className="text-xs text-gray-400">

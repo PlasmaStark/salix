@@ -28,6 +28,23 @@ export default async function BlogPost({ params }: { params: any }) {
         <Breadcrumb />
       </header>
 
+
+      <div className="flex items-start gap-2 mb-1 max-w-2xl mx-auto block sm:hidden">
+        <p className="text-normal text-gray-500">
+          {new Date(metadata.date).toLocaleDateString("en-GB", {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+          })}
+          , last modified{" "}
+          {new Date(lastMod).toLocaleDateString("en-GB", {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+          })}
+        </p>
+      </div>
+
       <div className="flex rounded-lg bg-white items-start p-4 max-w-2xl mx-auto">
         {/* Immagine */}
         <div className="w-[80px] sm:w-[120px] flex-shrink-0 mr-4">
@@ -67,22 +84,6 @@ export default async function BlogPost({ params }: { params: any }) {
             })}
           </p>
         </div>
-      </div>
-
-      <div className="flex items-start gap-2 mt-1 max-w-2xl mx-auto block sm:hidden">
-        <p className="text-normal text-gray-500">
-          {new Date(metadata.date).toLocaleDateString("en-GB", {
-            day: "numeric",
-            month: "long",
-            year: "numeric",
-          })}
-          , last modified{" "}
-          {new Date(lastMod).toLocaleDateString("en-GB", {
-            day: "numeric",
-            month: "long",
-            year: "numeric",
-          })}
-        </p>
       </div>
 
       <ul className="flex items-start gap-2 mt-1 max-w-2xl mx-auto">
