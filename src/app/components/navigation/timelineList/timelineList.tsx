@@ -1,3 +1,5 @@
+import { FaPaperclip } from "react-icons/fa";
+
 interface Item {
   title: string;
   date: string;
@@ -19,65 +21,75 @@ const badgeBgClasses: Record<
   "border-accent5": "bg-accent5",
   "border-accent6": "bg-accent6",
 };
+const linkTextClasses: Record<
+  keyof typeof badgeBgClasses,
+  string
+> = {
+  "border-accent": "text-[var(--color-accent)]",
+  "border-accent2": "text-[var(--color-accent2)]",
+  "border-accent3": "text-[var(--color-accent3)]",
+  "border-accent4": "text-[var(--color-accent4)]",
+  "border-accent5": "text-[var(--color-accent5)]",
+  "border-accent6": "text-[var(--color-accent6)]",
+};
 
 interface TimelineListProps {
   items: Item[];
   borderColor?: string;
-  linkLabel?: string;
-  noLinkLabel?: string;
 }
 
 export default function TimelineList({
   items,
   borderColor = "border-accent",
-  linkLabel = "Read more",
-  noLinkLabel = "TBA",
 }: TimelineListProps) {
 const key = borderColor as keyof typeof badgeBgClasses;
 const badgeBg = badgeBgClasses[key] ?? "bg-accent";
+const linkColor = linkTextClasses[key] ?? "text-[var(--color-accent)]";
   return (
     <ul className="space-y-1">
       {items.map((item, idx) => (
         <li key={idx} className={`relative pl-4 border-l-4 ${borderColor}`}>
-          {/* Titolo */}
-          <h3 className="text-lg font-semibold">{item.title}</h3>
+          <p className="text-normal">
+            {/* Link */}
+            {item.link ? (
+              <a href={item.link} rel="noopener noreferrer">
+                <FaPaperclip
+                  className={`${linkColor} inline-block opacity-90`}
+                />
+              </a>
+            ) : (
+              <span className="text-sm inline-block opacity-90 text-gray-500">
+                (TBA)
+              </span>
+            )}
 
-          {/* Meta info */}
-          <p className="text-sm text-muted-foreground flex flex-wrap items-center gap-2">
             {/* Badge tipo */}
             {item.type && (
               <span
-                className={`text-xs font-semibold px-2 py-0.5 rounded-full uppercase ${badgeBg} text-black`}
+                className={`text-xs font-semibold px-2 py-0.5 ml-1 rounded-full uppercase ${badgeBg} text-black`}
               >
                 {item.type}
               </span>
             )}
+
+            {/* Titolo */}
+            <span className="font-semibold"> {item.title}</span>
+          </p>
+
+          {/* Meta info */}
+          <p className="text-sm text-muted-foreground flex flex-wrap items-center gap-2">
             <span>
               {item.event ? item.event + ", " : ""}
               {new Date(item.date).toLocaleDateString("en-GB", {
                 year: "numeric",
                 month: "short",
               })}
-              {item.authors ? ` - ${item.authors}` : ""}
+              {item.authors ? ` - ${item.authors}.` : ""}
             </span>
           </p>
-
-          {/* Descrizione */}
-          {item.description && <p className="text-sm">{item.description}</p>}
-
-          {/* Link */}
-          {item.link ? (
-            <a
-              href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-blue-400 hover:underline"
-            >
-              {linkLabel}
-            </a>
-          ) : (
-            <p className="text-sm text-gray-400 italic">{noLinkLabel}</p>
-          )}
+          <p className="text-sm text-muted-foreground flex flex-wrap items-center gap-2">
+            {item.description ? ` ${item.description}` : ""}
+          </p>
         </li>
       ))}
     </ul>

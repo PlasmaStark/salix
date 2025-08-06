@@ -59,8 +59,6 @@ export default function AcademiaPage() {
         <TimelineList
           items={publications}
           borderColor="border-accent"
-          linkLabel="Read more"
-          noLinkLabel="TBA"
         />
       </section>
 
@@ -72,8 +70,6 @@ export default function AcademiaPage() {
         <TimelineList
           items={contributions}
           borderColor="border-accent4"
-          linkLabel="Read more"
-          noLinkLabel="TBA"
         />
       </section>
 
@@ -85,8 +81,6 @@ export default function AcademiaPage() {
         <TimelineList
           items={theses}
           borderColor="border-accent2"
-          linkLabel="Read more"
-          noLinkLabel="TBA"
         />
       </section>
 
@@ -98,8 +92,6 @@ export default function AcademiaPage() {
         <TimelineList
           items={software}
           borderColor="border-accent5"
-          linkLabel="View project"
-          noLinkLabel="TBA"
         />
       </section>
     </main>
