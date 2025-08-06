@@ -1,7 +1,14 @@
 [
   {
+    "title": "'Peano' Beamer Theme",
+    "description": "Semi-official Beamer theme for the PoliTo cryptography group.",
+    "link": "github.com/PlasmaStark/Peano",
+    "date": "August 2025",
+    "authors": "L. Errati"
+  },
+  {
     "title": "'BeUnitn' Beamer Theme",
-    "description": "Semi-official beamer theme for the UniTN Math Department.",
+    "description": "Semi-official Beamer theme for the UniTN Math Department.",
     "link": "https://github.com/giacomoborin/Beamer-Theme",
     "date": "April 2021",
     "authors": "G. Borin, L. Errati"
