@@ -9,12 +9,12 @@
   --foreground: #ededed;
   --color-primary: #1f2b32;
   --color-secondary: #00453e;
-  --color-accent: #ec9929;       /* Accent 1: Arancio */
-  --color-accent2: #385157;      /* Accent 2: Blu-verde */
-  --color-accent3: #a96ecb;      /* Accent 3: Lilla */
-  --color-accent4: #50b49a;      /* Accent 4: Verde menta */
-  --color-accent5: #fa5d5d;      /* Accent 5: Rosso salmone */
-  --color-accent6: #4c91f1;      /* Accent 6: Blu acceso */
+  --color-accent: #ec9929;       
+  --color-accent2: #385157;     
+  --color-accent3: #a96ecb;      
+  --color-accent4: #50b49a;      
+  --color-accent5: #9A3A41;      
+  --color-accent6: #5a728a;      
   --font-base: "Inter", sans-serif;
   --font-heading: "GeistSans", sans-serif;
   --font-mono: "GeistMono", monospace;

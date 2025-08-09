@@ -80,7 +80,7 @@ export default function AcademiaPage() {
         </h2>
         <TimelineList
           items={theses}
-          borderColor="border-accent2"
+          borderColor="border-accent6"
         />
       </section>
 
