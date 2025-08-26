@@ -19,7 +19,7 @@ export default async function TagPage({ params }: { params: Promise<{ tag: strin
       <h1 className="text-4xl font-bold text-center mb-6">
         Chronicles: <b>{tag}</b>
       </h1>
-      <p className="text-lg text-center mb-10">
+      <p className="text-normal text-center mb-10">
         <b>Chronicles</b> is a curated collection of personal tales: some
         amusing, others cautionary.
       </p>

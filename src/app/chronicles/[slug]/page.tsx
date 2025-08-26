@@ -28,14 +28,14 @@ export default async function BlogPost({ params }: { params: any }) {
   const lastMod = stats.mtime.toISOString();
 
   return (
-    <article className="container mx-auto px-2 py-2">
+    <article className="container max-w-3xl mx-auto px-2 py-2">
       {/* Header */}
       <header className="mb-6">
         <Breadcrumb />
       </header>
 
       <div className="flex items-start gap-2 mb-1 max-w-2xl mx-auto block sm:hidden">
-        <p className="text-normal text-gray-500">
+        <p className="text-sm text-gray-500">
           {new Date(metadata.date).toLocaleDateString("en-GB", {
             day: "numeric",
             month: "long",
@@ -67,15 +67,15 @@ export default async function BlogPost({ params }: { params: any }) {
         </div>
 
         <div className="flex flex-col justify-center">
-          <h1 className="text-lg sm:text-3xl font-bold text-accent">
+          <h1 className="text-2xl font-bold text-accent">
             {metadata.title}
           </h1>
-          <p className="text-normal sm:text-lg text-gray-700">
+          <p className="text-normal text-gray-700">
             {metadata.description}
           </p>
 
           {/* visibile solo da sm in su */}
-          <p className="text-normal text-gray-500 hidden sm:block">
+          <p className="text-sm text-gray-500 hidden sm:block">
             {new Date(metadata.date).toLocaleDateString("en-GB", {
               day: "numeric",
               month: "long",
@@ -106,7 +106,7 @@ export default async function BlogPost({ params }: { params: any }) {
 
       {/* TOC */}
       {toc.length > 0 && (
-        <nav className="mb-6 mt-6 max-w-xl mx-auto text-sm text-left bg-[#1a1a1a] p-4 rounded-lg shadow-inner border border-gray-700">
+        <nav className="mb-8 mt-6 max-w-xl mx-auto text-sm text-left bg-[#1a1a1a] p-4 rounded-lg shadow-inner border border-gray-700">
           <p className="text-lg font-bold text-white mb-2">Contents:</p>
           <ul className="space-y-1">
             {toc
@@ -116,7 +116,6 @@ export default async function BlogPost({ params }: { params: any }) {
                   -{" "}
                   <a
                     href={`#${item.id}`}
-                    className="text-lg"
                     style={{ color: "white" }}
                   >
                     {item.text}
@@ -129,7 +128,7 @@ export default async function BlogPost({ params }: { params: any }) {
 
       {/* Contenuto */}
       <div
-        className="prose prose-lg prose-invert max-w-full"
+        className="prose prose-invert max-w-full"
         style={{ overflowWrap: "break-word" }}
         dangerouslySetInnerHTML={{ __html: content }}
       />

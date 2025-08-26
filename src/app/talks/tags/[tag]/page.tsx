@@ -19,7 +19,7 @@ export default async function TagPage({ params }: { params: Promise<{ tag: strin
       <h1 className="text-4xl font-bold text-center mb-6">
         Talks: <b>{tag}</b>
       </h1>
-      <p className="text-lg text-center mb-10">
+      <p className="text-normal text-center mb-10">
         Public <b>talks</b> for diffusion or future fruition.
       </p>
       <ContentList contents={posts} baseRoute="talks" variant="textual" />

@@ -32,7 +32,7 @@ export default async function Article({ params }: { params: any }) {
   }
 
   return (
-    <article className="container mx-auto px-2 py-2">
+    <article className="container max-w-3xl mx-auto px-2 py-2">
       {/* Titolo */}
       <header className="mb-6">
         <link
@@ -40,8 +40,8 @@ export default async function Article({ params }: { params: any }) {
           href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"
         />
         <Breadcrumb />
-        <h1 className="text-5xl font-bold text-white-800">{metadata.title}</h1>
-        <p className="text-2xl italic text-white-400">{metadata.description}</p>
+        <h1 className="text-4xl font-bold text-white-800">{metadata.title}</h1>
+        <p className="text-normal italic text-white-400">{metadata.description}</p>
         <p className="text-normal text-gray-500">
           first made{" "}
           {new Date(metadata.date).toLocaleDateString("en-GB", {
@@ -96,7 +96,6 @@ export default async function Article({ params }: { params: any }) {
                 <li key={item.id} className={`ml-6`}>
                   - <a
                     href={`#${item.id}`}
-                    className="text-lg"
                     style={{ color: "white" }}
                   >
                     {item.text}
@@ -108,7 +107,7 @@ export default async function Article({ params }: { params: any }) {
       )}
 
       <div
-        className="prose prose-lg prose-invert max-w-full"
+        className="prose prose-invert max-w-full"
         dangerouslySetInnerHTML={{ __html: content }}
       />
       <footer className="mt-12">

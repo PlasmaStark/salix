@@ -27,7 +27,7 @@ export default async function BlogPost({ params }: { params: any }) {
   const lastMod = stats.mtime.toISOString();
 
   return (
-    <article className="max-w-3xl mx-auto px-2 py-2">
+    <article className="container max-w-3xl mx-auto px-2 py-2">
       <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"
@@ -66,7 +66,7 @@ export default async function BlogPost({ params }: { params: any }) {
 
       {/* Contenuto */}
       <div
-        className="prose prose-lg prose-invert"
+        className="prose prose-invert"
         dangerouslySetInnerHTML={{ __html: content }}
       />
     </article>
