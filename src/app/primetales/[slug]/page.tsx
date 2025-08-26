@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { getContentList } from '@/lib/getPosts';
 import path from 'path';
 import fs from 'fs';
+import { Metadata } from 'next';
 
 export async function generateStaticParams() {
   const posts = getContentList(ARTICLE_DIR);
@@ -13,6 +14,11 @@ export async function generateStaticParams() {
     slug: post.slug,
   }));
 }
+
+export const metadata: Metadata = {
+  title: "PrimeTales",
+  description: "",
+};
 
 export default async function Article({ params }: { params: any }) {
   const { slug } = await params;

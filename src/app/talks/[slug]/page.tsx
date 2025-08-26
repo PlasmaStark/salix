@@ -5,6 +5,7 @@ import { BIBLIOGRAPHY_DIR, TALKS_DIR } from '../../../../config';
 import { getContentList } from '@/lib/getPosts';
 import path from 'path';
 import fs from 'fs';
+import { Metadata } from 'next';
 
 export async function generateStaticParams() {
   const posts = getContentList(TALKS_DIR);
@@ -12,6 +13,11 @@ export async function generateStaticParams() {
     slug: post.slug,
   }));
 }
+
+export const metadata: Metadata = {
+    title: "Talks",
+    description: "Some public talks",
+};
 
 export default async function BlogPost({ params }: { params: any }) {
   const { slug } = await params;
