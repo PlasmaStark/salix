@@ -1,9 +1,15 @@
 import {
   FaAtom,
   FaBookOpen,
+  FaChalkboardTeacher,
   FaFileAlt,
+  FaMandalorian,
+  FaMeetup,
   FaMicrophoneAlt,
   FaPeopleArrows,
+  FaPeopleCarry,
+  FaStickyNote,
+  FaTheaterMasks,
   FaTools,
 } from "react-icons/fa";
 import Breadcrumb from "../components/navigation/breadcrumb";
@@ -12,6 +18,8 @@ import publications from '../../contents/academia/publications.json';
 import contributions from '../../contents/academia/contributions.json';
 import theses from '../../contents/academia/theses.json';
 import software from '../../contents/academia/software.json';
+import organisation from '../../contents/academia/organisation.json';
+import teaching from '../../contents/academia/teaching.json';
 import { Metadata } from "next";
 import TimelineList from "../components/navigation/timelineList/timelineList";
 
@@ -75,12 +83,24 @@ export default function AcademiaPage() {
 
       <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
+          <FaChalkboardTeacher className="text-white" aria-hidden="true" />
+          Teaching
+        </h2>
+        <TimelineList
+          items={teaching}
+          borderColor="border-accent"
+          emptyLink = "(unavailable)"
+        />
+      </section>
+
+      <section className="mb-12">
+        <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
           <FaBookOpen className="text-white" aria-hidden="true" />
           Theses
         </h2>
         <TimelineList
           items={theses}
-          borderColor="border-accent6"
+          borderColor="border-accent4"
         />
       </section>
 
@@ -91,7 +111,18 @@ export default function AcademiaPage() {
         </h2>
         <TimelineList
           items={software}
-          borderColor="border-accent5"
+          borderColor="border-accent"
+        />
+      </section>
+
+      <section className="mb-12">
+        <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
+          <FaPeopleCarry className="text-white" aria-hidden="true" />
+          Organisation
+        </h2>
+        <TimelineList
+          items={organisation}
+          borderColor="border-accent4"
         />
       </section>
     </main>

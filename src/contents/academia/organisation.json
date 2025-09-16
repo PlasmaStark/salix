@@ -1,0 +1,26 @@
+[
+  {
+    "type": "workshop",
+    "title": "History of Cryptography",
+    "event": "Cifris25",
+    "date": "September 2025",
+    "authors": "F. Atzeni, P. Bonavoglia, F. Cosimato, L. Errati",
+    "link": "https://www.decifris.it/cifris25/workshops/#HIS"
+  },
+  {
+    "type": "workshop",
+    "title": "Quantum RNGs and Cryptography",
+    "event": "Cifris25",
+    "date": "September 2025",
+    "authors": "M. Caccia, L. Errati, R. La Scala",
+    "link": "https://www.decifris.it/cifris25/workshops#QRN"
+  },
+  {
+    "type": "workshop",
+    "title": "A Journey into Bitcoin's Cryptography",
+    "event": "Cifris25",
+    "date": "September 2025",
+    "authors": "G. Cappiello, L. Errati",
+    "link": "https://www.decifris.it/cifris25/workshops#BIT"
+  }
+]

@@ -36,11 +36,13 @@ const linkTextClasses: Record<
 interface TimelineListProps {
   items: Item[];
   borderColor?: string;
+  emptyLink?: string;
 }
 
 export default function TimelineList({
   items,
   borderColor = "border-accent",
+  emptyLink = "(TBA)"
 }: TimelineListProps) {
 const key = borderColor as keyof typeof badgeBgClasses;
 const badgeBg = badgeBgClasses[key] ?? "bg-accent";
@@ -59,7 +61,7 @@ const linkColor = linkTextClasses[key] ?? "text-[var(--color-accent)]";
               </a>
             ) : (
               <span className="text-sm inline-block opacity-90 text-gray-500">
-                (TBA)
+                {item.link ? item.link : emptyLink}
               </span>
             )}
 
