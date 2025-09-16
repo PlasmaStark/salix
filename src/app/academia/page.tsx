@@ -3,13 +3,9 @@ import {
   FaBookOpen,
   FaChalkboardTeacher,
   FaFileAlt,
-  FaMandalorian,
-  FaMeetup,
   FaMicrophoneAlt,
   FaPeopleArrows,
   FaPeopleCarry,
-  FaStickyNote,
-  FaTheaterMasks,
   FaTools,
 } from "react-icons/fa";
 import Breadcrumb from "../components/navigation/breadcrumb";
