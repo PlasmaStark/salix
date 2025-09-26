@@ -1,11 +1,11 @@
 [
   {
-    "type": "conference paper",
+    "type": "talk",
     "title": "Cryptographic Standards for Random Number Generation",
     "event": "Cifris25",
     "date": "September 2025",
     "authors": "L. Errati, R. La Scala, M. Palumbo",
-    "link": ""
+    "link": "/talks/2025-09-12-rngs"
   },
   {
     "type": "invited talk",
