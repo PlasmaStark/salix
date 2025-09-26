@@ -1,5 +1,13 @@
 [
   {
+    "type": "conference paper",
+    "title": "Cryptographic Standards for Random Number Generation",
+    "event": "Cifris25",
+    "date": "September 2025",
+    "authors": "L. Errati, R. La Scala, M. Palumbo",
+    "link": ""
+  },
+  {
     "type": "invited talk",
     "title": "Post-Quantum Signatures for Blockchain",
     "event": "XRP Commons Paris",
