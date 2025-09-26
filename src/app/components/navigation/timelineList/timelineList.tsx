@@ -81,11 +81,11 @@ const linkColor = linkTextClasses[key] ?? "text-[var(--color-accent)]";
           {/* Meta info */}
           <p className="text-sm text-muted-foreground flex flex-wrap items-center gap-2">
             <span>
-              {item.event ? item.event + ", " : ""}
               {new Date(item.date).toLocaleDateString("en-GB", {
                 year: "numeric",
                 month: "short",
               })}
+              {item.event ? ", " + item.event  : ""}
               {item.authors ? ` - ${item.authors}.` : ""}
             </span>
           </p>
