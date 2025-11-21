@@ -41,6 +41,16 @@ interface TimelineListProps {
   emptyLink?: string;
 }
 
+// Separator component for clarity
+const Separator = () => (
+    <span className="inline-block text-gray-400 font-medium mx-1 select-none">
+        &bull;
+    </span>
+);
+// I used a middle dot (•) instead of a comma (,) as it often looks cleaner
+// and avoids the need for a trailing space, but you can change it back to
+// ", " if you prefer a comma and a space.
+
 export default function TimelineList({
   items,
   borderColor = "border-accent",
@@ -55,6 +65,70 @@ export default function TimelineList({
       {items.map((item, idx) => {
         const isCompactMode = !item.event && !item.authors;
 
+        // Define the sequence of visible metadata items to apply separators correctly
+        const metadataItems = [
+          // 1. Date (rimosso whitespace-nowrap)
+          <span
+            key="date"
+            className="flex items-center gap-1 text-gray-400 font-medium"
+          >
+            <MdOutlineDateRange className={`${linkColor}`} />
+            {new Date(item.date).toLocaleDateString("en-GB", {
+              year: "numeric",
+              month: "short",
+            })}
+          </span>,
+
+          // 2. Type (Badge - lasciato com'era)
+          item.type && (
+            <span
+              key="type"
+              className={`text-[10px] font-bold px-1.5 rounded-sm uppercase tracking-wider ${badgeBg} text-black whitespace-nowrap`}
+            >
+              {item.type}
+            </span>
+          ),
+
+          // 3. Link (rimosso whitespace-nowrap)
+          item.link ? (
+            <a
+              key="link"
+              href={item.link}
+              rel="noopener noreferrer"
+              target="_blank"
+              className={`flex items-center gap-1 hover:text-white transition-colors no-underline duration-200 group`}
+              title="View Resource"
+            >
+              <span className={`${linkColor} opacity-80`}>link</span>
+            </a>
+          ) : (
+            <span key="empty-link" className="text-gray-400 flex items-center gap-1">
+              {emptyLink}
+            </span>
+          ),
+
+          // 4. Event (rimosso whitespace-nowrap)
+          !isCompactMode && item.event && (
+            <span key="event" className="text-gray-400 italic">
+              {item.event}
+            </span>
+          ),
+
+          // 5. Authors (rimosso whitespace-nowrap)
+          !isCompactMode && item.authors && (
+            <span key="authors">
+              {item.authors}
+            </span>
+          ),
+
+          // 6. Description (Only in compact mode)
+          isCompactMode && item.description && (
+            <span key="compact-description" className="text-gray-400">
+              {item.description}
+            </span>
+          ),
+        ].filter(Boolean) as React.ReactElement[];
+
         return (
           <li key={idx} className={`relative pl-6 border-l-4 ${borderColor}`}>
             {/* RIGA 1: TITOLO */}
@@ -62,60 +136,15 @@ export default function TimelineList({
               {item.title}
             </h3>
 
-            {/* RIGA 2: METADATI (Badge | Data | Link | Evento | Autori ... | Descrizione ) */}
-            <div className="text-sm text-gray-400 flex flex-wrap items-center gap-x-2">
-              <span className="flex items-center gap-1 text-gray-400 font-medium">
-                <MdOutlineDateRange className={`${linkColor}`} />
-                {new Date(item.date).toLocaleDateString("en-GB", {
-                  year: "numeric",
-                  month: "short",
-                })}
-              </span>
-              {item.type && (
-                <>
-                <span
-                  className={`text-[10px] font-bold px-1.5 rounded-sm uppercase tracking-wider ${badgeBg} text-black`}
-                >
-                  {item.type}
-                </span>
-                </>
-              )}
-              {item.link ? (
-                <a
-                  href={item.link}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  className={`flex items-center gap-1 hover:text-white transition-colors no-underline duration-200 group`}
-                  title="View Resource"
-                >
-                  <span className={`${linkColor} opacity-80`}>
-                    link
-                  </span>
-                </a>
-              ) : (
-                <span className="text-gray-400 flex items-center gap-1">
-                  {emptyLink}
-                </span>
-              )}
-              {!isCompactMode && (
-                <>
-                  {item.event && (
-                    <span className="flex items-center gap-2">
-                      <span className="text-gray-400 italic">{item.event}</span>
-                    </span>
-                  )}
-                  {item.authors && (
-                    <span className="flex items-center gap-2">
-                      <span>{item.authors}</span>
-                    </span>
-                  )}
-                </>
-              )}
-              {isCompactMode && item.description && (
-                <span className="flex items-center gap-2 text-gray-400">
-                  <span>{item.description}</span>
-                </span>
-              )}
+            {/* RIGA 2: METADATI - Use flex-wrap and map with separator */}
+            <div className="text-sm text-gray-400 flex flex-wrap items-center">
+              {metadataItems.map((component, componentIdx) => (
+                <div key={component!.key} className="flex items-center">
+                  {component}
+                  {/* Insert Separator only if it's NOT the last item */}
+                  {componentIdx < metadataItems.length - 1 && <Separator />}
+                </div>
+              ))}
             </div>
 
             {/* RIGA 3: Descrizione a capo (Solo mode Complessa) */}
