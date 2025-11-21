@@ -1,5 +1,10 @@
 [
   {
+    "date": "2025-11-21",
+    "message": "Created 'The Digest'",
+    "link": "/the-digest"
+  },
+  {
     "date": "2025-09-12",
     "message": "Added my talk at Cifris25",
     "link": "/talks/2025-09-12-rngs"

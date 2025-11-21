@@ -85,7 +85,7 @@ export default function AcademiaPage() {
         <TimelineList
           items={teaching}
           borderColor="border-accent"
-          emptyLink = "(unavailable)"
+          emptyLink = "link unavailable"
         />
       </section>
 

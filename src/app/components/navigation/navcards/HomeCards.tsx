@@ -1,4 +1,4 @@
-import { faUser, faBook, faComments, faFlask, faScroll } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faBook, faComments, faFlask, faScroll, faMugHot } from '@fortawesome/free-solid-svg-icons';
 import NavCard from './NavCard';
 
 const categories = [
@@ -18,7 +18,7 @@ const categories = [
     href: '/chronicles',
     icon: faScroll,
     title: 'Chronicles',
-    description: 'A curated collection of personal tales.',
+    description: 'A collection of personal tales.',
   },
   {
     href: '/primetales',
@@ -30,14 +30,20 @@ const categories = [
     href: '/talks',
     icon: faComments,
     title: 'Talks',
-    description: 'Public talks and divulgation.',
+    description: 'Public talks and public outreach.',
+  },
+  {
+    href: '/the-digest',
+    icon: faMugHot,
+    title: 'The Digest',
+    description: 'Monthly cryptographic digest.',
   },
 ];
 
 export default function HomeCategories() {
   return (
     <section id="categories" className="mb-16 mt-2 sm:mt-3">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-3 items-stretch">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-3 items-stretch">
         {categories.map(({ href, icon, title, description }) => (
           <NavCard
             key={href}
