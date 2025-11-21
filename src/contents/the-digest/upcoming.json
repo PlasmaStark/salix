@@ -2,7 +2,6 @@
   {
     "date": "2025-12",
     "title": "1. Minimal assumptions for the Fiat-Shamir transform",
-    "description": "Uncovering the minimal conditions for Fiat-Shamir transform security in identification and signature schemes.",
-    "link": ""
+    "description": "Uncovering the minimal conditions for Fiat-Shamir transform security in identification and signature schemes."
   }
 ]

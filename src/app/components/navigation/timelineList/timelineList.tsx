@@ -63,7 +63,7 @@ export default function TimelineList({
             </h3>
 
             {/* RIGA 2: METADATI (Badge | Data | Link | Evento | Autori ... | Descrizione ) */}
-            <div className="text-sm text-gray-400 flex flex-wrap items-center gap-x-1">
+            <div className="text-sm text-gray-400 flex flex-wrap items-center gap-x-2">
               <span className="flex items-center gap-1 text-gray-400 font-medium">
                 <MdOutlineDateRange className={`${linkColor}`} />
                 {new Date(item.date).toLocaleDateString("en-GB", {
@@ -73,7 +73,6 @@ export default function TimelineList({
               </span>
               {item.type && (
                 <>
-                <span className="text-gray-400 opacity-50">|</span>
                 <span
                   className={`text-[10px] font-bold px-1.5 rounded-sm uppercase tracking-wider ${badgeBg} text-black`}
                 >
@@ -89,14 +88,12 @@ export default function TimelineList({
                   className={`flex items-center gap-1 hover:text-white transition-colors no-underline duration-200 group`}
                   title="View Resource"
                 >
-                  <span className="text-gray-400 opacity-50">|</span>
                   <span className={`${linkColor} opacity-80`}>
                     link
                   </span>
                 </a>
               ) : (
                 <span className="text-gray-400 flex items-center gap-1">
-                  <span className="text-gray-400 opacity-50 text-sm">|</span>
                   {emptyLink}
                 </span>
               )}
@@ -104,13 +101,11 @@ export default function TimelineList({
                 <>
                   {item.event && (
                     <span className="flex items-center gap-2">
-                      <span className="text-gray-400 opacity-50">|</span>
                       <span className="text-gray-400 italic">{item.event}</span>
                     </span>
                   )}
                   {item.authors && (
                     <span className="flex items-center gap-2">
-                      <span className="text-gray-400 opacity-50">|</span>
                       <span>{item.authors}</span>
                     </span>
                   )}
@@ -118,7 +113,6 @@ export default function TimelineList({
               )}
               {isCompactMode && item.description && (
                 <span className="flex items-center gap-2 text-gray-400">
-                  <span className="text-gray-400 opacity-50">|</span>
                   <span>{item.description}</span>
                 </span>
               )}
