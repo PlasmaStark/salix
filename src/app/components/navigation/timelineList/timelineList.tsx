@@ -1,4 +1,3 @@
-import { FaPaperclip, FaExternalLinkAlt } from "react-icons/fa";
 import { MdOutlineDateRange } from "react-icons/md";
 
 interface Item {
