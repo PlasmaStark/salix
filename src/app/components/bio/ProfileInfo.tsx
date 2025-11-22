@@ -110,12 +110,7 @@ export default function ProfileInfo({ compact = false }: { compact?: boolean }) 
               Theory group.
             </p>
             <p className="text-sm flex items-center justify-center gap-2 mt-2">
-              <FontAwesomeIcon
-                icon={faLocationDot}
-                aria-hidden="true"
-                className="text-white w-4 h-4"
-              />
-              Turin, Italy 🇮🇹
+                🇮🇹  Turin, Italy
             </p>
           </>
         )}

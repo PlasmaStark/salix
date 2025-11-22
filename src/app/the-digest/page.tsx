@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
 import Breadcrumb from "../components/navigation/breadcrumb";
 import Image from "next/image";
-import {
-  FaMicrophoneAlt,
-  FaHourglassHalf,
-} from "react-icons/fa";
 import TimelineList from "../components/navigation/timelineList/timelineList";
 import digestEpisodes from "../../contents/the-digest/archive.json";
 import upcomingEpisodes from "../../contents/the-digest/upcoming.json";
@@ -25,7 +21,7 @@ export default function TheDigestPage() {
           <div className="relative h-64 sm:h-64 w-full">
             <Image
               src="/images/thedigest.webp"
-              alt="Hero background"
+              alt="News background"
               fill
               sizes="(max-width: 840px) 100vw, (max-width: 1224px) 100vw, 100vw"
               className="object-cover object-center"
@@ -45,7 +41,7 @@ export default function TheDigestPage() {
       <section className="mb-12">
         <p>
           <b>The Digest</b> is a monthly summary of advanced research concepts.{" "}
-          <br></br>Here you can find the handouts of all upcoming and past
+          <br></br>Here you can find the handouts of upcoming and past
           episodes.
         </p>
       </section>
@@ -53,7 +49,6 @@ export default function TheDigestPage() {
       {/* Upcoming */}
       <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
-          <FaHourglassHalf className="text-white" aria-hidden="true" />
           Upcoming
         </h2>
         <TimelineList
@@ -66,7 +61,6 @@ export default function TheDigestPage() {
       {/* Archive */}
       <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
-          <FaMicrophoneAlt className="text-white" aria-hidden="true" />
           Archive of Episodes
         </h2>
 

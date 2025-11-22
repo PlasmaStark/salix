@@ -61,7 +61,7 @@ export default function TimelineList({
   const linkColor = linkTextClasses[key] ?? "text-[var(--color-accent)]";
 
   return (
-    <ul className="space-y-0.5">
+    <ul className="space-y-1">
       {items.map((item, idx) => {
         const isCompactMode = !item.event && !item.authors;
 

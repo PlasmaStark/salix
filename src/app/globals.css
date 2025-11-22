@@ -11,6 +11,8 @@
   --color-secondary: #00453e;
   --color-accent: #ec9929;       
   --color-accent2: #385157;
+  --color-black40: rgba(0, 0, 0, 0.6);
+  --color-accentlight: rgba(236, 153, 41, 0.5);
   --color-accent2light: rgba(56, 81, 87, 0.9);     
   --color-accent3: #a96ecb;      
   --color-accent4: #50b49a;      

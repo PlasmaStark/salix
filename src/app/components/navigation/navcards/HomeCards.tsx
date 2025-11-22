@@ -43,7 +43,7 @@ const categories = [
 export default function HomeCategories() {
   return (
     <section id="categories" className="mb-16 mt-2 sm:mt-3">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-3 items-stretch">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 items-stretch">
         {categories.map(({ href, icon, title, description }) => (
           <NavCard
             key={href}

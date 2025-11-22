@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Breadcrumb from "@components/breadcrumb";
-import Image from 'next/image'
+import Image from "next/image";
 import Link from "next/link";
-import { FaFlask, FaRegCommentDots } from "react-icons/fa";
 
 export const metadata: Metadata = {
   title: "About",
@@ -65,60 +64,59 @@ export default function About() {
       </section>
 
       {/* Research Section */}
-      <section>
+      <section className=" mb-10">
         <h2 className="text-3xl font-bold mb-6 flex items-center gap-2 text-white">
-          <FaFlask className="text-white" />
           Research
         </h2>
-
-        <div className="border-l-4 border-accent pl-4 mb-10">
+        <div className="border-l-4 border-accent pl-4 mb-1">
           <p className="text-normalleading-relaxed">
             My main research areas are cryptography, complexity theory, number
-            theory, and in my spare time I read about the history of
-            mathematics.
+            theory.
             <br />I am currently working on <b>
               cryptographic group actions
             </b>{" "}
-            and <b>digital signatures</b>.
+            and <b>digital signatures</b>. See my <a>Academia</a> webpage.
+          </p>
+        </div>
+        <div className="border-l-4 border-accent pl-4 mb-10">
+          <p className="text-normalleading-relaxed">
+            In my spare time, I enjoy exploring the{" "}
+            <b>history of cryptography</b>. It tells us about our past, and
+            shows where principles or ideas we take for granted really came
+            from. Not to mention, it makes for great introductions in talks!
           </p>
         </div>
       </section>
 
       {/* Some Thoughts Section */}
-      <section>
+      <section className=" mb-10">
         <h2 className="text-3xl font-bold mb-6 flex items-center gap-2 text-white">
-          <FaRegCommentDots className="text-white" />
           Some thoughts
         </h2>
 
-        <div className="border-l-4 border-accent pl-4 mb-5">
+        <div className="border-l-4 border-accent pl-4 mb-1">
           <h3 className="text-xl font-semibold mb-2" id="community">
-            Community - shaping the future together
+            Community
           </h3>
           <p className="text-normalleading-relaxed">
-            What brought Homo Sapiens to where it stands today?
-            <br />A lion might have defeated one of us, but it would soon have
-            to face fifty angry, rock-throwing, cooperating monkeys.
-            Collaboration has always been one of our greatest strengths, and it
-            is probably the key to shaping - and fixing - the future. As people
-            of science this means coming together, providing our perspective to
-            the public and putting our abilities to use for society. We are the
-            same.
+            A lion might have defeated a lonely Homo Sapiens, but it would soon
+            have to face fifty angry rock-throwing monkeys. Collaboration is
+            probably the key to shaping - and fixing - the future. As people of
+            science this means coming together, providing our perspective to the
+            public and putting our abilities to use for society.
           </p>
         </div>
 
-        <div className="border-l-4 border-accent pl-4 mb-10">
+        <div className="border-l-4 border-accent pl-4">
           <h3 className="text-xl font-semibold mb-2" id="communication">
-            Communication - one (tiny) step at a time
+            Communication
           </h3>
           <p className="text-normalleading-relaxed">
             Our ability to communicate effectively has always been a key
             strength. Thousands of years ago, teaching others how to craft
             obsidian tools without losing fingers surely gave us an edge (pun
-            intended!).
-            <br />I believe in the power of scientific communication: step by
-            step it shares knowledge, enables informed decisions, and shapes our
-            technical future. That is real power.
+            intended!). I believe this power transfers to scientific
+            communication.
           </p>
         </div>
       </section>
@@ -156,4 +154,3 @@ export default function About() {
     </main>
   );
 }
-
