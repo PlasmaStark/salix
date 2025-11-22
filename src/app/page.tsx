@@ -30,7 +30,7 @@ export default function Home() {
           />
         </div>
         <div className="absolute inset-0 bg-black40 flex flex-col justify-center items-center p-4 z-10">
-          <h1 className="text-5xl font-extrabold text-white tracking-wider text-center mb-2 drop-shadow-lg">
+          <h1 className="sm:text-5xl text-3xl font-extrabold text-white tracking-wider text-center mb-2 drop-shadow-lg">
             Welcome, traveller
           </h1>
           <p className="text-lg text-white font-semibold italic drop-shadow-md text-center">
