@@ -81,8 +81,8 @@ export default function About() {
         <div className="border-l-4 border-accent pl-4 mb-10">
           <p className="text-normalleading-relaxed">
             In my spare time, I enjoy exploring the{" "}
-            <b>history of cryptography</b>. It tells us about our past, and
-            shows where principles or ideas we take for granted really came
+            <b>history of cryptography</b>. It's our past, and
+            it shows where principles or ideas we take for granted really came
             from. Not to mention, it makes for great introductions in talks!
           </p>
         </div>
