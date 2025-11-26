@@ -2,6 +2,6 @@
   {
     "date": "2025-12",
     "title": "1. Security of the Fiat-Shamir transform",
-    "description": "Minimal security conditions for the Fiat-Shamir transform: identification and signature schemes."
+    "description": "Minimal security conditions."
   }
 ]

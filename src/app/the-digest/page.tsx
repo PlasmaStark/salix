@@ -4,6 +4,7 @@ import Image from "next/image";
 import TimelineList from "../components/navigation/timelineList/timelineList";
 import digestEpisodes from "../../contents/the-digest/archive.json";
 import upcomingEpisodes from "../../contents/the-digest/upcoming.json";
+import miscellaneaEpisodes from "../../contents/the-digest/miscellanea.json";
 
 export const metadata: Metadata = {
   title: "The Digest",
@@ -48,9 +49,10 @@ export default function TheDigestPage() {
 
       {/* Upcoming */}
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
+        <h2 className="text-2xl font-semibold flex items-center gap-2">
           Upcoming
         </h2>
+        <p className="mb-4">Future episodes.</p>
         <TimelineList
           items={upcomingEpisodes}
           borderColor="border-accent"
@@ -60,12 +62,27 @@ export default function TheDigestPage() {
 
       {/* Archive */}
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
-          Archive of Episodes
+        <h2 className="text-2xl font-semibold flex items-center gap-2">
+          Archive
         </h2>
+        <p className="mb-4">Past episodes.</p>
 
         <TimelineList
           items={digestEpisodes}
+          borderColor="border-accent"
+          emptyLink="(Handout TBA)"
+        />
+      </section>
+
+      {/* Archive */}
+      <section className="mb-12">
+        <h2 className="text-2xl font-semibold flex items-center gap-2">
+          Miscellanea
+        </h2>
+        <p className="mb-4">Some material from talks or events that still fits the scope of The Digest.</p>
+
+        <TimelineList
+          items={miscellaneaEpisodes}
           borderColor="border-accent"
           emptyLink="(Handout TBA)"
         />
