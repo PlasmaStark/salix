@@ -1,5 +1,13 @@
 [
   {
+    "type": "seminar",
+    "title": "History of Cryptography in Turin 2026",
+    "event": "HisTO26",
+    "date": "April 2026",
+    "authors": "P. Bonavoglia, L. Errati",
+    "link": "https://sites.google.com/view/histo26/home"
+  },
+  {
     "type": "workshop",
     "title": "History of Cryptography",
     "event": "Cifris25",
