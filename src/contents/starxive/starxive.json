@@ -2,14 +2,15 @@
   {
     "id": "Pell25",
     "authors": "L. Errati", 
-    "title": "SQISign: compact post-quantum signatures from quaternions and isogenies",
+    "title": "What the Pell",
     "date": 2025,
     "class": "Article",
     "type": "Articles",
     "tags":  [
-      "foundations"
+      "foundations",
+      "security"
     ],
-    "url": "https://www.leonardoerrati.com/article_whatthepell.pdf",
-    "description": "Constructs SQISign from an identification protocol."
+    "url": "https://www.leonardoerrati.com/pdfs/article_whatthepell.pdf",
+    "description": "Cryptanalysis of Degree-Two Pell Curves"
   }
 ]
