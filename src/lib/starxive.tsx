@@ -1,5 +1,5 @@
 export const tagColors: Record<string, string> = {
-    security: "#ef4444", // Rosso
+    foundations: "#ef4444", // Rosso
     pkp: "#3b82f6", // Blu
     identification: "#a855f7", // Viola
     codes: "#10b981", // Verde 

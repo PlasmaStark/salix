@@ -1,0 +1,220 @@
+[
+  {
+    "id": "Damgard07",
+    "authors": "I. Damgard",
+    "title": "A “proof-reading” of some issues in cryptography",
+    "date": 2007,
+    "class": "Position paper",
+    "type": "Articles",
+    "tags": [
+      "security"
+    ],
+    "url": "https://cs.au.dk/~ivan/positionpaper.pdf",
+    "description": "Issues with security proofs and why we still need them"
+  },
+  {
+    "id": "Kamara17",
+    "authors": "S. Kamara",
+    "title": "A Brief Introduction to Cryptography",
+    "date": 2017,
+    "class": "Lecture notes",
+    "type": "Lecture notes",
+    "tags": [
+      "security"
+    ],
+    "url": "https://cs.brown.edu/~seny/2950-v/intro.pdf",
+    "description": "Game-based & simulation-based techniques, hands-on introduction"
+  },
+  {
+    "id": "GolBel08",
+    "authors": "S. Goldwasser, M. Bellare",
+    "title": "Lecture Notes on Cryptography",
+    "date": 2008,
+    "class": "Lecture notes",
+    "type": "Lecture notes",
+    "tags": [
+      "security"
+    ],
+    "url": "https://cseweb.ucsd.edu//~mihir/papers/gb.pdf",
+    "description": "Complete theory with a focus on security arguments"
+  },
+  {
+    "id": "EPRINT: SanBalChia22",
+    "authors": "P. Santini, M. Baldi, F. Chiaraluce",
+    "title": "Computational Hardness of the Permuted Kernel and Subcode Equivalence Problems",
+    "date": 2022,
+    "class": "Article",
+    "type": "Articles",
+    "tags": [
+      "pkp",
+      "codes"
+    ],
+    "url": "https://eprint.iacr.org/2022/1749.pdf",
+    "description": "PKP, SEP and their equivalence"
+  },
+  {
+    "id": "ARXIV: SanBalChia22",
+    "authors": "P. Santini, M. Baldi, F. Chiaraluce",
+    "title": "A Novel Attack on the Permuted Kernel Problem",
+    "date": 2022,
+    "class": "Article",
+    "type": "Articles",
+    "tags": [
+      "pkp",
+      "codes"
+    ],
+    "url": "https://arxiv.org/pdf/2206.14547",
+    "description": "Improved the classical PKP attack"
+  },
+  {
+    "id": "CRYPTO: Shamir89",
+    "authors": "A. Shamir",
+    "title": "An Efficient Identification Scheme Based on Permuted Kernels",
+    "date": 1989,
+    "class": "Extended Abstract",
+    "type": "Articles",
+    "tags": [
+      "pkp",
+      "identification"
+    ],
+    "url": "https://link.springer.com/chapter/10.1007/0-387-34805-0_54",
+    "description": "Defines PKP and builds an identification scheme"
+  },
+  {
+    "id": "ARXIV: Sanna24",
+    "authors": "C. Sanna",
+    "title": "On the number of solutions to a random instance of the permuted kernel problem",
+    "date": 2024,
+    "class": "Article",
+    "type": "Articles",
+    "tags": [
+      "pkp"
+    ],
+    "url": "https://arxiv.org/pdf/2406.00453",
+    "description": "The standard heuristic differs a lot from the expected value"
+  },
+  {
+    "id": "Weger24",
+    "authors": "V. Weger",
+    "title": "The Mysterious Case of Code Equivalence",
+    "date": 2024,
+    "class": "Lecture notes",
+    "type": "Lecture notes",
+    "tags": [
+      "codes"
+    ],
+    "url": "http://user.math.uzh.ch/weger/VT_Summer_School.pdf",
+    "description": "Introduction to most subclasses of the Code Equivalence Problem"
+  },
+  {
+    "id": "EPRINT: AABN02",
+    "authors": "M. Abdalla, J. Anm M. Bellare, C. Namprempre",
+    "title": "From Identification to Signatures via the Fiat-Shamir Transform",
+    "date": 2002,
+    "class": "Article",
+    "type": "Articles",
+    "tags": [
+      "security",
+      "identification",
+      "signatures"
+    ],
+    "url": "https://eprint.iacr.org/2002/022.pdf",
+    "description": "Proof of security of the Fiat-Shamir paradigm"
+  },
+  {
+    "id": "EUROCRYPT: Shoup97",
+    "authors": "V. Shoup",
+    "title": "Lower Bounds for Discrete Logarithms and Related Problems",
+    "date": 1997,
+    "class": "Extended Abstract",
+    "type": "Articles",
+    "tags": [
+      "security"
+    ],
+    "url": "https://www.shoup.net/papers/dlbounds1.pdf",
+    "description": "Introduction of the generic group model"
+  },
+  {
+    "id": "HwaKimLee",
+    "authors": "S. Hwang, I. Kim, W. Lee",
+    "title": "Modern Cryptography with Proof Techniques and Implementations",
+    "date": 2023,
+    "class": "Book",
+    "type": "Books",
+    "tags": [
+      "security"
+    ],
+    "url": "https://www.routledge.com/Modern-Cryptography-with-Proof-Techniques-and-Implementations/OunHwang-Kim-Lee/p/book/9780367723231",
+    "description": "Theory of provable cryptography"
+  },
+  {
+    "id": "BonSho23",
+    "authors": "D. Boneh, V. Shoup", 
+    "title": "A Graduate Course in Applied Cryptography",
+    "date": 2023,
+    "class": "Draft",
+    "type": "Books",
+    "tags":  [
+      "security",
+      "signatures"
+    ],
+    "url": "https://crypto.stanford.edu/~dabo/cryptobook/BonehShoup_0_5.pdf",
+    "description": "Incomplete but excellent"
+  },
+  {
+    "id": "EPRINT: BelDaiLi19",
+    "authors": "M. Bellare, W. Dai, L. Li", 
+    "title": "The Local Forking Lemma and its Application to Deterministic Encryption",
+    "date": 2019,
+    "class": "Article",
+    "type": "Articles",
+    "tags":  [
+      "security",
+      "signatures"
+    ],
+    "url": "https://eprint.iacr.org/2019/1017.pdf",
+    "description": "A forking lemma only reprogramming one point"
+  },
+  {
+    "id": "EPRINT: CriKomMal23",
+    "authors": "E. Crites, C. Komlo, M. Maller", 
+    "title": "Fully Adaptive Schnorr Threshold Signatures",
+    "date": 2023,
+    "class": "Article",
+    "type": "Articles",
+    "tags":  [
+      "security",
+      "signatures"
+    ],
+    "url": "https://eprint.iacr.org/archive/2023/445/1679907858.pdf",
+    "description": "Threshold signatures with adaptive security"
+  },
+  {
+    "id": "EPRINT: ChoPerSan23",
+    "authors": "T. Chou, E. Persichetti, P. Santini", 
+    "title": "On Linear Equivalence, Canonical Forms, and Digital Signatures",
+    "date": 2023,
+    "class": "Article",
+    "type": "Articles",
+    "tags":  [
+      "lep",
+      "signatures"
+    ],
+    "url": "https://eprint.iacr.org/2023/1533.pdf",
+    "description": "Compress the zero-knowledge proof via CF-LEP."
+  },
+  {
+    "id": "EPRINT: DKLPW20",
+    "authors": "L. De Feo, D. Kohel, A. Leroux, C. Petit, B. Wesolowski", 
+    "title": "SQISign: compact post-quantum signatures from quaternions and isogenies",
+    "date": 2020,
+    "class": "Article",
+    "type": "Articles",
+    "tags":  [
+      "isogenies",
+      "signatures"
+    ],
+    "url": "https://eprint.iacr.org/2020/1240.pdf",
+    "description": "Constructs SQISign from an identification protocol."
+  }
+]
