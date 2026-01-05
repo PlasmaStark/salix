@@ -81,9 +81,9 @@ export default function About() {
         <div className="border-l-4 border-accent pl-4 mb-10">
           <p className="text-normalleading-relaxed">
             In my spare time, I enjoy exploring the{" "}
-            <b>history of cryptography</b>. It's our past, and
-            it shows where principles or ideas we take for granted really came
-            from. Not to mention, it makes for great introductions in talks!
+            <b>history of cryptography</b>. It's our past, and it shows where
+            principles or ideas we take for granted really came from. Not to
+            mention, it makes for great introductions in talks!
           </p>
         </div>
       </section>
@@ -151,6 +151,79 @@ export default function About() {
       </section>
       <hr className="border-gray-300 my-8" />
     */}
+
+      {/* Bookshelf Section */}
+      <section className="mb-12">
+        <h2 className="text-3xl font-bold mb-8 text-white">Bookshelf</h2>
+        <div className="border-l-4 border-accent pl-4 mb-4">
+          <p className="text-normal leading-relaxed">
+            A selection of funny, clever or interesting books I found
+            noteworthy; <i>la crème de la crème</i>, from fiction to biography.
+            Had I used an LLM to write this, it would have called them
+            "thought-provoking". Worth a read if you find yourself bored.
+          </p>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+          <div className="relative aspect-[2/3] rounded-lg overflow-hidden group">
+            <Image
+              src="/images/books/feynman_joking.webp"
+              alt="Surely You're Joking, Mr. Feynman!"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-4">
+              <p className="text-white font-bold text-sm leading-tight">
+                Surely You're Joking, Mr. Feynman!
+              </p>
+              <p className="text-accent text-xs mt-1">
+                Richard D. Feynman, Ralph Leighton
+              </p>
+            </div>
+          </div>
+          <div className="relative aspect-[2/3] rounded-lg overflow-hidden group">
+            <Image
+              src="/images/books/lewis_evolution.webp"
+              alt="The evolution man"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-4">
+              <p className="text-white font-bold text-sm leading-tight">
+                The evolution man
+              </p>
+              <p className="text-accent text-xs mt-1">Roy Lewis</p>
+            </div>
+          </div>
+          <div className="relative aspect-[2/3] rounded-lg overflow-hidden group">
+            <Image
+              src="/images/books/wells_moon.webp"
+              alt="The First Men In The Moon"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-4">
+              <p className="text-white font-bold text-sm leading-tight">
+                The First Men In The Moon
+              </p>
+              <p className="text-accent text-xs mt-1">Herbert G. Wells</p>
+            </div>
+          </div>
+          <div className="relative aspect-[2/3] rounded-lg overflow-hidden group">
+            <Image
+              src="/images/books/leblanc_813.webp"
+              alt="813: The Double Life of Arsene Lupin"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-4">
+              <p className="text-white font-bold text-sm leading-tight">
+                813: The Double Life of Arsene Lupin
+              </p>
+              <p className="text-accent text-xs mt-1">Maurice Leblanc</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
