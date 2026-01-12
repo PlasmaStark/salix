@@ -3,31 +3,31 @@
     "title": "Elden Ring",
     "image": "/images/games/elden_ring.jpg",
     "scoreL": 9,
-    "scoreA": 0
+    "scoreA": 8.5
   },
   {
     "title": "Dave the Diver",
     "image": "/images/games/dave_diver.jpg",
     "scoreL": 8,
-    "scoreA": 0
+    "scoreA": 9
   },
   {
     "title": "The Witcher 3: Wild Hunt",
     "image": "/images/games/witcher.jpg",
     "scoreL": 10,
-    "scoreA": 0
+    "scoreA": 9.5
   },
   {
     "title": "Expedition 33",
     "image": "/images/games/expedition_33.jpg",
     "scoreL": 9.5,
-    "scoreA": 0
+    "scoreA": 9.25
   },
   {
     "title": "Fallout 4",
     "image": "/images/games/fallout_4.jpg",
     "scoreL": 8.5,
-    "scoreA": 0
+    "scoreA": 7.8
   },
   {
     "title": "Marvel's Spider-man",
