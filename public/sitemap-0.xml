@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>https://www.leonardoerrati.com/talks</loc><lastmod>2025-08-26T14:38:16.441Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.leonardoerrati.com/about</loc><lastmod>2026-01-05T15:35:56.459Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.leonardoerrati.com/chronicles</loc><lastmod>2026-01-15T09:09:17.743Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.leonardoerrati.com</loc><lastmod>2025-11-26T10:30:48.293Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.leonardoerrati.com/talks/tags/Authentication</loc><lastmod>2025-08-26T14:38:16.441Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.leonardoerrati.com/talks/tags/Blockchain</loc><lastmod>2025-08-26T14:38:16.441Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.leonardoerrati.com/talks/tags/Codes</loc><lastmod>2025-08-26T14:38:16.441Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.leonardoerrati.com/talks/tags/Factorisation</loc><lastmod>2025-08-26T14:38:16.441Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.leonardoerrati.com/talks/tags/Foundations</loc><lastmod>2025-08-26T14:38:16.441Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.leonardoerrati.com/talks/tags/History</loc><lastmod>2025-08-26T14:38:16.441Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.leonardoerrati.com/talks/tags/Signatures</loc><lastmod>2025-08-26T14:38:16.441Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.leonardoerrati.com/chronicles/tags/Asimov</loc><lastmod>2026-01-15T09:09:17.743Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.leonardoerrati.com/chronicles/tags/Books</loc><lastmod>2026-01-15T09:09:17.743Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.leonardoerrati.com/chronicles/tags/Bureaucracy</loc><lastmod>2026-01-15T09:09:17.743Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.leonardoerrati.com/chronicles/tags/Cybersecurity</loc><lastmod>2026-01-15T09:09:17.743Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.leonardoerrati.com/chronicles/tags/Primes</loc><lastmod>2026-01-15T09:09:17.743Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.leonardoerrati.com/chronicles/tags/Python</loc><lastmod>2026-01-15T09:09:17.743Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.leonardoerrati.com/talks/2021-10-19-quadratic-sieve</loc><lastmod>2025-07-12T14:39:15.746Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.leonardoerrati.com/talks/2022-12-14-mfa</loc><lastmod>2025-07-12T14:37:55.994Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.leonardoerrati.com/talks/2023-03-21-hamming</loc><lastmod>2025-07-12T14:37:36.965Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.leonardoerrati.com/talks/2025-03-21-pq-blockchain</loc><lastmod>2025-07-19T08:26:34.533Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.leonardoerrati.com/talks/2025-12-04-aperitif</loc><lastmod>2025-12-04T15:29:12.388Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 <url><loc>https://www.leonardoerrati.com/chronicles/2022-09-28-asimov-crusade</loc><changefreq>daily</changefreq><priority>0.7</priority></url>
 <url><loc>https://www.leonardoerrati.com/chronicles/2023-10-18-slow-priest</loc><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.leonardoerrati.com/chronicles/2023-primespiral</loc><changefreq>daily</changefreq><priority>0.7</priority></url>
 <url><loc>https://www.leonardoerrati.com/chronicles/2024-10-09-piracy-shield</loc><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.leonardoerrati.com/chronicles/2025-07-16-presentations</loc><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>

@@ -50,8 +50,9 @@ export default function Home() {
 
       {/* Categories Section */}
       <HomeCategories />
+
+      {/* Quote & changelog */}
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
-        {/* Quote */}
         <div className="relative bg-background-100 p-6 border-l-4 border-accent rounded-lg shadow-inner self-start">
           <span className="absolute top-2 left-6 text-accent text-5xl leading-none opacity-20 select-none">
             “
@@ -70,8 +71,6 @@ export default function Home() {
             — Arsène Lupin, <span className="italic">Gentleman Thief</span>
           </figcaption>
         </div>
-
-        {/* Changelog */}
         <Changelog entries={changelog} />
       </section>
     </main>
