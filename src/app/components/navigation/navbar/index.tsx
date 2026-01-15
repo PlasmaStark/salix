@@ -5,13 +5,13 @@ import Link from "next/link";
 import { MobileSidebar } from "./MobileSidebar";
 import { HamburgerButton } from "./HamburgerButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBook, faComments, faFlask, faHome, faMugHot, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faPenNib, faComments, faFlask, faHome, faMugHot, faUser } from "@fortawesome/free-solid-svg-icons";
 
 const navLinks = [
   { path: "", label: "Home", icon: faHome },
   { path: "about", label: "About", icon: faUser },
   { path: "academia", label: "Academia", icon: faFlask },
-  { path: "primetales", label: "Prime Tales", icon: faBook },
+  { path: "chronicles", label: "Chronicles", icon: faPenNib },
   { path: "talks", label: "Talks", icon: faComments },
   { path: "the-digest", label: "The Digest", icon: faMugHot },
 ];

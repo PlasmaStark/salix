@@ -1,19 +1,19 @@
 import Link from "next/link";
 import { ContentItem } from "./getPosts";
-import Image from 'next/image';
+import Image from "next/image";
 
 type ContentCardProps = {
   post: ContentItem;
   baseRoute: string;
-  variant?: 'default' | 'small' | 'horizontal' | 'textual';
+  variant?: "default" | "small" | "horizontal" | "textual";
 };
 
 export default function ContentCard({
   post,
   baseRoute,
-  variant = 'default',
+  variant = "default",
 }: ContentCardProps) {
-  if (variant === 'small') {
+  if (variant === "small") {
     return (
       <li className="p-2 border rounded shadow hover:shadow-lg transition">
         <Link
@@ -43,7 +43,7 @@ export default function ContentCard({
     );
   }
 
-  if (variant === 'textual') {
+  if (variant === "textual") {
     return (
       <li className="bg-white rounded-md p-4 flex flex-col">
         <Link href={`/${baseRoute}/${post.slug}`} className="no-underline mb-2">
@@ -76,42 +76,59 @@ export default function ContentCard({
     );
   }
 
-
-  if (variant === 'horizontal') {
+  if (variant === "horizontal") {
     return (
-      <li className="rounded-lg bg-white p-2">
-        <Link href={`/${baseRoute}/${post.slug}`} className="no-underline">
-          {post.coverImage && (
-            <div className="flex items-start">
-              <div className="w-[100px] flex-shrink-0 mr-4">
+      <li className="bg-gray-800 flex flex-col m-2">
+        <Link
+          href={`/${baseRoute}/${post.slug}`}
+          className="no-underline block"
+        >
+          <div className="flex flex-col items-center">
+            {post.coverImage && (
+              <div className="flex flex-col flex-grow w-full flex-shrink-0">
                 <Image
-                  src={post.coverImage.startsWith("/") ? post.coverImage : `/${post.coverImage}`}
-                  width={100}
-                  height={100}
-                  className="object-cover rounded-md"
+                  src={
+                    post.coverImage.startsWith("/")
+                      ? post.coverImage
+                      : `/${post.coverImage}`
+                  }
+                  width={400}
+                  height={150}
+                  className="object-cover aspect-video"
                   alt={post.title}
                 />
               </div>
-              <div className="flex flex-col justify-center">
-                <h2 className="text-xl font-bold text-accent">{post.title}</h2>
-                <p className="text-sm text-gray-500">{post.date}</p>
-                <p className="text-normal text-gray-700">{post.description}</p>
-              </div>
+            )}
+
+            <div className="flex flex-col flex-grow w-full p-2">
+              <p className="text-sm text-gray-400 mb-2">
+                 {post.date}
+              </p>
+
+              <h2 className="text-2xl font-bold text-foreground leading-tight mb-1">
+                {post.title}
+              </h2>
+
+              <p className="text-sm text-gray-400 leading-relaxed line-clamp-2 italic font-serif">
+                 "{post.description}"
+              </p>
             </div>
-          )}
+          </div>
         </Link>
-        <ul className="flex flex-wrap gap-2 ml-1 mt-2 mb-1">
-          {post.tags.map((tag) => (
-            <li key={tag}>
-              <Link
-                href={`/${baseRoute}/tags/${tag}`}
-                className="text-xs no-underline text-gray-600 bg-gray-200 rounded-full px-2 py-1 hover:bg-gray-300 transition-colors"
-              >
-                #{tag}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <div className="mt-auto p-2 pt-0"> 
+        <ul className="flex flex-wrap gap-2">
+            {post.tags.map((tag) => (
+              <li key={tag}>
+                <Link
+                  href={`/${baseRoute}/tags/${tag}`}
+                  className="tracking-wider no-underline text-accent"
+                >
+                  {tag}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </li>
     );
   }

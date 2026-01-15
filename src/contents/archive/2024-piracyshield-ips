@@ -1,9 +1,0 @@
-| YYYY-MM-DD | downtime | friendly target                                                  |
-| ---------- | -------- | ---------------------------------------------------------------- |
-| 2024-02-24 |          | Zenlayers's CDN (`IP 104.166.170.62`) [@WEB:TF24]                |
-| 2024-02-24 |          | Cloudflare's CDN (`IP 188.114.97.7`) [@WEB:DD24a]                |
-| 2024-08-18 | 37d      | Samsung's IPTV (`https://tizen.smartone-iptv.com`) [@WEB:HDB24b] |
-| 2024-08-18 | 37d      | LG's IPTV (`https://lg.smartone-iptv.com`) [@WEB:HDB24b]         |
-| 2024-10-19 | 6h       | Google's CDN (`drive.usercontent.google.com`) [@WEB:LS24]        |
-| 2024-10-19 | 6h       | Imperva's CDN (unknown) [@WEB:G24]                               |
-| 2024-12-01 |          | DDay's CDN [@WEB:DD24b]                                          |

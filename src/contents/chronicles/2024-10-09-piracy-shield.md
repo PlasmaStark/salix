@@ -1,11 +1,11 @@
 ---
 title: "Italian fiascos: PiracyShield"
 date: "2024-10-09"
-description: "The big red button to nuke the internet."
+description: "The big red button to nuke the web."
 coverImage: "images/chronicles/2025-shield.webp"
 tags:
   - Cybersecurity
-  - Infrastructure
+  - Bureaucracy
 ---
 
 > The July 14th 2023 law no. 93, which came into force on August 8th, grants new powers to the Authority to strengthen its functions for a more effective and timely counteraction against online piracy related to live broadcast events.

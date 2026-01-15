@@ -1,11 +1,10 @@
 ---
 title: "The Slow Priest"
 date: "2023-10-18"
-description: "A job interview for public administration."
+description: "A job interview in public administration."
 coverImage: "images/chronicles/2023-priest.webp"
 tags:
   - Bureaucracy
-  - Infrastructure
 ---
 
 One of my most cathartic experiences was a job interview for a partially state-owned company, which shall only be named _Slow SpA_.

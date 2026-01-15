@@ -29,13 +29,17 @@ export default async function BlogPost({ params }: { params: any }) {
 
   return (
     <article className="container max-w-3xl mx-auto px-2 py-2">
-      {/* Header */}
+      {/* Titolo */}
       <header className="mb-6">
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"
+        />
         <Breadcrumb />
-      </header>
-
-      <div className="flex items-start gap-2 mb-1 max-w-2xl mx-auto block sm:hidden">
-        <p className="text-sm text-gray-500">
+        <h1 className="text-4xl font-bold text-white-800">{metadata.title}</h1>
+        <p className="text-normal italic text-white-400">{metadata.description}</p>
+        <p className="text-normal text-gray-500">
+          first made{" "}
           {new Date(metadata.date).toLocaleDateString("en-GB", {
             day: "numeric",
             month: "long",
@@ -46,63 +50,33 @@ export default async function BlogPost({ params }: { params: any }) {
             day: "numeric",
             month: "long",
             year: "numeric",
-          })}
+          })}{" "}
         </p>
-      </div>
-
-      <div className="flex rounded-lg bg-white items-start p-4 max-w-2xl mx-auto">
-        {/* Immagine */}
-        <div className="w-[120px] aspect-[3/4] flex-shrink-0 mr-4 overflow-hidden rounded-md">
-          <Image
-            src={
-              metadata.coverImage.startsWith("/")
-                ? metadata.coverImage
-                : `/${metadata.coverImage}`
-            }
-            width={480}
-            height={640}
-            alt={metadata.title}
-            className="w-full h-full object-cover"
-          />
-        </div>
-
-        <div className="flex flex-col justify-center">
-          <h1 className="text-2xl font-bold text-accent">
-            {metadata.title}
-          </h1>
-          <p className="text-normal text-gray-700">
-            {metadata.description}
-          </p>
-
-          {/* visibile solo da sm in su */}
-          <p className="text-sm text-gray-500 hidden sm:block">
-            {new Date(metadata.date).toLocaleDateString("en-GB", {
-              day: "numeric",
-              month: "long",
-              year: "numeric",
-            })}
-            , last modified{" "}
-            {new Date(lastMod).toLocaleDateString("en-GB", {
-              day: "numeric",
-              month: "long",
-              year: "numeric",
-            })}
-          </p>
-        </div>
-      </div>
-
-      <ul className="flex items-start gap-2 mt-1 max-w-2xl mx-auto">
-        {metadata.tags.map((tag: string) => (
-          <li key={tag}>
-            <Link
-              href={`/chronicles/tags/${tag}`}
-              className="text-sm text-gray-600 bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-300 no-underline"
-            >
-              #{tag}
-            </Link>
-          </li>
-        ))}
-      </ul>
+        <ul className="flex flex-wrap gap-2 mt-4">
+          {metadata.tags.map((tag: string) => (
+            <li key={tag}>
+              <Link
+                href={`/primetales/tags/${tag}`}
+                className="text-sm text-gray-600 bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-300 no-underline"
+              >
+                #{tag}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </header>
+<div className="w-fill mb-4 flex items-center justify-center">
+      {/* Contenuto */}
+<div className="w-[40%] overflow-hidden aspect-square">
+  <Image
+    src={metadata.coverImage.startsWith("/") ? metadata.coverImage : `/${metadata.coverImage}`}
+    height={400}
+    width={400}
+    alt={metadata.title}
+    className="object-cover w-full h-full" 
+  />
+</div>
+</div>
 
       {/* TOC */}
       {toc.length > 0 && (

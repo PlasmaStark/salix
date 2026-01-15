@@ -20,8 +20,7 @@ export default async function TagPage({ params }: { params: Promise<{ tag: strin
         Chronicles: <b>{tag}</b>
       </h1>
       <p className="text-normal text-center mb-10">
-        <b>Chronicles</b> is a curated collection of personal tales: some
-        amusing, others cautionary.
+        <b>Chronicles</b> is a collection of amusing tales and mathematical content.
       </p>
       <ContentList
         contents={posts}

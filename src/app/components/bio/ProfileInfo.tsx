@@ -78,7 +78,7 @@ export default function ProfileInfo({ compact = false }: { compact?: boolean }) 
                   aria-haspopup="true"
                   aria-expanded={open}
                 >
-                  Follow
+                  Links
                 </button>
 
                 {open && (

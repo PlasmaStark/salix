@@ -1,4 +1,4 @@
-import { faUser, faBook, faComments, faFlask, faMugHot } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faComments, faFlask, faMugHot, faPenNib } from '@fortawesome/free-solid-svg-icons';
 import NavCard from './NavCard';
 
 const categories = [
@@ -15,10 +15,10 @@ const categories = [
     description: 'Academic research and activities.',
   },
   {
-    href: '/primetales',
-    icon: faBook,
-    title: 'Prime Tales',
-    description: 'A set of algebraic anecdotes.',
+    href: '/chronicles',
+    icon: faPenNib,
+    title: 'Chronicles',
+    description: 'Tales from Italy and research.',
   },
   {
     href: '/talks',
