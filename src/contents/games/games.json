@@ -21,7 +21,7 @@
     "title": "Expedition 33",
     "image": "/images/games/expedition_33.jpg",
     "scoreL": 9.5,
-    "scoreA": 9.25
+    "scoreA": 9.3
   },
   {
     "title": "Fallout 4",
@@ -32,7 +32,7 @@
   {
     "title": "Marvel's Spider-man",
     "image": "/images/games/spiderman.jpg",
-    "scoreL": 0,
-    "scoreA": 0
+    "scoreL": "",
+    "scoreA": ""
   }
 ]
