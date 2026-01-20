@@ -1,38 +1,44 @@
 [
   {
     "title": "Elden Ring",
-    "image": "/images/games/elden_ring.jpg",
+    "image": "/images/games/elden_ring.webp",
     "scoreL": 9,
     "scoreA": 8.5
   },
   {
     "title": "Dave the Diver",
-    "image": "/images/games/dave_diver.jpg",
-    "scoreL": 8.25,
+    "image": "/images/games/dave_diver.webp",
+    "scoreL": 8,
     "scoreA": 9
   },
   {
     "title": "The Witcher 3: Wild Hunt",
-    "image": "/images/games/witcher.jpg",
+    "image": "/images/games/witcher.webp",
     "scoreL": 10,
     "scoreA": 9.5
   },
   {
     "title": "Expedition 33",
-    "image": "/images/games/expedition_33.jpg",
+    "image": "/images/games/expedition_33.webp",
     "scoreL": 9.5,
-    "scoreA": 9.3
+    "scoreA": 9.25
   },
   {
     "title": "Fallout 4",
-    "image": "/images/games/fallout_4.jpg",
+    "image": "/images/games/fallout_4.webp",
     "scoreL": 8.5,
     "scoreA": 7.8
   },
   {
     "title": "Marvel's Spider-man",
-    "image": "/images/games/spiderman.jpg",
+    "image": "/images/games/spiderman.webp",
     "scoreL": 8.25,
     "scoreA": 7.5
+  },
+  {
+    "title": "Death Stranding",
+    "image": "/images/games/death_stranding.webp",
+    "scoreL": "",
+    "scoreA": ""
   }
 ]
