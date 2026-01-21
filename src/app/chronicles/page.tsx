@@ -1,9 +1,9 @@
-import Breadcrumb from '@components/breadcrumb';
-import { getContentList } from '@lib/getPosts';
-import { BLOG_DIR } from '../../../config';
-import { getAllTags } from '@/lib/getPosts';
-import ContentList from '@/lib/ContentList';
-import { Metadata } from 'next';
+import Breadcrumb from "@components/breadcrumb";
+import { getContentList } from "@lib/getPosts";
+import { BLOG_DIR } from "../../../config";
+import { getAllTags } from "@/lib/getPosts";
+import ContentList from "@/lib/ContentList";
+import { Metadata } from "next";
 
 export async function generateStaticParams() {
   const tags = await getAllTags(BLOG_DIR);
@@ -13,8 +13,8 @@ export async function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
-    title: "Chronicles",
-    description: "A collection of personal chronicles",
+  title: "Chronicles",
+  description: "Amusing tales and mathematical content",
 };
 
 export default async function ChroniclesPage() {
@@ -25,7 +25,8 @@ export default async function ChroniclesPage() {
       <Breadcrumb />
       <h1 className="text-4xl font-bold text-center mb-6">Chronicles</h1>
       <p className="text-normal text-center mb-10">
-        <b>Chronicles</b> is a collection of amusing tales and mathematical content.
+        <b>Chronicles</b> is a collection of amusing tales and mathematical
+        content.
       </p>
       <ContentList
         contents={posts}

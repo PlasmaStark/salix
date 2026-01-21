@@ -85,38 +85,35 @@ export default function ContentCard({
         >
           <div className="flex flex-col items-center">
             {post.coverImage && (
-              <div className="flex flex-col flex-grow w-full flex-shrink-0">
+              <div className="w-fill overflow-hidden aspect-square">
                 <Image
                   src={
                     post.coverImage.startsWith("/")
                       ? post.coverImage
                       : `/${post.coverImage}`
                   }
+                  height={400}
                   width={400}
-                  height={150}
-                  className="object-cover aspect-video"
                   alt={post.title}
+                  className="object-cover w-full h-full"
                 />
               </div>
             )}
-
             <div className="flex flex-col flex-grow w-full p-2">
-              <p className="text-sm text-gray-400 mb-2">
-                 {post.date}
-              </p>
+              <p className="text-sm text-gray-400 mb-2">{post.date}</p>
 
               <h2 className="text-2xl font-bold text-foreground leading-tight mb-1">
                 {post.title}
               </h2>
 
               <p className="text-sm text-gray-400 leading-relaxed line-clamp-2 italic font-serif">
-                 "{post.description}"
+                "{post.description}"
               </p>
             </div>
           </div>
         </Link>
-        <div className="mt-auto p-2 pt-0"> 
-        <ul className="flex flex-wrap gap-2">
+        <div className="mt-auto p-2 pt-0">
+          <ul className="flex flex-wrap gap-2">
             {post.tags.map((tag) => (
               <li key={tag}>
                 <Link
