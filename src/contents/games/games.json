@@ -26,19 +26,19 @@
   {
     "title": "Fallout 4",
     "image": "/images/games/fallout_4.webp",
-    "scoreL": 8.5,
+    "scoreL": 8.3,
     "scoreA": 7.8
   },
   {
     "title": "Marvel's Spider-man",
     "image": "/images/games/spiderman.webp",
-    "scoreL": 8.25,
+    "scoreL": 8,
     "scoreA": 7.5
   },
   {
     "title": "Death Stranding",
     "image": "/images/games/death_stranding.webp",
-    "scoreL": "",
-    "scoreA": ""
+    "scoreL": "TBA",
+    "scoreA": "TBA"
   }
 ]
