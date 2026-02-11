@@ -1,6 +1,14 @@
 [
   {
     "type": "talk",
+    "title": "What the Pell: Cryptanalysis of Degree-two Pell Curves",
+    "event": "ITASEC26",
+    "date": "February 2026",
+    "authors": "L. Errati",
+    "link": "/talks/presentation_pell_2026-02-11"
+  },
+  {
+    "type": "talk",
     "title": "Cryptographic Standards for Random Number Generation",
     "event": "Cifris25",
     "date": "September 2025",
