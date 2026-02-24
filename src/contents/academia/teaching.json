@@ -1,5 +1,12 @@
 [
   {
+    "title": "La storia della crittografia: il progetto Venona",
+    "description": "Theory and shortcomings of OTP, its use and breaks during the cold war. (Italian)",
+    "type": "Supervised Thesis",
+    "date": "March 2026",
+    "authors": "C. Molino"
+  },
+  {
     "title": "La firma di Schnorr",
     "description": "Construction and applications of the Schnorr signature to the Bitcoin network. (Italian)",
     "type": "Supervised Thesis",
