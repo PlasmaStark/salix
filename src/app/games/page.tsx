@@ -56,81 +56,80 @@ export default function GamingPage() {
           </div>
         ))}
       </div>
+{/* ── LEADERBOARD ── */}
+<section className="mt-20 mb-8">
+  <div className="flex items-center gap-4 mb-8">
+    <h2 className="text-3xl font-black uppercase tracking-widest">Leaderboard</h2>
+    <div className="flex-1 h-px bg-gradient-to-r from-gray-500 to-transparent" />
+  </div>
 
-      {/* ── LEADERBOARD ── */}
-      <section className="mt-20 mb-8">
-        <div className="flex items-center gap-4 mb-8">
-          <h2 className="text-3xl font-black uppercase tracking-widest">Leaderboard</h2>
-          <div className="flex-1 h-px bg-gradient-to-r from-gray-500 to-transparent" />
+  <div className="flex flex-col gap-2">
+    {rankedGames.map((game, i) => {
+      const medal = i === 0 ? "🥇" : i === 1 ? "🥈" : i === 2 ? "🥉" : null;
+      const isTop3 = i < 3;
+
+      return (
+        <div
+          key={game.title}
+          className={`
+            flex items-center gap-2 rounded-xl px-3 py-3 min-w-0
+            ${isTop3
+              ? "bg-gray-800 border border-gray-600"
+              : "bg-gray-900 border border-gray-800"
+            }
+          `}
+        >
+          {/* Posizione */}
+          <div className="w-8 flex-shrink-0 text-center">
+            {medal ? (
+              <span className="text-xl">{medal}</span>
+            ) : (
+              <span className="text-gray-500 font-black"># {i + 1}</span>
+            )}
+          </div>
+
+          {/* Thumbnail */}
+          <div className="relative w-9 h-9 rounded-lg overflow-hidden flex-shrink-0">
+            <Image
+              src={game.image}
+              alt={game.title}
+              fill
+              className="object-cover"
+            />
+          </div>
+
+          {/* Titolo */}
+          <span className={`flex-1 font-bold truncate min-w-0 text-sm md:text-base ${isTop3 ? "text-white" : "text-gray-300"}`}>
+            {game.title}
+          </span>
+
+          {/* Voti */}
+          <div className="flex items-center gap-2 flex-shrink-0">
+            <div className="hidden sm:flex flex-col items-center">
+              <span className="text-[9px] font-black uppercase text-gray-500">L</span>
+              <span className="text-sm font-black text-accent">{game.scoreL}</span>
+            </div>
+            <div className="hidden sm:flex flex-col items-center">
+              <span className="text-[9px] font-black uppercase text-gray-500">A</span>
+              <span className="text-sm font-black text-accent6">{game.scoreA}</span>
+            </div>
+
+            {/* Media */}
+            <div
+              className={`
+                w-11 h-9 flex items-center justify-center rounded-lg font-black text-base
+                shadow-[3px_3px_0px_0px_rgba(0,0,0,0.4)] transform -rotate-2 flex-shrink-0
+                ${isTop3 ? "bg-white text-gray-900" : "bg-gray-700 text-white"}
+              `}
+            >
+              {game.avg % 1 === 0 ? game.avg : game.avg.toFixed(1)}
+            </div>
+          </div>
         </div>
-
-        <div className="flex flex-col gap-2">
-          {rankedGames.map((game, i) => {
-            const medal = i === 0 ? "🥇" : i === 1 ? "🥈" : i === 2 ? "🥉" : null;
-            const isTop3 = i < 3;
-
-            return (
-              <div
-                key={game.title}
-                className={`
-                  flex items-center gap-4 rounded-xl px-4 py-3 transition-all
-                  ${isTop3
-                    ? "bg-gray-800 border border-gray-600"
-                    : "bg-gray-900 border border-gray-800"
-                  }
-                `}
-              >
-                {/* Posizione */}
-                <div className="w-10 flex-shrink-0 text-center">
-                  {medal ? (
-                    <span className="text-2xl">{medal}</span>
-                  ) : (
-                    <span className="text-gray-500 font-black text-lg">#{i + 1}</span>
-                  )}
-                </div>
-
-                {/* Thumbnail */}
-                <div className="relative w-10 h-10 rounded-lg overflow-hidden flex-shrink-0">
-                  <Image
-                    src={game.image}
-                    alt={game.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-
-                {/* Titolo */}
-                <span className={`flex-1 font-bold truncate ${isTop3 ? "text-white" : "text-gray-300"}`}>
-                  {game.title}
-                </span>
-
-                {/* Voti L e A */}
-                <div className="flex items-center gap-3 flex-shrink-0">
-                  <div className="flex flex-col items-center">
-                    <span className="text-[9px] font-black uppercase text-gray-500">L</span>
-                    <span className="text-sm font-black text-accent">{game.scoreL}</span>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <span className="text-[9px] font-black uppercase text-gray-500">A</span>
-                    <span className="text-sm font-black text-accent6">{game.scoreA}</span>
-                  </div>
-
-                  {/* Media */}
-                  <div
-                    className={`
-                      w-12 h-10 flex items-center justify-center rounded-lg font-black text-lg
-                      shadow-[3px_3px_0px_0px_rgba(0,0,0,0.4)] transform -rotate-2
-                      ${isTop3 ? "bg-white text-gray-900" : "bg-gray-700 text-white"}
-                    `}
-                  >
-                    {game.avg % 1 === 0 ? game.avg : game.avg.toFixed(1)}
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </section>
+      );
+    })}
+  </div>
+</section>
     </main>
   );
 }
