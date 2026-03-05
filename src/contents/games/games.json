@@ -38,6 +38,12 @@
   {
     "title": "Death Stranding",
     "image": "/images/games/death_stranding.webp",
+    "scoreL": "4.3",
+    "scoreA": "4"
+  },
+  {
+    "title": "Bulletstorm",
+    "image": "/images/games/bulletstorm.webp",
     "scoreL": "TBA",
     "scoreA": "TBA"
   }
