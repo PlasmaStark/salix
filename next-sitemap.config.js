@@ -1,8 +1,17 @@
-const { mapUrlToFile, getLastModForUrl } = require('./src/lib/Atlas');
+const { mapUrlToFile, getLastModForUrl } = require("./src/lib/Atlas");
 
 module.exports = {
   siteUrl: process.env.SITE_URL || "https://www.leonardoerrati.com",
   generateRobotsTxt: true,
+  robotsTxtOptions: {
+    additionalSitemaps: [],
+    policies: [
+      {
+        userAgent: "*",
+        disallow: ["/starxive"],
+      },
+    ],
+  },
 
   transform: async (config, urlPath) => {
     const lastmod = getLastModForUrl(urlPath);

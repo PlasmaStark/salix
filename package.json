@@ -21,6 +21,7 @@
     "framer-motion": "^12.23.0",
     "gray-matter": "^4.0.3",
     "katex": "^0.16.19",
+    "maplibre-gl": "^5.19.0",
     "marked": "^15.0.3",
     "next": "^15.3.4",
     "next-sitemap": "^4.2.3",
