@@ -1,10 +1,5 @@
 [
   {
-    "date": "2026-04",
-    "title": "1. The KKS signature scheme",
-    "description": "Structure and attacks."
-  },
-  {
     "date": "TBA",
     "title": "?. Security of the Fiat-Shamir transform",
     "description": "Minimal security conditions."
