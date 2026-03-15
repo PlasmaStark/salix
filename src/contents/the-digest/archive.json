@@ -1,2 +1,14 @@
 [
+  {
+    "date": "2026-03-18",
+    "title": "2. The Alekhnovich I and II encryption schemes",
+    "description": "Structure and security.",
+    "link": ""
+  },
+  {
+    "date": "2026-02-19",
+    "title": "1. The KKS signature scheme",
+    "description": "Structure and attacks.",
+    "link": ""
+  }
 ]
