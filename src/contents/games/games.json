@@ -38,12 +38,18 @@
   {
     "title": "Death Stranding",
     "image": "/images/games/death_stranding.webp",
-    "scoreL": "4.3",
+    "scoreL": "4.5",
     "scoreA": "4"
   },
   {
     "title": "Bulletstorm",
     "image": "/images/games/bulletstorm.webp",
+    "scoreL": "7.5",
+    "scoreA": "8"
+  },
+  {
+    "title": "Wolfenstein: the New Order",
+    "image": "/images/games/wolfenstein_no.webp",
     "scoreL": "TBA",
     "scoreA": "TBA"
   }

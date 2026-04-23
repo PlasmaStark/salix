@@ -79,7 +79,7 @@ export default function TheDigestPage() {
         <h2 className="text-2xl font-semibold flex items-center gap-2">
           Miscellanea
         </h2>
-        <p className="mb-4">Some material from talks or events that still fits the scope of The Digest.</p>
+        <p className="mb-4">Some material from talks or events still fitting the scope of The Digest.</p>
 
         <TimelineList
           items={miscellaneaEpisodes}
