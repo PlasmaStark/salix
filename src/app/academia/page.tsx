@@ -7,7 +7,6 @@ import organisation from "../../contents/academia/organisation.json";
 import teaching from "../../contents/academia/teaching.json";
 import { Metadata } from "next";
 import TimelineList from "../components/navigation/timelineList/timelineList";
-import AcademiaCategories from "../components/navigation/navcards/AcademiaCards";
 
 export const metadata: Metadata = {
   title: "Academia",
@@ -21,8 +20,6 @@ export default function AcademiaPage() {
       <section className="text-center mb-12">
         <h1 className="text-4xl font-bold mb-2">Academia</h1>
         <p>Cryptography PhD student at Politechnic of Turin</p>
-        {/* Categories Section */}
-        <AcademiaCategories />
       </section>
 
       <section className="mb-12">

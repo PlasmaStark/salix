@@ -1,4 +1,4 @@
-import { faUser, faComments, faFlask, faMugHot, faPenNib } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faComments, faFlask, faMugHot, faPenNib, faGamepad} from '@fortawesome/free-solid-svg-icons';
 import NavCard from './NavCard';
 
 const categories = [
@@ -18,7 +18,25 @@ const categories = [
     href: '/chronicles',
     icon: faPenNib,
     title: 'Chronicles',
-    description: 'Tales from Italy and research.',
+    description: 'A collection of tales and legends.',
+  },
+  {
+    href: '/games',
+    icon: faGamepad,
+    title: 'Games',
+    description: 'Games played & scored with a friend.',
+  },
+  {
+    href: '/talks',
+    icon: faComments,
+    title: 'Talks',
+    description: 'Public talks and public outreach.',
+  },
+  {
+    href: '/the-digest',
+    icon: faMugHot,
+    title: 'The Digest',
+    description: 'Periodic cryptographic digest.',
   },
 ];
 
