@@ -3,6 +3,8 @@ import { MdOutlineDateRange } from "react-icons/md";
 interface Item {
   title: string;
   date: string;
+  dateEnd?: string; 
+  logo?: string;
   authors?: string;
   event?: string;
   description?: string;
@@ -47,9 +49,6 @@ const Separator = () => (
         &bull;
     </span>
 );
-// I used a middle dot (•) instead of a comma (,) as it often looks cleaner
-// and avoids the need for a trailing space, but you can change it back to
-// ", " if you prefer a comma and a space.
 
 export default function TimelineList({
   items,
@@ -65,21 +64,31 @@ export default function TimelineList({
       {items.map((item, idx) => {
         const isCompactMode = !item.event && !item.authors;
 
-        // Define the sequence of visible metadata items to apply separators correctly
         const metadataItems = [
-          // 1. Date (rimosso whitespace-nowrap)
-          <span
-            key="date"
-            className="flex items-center gap-1 text-gray-400 font-medium"
-          >
-            <MdOutlineDateRange className={`${linkColor}`} />
-            {new Date(item.date).toLocaleDateString("en-GB", {
-              year: "numeric",
-              month: "short",
-            })}
-          </span>,
+          // 1. Date range
+<span
+  key="date"
+  className="flex items-center gap-1 text-gray-400 font-medium"
+>
+  <MdOutlineDateRange className={`${linkColor}`} />
+  {new Date(item.date).toLocaleDateString("en-GB", {
+    year: "numeric",
+    month: "short",
+  })}
+  {item.dateEnd && (
+    <>
+      {" → "}
+      {item.dateEnd === "present"
+        ? "Present"
+        : new Date(item.dateEnd).toLocaleDateString("en-GB", {
+            year: "numeric",
+            month: "short",
+          })}
+    </>
+  )}
+</span>,
 
-          // 2. Type (Badge - lasciato com'era)
+          // 2. Type 
           item.type && (
             <span
               key="type"
@@ -89,7 +98,7 @@ export default function TimelineList({
             </span>
           ),
 
-          // 3. Link (rimosso whitespace-nowrap)
+          // 3. Link
           item.link ? (
             <a
               key="link"
@@ -107,14 +116,14 @@ export default function TimelineList({
             </span>
           ),
 
-          // 4. Event (rimosso whitespace-nowrap)
+          // 4. Event
           !isCompactMode && item.event && (
             <span key="event" className="text-gray-400 italic">
               {item.event}
             </span>
           ),
 
-          // 5. Authors (rimosso whitespace-nowrap)
+          // 5. Authors
           !isCompactMode && item.authors && (
             <span key="authors">
               {item.authors}
@@ -132,22 +141,30 @@ export default function TimelineList({
         return (
           <li key={idx} className={`relative pl-6 border-l-4 ${borderColor}`}>
             {/* RIGA 1: TITOLO */}
-            <h3 className="text-lg font-bold text-white leading-tight mb-1">
+            <h3 className="text-lg font-bold text-white leading-tight mb-1 flex items-center gap-2">
+              {item.logo && (
+                <img
+                  src={item.logo}
+                  alt=""
+                  width={20}
+                  height={20}
+                  className="rounded-sm object-contain"
+                />
+              )}
               {item.title}
             </h3>
 
-            {/* RIGA 2: METADATI - Use flex-wrap and map with separator */}
+            {/* RIGA 2: METADATI */}
             <div className="text-sm text-gray-400 flex flex-wrap items-center">
               {metadataItems.map((component, componentIdx) => (
                 <div key={component!.key} className="flex items-center">
                   {component}
-                  {/* Insert Separator only if it's NOT the last item */}
                   {componentIdx < metadataItems.length - 1 && <Separator />}
                 </div>
               ))}
             </div>
 
-            {/* RIGA 3: Descrizione a capo (Solo mode Complessa) */}
+            {/* RIGA 3: Descrizione a capo */}
             {!isCompactMode && item.description && (
               <p className="text-sm text-gray-400 leading-relaxed w-fit pr-4">
                 {item.description}

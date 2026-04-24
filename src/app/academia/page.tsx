@@ -1,4 +1,5 @@
 import Breadcrumb from "../components/navigation/breadcrumb";
+import positions from "../../contents/academia/positions.json";
 import publications from "../../contents/academia/publications.json";
 import contributions from "../../contents/academia/contributions.json";
 import theses from "../../contents/academia/theses.json";
@@ -20,6 +21,13 @@ export default function AcademiaPage() {
       <section className="text-center mb-12">
         <h1 className="text-4xl font-bold mb-2">Academia</h1>
         <p>Cryptography PhD student at Politechnic of Turin</p>
+      </section>
+
+      <section className="mb-12">
+        <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
+          Positions
+        </h2>
+        <TimelineList items={positions} borderColor="border-accent" />
       </section>
 
       <section className="mb-12">
