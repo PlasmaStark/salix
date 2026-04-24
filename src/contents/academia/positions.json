@@ -4,15 +4,15 @@
     "date": "January 2026",
     "dateEnd": "present",
     "event": "Osservatorio Bitcoin",
-    "link" : "https://crypto.polito.it/bitcoin",
-    "logo": "/images/logos/osservatorio-bitcoin.png"
+    "link" : "https://crypto.polito.it/en/bitcoin",
+    "logo": "/images/logos/osservatorio-bitcoin.webp"
   },
   {
     "title": "PhD Student",
     "date": "February 2025",
     "dateEnd": "present",
     "event": "Politecnico di Torino",
-    "logo": "/images/logos/polito.png",
-    "link": "https://www.polito.it/personale?p=leonardo.errati"
+    "link": "https://www.polito.it/personale?p=leonardo.errati",
+    "logo": "/images/logos/polito.webp"
   }
 ]

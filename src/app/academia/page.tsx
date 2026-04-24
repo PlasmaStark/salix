@@ -27,7 +27,7 @@ export default function AcademiaPage() {
         <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
           Positions
         </h2>
-        <TimelineList items={positions} borderColor="border-accent" />
+        <TimelineList items={positions} borderColor="border-accent4" />
       </section>
 
       <section className="mb-12">
