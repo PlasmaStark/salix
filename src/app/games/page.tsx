@@ -80,7 +80,7 @@ export default function GamingPage() {
           `}
         >
           {/* Posizione */}
-          <div className="w-8 flex-shrink-0 text-center">
+          <div className="w-10 flex-shrink-0 text-center">
             {medal ? (
               <span className="text-xl">{medal}</span>
             ) : (
