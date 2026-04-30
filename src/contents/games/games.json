@@ -50,6 +50,12 @@
   {
     "title": "Wolfenstein: the New Order",
     "image": "/images/games/wolfenstein_no.webp",
+    "scoreL": "8.25",
+    "scoreA": "8.25"
+  },
+  {
+    "title": "The Last of Us (part 1)",
+    "image": "/images/games/lastofus_1.webp",
     "scoreL": "TBA",
     "scoreA": "TBA"
   }
