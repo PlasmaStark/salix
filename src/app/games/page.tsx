@@ -19,7 +19,7 @@ export default function GamingPage() {
     <main className="container mx-auto px-2 py-8">
       <section className="text-center mb-12">
         <h1 className="text-4xl font-bold mb-2">Games</h1>
-        <p className="text-gray-400 italic">Games played by L & A.</p>
+        <p className="text-gray-400 italic">Games played and scored by by L & A.</p>
       </section>
 
       {/* Griglia: 2 colonne mobile, 3 colonne desktop */}
