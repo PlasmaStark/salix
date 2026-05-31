@@ -26,31 +26,8 @@ export default function GamingPage() {
         </p>
       </header>
       <section>
-        {/* Mobile */}
         <div
-          className="sm:hidden mb-10"
-          style={{
-            color: "#ffe81f",
-            fontFamily: "Georgia, serif",
-            lineHeight: 1.9,
-            fontSize: "15px",
-          }}
-        >
-          <p className="text-4xl text-center mb-4">Games</p>
-          <p>
-            A NEW TASK IS AT HAND! L and A found their brain cells dangerously
-            underemployed and made a fateful decision: score games with the same
-            pettiness usually reserved for peer reviews.
-          </p>
-          <p style={{ marginTop: "1rem" }}>
-            They started with Elden Ring and liked it. Soon they scored more and
-            more. But a new game was at the horizon...
-          </p>
-        </div>
-
-        {/* Desktop */}
-        <div
-          className="hidden sm:block"
+          className="block"
           style={{
             perspective: "320px",
             overflow: "hidden",
@@ -58,7 +35,7 @@ export default function GamingPage() {
           }}
         >
           <div
-            className="w-3/5 mx-auto"
+            className="w-full sm:w-3/5 mx-auto"
             style={{
               transformOrigin: "50% 100%",
               transform: "rotateX(25deg)",
@@ -177,7 +154,7 @@ export default function GamingPage() {
 
                 {/* Titolo */}
                 <span
-                  className={`flex-1 font-bold truncate min-w-0 text-sm md:text-base ${isTop3 ? "text-white" : "text-gray-300"}`}
+                  className={`flex-1 font-bold truncate overflow-hidden min-w-0 text-sm md:text-base ${isTop3 ? "text-white" : "text-gray-300"}`}
                 >
                   {game.title}
                 </span>
