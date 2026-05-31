@@ -55,7 +55,7 @@ export default function RootLayout({
         </div>
 
         <footer className="bg-gray-800 text-white py-4 mt-5 text-center">
-          <p className="text-sm">© {new Date().getFullYear()} myself at Leonardo PLC (<a href="https://www.leonardo.com">Leonardo SPA</a> was taken...)</p>
+          <p className="text-sm">© {new Date().getFullYear()} myself, Leonardo (not <a href="https://www.leonardo.com">Leonardo</a>)</p>
           {lastMod && (
             <p className="text-xs text-gray-400">
               Last updated: {new Date(lastMod).toLocaleDateString()}
