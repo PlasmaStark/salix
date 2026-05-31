@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://www.leonardoerrati.com/talks</loc><lastmod>2026-05-31T14:57:55.706Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.leonardoerrati.com/games</loc><lastmod>2026-05-31T19:06:44.492Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 <url><loc>https://www.leonardoerrati.com</loc><lastmod>2026-05-31T13:34:13.115Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.leonardoerrati.com/games</loc><lastmod>2026-05-31T17:11:39.184Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.leonardoerrati.com/academia</loc><lastmod>2026-05-31T17:42:57.994Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.leonardoerrati.com/talks</loc><lastmod>2026-05-31T14:57:55.706Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 <url><loc>https://www.leonardoerrati.com/chronicles</loc><lastmod>2026-05-31T17:20:34.542Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.leonardoerrati.com/academia</loc><lastmod>2026-05-31T17:00:41.871Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.leonardoerrati.com/talks/2021-10-19-quadratic-sieve</loc><lastmod>2026-05-31T17:35:43.505Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.leonardoerrati.com/talks/2022-12-14-mfa</loc><lastmod>2026-05-31T17:35:43.505Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.leonardoerrati.com/talks/2023-03-21-hamming</loc><lastmod>2026-05-31T17:35:43.505Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.leonardoerrati.com/talks/2025-03-21-pq-blockchain</loc><lastmod>2026-05-31T17:35:43.505Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.leonardoerrati.com/talks/2025-12-04-aperitif</loc><lastmod>2026-05-31T17:35:43.505Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.leonardoerrati.com/chronicles/2022-09-28-asimov-crusade</loc><lastmod>2026-05-31T17:35:43.505Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.leonardoerrati.com/chronicles/2023-10-18-slow-priest</loc><lastmod>2026-05-31T17:35:43.505Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.leonardoerrati.com/chronicles/2023-primespiral</loc><lastmod>2026-05-31T17:35:43.505Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.leonardoerrati.com/chronicles/2024-10-09-piracy-shield</loc><lastmod>2026-05-31T17:35:43.505Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.leonardoerrati.com/talks/2021-10-19-quadratic-sieve</loc><lastmod>2026-05-31T19:16:48.398Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.leonardoerrati.com/talks/2022-12-14-mfa</loc><lastmod>2026-05-31T19:16:48.398Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.leonardoerrati.com/talks/2023-03-21-hamming</loc><lastmod>2026-05-31T19:16:48.398Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.leonardoerrati.com/talks/2025-03-21-pq-blockchain</loc><lastmod>2026-05-31T19:16:48.398Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.leonardoerrati.com/talks/2025-12-04-aperitif</loc><lastmod>2026-05-31T19:16:48.398Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.leonardoerrati.com/chronicles/2022-09-28-asimov-crusade</loc><lastmod>2026-05-31T19:16:48.398Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.leonardoerrati.com/chronicles/2023-10-18-slow-priest</loc><lastmod>2026-05-31T19:16:48.398Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.leonardoerrati.com/chronicles/2023-primespiral</loc><lastmod>2026-05-31T19:16:48.398Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.leonardoerrati.com/chronicles/2024-10-09-piracy-shield</loc><lastmod>2026-05-31T19:16:48.398Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>

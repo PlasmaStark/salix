@@ -3,8 +3,6 @@ import Breadcrumb from '@components/breadcrumb';
 import Link from 'next/link';
 import { BIBLIOGRAPHY_DIR, TALKS_DIR } from '../../../../config';
 import { getContentList } from '@/lib/getPosts';
-import path from 'path';
-import fs from 'fs';
 import { Metadata } from 'next';
 
 export async function generateStaticParams() {
@@ -28,9 +26,7 @@ const targetStyle: Record<string, string> = {
 export default async function TalkPost({ params }: { params: any }) {
   const { slug } = await params;
   const { metadata, content } = await getContent(slug, TALKS_DIR, BIBLIOGRAPHY_DIR);
-  const filePath = path.join(process.cwd(), "src/contents/talks", `${slug}.md`);
-  const stats = fs.statSync(filePath);
-  
+
   return (
     <article className="container max-w-3xl mx-auto px-2 py-2">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" />
