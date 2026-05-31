@@ -16,17 +16,41 @@ export default function GamingPage() {
     .sort((a, b) => b.avg - a.avg);
 
   return (
-    <main className="container mx-auto px-2 py-8">
+    <main className="container mx-auto py-8">
       <header className="mb-10 text-center">
-  <h1 className="font-serif text-4xl sm:text-5xl font-medium text-foreground">
-    Games
-  </h1>
-  <p className="text-sm text-gray-400 mt-2 italic">
-    Played and scored by L & A.
-  </p>
-</header>
+        <h1 className="font-serif text-4xl sm:text-5xl font-medium text-foreground">
+          Games
+        </h1>
+        <p className="text-sm text-gray-400 mt-2 italic">
+          Played and scored by L & A.
+        </p>
+      </header>
       <section>
+        {/* Mobile */}
         <div
+          className="sm:hidden mb-10"
+          style={{
+            color: "#ffe81f",
+            fontFamily: "Georgia, serif",
+            lineHeight: 1.9,
+            fontSize: "15px",
+          }}
+        >
+          <p className="text-4xl text-center mb-4">Games</p>
+          <p>
+            A NEW TASK IS AT HAND! L and A found their brain cells dangerously
+            underemployed and made a fateful decision: score games with the same
+            pettiness usually reserved for peer reviews.
+          </p>
+          <p style={{ marginTop: "1rem" }}>
+            They started with Elden Ring and liked it. Soon they scored more and
+            more. But a new game was at the horizon...
+          </p>
+        </div>
+
+        {/* Desktop */}
+        <div
+          className="hidden sm:block"
           style={{
             perspective: "320px",
             overflow: "hidden",
@@ -34,23 +58,22 @@ export default function GamingPage() {
           }}
         >
           <div
-          className="w-4/5" 
+            className="w-3/5 mx-auto"
             style={{
               transformOrigin: "50% 100%",
               transform: "rotateX(25deg)",
-              margin: "0 auto",
               color: "#ffe81f",
               fontFamily: "Georgia, serif",
               textAlign: "justify",
               lineHeight: 1.9,
-              fontSize: "18px",
+              fontSize: "16px",
             }}
           >
             <p className="text-6xl text-center">Games</p>
             <p style={{ marginTop: "1rem" }}>
-              A NEW TASK IS AT HAND! L and A found their brain cells dangerously underemployed and made
-              a fateful decision: score games with the same pettiness usually
-              reserved for peer reviews.
+              A NEW TASK IS AT HAND! L and A found their brain cells dangerously
+              underemployed and made a fateful decision: score games with the
+              same pettiness usually reserved for peer reviews.
             </p>
             <p style={{ marginTop: "1rem" }}>
               They started with Elden Ring and liked it. Soon they scored more
