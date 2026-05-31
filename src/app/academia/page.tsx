@@ -2,6 +2,7 @@ import Breadcrumb from "../components/navigation/breadcrumb";
 import positions from "../../contents/academia/positions.json";
 import publications from "../../contents/academia/publications.json";
 import contributions from "../../contents/academia/contributions.json";
+import talks from "../../contents/academia/talks.json";
 import theses from "../../contents/academia/theses.json";
 import supervised_theses from "../../contents/academia/supervised_theses.json";
 import software from "../../contents/academia/software.json";
@@ -40,7 +41,12 @@ const sections: {
         color: "border-accent",
       },
       {
-        label: "Invited Talks & Contributions",
+        label: "Invited Talks",
+        data: talks,
+        color: "border-accent",
+      },
+      {
+        label: "Contributions",
         data: contributions,
         color: "border-accent",
       },
