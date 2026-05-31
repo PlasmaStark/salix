@@ -12,3 +12,4 @@ Personal website built with Nextjs.
 | 25.6.1        | 2025 jun | v3          | JS graphics.    |
 | 25.7.1        | 2025 jul | v3.1        | Light graphics. |
 | 25.7.2        | 2025 jul | v3.2        | Localisation.   |
+| 26.5.31       | 2026 may | v4          | Big refactor.   |
