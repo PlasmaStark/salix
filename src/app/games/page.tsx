@@ -32,6 +32,7 @@ export default function GamingPage() {
             perspective: "320px",
             overflow: "hidden",
             marginBottom: "6rem",
+            transform: "translateZ(0)",
           }}
         >
           <div
@@ -148,7 +149,7 @@ export default function GamingPage() {
 
                 {/* Titolo */}
                 <span
-                  className={`flex-1 font-bold truncate overflow-hidden min-w-0 text-sm md:text-base ${isTop3 ? "text-white" : "text-gray-300"}`}
+                  className={`flex-1 w-0 font-bold truncate overflow-hidden min-w-0 text-sm md:text-base ${isTop3 ? "text-white" : "text-gray-300"}`}
                 >
                   {game.title}
                 </span>
