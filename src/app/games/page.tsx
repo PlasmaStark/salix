@@ -35,7 +35,7 @@ export default function GamingPage() {
           }}
         >
           <div
-            className="w-full sm:w-3/5 mx-auto"
+            className="w-4/5 sm:w-3/5 mx-auto"
             style={{
               transformOrigin: "50% 100%",
               transform: "rotateX(25deg)",
