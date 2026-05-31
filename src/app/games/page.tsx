@@ -34,7 +34,7 @@ export default function GamingPage() {
           }}
         >
           <div
-          className="w-full sm:w-3/5" 
+          className="w-4/5" 
             style={{
               transformOrigin: "50% 100%",
               transform: "rotateX(25deg)",
@@ -43,7 +43,7 @@ export default function GamingPage() {
               fontFamily: "Georgia, serif",
               textAlign: "justify",
               lineHeight: 1.9,
-              fontSize: "16px",
+              fontSize: "18px",
             }}
           >
             <p className="text-6xl text-center">Games</p>
