@@ -6,7 +6,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { socialLinks } from "@/contents/socialLinks";
 
-export default function ProfileInfo({ compact = false }: { compact?: boolean }) {
+export default function ProfileInfo({
+  compact = false,
+}: {
+  compact?: boolean;
+}) {
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -67,10 +71,10 @@ export default function ProfileInfo({ compact = false }: { compact?: boolean }) 
                 Leonardo Errati
               </h2>
 
-              <div className="relative" ref={dropdownRef}>
+              <div className="relative ml-auto" ref={dropdownRef}>
                 <button
                   onClick={() => setOpen(!open)}
-                  className={`ml-4 px-4 py-1 rounded-full text-sm transition ${
+                  className={`px-4 mr-6 py-1 rounded-full text-sm transition ${
                     open
                       ? "bg-accent hover:bg-accent-dark"
                       : "bg-accent2 hover:bg-accent"
@@ -78,7 +82,7 @@ export default function ProfileInfo({ compact = false }: { compact?: boolean }) 
                   aria-haspopup="true"
                   aria-expanded={open}
                 >
-                  Links
+                  Contacts
                 </button>
 
                 {open && (
@@ -87,8 +91,11 @@ export default function ProfileInfo({ compact = false }: { compact?: boolean }) 
                     style={{ animationFillMode: "forwards" }}
                   >
                     <div className="flex flex-col p-2 space-y-2">
-                      {socialLinks.map(({ href, icon, iconClass, label }) => (
-                        <DropdownLink key={href} {...{ href, icon, iconClass, label }} />
+                      <p className="font-mono text-xs flex items-center text-center justify-center gap-2 mt-2">
+                        leonardo dot errati at polito dot it
+                      </p>
+                      {socialLinks.map(({ href, icon, label }) => (
+                        <DropdownLink key={href} {...{ href, icon, label }} />
                       ))}
                     </div>
                   </div>
@@ -109,7 +116,10 @@ export default function ProfileInfo({ compact = false }: { compact?: boolean }) 
               Theory group.
             </p>
             <p className="text-sm flex items-center justify-center gap-2 mt-2">
-                🇮🇹  Turin, Italy
+              🇮🇹 Turin, Italy
+            </p>
+            <p className="font-mono text-sm flex items-center justify-center gap-2 mt-2">
+              leonardo dot errati at polito dot it
             </p>
           </>
         )}
@@ -117,8 +127,8 @@ export default function ProfileInfo({ compact = false }: { compact?: boolean }) 
 
       {!compact && (
         <div className="flex flex-wrap justify-center gap-2 mt-4">
-          {socialLinks.map(({ href, icon, iconClass, label }) => (
-            <SocialLink key={href} {...{ href, icon, iconClass, label }} />
+          {socialLinks.map(({ href, icon, label }) => (
+            <SocialLink key={href} {...{ href, icon, label }} />
           ))}
         </div>
       )}
@@ -129,12 +139,10 @@ export default function ProfileInfo({ compact = false }: { compact?: boolean }) 
 function SocialLink({
   href,
   icon,
-  iconClass,
   label,
 }: {
   href: string;
   icon?: any;
-  iconClass?: string;
   label: string;
 }) {
   return (
@@ -144,11 +152,7 @@ function SocialLink({
       rel="noopener noreferrer"
       className="flex items-center gap-2 px-2 py-1 bg-gray-800 text-white rounded-full text-xs hover:bg-accent transition no-underline"
     >
-      {icon ? (
-        <FontAwesomeIcon icon={icon} className="w-4 h-4" />
-      ) : (
-        <i className={`${iconClass} text-white text-sm`} />
-      )}
+      <FontAwesomeIcon icon={icon} className="w-4 h-4" />
       <span>{label}</span>
     </Link>
   );
@@ -157,12 +161,10 @@ function SocialLink({
 function DropdownLink({
   href,
   icon,
-  iconClass,
   label,
 }: {
   href: string;
   icon?: any;
-  iconClass?: string;
   label: string;
 }) {
   return (
@@ -172,11 +174,7 @@ function DropdownLink({
       rel="noopener noreferrer"
       className="flex items-center gap-2 text-white text-sm px-2 py-1 hover:bg-accent rounded transition no-underline"
     >
-      {icon ? (
-        <FontAwesomeIcon icon={icon} className="w-4 h-4" />
-      ) : (
-        <i className={`${iconClass} text-white text-sm`} />
-      )}
+      <FontAwesomeIcon icon={icon} className="w-4 h-4" />
       <span>{label}</span>
     </Link>
   );

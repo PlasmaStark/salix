@@ -5,7 +5,14 @@ import Image from "next/image";
 type ContentCardProps = {
   post: ContentItem;
   baseRoute: string;
-  variant?: "default" | "small" | "horizontal" | "textual";
+  variant?:
+    | "default"
+    | "small"
+    | "horizontal"
+    | "textual"
+    | "newspaper-featured"
+    | "newspaper-secondary"
+    | "conference";
 };
 
 export default function ContentCard({
@@ -45,7 +52,7 @@ export default function ContentCard({
 
   if (variant === "textual") {
     return (
-      <li className="bg-white rounded-md p-4 flex flex-col">
+      <li className="bg-gray-800 rounded-md p-4 flex flex-col">
         <Link href={`/${baseRoute}/${post.slug}`} className="no-underline mb-2">
           <p className="text-sm text-gray-500 mb-2 flex items-center gap-2">
             <span className="font-semibold text-white bg-accent2 px-2 py-0.5 rounded">
@@ -62,14 +69,7 @@ export default function ContentCard({
         </Link>
         <ul className="flex flex-wrap gap-2 mb-1">
           {post.tags.map((tag) => (
-            <li key={tag}>
-              <Link
-                href={`/${baseRoute}/tags/${tag}`}
-                className="text-xs no-underline text-gray-600 bg-gray-200 rounded-full px-2 py-1 hover:bg-gray-300 transition-colors"
-              >
-                #{tag}
-              </Link>
-            </li>
+            <li key={tag}>#{tag}</li>
           ))}
         </ul>
       </li>
@@ -85,7 +85,7 @@ export default function ContentCard({
         >
           <div className="flex flex-col items-center">
             {post.coverImage && (
-              <div className="w-fill overflow-hidden aspect-square">
+              <div className="w-full overflow-hidden aspect-video ">
                 <Image
                   src={
                     post.coverImage.startsWith("/")
@@ -101,11 +101,9 @@ export default function ContentCard({
             )}
             <div className="flex flex-col flex-grow w-full p-2">
               <p className="text-sm text-gray-400 mb-2">{post.date}</p>
-
               <h2 className="text-2xl font-bold text-foreground leading-tight mb-1">
                 {post.title}
               </h2>
-
               <p className="text-sm text-gray-400 leading-relaxed line-clamp-2 italic font-serif">
                 "{post.description}"
               </p>
@@ -115,17 +113,115 @@ export default function ContentCard({
         <div className="mt-auto p-2 pt-0">
           <ul className="flex flex-wrap gap-2">
             {post.tags.map((tag) => (
-              <li key={tag}>
-                <Link
-                  href={`/${baseRoute}/tags/${tag}`}
-                  className="tracking-wider no-underline text-accent"
-                >
-                  {tag}
-                </Link>
-              </li>
+              <li key={tag}>{tag}</li>
             ))}
           </ul>
         </div>
+      </li>
+    );
+  }
+
+if (variant === "newspaper-featured") {
+  return (
+    <li className="list-none border-b-2 border-gray-600 pb-6 mb-2">
+      <Link href={`/${baseRoute}/${post.slug}`} className="no-underline group block">
+        {post.coverImage && (
+          <div className="w-full overflow-hidden mb-4" style={{ height: "280px" }}>
+            <Image
+              src={post.coverImage.startsWith("/") ? post.coverImage : `/${post.coverImage}`}
+              alt={post.title}
+              width={800}
+              height={280}
+              className="object-cover w-full h-full"
+            />
+          </div>
+        )}
+        <div className="text-center max-w-xl mx-auto">
+          <p className="text-xs uppercase tracking-widest text-accent mb-2">
+            {post.date} · {post.tags[0] ?? ""}
+          </p>
+          <h2 className="font-serif text-3xl font-semibold leading-snug text-foreground mb-3 group-hover:text-accent transition-colors">
+            {post.title}
+          </h2>
+          <p className="text-sm text-gray-400 leading-relaxed">
+            {post.description}
+          </p>
+        </div>
+      </Link>
+    </li>
+  );
+}
+
+  if (variant === "newspaper-secondary") {
+    return (
+      <li className="list-none border-b border-dashed border-gray-700 py-2">
+        <Link
+          href={`/${baseRoute}/${post.slug}`}
+          className="no-underline group flex gap-3"
+        >
+          {post.coverImage && (
+            <div className="w-48 shrink-0 overflow-hidden" style={{ height: "180px" }}>
+              <Image
+                src={
+                  post.coverImage.startsWith("/")
+                    ? post.coverImage
+                    : `/${post.coverImage}`
+                }
+                alt={post.title}
+                width={192}
+                height={180}
+                className="object-cover w-full h-full"
+              />
+            </div>
+          )}
+          <div className="flex flex-col justify-center">
+            <p className="text-sm uppercase tracking-widest text-accent mb-0.5">
+              {post.date} · {post.tags[0] ?? ""}
+            </p>
+            <h3 className="font-serif text-lg font-semibold leading-snug text-foreground line-clamp-2">
+              {post.title}
+            </h3>
+            <p className="text-sm text-gray-500 mt-0.5 leading-tight line-clamp-2">
+              {post.description}
+            </p>
+          </div>
+        </Link>
+      </li>
+    );
+  }
+
+  if (variant === "conference") {
+    return (
+      <li>
+        <Link
+          href={`/${baseRoute}/${post.slug}`}
+          className="bg-gray-800 rounded-md p-4 no-underline group block"
+        >
+          <div className="flex flex-wrap items-baseline gap-x-3 gap-y-0">
+            <span className="font-mono text-xs text-white-500">{post.date}</span>
+            {post.target && (
+              <span
+                className={`text-xs uppercase tracking-widest ml-1 px-1.5 rounded-sm ${
+                  post.target === "Beginner"
+                    ? "text-green-400"
+                    : post.target === "Intermediate"
+                      ? "text-accent"
+                      : post.target === "Advanced"
+                        ? "text-red-400"
+                        : "text-gray-400"
+                }`}
+              >
+                {post.target}
+              </span>
+            )}
+          </div>
+          <h3 className="font-serif text-xl font-medium text-foreground group-hover:text-accent transition-colors leading-snug mb-1">
+            {post.title}
+          </h3>
+          <p className="text-normal text-gray-400 leading-tight">
+            {post.description}
+          </p>
+        </Link>
       </li>
     );
   }
@@ -160,14 +256,7 @@ export default function ContentCard({
       </Link>
       <ul className="flex flex-wrap gap-2 px-4 mb-4">
         {post.tags.map((tag) => (
-          <li key={tag}>
-            <Link
-              href={`/${baseRoute}/tags/${tag}`}
-              className="text-xs no-underline text-gray-600 bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-300 transition-colors"
-            >
-              #{tag}
-            </Link>
-          </li>
+          <li key={tag}>#{tag}</li>
         ))}
       </ul>
     </li>

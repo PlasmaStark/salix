@@ -118,6 +118,3 @@ function generateBibliographyHtml(citationOrder: string[], bibliography: any): s
 
   return `<ol class="bibliography">${bibliographyEntries.join('')}</ol>`;
 }
-
-
-

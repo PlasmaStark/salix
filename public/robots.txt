@@ -1,6 +1,6 @@
 # *
 User-agent: *
-Disallow: /starxive
+Allow: /
 
 # Host
 Host: https://www.leonardoerrati.com

@@ -30,12 +30,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link
-          rel="stylesheet"
-          href="/icons/academicons/css/academicons.min.css"
-        />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
@@ -60,8 +54,8 @@ export default function RootLayout({
           </main>
         </div>
 
-        <footer className="bg-gray-800 text-white py-8 mt-5 text-center">
-          <p className="text-sm">© {new Date().getFullYear()} myself</p>
+        <footer className="bg-gray-800 text-white py-4 mt-5 text-center">
+          <p className="text-sm">© {new Date().getFullYear()} myself at Leonardo PLC (<a href="https://www.leonardo.com">Leonardo SPA</a> was taken...)</p>
           {lastMod && (
             <p className="text-xs text-gray-400">
               Last updated: {new Date(lastMod).toLocaleDateString()}

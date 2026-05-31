@@ -15,49 +15,57 @@ export async function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
-    title: "Talks",
-    description: "Some public talks",
+  title: "Talks",
+  description: "Some public talks",
 };
 
-export default async function BlogPost({ params }: { params: any }) {
+const targetStyle: Record<string, string> = {
+  Beginner:     "bg-green-900 text-green-400",
+  Intermediate: "bg-orange-900 text-accent",
+  Advanced:     "bg-red-900 text-red-400",
+};
+
+export default async function TalkPost({ params }: { params: any }) {
   const { slug } = await params;
   const { metadata, content } = await getContent(slug, TALKS_DIR, BIBLIOGRAPHY_DIR);
   const filePath = path.join(process.cwd(), "src/contents/talks", `${slug}.md`);
   const stats = fs.statSync(filePath);
-  const lastMod = stats.mtime.toISOString();
-
+  
   return (
     <article className="container max-w-3xl mx-auto px-2 py-2">
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"
-      />
-      {/* Titolo */}
-      <header className="mb-6">
-        <Breadcrumb />
-        <h1 className="text-4xl font-bold text-white-800">{metadata.title}</h1>
-        <p className="text-normal text-gray-500 mt-2">
-          first made{" "}
-          {new Date(metadata.date).toLocaleDateString("en-GB", {
-            day: "numeric",
-            month: "long",
-            year: "numeric",
-          })}
-          , last modified{" "}
-          {new Date(lastMod).toLocaleDateString("en-GB", {
-            day: "numeric",
-            month: "long",
-            year: "numeric",
-          })}{" "}
-        </p>
-        <ul className="flex flex-wrap gap-2 mt-4">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" />
+
+      <Breadcrumb />
+
+      <header className="mb-8 border-b border-dashed border-gray-700 pb-6">
+        {/* Livello + data */}
+        <div className="flex flex-wrap items-center gap-3 mb-3">
+          {metadata.target && (
+            <span className={`text-xs uppercase tracking-widest px-2 py-0.5 rounded-sm ${targetStyle[metadata.target] ?? "bg-gray-800 text-gray-400"}`}>
+              {metadata.target}
+            </span>
+          )}
+          <span className="font-mono text-xs text-gray-500">
+            {new Date(metadata.date).toLocaleDateString("en-GB", {
+              day: "numeric", month: "long", year: "numeric",
+            })}
+          </span>
+        </div>
+
+        {/* Titolo */}
+        <h1 className="font-serif text-3xl sm:text-4xl font-medium text-white leading-tight mb-3">
+          {metadata.title}
+        </h1>
+
+        {/* Tag */}
+        <ul className="flex flex-wrap gap-2">
           {metadata.tags.map((tag: string) => (
             <li key={tag}>
               <Link
                 href={`/talks/tags/${tag}`}
-                className="text-sm text-gray-600 bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-300 no-underline"
+                className="text-xs no-underline uppercase tracking-widest text-gray-500 border border-gray-700 px-2 py-0.5 rounded-sm hover:text-accent hover:border-accent transition-colors"
               >
-                #{tag}
+                {tag}
               </Link>
             </li>
           ))}
@@ -66,7 +74,8 @@ export default async function BlogPost({ params }: { params: any }) {
 
       {/* Contenuto */}
       <div
-        className="prose prose-invert"
+        className="prose prose-invert max-w-full"
+        style={{ overflowWrap: "break-word" }}
         dangerouslySetInnerHTML={{ __html: content }}
       />
     </article>

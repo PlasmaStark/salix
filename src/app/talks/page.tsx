@@ -1,19 +1,12 @@
-import { getContentList, getAllTags } from '@/lib/getPosts';
-import { TALKS_DIR } from '../../../config';
-import Breadcrumb from '@components/breadcrumb';
-import ContentList from '@/lib/ContentList';
-import { Metadata } from 'next';
-
-export async function generateStaticParams() {
-  const tags = await getAllTags(TALKS_DIR);
-  return tags.map((tag: string) => ({
-    tag,
-  }));
-}
+import { getContentList } from "@/lib/getPosts";
+import { TALKS_DIR } from "../../../config";
+import Breadcrumb from "@components/breadcrumb";
+import ContentList from "@/lib/ContentList";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Talks",
-    description: "Some public talks",
+  title: "Talks",
+  description: "Some public talks",
 };
 
 export default async function TalksPage() {
@@ -22,11 +15,13 @@ export default async function TalksPage() {
   return (
     <main className="container mx-auto px-2 py-2">
       <Breadcrumb />
-      <h1 className="text-4xl font-bold text-center mb-6">Talks</h1>
-      <p className="text-normal text-center mb-10">
-        Public <b>talks</b> for diffusion or future fruition.
-      </p>
-      <ContentList contents={posts} baseRoute="talks" variant="textual" />
+    <h1 className="text-center font-serif text-4xl sm:text-5xl font-medium text-foreground">
+      Talks
+    </h1>
+      <p className="text-sm text-center tracking-widest text-gray-500  mb-10">
+      A selection of public talks.
+    </p>
+      <ContentList contents={posts} baseRoute="talks" variant="conference" />
     </main>
   );
 }

@@ -1,5 +1,3 @@
-import { MdOutlineDateRange } from "react-icons/md";
-
 interface Item {
   title: string;
   date: string;
@@ -45,7 +43,7 @@ interface TimelineListProps {
 
 // Separator component for clarity
 const Separator = () => (
-    <span className="inline-block text-gray-400 font-medium mx-1 select-none">
+    <span className="inline-block text-gray-500 font-medium mx-1 select-none">
         &bull;
     </span>
 );
@@ -65,12 +63,10 @@ export default function TimelineList({
         const isCompactMode = !item.event && !item.authors;
 
         const metadataItems = [
-          // 1. Date range
 <span
   key="date"
-  className="flex items-center gap-1 text-gray-400 font-medium"
+  className="flex items-center gap-1 text-gray-500 font-medium"
 >
-  <MdOutlineDateRange className={`${linkColor}`} />
   {new Date(item.date).toLocaleDateString("en-GB", {
     year: "numeric",
     month: "short",
@@ -105,20 +101,20 @@ export default function TimelineList({
               href={item.link}
               rel="noopener noreferrer"
               target="_blank"
-              className={`flex items-center gap-1 hover:text-white transition-colors no-underline duration-200 group`}
+              className={`flex items-center gap-1 no-underline`}
               title="View Resource"
             >
               <span className={`${linkColor} opacity-80`}>link</span>
             </a>
           ) : (
-            <span key="empty-link" className="text-gray-400 flex items-center gap-1">
+            <span key="empty-link" className="text-gray-500 flex items-center gap-1">
               {emptyLink}
             </span>
           ),
 
           // 4. Event
           !isCompactMode && item.event && (
-            <span key="event" className="text-gray-400 italic">
+            <span key="event" className="text-gray-500 italic">
               {item.event}
             </span>
           ),
@@ -132,7 +128,7 @@ export default function TimelineList({
 
           // 6. Description (Only in compact mode)
           isCompactMode && item.description && (
-            <span key="compact-description" className="text-gray-400">
+            <span key="compact-description" className="text-gray-500">
               {item.description}
             </span>
           ),
@@ -140,22 +136,11 @@ export default function TimelineList({
 
         return (
           <li key={idx} className={`relative pl-6 border-l-4 ${borderColor}`}>
-            {/* RIGA 1: TITOLO */}
-            <h3 className="text-lg font-bold text-white leading-tight mb-1 flex items-center gap-2">
-              {item.logo && (
-                <img
-                  src={item.logo}
-                  alt=""
-                  width={20}
-                  height={20}
-                  className="rounded-sm object-contain"
-                />
-              )}
+            <h3 className="text-lg font-bold text-white leading-tight flex items-center gap-2">
               {item.title}
             </h3>
 
-            {/* RIGA 2: METADATI */}
-            <div className="text-sm text-gray-400 flex flex-wrap items-center">
+            <div className="text-sm text-gray-500 flex flex-wrap items-center">
               {metadataItems.map((component, componentIdx) => (
                 <div key={component!.key} className="flex items-center">
                   {component}
@@ -164,9 +149,8 @@ export default function TimelineList({
               ))}
             </div>
 
-            {/* RIGA 3: Descrizione a capo */}
             {!isCompactMode && item.description && (
-              <p className="text-sm text-gray-400 leading-relaxed w-fit pr-4">
+              <p className="text-sm text-gray-500 leading-relaxed w-fit pr-4">
                 {item.description}
               </p>
             )}

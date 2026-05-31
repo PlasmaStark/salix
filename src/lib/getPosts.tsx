@@ -55,14 +55,3 @@ export function getContentListFromJson(filepath: string): ContentItem[] {
     type: item.type,
   }));
 }
-
-export function getAllTags(directory: string): string[] {
-  const contentList = getContentList(directory);
-  const tags = contentList.flatMap((content) => content.tags);
-  return Array.from(new Set(tags));
-}
-
-export function getAllTagsFromContent(contentItems: ContentItem[]): string[] {
-  const allTags = contentItems.flatMap((item) => item.tags);
-  return Array.from(new Set(allTags));
-}

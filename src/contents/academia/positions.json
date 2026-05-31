@@ -12,5 +12,12 @@
     "dateEnd": "present",
     "event": "Politecnico di Torino",
     "link": "https://www.polito.it/personale?p=leonardo.errati"
+  },
+  {
+    "title": "Undergraduate Research Fellow",
+    "date": "March 2024",
+    "dateEnd": "February 2025",
+    "event": "Università di Trento",
+    "link": "https://www.maths.unitn.it/en/110/laboratory-of-industrial-mathematics-and-cryptography"
   }
 ]
