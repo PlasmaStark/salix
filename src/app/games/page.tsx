@@ -60,9 +60,7 @@ export default function GamingPage() {
         </div>
 
         <div className="flex items-center gap-4 mb-8">
-          <h2 className="text-3xl font-black uppercase tracking-widest">
-            List
-          </h2>
+          <h2 className="text-3xl font-black uppercase tracking-wider">List</h2>
           <div className="flex-1 h-px bg-gradient-to-r from-gray-500 to-transparent" />
         </div>
       </section>
@@ -109,7 +107,7 @@ export default function GamingPage() {
       {/* ── LEADERBOARD ── */}
       <section className="mt-20 mb-8">
         <div className="flex items-center gap-4 mb-8">
-          <h2 className="text-3xl font-black uppercase tracking-widest">
+          <h2 className="text-2xl font-black uppercase tracking-wider">
             Leaderboard
           </h2>
           <div className="flex-1 h-px bg-gradient-to-r from-gray-500 to-transparent" />
@@ -125,13 +123,9 @@ export default function GamingPage() {
               <div
                 key={game.title}
                 className={`
-            flex items-center gap-2 rounded-xl px-3 py-3 min-w-0
-            ${
-              isTop3
-                ? "bg-gray-800 border border-gray-600"
-                : "bg-gray-900 border border-gray-800"
-            }
-          `}
+    flex items-center gap-2 rounded-xl px-3 py-3 min-w-0 overflow-hidden
+    ${isTop3 ? "bg-gray-800 border border-gray-600" : "bg-gray-900 border border-gray-800"}
+  `}
               >
                 {/* Posizione */}
                 <div className="w-10 flex-shrink-0 text-center">
