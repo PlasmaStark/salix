@@ -16,7 +16,7 @@ export default function GamingPage() {
     .sort((a, b) => b.avg - a.avg);
 
   return (
-    <main className="container mx-auto py-8">
+    <main className="container mx-auto px-2 py-2">
       <header className="mb-10 text-center">
         <h1 className="font-serif text-4xl sm:text-5xl font-medium text-foreground">
           Games
@@ -25,6 +25,45 @@ export default function GamingPage() {
           Played and scored by L & A.
         </p>
       </header>
+      <section>
+        <div
+          className="block"
+          style={{
+            perspective: "320px",
+            overflow: "hidden",
+            marginBottom: "6rem",
+          }}
+        >
+          <div
+            className="w-4/5 sm:w-3/5 mx-auto"
+            style={{
+              transformOrigin: "50% 100%",
+              transform: "rotateX(25deg)",
+              color: "#ffe81f",
+              fontFamily: "Georgia, serif",
+              textAlign: "justify",
+              lineHeight: 1.9,
+              fontSize: "16px",
+            }}
+          >
+            <p className="text-6xl text-center">Games</p>
+            <p style={{ marginTop: "1rem" }}>
+              A NEW TASK IS AT HAND! L and A found their brain cells dangerously
+              underemployed and made a fateful decision: score games with the
+              same pettiness usually reserved for peer reviews.
+            </p>
+            <p style={{ marginTop: "1rem" }}>
+              They started with Elden Ring and liked it. Soon they scored more
+              and more. But a new game was at the horizon...
+            </p>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-4 mb-8">
+          <h2 className="text-3xl font-black uppercase tracking-wider">List</h2>
+          <div className="flex-1 h-px bg-gradient-to-r from-gray-500 to-transparent" />
+        </div>
+      </section>
 
       <section>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
