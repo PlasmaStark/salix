@@ -58,5 +58,11 @@
     "image": "/images/games/lastofus_1.webp",
     "scoreL": "8.25",
     "scoreA": "9"
+  },
+  {
+    "title": "Mass Effect Legendary Edition",
+    "image": "/images/games/mass_effect_le.webp",
+    "scoreL": "TBA",
+    "scoreA": "TBA"
   }
 ]
