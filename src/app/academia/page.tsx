@@ -52,7 +52,7 @@ const sections: {
         color: "border-accent",
       },
       {
-        label: "Invited Talks",
+        label: "Talks",
         data: talks,
         color: "border-accent",
       },
