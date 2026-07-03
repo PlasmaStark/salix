@@ -105,6 +105,51 @@ export default function Home() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
           <div className="relative aspect-[2/3] rounded-lg overflow-hidden group">
             <Image
+              src="/images/books/gilgamesh.webp"
+              alt="The Epic of Gilgamesh"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-4">
+              <p className="text-white font-bold text-sm leading-tight">
+                The Epic of Gilgamesh
+              </p>
+            </div>
+          </div>
+          <div className="relative aspect-[2/3] rounded-lg overflow-hidden group">
+            <Image
+              src="/images/books/gilgamesh.webp"
+              alt="The Three Musketeers"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-4">
+              <p className="text-white font-bold text-sm leading-tight">
+                The Three Musketeers
+              </p>
+              <p className="text-accent text-xs mt-1">
+                Alexandre Dumas
+              </p>
+            </div>
+          </div>
+          <div className="relative aspect-[2/3] rounded-lg overflow-hidden group">
+            <Image
+              src="/images/books/gilgamesh.webp"
+              alt="The End of Eternity"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-4">
+              <p className="text-white font-bold text-sm leading-tight">
+                The End of Eternity
+              </p>
+              <p className="text-accent text-xs mt-1">
+                Isaac Asimov
+              </p>
+            </div>
+          </div>
+          <div className="relative aspect-[2/3] rounded-lg overflow-hidden group">
+            <Image
               src="/images/books/feynman_joking.webp"
               alt="Surely You're Joking, Mr. Feynman!"
               fill
