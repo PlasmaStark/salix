@@ -118,7 +118,7 @@ export default function Home() {
           </div>
           <div className="relative aspect-[2/3] rounded-lg overflow-hidden group">
             <Image
-              src="/images/books/gilgamesh.webp"
+              src="/images/books/dumas_musketeers.webp"
               alt="The Three Musketeers"
               fill
               className="object-cover"
@@ -134,7 +134,7 @@ export default function Home() {
           </div>
           <div className="relative aspect-[2/3] rounded-lg overflow-hidden group">
             <Image
-              src="/images/books/gilgamesh.webp"
+              src="/images/books/asimov_eternity.webp"
               alt="The End of Eternity"
               fill
               className="object-cover"
