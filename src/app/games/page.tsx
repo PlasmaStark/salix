@@ -1,6 +1,7 @@
 import Image from "next/image";
 import games from "../../contents/games/games.json";
 import { Metadata } from "next";
+import Breadcrumb from "../components/navigation/breadcrumb";
 
 export const metadata: Metadata = {
   title: "Games",
@@ -17,11 +18,12 @@ export default function GamingPage() {
 
   return (
     <main className="container mx-auto px-2 py-2">
+      <Breadcrumb />
       <header className="mb-10 text-center">
-        <h1 className="font-serif text-4xl sm:text-5xl font-medium text-foreground">
+        <h1 className="text-center font-serif text-4xl sm:text-5xl font-medium text-foreground">
           Games
         </h1>
-        <p className="text-sm text-gray-400 mt-2 italic">
+        <p className="text-sm text-center tracking-widest text-gray-500  mb-10">
           Played and scored by L & A.
         </p>
       </header>

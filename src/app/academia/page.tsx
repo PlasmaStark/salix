@@ -1,6 +1,7 @@
 import Breadcrumb from "../components/navigation/breadcrumb";
 import positions from "../../contents/academia/positions.json";
 import publications from "../../contents/academia/publications.json";
+import preprints from "../../contents/academia/preprints.json";
 import contributions from "../../contents/academia/contributions.json";
 import talks from "../../contents/academia/talks.json";
 import theses from "../../contents/academia/theses.json";
@@ -36,18 +37,23 @@ const sections: {
     group: "Research",
     items: [
       {
+        label: "Preprints",
+        data: preprints,
+        color: "border-accent",
+      },
+      {
         label: "Conference Papers",
         data: publications,
         color: "border-accent",
       },
       {
-        label: "Invited Talks",
-        data: talks,
+        label: "Contributions",
+        data: contributions,
         color: "border-accent",
       },
       {
-        label: "Contributions",
-        data: contributions,
+        label: "Invited Talks",
+        data: talks,
         color: "border-accent",
       },
     ],
@@ -78,10 +84,13 @@ export default function AcademiaPage() {
     <main className="container mx-auto px-2 py-2">
       <Breadcrumb />
 
-      <header className="mb-10">
-        <h1 className="font-serif text-4xl sm:text-5xl font-medium text-center">
+      <header className="mb-10 text-center">
+        <h1 className="text-center font-serif text-4xl sm:text-5xl font-medium text-foreground">
           Academia
         </h1>
+        <p className="text-sm text-center tracking-widest text-gray-500  mb-10">
+          Experience and track record.
+        </p>
       </header>
 
       {sections.map(({ group, items }) => (
