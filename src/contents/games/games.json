@@ -26,8 +26,8 @@
   {
     "title": "Fallout 4",
     "image": "/images/games/fallout_4.webp",
-    "scoreL": 8.3,
-    "scoreA": 7.8
+    "scoreL": 8.25,
+    "scoreA": 7.75
   },
   {
     "title": "Marvel's Spider-man",
@@ -62,8 +62,8 @@
   {
     "title": "Cyberpunk 2077",
     "image": "/images/games/cyberpunk_2077.webp",
-    "scoreL": "TBA",
-    "scoreA": "TBA"
+    "scoreL": "9",
+    "scoreA": "8.25"
   },
   {
     "title": "Mass Effect Legendary Edition",
