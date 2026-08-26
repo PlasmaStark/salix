@@ -53,6 +53,11 @@ const sections: {
         color: "border-accent",
       },
       {
+        label: "Editor",
+        data: editor,
+        color: "border-accent",
+      },
+      {
         label: "Talks",
         data: talks,
         color: "border-accent",

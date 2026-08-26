@@ -71,7 +71,7 @@ export default function Home() {
       {/* Quote */}
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
         <div /> {/* spacer */}
-        <div className="relative bg-background-100 px-6 py-4 border-l-4 border-accent rounded-lg shadow-inner self-start">
+        <div className="relative bg-background-100 px-6 py-4 rounded-lg shadow-inner self-start">
           <span className="absolute top-1 left-6 text-accent text-5xl leading-none opacity-20 select-none">
             "
           </span>
@@ -96,10 +96,8 @@ export default function Home() {
         <h2 className="text-3xl font-bold mb-8 text-white">Bookshelf</h2>
         <div className="mb-4">
           <p className="text-normal leading-relaxed">
-            A selection of funny, clever or interesting books I found
-            noteworthy; <i>la crème de la crème</i>, from fiction to biography.
-            Had I used an LLM to write this, it would have called them
-            "thought-provoking". Worth a read if you find yourself bored.
+            A selection of funny, clever or interesting books I found deserved a spot on this Olympus.
+            Worth a read if you find yourself bored.
           </p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
