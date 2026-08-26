@@ -41,9 +41,8 @@ export default function TheDigestPage() {
 
       <section className="mb-12">
         <p>
-          <b>The Digest</b> is a periodic summary of advanced research concepts.{" "}
-          <br></br>Here you can find the handouts of upcoming and past
-          episodes.
+          <b>The Digest</b> is a periodic summary of advanced research concepts. 
+          Feel free to reach out in case of typos.
         </p>
       </section>
 
@@ -52,11 +51,9 @@ export default function TheDigestPage() {
         <h2 className="text-2xl font-semibold flex items-center gap-2">
           Upcoming
         </h2>
-        <p className="mb-4">Future episodes.</p>
         <TimelineList
           items={upcomingEpisodes}
           borderColor="border-accent"
-          emptyLink="handout TBA"
         />
       </section>
 
@@ -65,12 +62,10 @@ export default function TheDigestPage() {
         <h2 className="text-2xl font-semibold flex items-center gap-2">
           Archive
         </h2>
-        <p className="mb-4">Past episodes.</p>
 
         <TimelineList
           items={digestEpisodes}
           borderColor="border-accent"
-          emptyLink="(Handout TBA)"
         />
       </section>
 
@@ -84,7 +79,6 @@ export default function TheDigestPage() {
         <TimelineList
           items={miscellaneaEpisodes}
           borderColor="border-accent"
-          emptyLink="(Handout TBA)"
         />
       </section>
     </main>

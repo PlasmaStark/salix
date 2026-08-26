@@ -1,6 +1,11 @@
 [
   {
-    "date": "TBA",
+    "date": "-",
+    "title": "3. Security games for FHE schemes on approximate numbers",
+    "description": "The IND-CPA-C security game."
+  },
+  {
+    "date": "-",
     "title": "?. Security of the Fiat-Shamir transform",
     "description": "Minimal security conditions."
   }

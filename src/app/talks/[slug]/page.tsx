@@ -49,7 +49,7 @@ export default async function TalkPost({ params }: { params: any }) {
         </div>
 
         {/* Titolo */}
-        <h1 className="font-serif text-3xl sm:text-4xl font-medium text-white leading-tight mb-3">
+        <h1 className="font-serif text-3xl font-medium text-white leading-tight mb-3">
           {metadata.title}
         </h1>
 
@@ -57,12 +57,11 @@ export default async function TalkPost({ params }: { params: any }) {
         <ul className="flex flex-wrap gap-2">
           {metadata.tags.map((tag: string) => (
             <li key={tag}>
-              <Link
-                href={`/talks/tags/${tag}`}
-                className="text-xs no-underline uppercase tracking-widest text-gray-500 border border-gray-700 px-2 py-0.5 rounded-sm hover:text-accent hover:border-accent transition-colors"
+              <p
+                className="text-xs no-underline uppercase text-gray-500 border border-gray-700 px-2 py-0.5 rounded-sm"
               >
                 {tag}
-              </Link>
+              </p>
             </li>
           ))}
         </ul>

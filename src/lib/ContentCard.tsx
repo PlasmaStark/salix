@@ -195,9 +195,9 @@ if (variant === "newspaper-featured") {
       <li>
         <Link
           href={`/${baseRoute}/${post.slug}`}
-          className="bg-gray-800 rounded-md p-4 no-underline group block"
+          className="bg-gray-900 rounded-md p-4 no-underline group block"
         >
-          <div className="flex flex-wrap items-baseline gap-x-3 gap-y-0">
+          <div className="flex flex-wrap items-baseline">
             <span className="font-mono text-xs text-white-500">{post.date}</span>
             {post.target && (
               <span
@@ -215,10 +215,10 @@ if (variant === "newspaper-featured") {
               </span>
             )}
           </div>
-          <h3 className="font-serif text-xl font-medium text-foreground group-hover:text-accent transition-colors leading-snug mb-1">
+          <h3 className="font-serif text-xl font-medium text-foreground group-hover:text-accent transition-colors leading-snug">
             {post.title}
           </h3>
-          <p className="text-normal text-gray-400 leading-tight">
+          <p className="text-sm text-gray-400 leading-tight">
             {post.description}
           </p>
         </Link>

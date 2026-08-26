@@ -16,10 +16,7 @@ export default async function ChroniclesPage() {
     <main className="container mx-auto px-2 py-2">
       <Breadcrumb />
       {/* Masthead */}
-      <div className="border-t-2 border-b-2 border-foreground py-2 mb-1 text-center">
-        <p className="text-xs uppercase tracking-widest text-gray-400 mb-1">
-          Tales · Mathematics · Curiosities
-        </p>
+      <div className="py-2 mb-1 text-center">
         <h1 className="font-serif text-4xl sm:text-5xl font-semibold tracking-wide text-foreground">
           Chronicles
         </h1>

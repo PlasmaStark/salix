@@ -3,6 +3,7 @@ import positions from "../../contents/academia/positions.json";
 import publications from "../../contents/academia/publications.json";
 import preprints from "../../contents/academia/preprints.json";
 import contributions from "../../contents/academia/contributions.json";
+import editor from "../../contents/academia/editor.json";
 import talks from "../../contents/academia/talks.json";
 import theses from "../../contents/academia/theses.json";
 import supervised_theses from "../../contents/academia/supervised_theses.json";
@@ -109,7 +110,6 @@ export default function AcademiaPage() {
                 <TimelineList
                   items={data as any}
                   borderColor={color}
-                  emptyLink={emptyLink}
                 />
               </div>
             ))}

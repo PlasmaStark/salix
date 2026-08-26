@@ -172,7 +172,7 @@ function DropdownLink({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center gap-2 text-white text-sm px-2 py-1 hover:bg-accent rounded transition no-underline"
+      className="flex items-center gap-2 text-white text-sm px-2 py-1 rounded no-underline"
     >
       <FontAwesomeIcon icon={icon} className="w-4 h-4" />
       <span>{label}</span>

@@ -1,7 +1,9 @@
+import { FaPaperclip } from "react-icons/fa";
+
 interface Item {
   title: string;
   date: string;
-  dateEnd?: string; 
+  dateEnd?: string;
   logo?: string;
   authors?: string;
   event?: string;
@@ -10,123 +12,64 @@ interface Item {
   type?: string;
 }
 
-const badgeBgClasses: Record<
-  | "border-accent"
-  | "border-accent2"
-  | "border-accent3"
-  | "border-accent4"
-  | "border-accent5"
-  | "border-accent6",
-  string
-> = {
-  "border-accent": "bg-accent",
-  "border-accent2": "bg-accent2",
-  "border-accent3": "bg-accent3",
-  "border-accent4": "bg-accent4",
-  "border-accent5": "bg-accent5",
-  "border-accent6": "bg-accent6",
-};
-const linkTextClasses: Record<keyof typeof badgeBgClasses, string> = {
-  "border-accent": "text-[var(--color-accent)]",
-  "border-accent2": "text-[var(--color-accent2)]",
-  "border-accent3": "text-[var(--color-accent3)]",
-  "border-accent4": "text-[var(--color-accent4)]",
-  "border-accent5": "text-[var(--color-accent5)]",
-  "border-accent6": "text-[var(--color-accent6)]",
-};
-
 interface TimelineListProps {
   items: Item[];
   borderColor?: string;
-  emptyLink?: string;
 }
 
-// Separator component for clarity
 const Separator = () => (
-    <span className="inline-block text-gray-500 font-medium mx-1 select-none">
-        &bull;
-    </span>
+  <span className="inline-block text-gray-600 mx-1 select-none">&bull;</span>
 );
 
 export default function TimelineList({
   items,
   borderColor = "border-accent",
-  emptyLink = "link TBA",
 }: TimelineListProps) {
-  const key = borderColor as keyof typeof badgeBgClasses;
-  const badgeBg = badgeBgClasses[key] ?? "bg-accent";
-  const linkColor = linkTextClasses[key] ?? "text-[var(--color-accent)]";
-
   return (
     <ul className="space-y-1">
       {items.map((item, idx) => {
         const isCompactMode = !item.event && !item.authors;
 
         const metadataItems = [
-<span
-  key="date"
-  className="flex items-center gap-1 text-gray-500 font-medium"
->
-  {new Date(item.date).toLocaleDateString("en-GB", {
-    year: "numeric",
-    month: "short",
-  })}
-  {item.dateEnd && (
-    <>
-      {" → "}
-      {item.dateEnd === "present"
-        ? "Present"
-        : new Date(item.dateEnd).toLocaleDateString("en-GB", {
-            year: "numeric",
-            month: "short",
-          })}
-    </>
-  )}
-</span>,
+          // Date
+          <span key="date" className="text-gray-500 font-medium">
+            {new Date(item.date).toLocaleDateString("en-GB", {
+              year: "numeric",
+              month: "short",
+            })}
+            {item.dateEnd && (
+              <>
+                {" / "}
+                {item.dateEnd === "present"
+                  ? "Present"
+                  : new Date(item.dateEnd).toLocaleDateString("en-GB", {
+                      year: "numeric",
+                      month: "short",
+                    })}
+              </>
+            )}
+          </span>,
 
-          // 2. Type 
+          // Type
           item.type && (
-            <span
-              key="type"
-              className={`text-[10px] font-bold px-1.5 rounded-sm uppercase tracking-wider ${badgeBg} text-black whitespace-nowrap`}
-            >
+            <span key="type" className="text-gray-400">
               {item.type}
             </span>
           ),
 
-          // 3. Link
-          item.link ? (
-            <a
-              key="link"
-              href={item.link}
-              rel="noopener noreferrer"
-              target="_blank"
-              className={`flex items-center gap-1 no-underline`}
-              title="View Resource"
-            >
-              <span className={`${linkColor} opacity-80`}>link</span>
-            </a>
-          ) : (
-            <span key="empty-link" className="text-gray-500 flex items-center gap-1">
-              {emptyLink}
-            </span>
-          ),
-
-          // 4. Event
+          // Event
           !isCompactMode && item.event && (
             <span key="event" className="text-gray-500 italic">
               {item.event}
             </span>
           ),
 
-          // 5. Authors
+          // Authors
           !isCompactMode && item.authors && (
-            <span key="authors">
-              {item.authors}
-            </span>
+            <span key="authors">{item.authors}</span>
           ),
 
-          // 6. Description (Only in compact mode)
+          // Description in compact mode
           isCompactMode && item.description && (
             <span key="compact-description" className="text-gray-500">
               {item.description}
@@ -135,22 +78,40 @@ export default function TimelineList({
         ].filter(Boolean) as React.ReactElement[];
 
         return (
-          <li key={idx} className={`relative pl-6 border-l-4 ${borderColor}`}>
-            <h3 className="text-lg font-bold text-white leading-tight flex items-center gap-2">
-              {item.title}
+          <li key={idx} className={`relative pl-3 border-l-2 ${borderColor}`}>
+            <h3 className="text-small font-semibold text-white leading-snug">
+              {item.link ? (
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="!text-white no-underline"
+                >
+                  {item.title}
+<span className="ml-1 inline-block">
+  <FaPaperclip size={11} style={{ color: "white", opacity: 0.5 }} />
+</span>
+                </a>
+              ) : (
+                item.title
+              )}
             </h3>
 
-            <div className="text-sm text-gray-500 flex flex-wrap items-center">
-              {metadataItems.map((component, componentIdx) => (
-                <div key={component!.key} className="flex items-center">
-                  {component}
-                  {componentIdx < metadataItems.length - 1 && <Separator />}
-                </div>
-              ))}
-            </div>
+            {/* Metadata */}
+            {metadataItems.length > 0 && (
+              <div className="text-xs text-gray-500 flex flex-wrap items-center mt-0.5">
+                {metadataItems.map((component, componentIdx) => (
+                  <div key={component!.key} className="flex items-center">
+                    {component}
+                    {componentIdx < metadataItems.length - 1 && <Separator />}
+                  </div>
+                ))}
+              </div>
+            )}
 
+            {/* Description */}
             {!isCompactMode && item.description && (
-              <p className="text-sm text-gray-500 leading-relaxed w-fit pr-4">
+              <p className="text-sm text-gray-500 leading-relaxed pr-2">
                 {item.description}
               </p>
             )}
