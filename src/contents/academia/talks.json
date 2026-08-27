@@ -1,6 +1,6 @@
 [
   {
-    "type": "talk",
+    "type": "contributed talk",
     "title": "What the Pell: Cryptanalysis of Degree-two Pell Curves",
     "event": "ITASEC26",
     "date": "February 2026",
@@ -8,7 +8,7 @@
     "link": "/pdfs/presentation_pell_2026-02-11.pdf"
   },
   {
-    "type": "talk",
+    "type": "contributed talk",
     "title": "Cryptographic Standards for Random Number Generation",
     "event": "Cifris25",
     "date": "September 2025",

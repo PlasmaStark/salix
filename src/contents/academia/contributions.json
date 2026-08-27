@@ -1,10 +1,18 @@
 [
   {
-    "type": "talk",
+    "type": "proceedings",
     "title": "Cryptographic Standards for Random Number Generation",
-    "event": "Cifris25",
+    "event": "Cifris25 proceedings",
     "date": "September 2025",
     "authors": "L. Errati, R. La Scala, M. Palumbo",
-    "link": "https://drive.google.com/file/d/1kBTUGUq8Z4yw2aTWEcz3E0DQCSmGFN5k/edit"
+    "link": "https://doi.org/10.69091/koine/vol-7-W39"
+  },
+  {
+    "type": "contribution",
+    "title": "Bitcoin and Cryptography",
+    "event": "De Cifris Koine vol. 6",
+    "date": "May 2025",
+    "authors": "A. Bracciali, L. Errati, N. Gavioli",
+    "link": "https://doi.org/10.69091/koine/vol-6-B01"
   }
 ]
