@@ -1,6 +1,14 @@
 [
   {
     "type": "contributed talk",
+    "title": "Canonical Liftings for Group Actions: Beyond Ring Signatures?",
+    "event": "ALPEC",
+    "date": "September 2026",
+    "authors": "A. Budroni, G. D'Alconzo, L. Errati, E. Persichetti",
+    "link": "/pdfs/presentation_liftings_2026-09-03.pdf"
+  },
+  {
+    "type": "contributed talk",
     "title": "What the Pell: Cryptanalysis of Degree-two Pell Curves",
     "event": "ITASEC26",
     "date": "February 2026",
