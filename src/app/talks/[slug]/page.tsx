@@ -49,9 +49,14 @@ export default async function TalkPost({ params }: { params: any }) {
         </div>
 
         {/* Titolo */}
-        <h1 className="font-serif text-3xl font-medium text-white leading-tight mb-3">
+        <h1 className="text-3xl text-white">
           {metadata.title}
         </h1>
+        {metadata.description && (
+          <p className="text-base italic text-gray-400 leading-snug mb-4">
+            {metadata.description}
+          </p>
+        )}
 
         {/* Tag */}
         <ul className="flex flex-wrap gap-2">
