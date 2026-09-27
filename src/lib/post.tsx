@@ -1,19 +1,19 @@
-import { promises as fs } from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-import { unified } from 'unified';
-import remarkParse from 'remark-parse';
-import remarkRehype from 'remark-rehype';
-import rehypeStringify from 'rehype-stringify';
-import remarkMath from 'remark-math';
-import remarkGfm from 'remark-gfm';
-import rehypeKatex from 'rehype-katex';
-import remarkImages from './plugins/remark-images';
-import { remarkExtractToc } from './plugins/remark-extract-toc';
-import rehypeSlug from 'rehype-slug';
-import rehypeRaw from 'rehype-raw';
+import { promises as fs } from "fs";
+import path from "path";
+import matter from "gray-matter";
+import { unified } from "unified";
+import remarkParse from "remark-parse";
+import remarkRehype from "remark-rehype";
+import rehypeStringify from "rehype-stringify";
+import remarkMath from "remark-math";
+import remarkGfm from "remark-gfm";
+import rehypeKatex from "rehype-katex";
+import remarkImages from "./plugins/remark-images";
+import { remarkExtractToc } from "./plugins/remark-extract-toc";
+import rehypeSlug from "rehype-slug";
+import rehypeRaw from "rehype-raw";
 
-const Cite = require('citation-js');
+const Cite = require("citation-js");
 
 const contentCache = new Map();
 let bibliographyCache: any = null;
@@ -44,7 +44,7 @@ function createProcessor(toc: any[]) {
 export async function getContent(
   slug: string,
   directory: string,
-  bibliographyFile: string
+  bibliographyFile: string,
 ) {
   const cacheKey = `${slug}-${directory}-${bibliographyFile}`;
   if (contentCache.has(cacheKey)) {
@@ -53,14 +53,17 @@ export async function getContent(
 
   const filePath = path.join(directory, `${slug}.md`);
   try {
-    const fileContent = await fs.readFile(filePath, 'utf-8');
+    const fileContent = await fs.readFile(filePath, "utf-8");
     const { data, content } = matter(fileContent);
     const toc: { text: string; id: string; level: number }[] = [];
     const processor = createProcessor(toc);
     const processedContent = await processor.process(content);
 
     const bibliography = await loadBibliographyOnce(bibliographyFile);
-    const citationProcessing = processCitations(processedContent.toString(), bibliography);
+    const citationProcessing = processCitations(
+      processedContent.toString(),
+      bibliography,
+    );
 
     const result = {
       metadata: data,
@@ -94,17 +97,20 @@ function processCitations(content: string, bibliography: any) {
     return `<span class="citation">[${citationNumber}]</span>`;
   });
 
-  const bibliographyHtml = generateBibliographyHtml(citationOrder, bibliography);
+  const bibliographyHtml = generateBibliographyHtml(
+    citationOrder,
+    bibliography,
+  );
   return { htmlContent, bibliographyHtml };
 }
 
 function generateBibliographyHtml(
   citationOrder: string[],
-  bibliography: any
+  bibliography: any,
 ): string {
   const bibliographyEntries = citationOrder.map((citationKey, index) => {
     const rawEntry = bibliography.data.find(
-      (entry: any) => entry.id === citationKey
+      (entry: any) => entry.id === citationKey,
     );
 
     if (!rawEntry) {
@@ -115,17 +121,14 @@ function generateBibliographyHtml(
     // Format only this specific entry
     const singleCitation = new Cite([rawEntry]);
 
-    const formattedEntry = singleCitation.format('bibliography', {
-      format: 'html',
+    const formattedEntry = singleCitation.format("bibliography", {
+      format: "html",
     });
 
     const url = rawEntry.URL || rawEntry.url || rawEntry.note;
 
     // Remove URL already printed by the bibliography formatter
-    const cleanedEntry = formattedEntry.replace(
-      /https?:\/\/[^\s<]+/g,
-      ''
-    );
+    const cleanedEntry = formattedEntry.replace(/https?:\/\/[^\s<]+/g, "");
 
     const wrappedEntry = url
       ? `<a href="${url}" target="_blank" rel="noopener noreferrer">${cleanedEntry}</a>`
@@ -134,5 +137,5 @@ function generateBibliographyHtml(
     return `<li id="ref-${index + 1}">${wrappedEntry}</li>`;
   });
 
-  return `<ol class="bibliography">${bibliographyEntries.join('')}</ol>`;
+  return `<ol class="bibliography">${bibliographyEntries.join("")}</ol>`;
 }
