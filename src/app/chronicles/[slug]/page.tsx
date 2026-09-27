@@ -39,18 +39,18 @@ export default async function BlogPost({ params }: { params: any }) {
 
       {/* Hero magazinistico */}
       {coverSrc && (
-        <div className="relative w-full overflow-hidden rounded-lg mb-6" style={{ maxHeight: '420px' }}>
+        <div className="relative w-full overflow-hidden rounded-lg mb-6" style={{ maxHeight: '500px' }}>
           <Image
             src={coverSrc}
             width={900}
-            height={420}
+            height={500}
             alt={metadata.title}
             className="object-cover w-full"
-            style={{ maxHeight: '420px' }}
+            style={{ maxHeight: '500px' }}
             priority
           />
           {/* Overlay con titolo */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent flex flex-col justify-end p-6">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-transparent flex flex-col justify-end p-6">
             <ul className="flex flex-wrap gap-2 mb-3">
               {metadata.tags.map((tag: string) => (
                 <li key={tag} className="text-xs no-underline uppercase tracking-widest text-white px-0.5 py-0.5">

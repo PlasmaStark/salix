@@ -31,21 +31,10 @@ function NewspaperLayout({
   const sorted = [...contents].sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   );
-  const [featured, ...rest] = sorted;
   return (
   <div>
     <ul className="flex flex-col gap-4">
-      {featured && (
-        <ContentCard post={featured} baseRoute={baseRoute} variant="newspaper-featured" />
-      )}
-    </ul>
-    {rest.length > 0 && (
-      <p className="text-normal uppercase tracking-widest text-gray-600 mt-2 mb-8">
-        More chronicles
-      </p>
-    )}
-    <ul className="flex flex-col gap-4">
-      {rest.map((post) => (
+      {sorted.map((post) => (
         <ContentCard key={post.slug} post={post} baseRoute={baseRoute} variant="newspaper-secondary" />
       ))}
     </ul>
