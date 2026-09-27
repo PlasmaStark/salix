@@ -98,20 +98,38 @@ function processCitations(content: string, bibliography: any) {
   return { htmlContent, bibliographyHtml };
 }
 
-function generateBibliographyHtml(citationOrder: string[], bibliography: any): string {
+function generateBibliographyHtml(
+  citationOrder: string[],
+  bibliography: any
+): string {
   const bibliographyEntries = citationOrder.map((citationKey, index) => {
-    const rawEntry = bibliography.get({ selector: citationKey, type: 'json' })[0];
-    const formattedEntry = bibliography.format('bibliography', {
-      type: 'html',
-      entry: citationKey,
+    const rawEntry = bibliography.data.find(
+      (entry: any) => entry.id === citationKey
+    );
+
+    if (!rawEntry) {
+      console.warn(`Bibliography entry not found: ${citationKey}`);
+      return `<li id="ref-${index + 1}">Missing reference: ${citationKey}</li>`;
+    }
+
+    // Format only this specific entry
+    const singleCitation = new Cite([rawEntry]);
+
+    const formattedEntry = singleCitation.format('bibliography', {
+      format: 'html',
     });
 
-    const url = rawEntry?.URL || rawEntry?.url || rawEntry?.note;
-    const cleanedEntry = formattedEntry.replace(/https?:\/\/[^\s<]+/g, '');
+    const url = rawEntry.URL || rawEntry.url || rawEntry.note;
+
+    // Remove URL already printed by the bibliography formatter
+    const cleanedEntry = formattedEntry.replace(
+      /https?:\/\/[^\s<]+/g,
+      ''
+    );
 
     const wrappedEntry = url
       ? `<a href="${url}" target="_blank" rel="noopener noreferrer">${cleanedEntry}</a>`
-      : formattedEntry;
+      : cleanedEntry;
 
     return `<li id="ref-${index + 1}">${wrappedEntry}</li>`;
   });
