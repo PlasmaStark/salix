@@ -20,7 +20,8 @@ This talk was first held at [ALPEC summer school](https://alpec-school.github.io
 
 ## Material
 
-- [slides for ALPEC](/pdfs/presentation_liftings_2026-09-03.pdf)
+- [slides for ALPEC, 2026-09-03](/pdfs/presentation_liftings_2026-09-03.pdf)
+- [slides for 6GPHYSEC, 2026-09-28](/pdfs/presentation_liftings_2026-09-28.pdf)
 - [article](https://eprint.iacr.org/2026/1348)
 
 
