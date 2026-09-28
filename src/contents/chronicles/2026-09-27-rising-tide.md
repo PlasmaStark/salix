@@ -5,20 +5,19 @@ description: "On the future of math and sciences."
 coverImage: "images/chronicles/2026-tide.webp"
 tags:
   - Mathematics
-  - AI
 ---
 
-At this point, we all are surely familiar with LLMs. We might also be familiar with the recent drama surrounding OpenAI and the Navier-Stokes equation. (Wait, it has a [Wikipedia page](https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_priority_controversy)? Of course it does.)
+Times are changing, and academia must also change. At this point, we all are familiar with LLMs. We might also be familiar with the recent drama surrounding OpenAI and the Navier-Stokes equation. (Wait, it has a [Wikipedia page](https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_priority_controversy)? Of course it does.)
 
-This is becoming more and more relevant, and recently popped out both with colleagues and collaborators. I thought about this, and would like to jolt down some remarks, and a connection between two related problems affecting academia.
+This recently popped out both with colleagues and collaborators. I would like to jolt down some remarks, and a connection between this and other problems .
 
 ## Drowning in Data
 
 This is one of the most important challenges for the future of science: the surge in research papers. It is evident in the graph of preprint submissions at [arXiv](https://arxiv.org/stats/monthly_submissions). In March 2026, it jumped to over 1000 articles per day, and it still seems to be experiencing an exponential growth, doubling since 2022. The ICLR27 conference saw [60.000 submitted abstracts](https://www.kucoin.com/news/flash/iclr-2027-submissions-surpass-60-000-breaking-previous-records?lang=en_US&), twenty times those in 2022. 
 
-Indeed, this must be partly due to changes in focus and founding. ICLR27 is a conference in machine learning after all. But of course, there is an elephant in the room with us. Researchers were given a tool seemingly able to analyse all the ideas in their drawers, which would have usually been left there or lent to students. A gift worthy of ancient cautionary tales, not inherently bad or good.
+Indeed, this is partly due to changes in focus and founding. ICLR27 is a conference in machine learning, after all. Another possible cause is the sheer increase in the number of researchers. But of course, there is an elephant in our room. Researchers were given a terrific artifact, one seemingly able to analyse all the little ideas in their drawers which would have usually been left there or lent to students. A gift worthy of ancient cautionary tales, not inherently bad or good.
 
-Surprisingly enough, the [cryptography ePrint archive](https://eprint.iacr.org/stats) did not see an anomalous increase since 2022, but [conference submissions](https://www.iacr.org/cryptodb/data/acceptance.php) experienced the familiar exponential increase. This makes things more complicated, and hints that the blame might not be only on this artefact.
+Surprisingly enough, as of September 2026, the [cryptography ePrint archive](https://eprint.iacr.org/stats) did not see an anomalous growth in submissions, but [conferences](https://www.iacr.org/cryptodb/data/acceptance.php) experienced the familiar exponential increase. This makes things more complicated, and hints that the blame might not be only on this artefact.
 
 ## Is my LLM a Devil or an Angel?
 
@@ -26,11 +25,13 @@ The two extremes are exaggerate in their own way. LLMs will not "destroy" mathem
 
 This powerful artefact is not inherently good or bad. As researchers, we find ourselves in quite a pickle. We have the possibility to forge so many new articles so much faster, further increasing our own metrics. This makes us sleep better at night. But doing so contributes to the rising tide, causing all sorts of problems. The devil lies in how we choose to use this artefact. 
 
-Coming back to the Navier-Stokes controversy, many important mathematicians shared their opinions ([@WEB:mathathon], [@WEB:mathandai], [@WEB:math-unseen]). Let us leave aside the fact that OpenAI provably bullied two prominent researchers and likely stole their result, via siphoned knowledge or word of mouth. While it is incredible to know whether Millennium Problems hold or not, this was never meant to be the point. Hilbert, and later the Clay institute, selected some problems as guiding lights, ideas that would spawn other ideas or whole research areas. Math really is the friends we made along the way. Or it would have been, if using LLMs generated any. Blind adoption of this devilish deal does not produce collateral knowledge, and hinders the development of future mathematicians. Of course, if we mind this, there are ways of integrating LLMs into your research that are quite reasonable. 
+Going back to the Navier-Stokes controversy, many important mathematicians shared their opinions ([@WEB:mathathon], [@WEB:mathandai], [@WEB:math-unseen]). Let us leave aside the fact that OpenAI provably bullied two prominent researchers and likely stole their result, either via siphoned knowledge or word of mouth. While it is incredible to know whether Millennium Problems hold or not, this was never meant to be the point. Hilbert, and later the Clay institute, selected some problems as guiding lights, ideas that would spawn other ideas or whole research areas. Math really is the friends we made along the way. Or it would have been, if using LLMs generated any. Blind adoption of this devilish deal does not produce collateral knowledge, and hinders the development of future mathematicians. Of course, if we mind this, there are ways of integrating LLMs into your research that are quite reasonable. 
 
 ## The Road Ahead
 
-First, we must adapt to the increasing number of articles. In medicine, they are now so many that two researchers in the same area might have little knowledge overlap. Tens of thousands are published each year, and unsurprisingly most are later found to be wrong or tampered - not all retracted. Second, we must decide if we will allow LLMs to have a role in mathematics. The two are intertwined.
+First, we must adapt to the increasing number of articles. In medicine, for instance, they are now so many that two researchers in the same area might have little knowledge overlap. Tens of thousands are published each year, and unsurprisingly most are later found to be wrong or tampered - not all retracted. 
+
+Second, we must decide if we will allow LLMs to have a role in mathematics. 
 
 I leave the following as open questions. I do not claim to have the answer, they are merely brain-scratchers, to be considered for the future of science.
 
