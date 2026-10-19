@@ -68,6 +68,12 @@
   {
     "title": "Mass Effect Legendary Edition",
     "image": "/images/games/mass_effect_le.webp",
+    "scoreL": "8.75",
+    "scoreA": "8.5"
+  },
+  {
+    "title": "The Outer Worlds",
+    "image": "/images/games/outer_worlds.webp",
     "scoreL": "TBA",
     "scoreA": "TBA"
   }
