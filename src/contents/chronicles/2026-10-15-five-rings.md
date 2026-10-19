@@ -10,7 +10,7 @@ tags:
 
 When I was in Taiwan, I learned of *The Book of Five Rings*, a treatise by Miyamoto Musashi organised into five scrolls, one for each of the five elements of Japanese Buddhist cosmology: Earth, Water, Fire, Wind, and Void. Each scroll covers one aspect of strategy a good martial artist should master. And I thought to myself: *"why not do the same with a PhD?"*
 
-![Five rings](/images/primetales/2026-five_rings.webp)
+![Five rings](/images/chronicles/2026-five_rings.webp)
 
 ## I. Earth
 
@@ -58,8 +58,10 @@ Void is the shortest scroll, and it contains no technique. It describes a mind f
 
 During a PhD, you are given (to some extent) tools, goals, deadlines. Once a milestone is overcome, others take its place almost naturally. However, after years of this routine, you will be left stranded, possibly without a purpose. The trial of the Dawn is the following question: *"and now what?"*. This is heavily subjective. Overcoming it is easy for some, close to annihilating for others. 
 
-![Five rings and their trials](/images/primetales/2026-five_rings_trials.webp)
+![Five rings and their trials](/images/chronicles/2026-five_rings_trials.webp)
 
 ## Conclusion
 
-Four of the trials come with the doctorate. The fifth, my dear reader, I fear is entirely up to you. Is it possible to fail it? Is it possible to succeed? It is no accident that Musashi ends his book on emptiness. After the techniques, what remains is the mind that chooses.
+Four of the trials come with the doctorate. The fifth, my dear reader, I fear is entirely up to you. Is it possible to fail it? Is it possible to succeed? It is no accident that Musashi ends his book on emptiness. After the techniques, what remains is the mind that chooses. 
+
+Here are [some slides](/pdfs/presentation_fiverings_2026-10-15.pdf) I used to present this for a course in public speaking. All images come from here. Good luck!
