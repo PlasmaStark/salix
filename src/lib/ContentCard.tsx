@@ -138,7 +138,7 @@ if (variant === "newspaper-featured") {
         )}
         <div className="text-center max-w-xl mx-auto">
           <p className="text-xs uppercase tracking-widest text-accent mb-2">
-            {post.date} · {post.tags[0] ?? ""}
+            {post.date} / {post.tags[0] ?? ""}
           </p>
           <h2 className="font-serif text-3xl font-semibold leading-snug text-foreground mb-3 group-hover:text-accent transition-colors">
             {post.title}
@@ -176,7 +176,7 @@ if (variant === "newspaper-featured") {
           )}
           <div className="flex flex-col justify-center">
             <p className="text-sm uppercase tracking-widest text-accent mb-0.5">
-              {post.date} · {post.tags[0] ?? ""}
+              {post.date} / {post.tags[0] ?? ""}
             </p>
             <h3 className="font-serif text-lg font-semibold leading-snug text-foreground line-clamp-2">
               {post.title}

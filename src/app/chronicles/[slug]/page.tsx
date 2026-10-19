@@ -97,7 +97,7 @@ export default async function BlogPost({ params }: { params: any }) {
         {new Date(metadata.date).toLocaleDateString("en-GB", {
           day: "numeric", month: "long", year: "numeric",
         })}
-        {" · last modified "}
+        {", last modified "}
         {new Date(lastMod).toLocaleDateString("en-GB", {
           day: "numeric", month: "long", year: "numeric",
         })}
