@@ -13,7 +13,10 @@ import { remarkExtractToc } from "./plugins/remark-extract-toc";
 import rehypeSlug from "rehype-slug";
 import rehypeRaw from "rehype-raw";
 
-const Cite = require("citation-js");
+// Only the local BibTeX reader and HTML bibliography formatter are needed.
+const { Cite } = require("@citation-js/core");
+require("@citation-js/plugin-bibtex");
+require("@citation-js/plugin-csl");
 
 const contentCache = new Map();
 let bibliographyCache: any = null;

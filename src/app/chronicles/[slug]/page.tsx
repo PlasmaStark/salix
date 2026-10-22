@@ -6,7 +6,9 @@ import { getContentList } from '@/lib/getPosts';
 import Image from 'next/image';
 import path from 'path';
 import fs from 'fs';
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
+
+type PostProps = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
   const posts = getContentList(BLOG_DIR);
@@ -15,12 +17,17 @@ export async function generateStaticParams() {
   }));
 }
 
-export const metadata: Metadata = {
-  title: "Chronicles",
-  description: "A collection of personal chronicles",
-};
+export async function generateMetadata({ params }: PostProps): Promise<Metadata> {
+  const { slug } = await params;
+  const { metadata } = await getContent(slug, BLOG_DIR, BIBLIOGRAPHY_DIR);
 
-export default async function BlogPost({ params }: { params: any }) {
+  return {
+    title: metadata.title,
+    description: metadata.description,
+  };
+}
+
+export default async function BlogPost({ params }: PostProps) {
   const { slug } = await params;
   const { metadata, content, bibliography, toc } = await getContent(slug, BLOG_DIR, BIBLIOGRAPHY_DIR);
   const filePath = path.join(process.cwd(), 'src/contents/chronicles', `${slug}.md`);

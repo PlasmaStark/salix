@@ -178,7 +178,7 @@ if (variant === "newspaper-featured") {
             <p className="text-sm uppercase tracking-widest text-accent mb-0.5">
               {post.date} / {post.tags[0] ?? ""}
             </p>
-            <h3 className="font-serif text-lg font-semibold leading-snug text-foreground line-clamp-2">
+            <h3 className="text-lg font-semibold leading-snug text-foreground line-clamp-2">
               {post.title}
             </h3>
             <p className="text-sm text-gray-500 mt-0.5 leading-tight line-clamp-2">
@@ -198,7 +198,7 @@ if (variant === "newspaper-featured") {
           className="bg-gray-900 rounded-md p-4 no-underline group block"
         >
           <div className="flex flex-wrap items-baseline">
-            <span className="font-mono text-xs text-white-500">{post.date}</span>
+            <span className="font-mono text-xs text-white-500">{post.date} </span>
             {post.target && (
               <span
                 className={`text-xs uppercase tracking-widest ml-1 px-1.5 rounded-sm ${
@@ -211,11 +211,11 @@ if (variant === "newspaper-featured") {
                         : "text-gray-400"
                 }`}
               >
-                {post.target}
+                ({post.target})
               </span>
             )}
           </div>
-          <h3 className="font-serif text-xl font-medium text-foreground group-hover:text-accent transition-colors leading-snug">
+          <h3 className="text-lg font-medium text-foreground group-hover:text-accent transition-colors leading-snug">
             {post.title}
           </h3>
           <p className="text-sm text-gray-400 leading-tight">

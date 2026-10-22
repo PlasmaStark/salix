@@ -1,18 +1,26 @@
+import type { Ref } from "react";
+
 export const HamburgerButton = ({
   isOpen,
   onClick,
   className,
+  buttonRef,
 }: {
   isOpen: boolean;
   onClick: () => void;
   className?: string;
+  buttonRef?: Ref<HTMLButtonElement>;
 }) => (
   <button
+    ref={buttonRef}
+    type="button"
     onClick={onClick}
     className={`relative md:hidden w-10 h-10 flex items-center justify-center text-white hover:text-[var(--color-accent)] focus:outline-none transition-colors duration-300 ${
       className ?? ""
     }`}
     aria-label="Toggle menu"
+    aria-expanded={isOpen}
+    aria-controls="mobile-navigation"
   >
     <div className="relative w-5 h-4">
       <span

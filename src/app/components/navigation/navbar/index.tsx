@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { MobileSidebar } from "./MobileSidebar";
 import { HamburgerButton } from "./HamburgerButton";
@@ -18,7 +18,25 @@ const navLinks = [
 
 export default function Navbar() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
-  const closeSidebar = () => setSidebarOpen(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const closeSidebar = useCallback(() => {
+    setSidebarOpen(false);
+    menuButtonRef.current?.focus();
+  }, []);
+
+  useEffect(() => {
+    if (!isSidebarOpen) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        closeSidebar();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [isSidebarOpen, closeSidebar]);
 
   return (
     <header className="fixed top-0 left-0 w-full bg-[var(--color-primary)] text-white shadow-lg z-50">
@@ -38,6 +56,7 @@ export default function Navbar() {
 
         {/* Mobile hamburger */}
         <HamburgerButton
+          buttonRef={menuButtonRef}
           isOpen={isSidebarOpen}
           onClick={() => setSidebarOpen(!isSidebarOpen)}
           className="relative z-[60]"

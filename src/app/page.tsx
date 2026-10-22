@@ -203,6 +203,20 @@ export default function Home() {
               </p>
               <p className="text-accent text-xs mt-1">Maurice Leblanc</p>
             </div>
+            <div className="relative aspect-[2/3] rounded-lg overflow-hidden group">
+              <Image
+                src="/images/books/north_august.webp"
+                alt="The First Fifteen Lives of Harry August"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-4">
+                <p className="text-white font-bold text-sm leading-tight">
+                  The First Fifteen Lives of Harry August
+                </p>
+                <p className="text-accent text-xs mt-1">Catherine Webb</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

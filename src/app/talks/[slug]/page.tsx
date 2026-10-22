@@ -3,7 +3,9 @@ import Breadcrumb from '@components/breadcrumb';
 import Link from 'next/link';
 import { BIBLIOGRAPHY_DIR, TALKS_DIR } from '../../../../config';
 import { getContentList } from '@/lib/getPosts';
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
+
+type PostProps = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
   const posts = getContentList(TALKS_DIR);
@@ -12,10 +14,15 @@ export async function generateStaticParams() {
   }));
 }
 
-export const metadata: Metadata = {
-  title: "Talks",
-  description: "Some public talks",
-};
+export async function generateMetadata({ params }: PostProps): Promise<Metadata> {
+  const { slug } = await params;
+  const { metadata } = await getContent(slug, TALKS_DIR, BIBLIOGRAPHY_DIR);
+
+  return {
+    title: metadata.title,
+    description: metadata.description,
+  };
+}
 
 const targetStyle: Record<string, string> = {
   Beginner:     "bg-green-900 text-green-400",
@@ -23,7 +30,7 @@ const targetStyle: Record<string, string> = {
   Advanced:     "bg-red-900 text-red-400",
 };
 
-export default async function TalkPost({ params }: { params: any }) {
+export default async function TalkPost({ params }: PostProps) {
   const { slug } = await params;
   const { metadata, content } = await getContent(slug, TALKS_DIR, BIBLIOGRAPHY_DIR);
 

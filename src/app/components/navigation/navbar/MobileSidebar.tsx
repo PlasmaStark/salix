@@ -19,6 +19,8 @@ export const MobileSidebar = ({
 
       {/* Sidebar da destra */}
       <aside
+        id="mobile-navigation"
+        inert={!isOpen}
         className={`fixed top-0 right-0 w-64 h-full bg-[var(--color-primary)] text-white shadow-lg z-50 p-6
           transform transition-transform duration-300 ease-in-out
           ${isOpen ? "translate-x-0" : "translate-x-full"}`}

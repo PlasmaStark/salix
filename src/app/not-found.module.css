@@ -1,0 +1,30 @@
+.card {
+  animation: appear 0.5s ease-out 0.2s both;
+}
+
+.cipher {
+  animation: color-pulse 1.2s ease-in-out infinite,
+    glitch 1.2s ease-in-out infinite;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes color-pulse {
+  0%, 100% { color: #f43f5e; opacity: 0.6; }
+  50% { color: #f87171; opacity: 1; }
+}
+
+@keyframes glitch {
+  0%, 100% { transform: translateX(0) skewX(0); }
+  20% { transform: translateX(-1px) skewX(1deg); }
+  40% { transform: translateX(1px) skewX(-1deg); }
+  60% { transform: translateX(-2px) skewX(0.5deg); }
+  80% { transform: translateX(2px) skewX(-0.5deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card, .cipher { animation: none; }
+}
