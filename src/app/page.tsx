@@ -214,7 +214,7 @@ export default function Home() {
                 <p className="text-white font-bold text-sm leading-tight">
                   The First Fifteen Lives of Harry August
                 </p>
-                <p className="text-accent text-xs mt-1">Catherine Webb</p>
+                <p className="text-accent text-xs mt-1">Claire North</p>
               </div>
             </div>
           </div>
