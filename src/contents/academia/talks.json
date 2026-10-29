@@ -30,5 +30,13 @@
     "date": "March 2025",
     "authors": "L. Errati",
     "link": "/talks/2025-03-21-pq-blockchain"
+  },
+  {
+    "type": "invited talk",
+    "title": "Linkable Ring Signatures from Group Actions",
+    "event": "Chalmers University of Technology",
+    "date": "October 2026",
+    "authors": "L. Errati",
+    "link": "/talks/2026-10-29-linkable-ring-signatures"
   }
 ]
