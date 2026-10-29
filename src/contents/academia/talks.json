@@ -1,11 +1,19 @@
 [
   {
+    "type": "invited talk",
+    "title": "Linkable Ring Signatures from Group Actions",
+    "event": "Chalmers University of Technology",
+    "date": "October 2026",
+    "authors": "L. Errati",
+    "link": "/talks/2026-10-29-linkable-ring-signatures"
+  },
+  {
     "type": "contributed talk",
     "title": "Canonical Liftings for Group Actions: Beyond Ring Signatures?",
-    "event": "ALPEC",
-    "date": "September 2026",
+    "event": "ALPEC / 6GPhySec / Cifris26 / NordiCrypt26",
+    "date": "September-October 2026",
     "authors": "A. Budroni, G. D'Alconzo, L. Errati, E. Persichetti",
-    "link": "/pdfs/presentation_liftings_2026-09-03.pdf"
+    "link": "/talks/2026-09-03-canonical-lifting"
   },
   {
     "type": "contributed talk",
@@ -30,13 +38,5 @@
     "date": "March 2025",
     "authors": "L. Errati",
     "link": "/talks/2025-03-21-pq-blockchain"
-  },
-  {
-    "type": "invited talk",
-    "title": "Linkable Ring Signatures from Group Actions",
-    "event": "Chalmers University of Technology",
-    "date": "October 2026",
-    "authors": "L. Errati",
-    "link": "/talks/2026-10-29-linkable-ring-signatures"
   }
 ]
