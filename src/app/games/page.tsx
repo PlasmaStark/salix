@@ -10,11 +10,11 @@ export const metadata: Metadata = {
 
 export default function GamingPage() {
   const rankedGames = [...games]
-    .map((game) => ({
-      ...game,
-      avg: (Number(game.scoreL) + Number(game.scoreA)) / 2,
-    }))
-    .sort((a, b) => b.avg - a.avg);
+    .map((game) => {
+      const avg = (Number(game.scoreL) + Number(game.scoreA)) / 2;
+      return { ...game, avg: Number.isFinite(avg) ? avg : null };
+    })
+    .sort((a, b) => (b.avg ?? -Infinity) - (a.avg ?? -Infinity));
 
   return (
     <main className="container mx-auto px-2 py-2">
@@ -84,20 +84,20 @@ export default function GamingPage() {
                     className="object-cover"
                   />
                 </div>
-                <div className="w-1/3 flex flex-col">
+                <div className="w-1/3 min-w-0 flex flex-col [container-type:inline-size]">
                   <div className="flex-1 flex flex-col items-center justify-center relative overflow-hidden">
-                    <span className="text-[10px] font-black uppercase mb-2">
+                    <span className="text-[min(10px,18cqi)] font-black uppercase mb-[min(0.5rem,10cqi)]">
                       L-Rank
                     </span>
-                    <span className="flex items-center justify-center w-16 h-16 bg-accent text-white text-2xl font-black rounded-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,0.3)] transform -rotate-3">
+                    <span className="flex items-center justify-center w-[70%] max-w-16 aspect-square shrink-0 bg-accent text-white text-[min(1.5rem,26cqi)] font-black rounded-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,0.3)] transform -rotate-3">
                       {game.scoreL}
                     </span>
                   </div>
                   <div className="flex-1 flex flex-col items-center justify-center relative overflow-hidden">
-                    <span className="text-[10px] font-black uppercase mb-2">
+                    <span className="text-[min(10px,18cqi)] font-black uppercase mb-[min(0.5rem,10cqi)]">
                       A-Rank
                     </span>
-                    <span className="flex items-center justify-center w-16 h-16 bg-accent6 text-white text-2xl font-black rounded-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,0.3)] transform -rotate-3">
+                    <span className="flex items-center justify-center w-[70%] max-w-16 aspect-square shrink-0 bg-accent6 text-white text-[min(1.5rem,26cqi)] font-black rounded-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,0.3)] transform -rotate-3">
                       {game.scoreA}
                     </span>
                   </div>
@@ -117,10 +117,11 @@ export default function GamingPage() {
         </div>
 
         <div className="flex flex-col gap-2">
-          {rankedGames.map((game, i) => {
-            const medal =
-              i === 0 ? "🥇" : i === 1 ? "🥈" : i === 2 ? "🥉" : null;
-            const isTop3 = i < 3;
+          {rankedGames.map((game) => {
+            const rank = game.avg === null
+              ? null
+              : rankedGames.findIndex((other) => other.avg === game.avg) + 1;
+            const isTop3 = rank !== null && rank <= 3;
 
             return (
               <div
@@ -132,11 +133,7 @@ export default function GamingPage() {
               >
                 {/* Posizione */}
                 <div className="w-10 flex-shrink-0 text-center">
-                  {medal ? (
-                    <span className="text-xl">{medal}</span>
-                  ) : (
-                    <span className="text-gray-500 font-black"># {i + 1}</span>
-                  )}
+                  <span className="text-gray-500 font-black">{rank ?? ""}</span>
                 </div>
 
                 {/* Thumbnail */}
@@ -183,7 +180,9 @@ export default function GamingPage() {
                 ${isTop3 ? "bg-white text-gray-900" : "bg-gray-700 text-white"}
               `}
                   >
-                    {game.avg % 1 === 0 ? game.avg : game.avg.toFixed(1)}
+                    {game.avg === null
+                      ? "TBA"
+                      : game.avg % 1 === 0 ? game.avg : game.avg.toFixed(1)}
                   </div>
                 </div>
               </div>

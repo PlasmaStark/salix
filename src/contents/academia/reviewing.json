@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Journal of Mathematical Cryptology",
+    "date": "2024",
+    "type": "Reviewer",
+    "link": "https://www.degruyterbrill.com/journal/key/jmc/html",
+    "dateEnd": "present"
+  },
+  {
+    "title": "Designs, Codes and Cryptography",
+    "date": "2025",
+    "type": "Subreviewer",
+    "link": "https://link.springer.com/journal/10623",
+    "dateEnd": "present"
+  },
+  {
+    "title": "CRYPTO",
+    "date": "2026",
+    "type": "Subreviewer",
+    "link": "https://crypto.iacr.org/2026/"
+  },
+  {
+    "title": "ASIACRYPT",
+    "date": "2026",
+    "type": "Subreviewer",
+    "link": "https://asiacrypt.iacr.org/2026/"
+  },
+  {
+    "title": "PKC",
+    "date": "2026",
+    "type": "Subreviewer",
+    "link": "https://pkc.iacr.org/2026/"
+  }
+]

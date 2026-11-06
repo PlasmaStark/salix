@@ -10,6 +10,7 @@ import supervised_theses from "../../contents/academia/supervised_theses.json";
 import software from "../../contents/academia/software.json";
 import organisation from "../../contents/academia/organisation.json";
 import teaching from "../../contents/academia/teaching.json";
+import reviewing from "../../contents/academia/reviewing.json";
 import { Metadata } from "next";
 import TimelineList from "../components/navigation/timelineList/timelineList";
 
@@ -25,6 +26,7 @@ const sections: {
     data: any[];
     color: string;
     emptyLink?: string;
+    datePrecision?: "month" | "year";
   }[];
 }[] = [
   {
@@ -80,6 +82,12 @@ const sections: {
     group: "Service",
     items: [
       { label: "Organisation", data: organisation, color: "border-accent" },
+      {
+        label: "Reviewer",
+        data: reviewing,
+        color: "border-accent",
+        datePrecision: "year",
+      },
       { label: "Software & Tools", data: software, color: "border-accent" },
     ],
   },
@@ -107,14 +115,17 @@ export default function AcademiaPage() {
             </h2>
           )}
           <div className={`space-y-4 ${group ? "pl-4" : ""}`}>
-            {items.map(({ label, data, color, emptyLink }) => (
+            {items.map(({ label, data, color, emptyLink, datePrecision }) => (
               <div key={label}>
-                <h3 className="text-xs uppercase tracking-widest text-gray-500 mb-1">
+                <h3 className="text-xs uppercase tracking-widest text-white mb-1">
                   {label}
                 </h3>
                 <TimelineList
                   items={data as any}
                   borderColor={color}
+                  datePrecision={datePrecision}
+                  titleClassName="text-sm font-bold text-gray-400"
+                  metadataSeparator="-"
                 />
               </div>
             ))}

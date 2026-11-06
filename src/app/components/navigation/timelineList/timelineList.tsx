@@ -15,15 +15,21 @@ interface Item {
 interface TimelineListProps {
   items: Item[];
   borderColor?: string;
+  datePrecision?: "month" | "year";
+  titleClassName?: string;
+  metadataSeparator?: string;
 }
 
-const Separator = () => (
-  <span className="inline-block text-gray-600 mx-1 select-none">&bull;</span>
+const Separator = ({ character }: { character: string }) => (
+  <span className="inline-block text-inherit mx-1 select-none">{character}</span>
 );
 
 export default function TimelineList({
   items,
   borderColor = "border-accent",
+  datePrecision = "month",
+  titleClassName = "text-base font-semibold text-white",
+  metadataSeparator = "•",
 }: TimelineListProps) {
   return (
     <ul className="space-y-1">
@@ -32,10 +38,10 @@ export default function TimelineList({
 
         const metadataItems = [
           // Date
-          <span key="date" className="text-gray-500 font-medium">
+          <span key="date">
             {new Date(item.date).toLocaleDateString("en-GB", {
               year: "numeric",
-              month: "short",
+              month: datePrecision === "month" ? "short" : undefined,
             })}
             {item.dateEnd && (
               <>
@@ -44,7 +50,7 @@ export default function TimelineList({
                   ? "Present"
                   : new Date(item.dateEnd).toLocaleDateString("en-GB", {
                       year: "numeric",
-                      month: "short",
+                      month: datePrecision === "month" ? "short" : undefined,
                     })}
               </>
             )}
@@ -52,14 +58,14 @@ export default function TimelineList({
 
           // Type
           item.type && (
-            <span key="type" className="text-gray-400">
+            <span key="type">
               {item.type}
             </span>
           ),
 
           // Event
           !isCompactMode && item.event && (
-            <span key="event" className="text-gray-500 italic">
+            <span key="event" className="italic">
               {item.event}
             </span>
           ),
@@ -71,7 +77,7 @@ export default function TimelineList({
 
           // Description in compact mode
           isCompactMode && item.description && (
-            <span key="compact-description" className="text-gray-500">
+            <span key="compact-description">
               {item.description}
             </span>
           ),
@@ -79,17 +85,17 @@ export default function TimelineList({
 
         return (
           <li key={idx} className={`relative pl-3 border-l-2 ${borderColor}`}>
-            <h3 className="text-small font-semibold text-white leading-snug">
+            <h3 className={`${titleClassName} leading-snug`}>
               {item.link ? (
                 <a
                   href={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="!text-white no-underline"
+                  className="!text-inherit no-underline"
                 >
                   {item.title}
 <span className="ml-1 inline-block">
-  <FaPaperclip size={11} style={{ color: "white", opacity: 0.5 }} />
+  <FaPaperclip size={11} style={{ color: "currentColor", opacity: 0.5 }} />
 </span>
                 </a>
               ) : (
@@ -103,7 +109,9 @@ export default function TimelineList({
                 {metadataItems.map((component, componentIdx) => (
                   <div key={component!.key} className="flex items-center">
                     {component}
-                    {componentIdx < metadataItems.length - 1 && <Separator />}
+                    {componentIdx < metadataItems.length - 1 && (
+                      <Separator character={metadataSeparator} />
+                    )}
                   </div>
                 ))}
               </div>
@@ -111,7 +119,7 @@ export default function TimelineList({
 
             {/* Description */}
             {!isCompactMode && item.description && (
-              <p className="text-sm text-gray-500 leading-relaxed pr-2">
+              <p className="text-xs text-gray-500 leading-relaxed pr-2">
                 {item.description}
               </p>
             )}
