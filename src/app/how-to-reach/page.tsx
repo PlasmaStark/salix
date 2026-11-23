@@ -26,15 +26,10 @@ export default function HowToReachPage() {
             <p>Politecnico di Torino, Corso Duca degli Abruzzi 24, 10129 Torino</p>
             <p>Department of Mathematical Sciences (DISMA)</p>
           </div>
-          <nav aria-label="On this page" className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
-            <a href="#on-campus">On campus</a>
-            <a href="#from-porta-susa">From Porta Susa</a>
-            <a href="#from-the-airport">From the airport</a>
-          </nav>
         </header>
 
         <section id="on-campus" className="space-y-3">
-          <h2 className="border-b border-gray-700 pb-2 font-serif text-2xl font-medium">
+          <h2 className="pb-2 font-serif text-2xl font-medium">
             On campus
           </h2>
           <ol className="list-decimal space-y-2 pl-6 marker:font-semibold marker:text-accent">
@@ -78,7 +73,7 @@ export default function HowToReachPage() {
         </section>
 
         <section id="from-porta-susa" className="space-y-3">
-          <h2 className="border-b border-gray-700 pb-2 font-serif text-2xl font-medium">
+          <h2 className="pb-2 font-serif text-2xl font-medium">
             From Torino Porta Susa
           </h2>
           <p>
@@ -107,7 +102,7 @@ export default function HowToReachPage() {
         </section>
 
         <section id="from-the-airport" className="space-y-3">
-          <h2 className="border-b border-gray-700 pb-2 font-serif text-2xl font-medium">
+          <h2 className="pb-2 font-serif text-2xl font-medium">
             From Turin Airport (Caselle)
           </h2>
           <p>
